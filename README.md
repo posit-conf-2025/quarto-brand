@@ -1,4 +1,4 @@
-WORKSHOP_TITLE
+Branded Websites, Presentations, Dashboards, and PDFs with Quarto
 ================
 
 ### posit::conf(2025)
