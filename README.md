@@ -3,7 +3,7 @@ WORKSHOP_TITLE
 
 ### posit::conf(2025)
 
-by INSTRUCTOR_NAME
+by Thomas Pedersen, and Teun Van den Brand
 
 -----
 
