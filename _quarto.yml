@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "website"
+  sidebar:
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: materials/01-intro/index.qmd
+        text: Intro
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
