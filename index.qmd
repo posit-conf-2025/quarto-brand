@@ -1,7 +1,12 @@
 ---
-title: "website"
+title: "Branded Websites, Presentations, Dashboards, and PDFs with Quarto"
+subtitle: "posit::conf(2025)"
 ---
 
-This is a Quarto website.
+🗓️ Date: 2025-09-12
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Overview
+
+## Schedule
+
+## Instructors

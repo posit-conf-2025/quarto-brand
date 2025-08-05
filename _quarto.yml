@@ -3,13 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "website"
+  title: ""
   sidebar:
     contents:
       - href: index.qmd
         text: Home
+      - href: materials/00-setup/index.qmd
+        text: Setup
       - href: materials/01-intro/index.qmd
-        text: Intro
+        text: Intro to Quarto
 
 format:
   html:

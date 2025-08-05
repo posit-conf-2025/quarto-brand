@@ -1,0 +1,19 @@
+---
+title: "Intro to Quarto"
+subtitle: "posit::conf(2025)"
+author:   
+  - name: Isabella Velásquez
+    affiliations:
+      - name: Posit, PBC
+  - name: Sara Altman
+    affiliations:
+      - name: Posit, PBC
+footer: ""
+logo: ""
+format:
+  revealjs:
+    transition: fade
+    slide-number: true
+    chalkboard: true
+---
+
