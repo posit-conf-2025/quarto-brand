@@ -2,15 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/index.html</loc>
-    <lastmod>2025-07-24T21:15:35.372Z</lastmod>
+    <lastmod>2025-08-05T17:32:21.569Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/01-intro/01-intro.html</loc>
     <lastmod>2025-07-24T23:11:27.260Z</lastmod>
   </url>
   <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/00-setup/index.html</loc>
+    <lastmod>2025-08-05T17:32:53.233Z</lastmod>
+  </url>
+  <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/LICENSE.html</loc>
     <lastmod>2025-07-24T23:20:25.021Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/00-setup/00-setup.html</loc>
+    <lastmod>2025-08-05T17:33:39.027Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/01-intro/index.html</loc>

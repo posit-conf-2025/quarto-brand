@@ -2,11 +2,51 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "website",
+    "title": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.",
+    "text": "🗓️ Date: 2025-09-12",
     "crumbs": [
       "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
+    "section": "Overview",
+    "text": "Overview",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
+    "section": "Schedule",
+    "text": "Schedule",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
+    "section": "Instructors",
+    "text": "Instructors",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "materials/00-setup/index.html",
+    "href": "materials/00-setup/index.html",
+    "title": "Setup",
+    "section": "",
+    "text": "Instructions",
+    "crumbs": [
+      "Setup"
     ]
   },
   {
@@ -23,7 +63,7 @@
     "section": "",
     "text": "Instructions",
     "crumbs": [
-      "Intro"
+      "Intro to Quarto"
     ]
   }
 ]
