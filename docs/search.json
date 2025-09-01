@@ -24,7 +24,7 @@
     "href": "index.html#schedule",
     "title": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
     "section": "Schedule",
-    "text": "Schedule",
+    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00 - 10:30\nIntroduction\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nPresentations & Dashboards\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nTypst & Websites\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nCustomizing Your Brand",
     "crumbs": [
       "Home"
     ]
@@ -65,5 +65,68 @@
     "crumbs": [
       "Intro to Quarto"
     ]
+  },
+  {
+    "objectID": "02-revealjs/index.html",
+    "href": "02-revealjs/index.html",
+    "title": "Professional Presentations with revealjs",
+    "section": "",
+    "text": "Anatomy of a Quarto presentation"
+  },
+  {
+    "objectID": "02-revealjs/index.html#components",
+    "href": "02-revealjs/index.html#components",
+    "title": "Professional Presentations with revealjs",
+    "section": "Components",
+    "text": "Components\n\nMetadata: YAML\nText: Markdown\nCode: Executed via knitr or jupyter\n\n\nWeave it all together, and you have a beautiful, functional slide deck!"
+  },
+  {
+    "objectID": "02-revealjs/slides.html#components",
+    "href": "02-revealjs/slides.html#components",
+    "title": "Professional Presentations with revealjs",
+    "section": "Components",
+    "text": "Components\n\nMetadata: YAML\nText: Markdown\nCode: Executed via knitr or jupyter\n\n\nWeave it all together, and you have a beautiful, functional slide deck!"
+  },
+  {
+    "objectID": "02-presentations/slides.html#file-formats",
+    "href": "02-presentations/slides.html#file-formats",
+    "title": "QuartoPresentations",
+    "section": "File formats",
+    "text": "File formats\nQuarto supports a variety of formats for creating presentations, including:\n\nrevealjs\npptx\nbeamer\n\n\nbrand.yml is currently supported only in revealjs."
+  },
+  {
+    "objectID": "02-presentations/slides.html#components",
+    "href": "02-presentations/slides.html#components",
+    "title": "QuartoPresentations",
+    "section": "Components",
+    "text": "Components\n\nMetadata: YAML\nText: Markdown\nCode: Executed via knitr or jupyter\n\n\nWeave it all together, and you have a beautiful, functional slide deck!"
+  },
+  {
+    "objectID": "02-presentations/slides.html#example",
+    "href": "02-presentations/slides.html#example",
+    "title": "QuartoPresentations",
+    "section": "Example",
+    "text": "Example\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+  },
+  {
+    "objectID": "02-presentations/slides.html#example-with-sections",
+    "href": "02-presentations/slides.html#example-with-sections",
+    "title": "QuartoPresentations",
+    "section": "Example with sections",
+    "text": "Example with sections\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n# In the morning\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Breakfast\n\n- Eat eggs\n- Drink coffee\n\n# In the evening\n\n## Dinner\n\n- Eat spaghetti\n- Drink wine\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+  },
+  {
+    "objectID": "02-presentations/slides.html#example-with-sections-1",
+    "href": "02-presentations/slides.html#example-with-sections-1",
+    "title": "QuartoPresentations",
+    "section": "Example with sections",
+    "text": "Example with sections\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n- Turn off alarm\n- Get out of bed\n\n---\n\n- Get in bed\n- Count sheep"
+  },
+  {
+    "objectID": "02-presentations/slides.html#components-1",
+    "href": "02-presentations/slides.html#components-1",
+    "title": "QuartoPresentations",
+    "section": "Components",
+    "text": "Components"
   }
 ]
