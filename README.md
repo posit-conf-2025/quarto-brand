@@ -22,7 +22,18 @@ Alternatively, you can completely redo the organization of this repo  as a Quart
 
 ## Description
 
-ADD WORKSHOP DESCRIPTION.
+Join us for a hands-on, one-day workshop at posit::conf(2025), where we’ll explore the versatility of Quarto output formats. Designed for data scientists, analysts, and content creators, this immersive session will teach you how to craft cohesive reports and presentations while refining your workflow with Quarto’s latest features.
+
+You will learn how to create dynamic websites, professional PDF documents, engaging presentations, and interactive dashboards using Quarto. This workshop highlights Quarto's powerful theming capabilities, including the new support for brand.yml, which ensures that your work maintains a professional and cohesive style across all formats.
+
+By the end of the session, you’ll be equipped to:
+
+* Build and deploy Quarto websites.
+* Generate professional presentations and PDF reports.
+* Create interactive dashboards for data visualization and reporting.
+* Use brand.yml to define and apply consistent theming across all outputs.
+
+Whether you're looking to enhance your personal projects or streamline organizational outputs, this workshop will equip you with the tools to create polished, professional results.
 
 ## Setup
 
@@ -32,17 +43,19 @@ ADD INFORMATION YOU WANT LEARNERS TO HAVE / STEPS THEY WANT THEM TO COMPLETE PRI
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | Session 1        |
+| 09:00 - 10:30 | Intro to Quarto & brand.yml|
 | 10:30 - 11:00 | *Coffee break*   |
-| 11:00 - 12:30 | Session 2        |
+| 11:00 - 12:30 |  RevealJS & Dashboards |
 | 12:30 - 13:30 | *Lunch break*    |
-| 13:30 - 15:00 | Session 3        |
+| 13:30 - 15:00 | Typst & Websites |
 | 15:00 - 15:30 | *Coffee break*   |
-| 15:30 - 17:00 | Session 4        |
+| 15:30 - 17:00 | Customizing Your Brand        |
 
 ## Instructor(s)
 
-ADD INSTRUCTOR(S) INFO.
+[Isabella Velásquez](https://ivelasq.rbind.io/) is a Senior Product Marketing Manager at Posit Software, where she develops strategic content to increase brand visibility and drive product adoption. She has a background in data analysis, reporting, and visualization and holds an MS in Analytics and a BA in Economics and East Asian Languages and Civilizations from the University of Chicago.
+
+[Sara Altman](https://www.linkedin.com/in/sarakaltman) is a Data Science Educator at Posit on the Developer Relations team. She creates technical content to help developers and data scientists achieve their goals with Posit tools. Prior to joining the Developer Relations team, she worked on [Posit Academy](https://posit.co/products/enterprise/academy/), Posit’s educational platform. Before Posit, Sara taught data science and R at Stanford. She holds a MS and BS in Symbolic Systems from Stanford.
 
 -----
 
