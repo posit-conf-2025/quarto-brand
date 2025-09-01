@@ -1,0 +1,51 @@
+#
+# _brand.yml for Posit Conf
+#
+
+meta:
+  name: posit::conf(2025)
+  link:
+    home: https://posit.co/conference/
+    
+logo:
+  images:
+    icon:
+      path: ../images/logo.png
+      alt: Posit Conf icon.
+  small: ../images/logo.png
+
+color:
+  palette:
+    dark-blue: "#223e50"
+    light-blue: "#a9c7c9"
+    forest-green: "#73994e"
+    golden-yellow: "#f3c13d"
+    off-white: "#F5F5F5"
+    black: "#111111"
+
+  background: off-white
+  foreground: dark-blue
+  primary: golden-yellow
+  secondary: forest-green
+  tertiary: light-blue
+  dark: black
+
+typography:
+  fonts:
+    - family: Open Sans
+      source: bunny
+      weight: [300, 400]
+
+  base:
+    family: Open Sans
+    weight: 400
+
+  headings:
+    family: Open Sans
+    weight: 300
+    color: dark-blue
+
+  link:
+    weight: 700
+    color: primary
+    decoration: none
