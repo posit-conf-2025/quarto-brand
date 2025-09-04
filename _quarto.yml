@@ -12,6 +12,8 @@ website:
         text: Setup
       - href: materials/01-intro/index.qmd
         text: Intro to Quarto
+      - href: materials/02-presentations/index.qmd
+        text: Presentations
 
 format:
   html:

@@ -24,7 +24,7 @@
     "href": "index.html#schedule",
     "title": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00 - 10:30\nIntroduction\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nPresentations & Dashboards\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nTypst & Websites\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nCustomizing Your Brand",
+    "text": "Schedule",
     "crumbs": [
       "Home"
     ]
@@ -128,5 +128,110 @@
     "title": "QuartoPresentations",
     "section": "Components",
     "text": "Components"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#file-formats",
+    "href": "materials/02-presentations/slides.html#file-formats",
+    "title": "QuartoPresentations",
+    "section": "File formats",
+    "text": "File formats\nQuarto supports a variety of formats for creating presentations, including:\n\nrevealjs\npptx\nbeamer\n\n\nbrand.yml is currently supported only in revealjs."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#components",
+    "href": "materials/02-presentations/slides.html#components",
+    "title": "QuartoPresentations",
+    "section": "Components",
+    "text": "Components\n\nMetadata: YAML\nText: Markdown\nCode: Executed via knitr or jupyter\n\n\nWeave it all together, and you have a beautiful, functional slide deck!"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#example",
+    "href": "materials/02-presentations/slides.html#example",
+    "title": "QuartoPresentations",
+    "section": "Example",
+    "text": "Example\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: html\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#example-1",
+    "href": "materials/02-presentations/slides.html#example-1",
+    "title": "QuartoPresentations",
+    "section": "Example",
+    "text": "Example\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#example-with-sections",
+    "href": "materials/02-presentations/slides.html#example-with-sections",
+    "title": "QuartoPresentations",
+    "section": "Example with sections",
+    "text": "Example with sections\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n# In the morning\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Breakfast\n\n- Eat eggs\n- Drink coffee\n\n# In the evening\n\n## Dinner\n\n- Eat spaghetti\n- Drink wine\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#example-with-sections-1",
+    "href": "materials/02-presentations/slides.html#example-with-sections-1",
+    "title": "QuartoPresentations",
+    "section": "Example with sections",
+    "text": "Example with sections\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n- Turn off alarm\n- Get out of bed\n\n---\n\n- Get in bed\n- Count sheep"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#your-turn",
+    "href": "materials/02-presentations/slides.html#your-turn",
+    "title": "QuartoPresentations",
+    "section": "Your turn",
+    "text": "Your turn\n\n\nTurn your Quarto document into a revealjs presentation\n\nChange html to revealjs in the YAML heading\n\nAdd a section by using a first-level heading (#)\nRender your document"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#multiple-columns",
+    "href": "materials/02-presentations/slides.html#multiple-columns",
+    "title": "QuartoPresentations",
+    "section": "Multiple columns",
+    "text": "Multiple columns\n:::: {.columns}\n\n::: {.column width=\"40%\"}\nLeft column\n:::\n\n::: {.column width=\"60%\"}\nRight column\n:::\n\n::::"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#speaker-notes",
+    "href": "materials/02-presentations/slides.html#speaker-notes",
+    "title": "QuartoPresentations",
+    "section": "Speaker notes",
+    "text": "Speaker notes\n## Slide with speaker notes\n\nSlide content\n\n::: {.notes}\nSpeaker notes go here.\n:::"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#line-highlighting",
+    "href": "materials/02-presentations/slides.html#line-highlighting",
+    "title": "QuartoPresentations",
+    "section": "Line highlighting",
+    "text": "Line highlighting\n```{.python code-line-numbers=\"1-2\"}\nimport numpy as np\nimport matplotlib.pyplot as plt\n```"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#incremental-content",
+    "href": "materials/02-presentations/slides.html#incremental-content",
+    "title": "QuartoPresentations",
+    "section": "Incremental content",
+    "text": "Incremental content\nIncremental lists:\n::: {.incremental}\n- Eat spaghetti\n- Drink wine\n:::\nAdd a pause:\n## Slide with a pause\n\ncontent before the pause\n\n. . .\n\ncontent after the pause"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#multiple-columns-1",
+    "href": "materials/02-presentations/slides.html#multiple-columns-1",
+    "title": "QuartoPresentations",
+    "section": "Multiple columns",
+    "text": "Multiple columns\n:::: {.columns}\n\n::: {.column width=\"40%\"}\nLeft column\n:::\n\n::: {.column width=\"60%\"}\nRight column\n:::\n\n::::"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#speaker-notes-1",
+    "href": "materials/02-presentations/slides.html#speaker-notes-1",
+    "title": "QuartoPresentations",
+    "section": "Speaker notes",
+    "text": "Speaker notes\n## Slide with speaker notes\n\nSlide content\n\n::: {.notes}\nSpeaker notes go here.\n:::"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#root-directory",
+    "href": "materials/02-presentations/slides.html#root-directory",
+    "title": "QuartoPresentations",
+    "section": "Root directory",
+    "text": "Root directory\nThe _brand.yml file in the root directory of your project (with or without a _quarto.yml file) will automatically apply the brand to your revealjs documents.\n\nThe revealjs format does not support switching between light and dark modes."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#shortcodes-in-slides",
+    "href": "materials/02-presentations/slides.html#shortcodes-in-slides",
+    "title": "QuartoPresentations",
+    "section": "Shortcodes in slides",
+    "text": "Shortcodes in slides\nUse {{&lt; brand color COLOR_NAME BRAND_MODE &gt;}} to return the brand color named COLOR_NAME as a string.\n---\nformat: revealjs\n---\n\n## Slide Title {background-color='{{&lt; brand color primary &gt;}}'}"
   }
 ]

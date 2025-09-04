@@ -1,0 +1,245 @@
+---
+title: "Quarto<br>Presentations"
+format:
+  revealjs:
+    title-slide-attributes: 
+      data-background-image: ../images/title-slide-light.svg
+      data-background-color: "white"
+      style: "text-align: right; left: 10%"
+---
+
+## File formats
+
+Quarto supports a variety of formats for creating presentations, including:
+
+* `revealjs`
+* `pptx`
+* `beamer`
+
+. . .
+
+brand.yml is currently supported only in `revealjs`.
+
+# Anatomy of a Quarto presentation {background-color='{{< brand color foreground >}}'}
+
+## Components
+
+1. Metadata: YAML
+2. Text: Markdown
+3. Code: Executed via knitr or jupyter
+
+. . .
+
+**Weave it all together**, and you have a beautiful, functional slide deck!
+
+## Example {auto-animate=true}
+
+````{.markdown}
+---
+title: "Habits"
+author: "John Doe"
+format: html
+---
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+````
+
+## Example {auto-animate=true}
+
+````{.markdown code-line-numbers=4}
+---
+title: "Habits"
+author: "John Doe"
+format: revealjs
+---
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+````
+
+## Example with sections {auto-animate=true}
+
+````markdown
+---
+title: "Habits"
+author: "John Doe"
+format: revealjs
+---
+
+# In the morning
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Breakfast
+
+- Eat eggs
+- Drink coffee
+
+# In the evening
+
+## Dinner
+
+- Eat spaghetti
+- Drink wine
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+````
+
+## Example with sections {auto-animate=true}
+
+````markdown
+---
+title: "Habits"
+author: "John Doe"
+format: revealjs
+---
+
+- Turn off alarm
+- Get out of bed
+
+---
+
+- Get in bed
+- Count sheep
+````
+
+## Your turn {background-color='{{< brand color primary >}}'}
+
+<br>
+
+* Turn your Quarto document into a `revealjs presentation`
+  * Change `html` to `revealjs` in the YAML heading
+* Add a section by using a first-level heading (`#`)
+* Render your document
+
+# Building slides
+
+## Multiple columns
+
+```markdown
+:::: {.columns}
+
+::: {.column width="40%"}
+Left column
+:::
+
+::: {.column width="60%"}
+Right column
+:::
+
+::::
+```
+
+## Speaker notes
+
+```markdown
+## Slide with speaker notes
+
+Slide content
+
+::: {.notes}
+Speaker notes go here.
+:::
+```
+
+## Line highlighting
+
+````markdown
+```{.python code-line-numbers="1-2"}
+import numpy as np
+import matplotlib.pyplot as plt
+```
+````
+
+## Incremental content
+
+Incremental lists:
+
+```markdown
+::: {.incremental}
+- Eat spaghetti
+- Drink wine
+:::
+```
+
+Add a pause:
+
+```markdown
+## Slide with a pause
+
+content before the pause
+
+. . .
+
+content after the pause
+```
+
+## Multiple columns
+
+```markdown
+:::: {.columns}
+
+::: {.column width="40%"}
+Left column
+:::
+
+::: {.column width="60%"}
+Right column
+:::
+
+::::
+```
+
+## Speaker notes
+
+```markdown
+## Slide with speaker notes
+
+Slide content
+
+::: {.notes}
+Speaker notes go here.
+:::
+```
+
+# Branding slides {background-color='{{< brand color foreground >}}'}
+
+## Root directory
+
+The `_brand.yml` file in the root directory of your project (with or without a `_quarto.yml` file) will automatically apply the brand to your `revealjs` documents.
+
+* The `revealjs` format does not support switching between light and dark modes.
+
+## Shortcodes in slides
+
+Use `{{{< brand color COLOR_NAME BRAND_MODE >}}}` to return the brand color named `COLOR_NAME` as a string.
+
+````markdown
+---
+format: revealjs
+---
+
+## Slide Title {background-color='{{{< brand color primary >}}}'}
+````
+
