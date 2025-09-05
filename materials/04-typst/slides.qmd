@@ -1,0 +1,10 @@
+---
+title: "PDFs with Typst"
+format:
+  revealjs:
+    title-slide-attributes: 
+      data-background-image: ../images/title-slide-light.svg
+      data-background-color: "white"
+      style: "text-align: right; left: 10%"
+---
+
