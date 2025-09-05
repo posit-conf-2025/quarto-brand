@@ -25,8 +25,8 @@ color:
 
   background: off-white
   foreground: dark-blue
-  primary: golden-yellow
-  secondary: forest-green
+  primary: forest-green
+  secondary: golden-yellow
   tertiary: light-blue
   dark: black
 
