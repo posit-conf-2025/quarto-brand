@@ -128,7 +128,7 @@ format: revealjs
 
 <br>
 
-* Turn your Quarto document into a `revealjs presentation`
+* Turn your Quarto document into a `revealjs` presentation
   * Change `html` to `revealjs` in the YAML heading
 * Add a section by using a first-level heading (`#`)
 * Render your document
