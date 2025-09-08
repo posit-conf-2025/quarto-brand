@@ -1,0 +1,54 @@
+#
+# _brand.yml for World Happiness Report
+#
+
+meta:
+  name: World Happiness Report
+  link:
+    home: https://www.worldhappiness.report/
+    
+logo:
+  images:
+    icon:
+      path: ../images/logo.png
+      alt: Posit Conf icon.
+  small: ../images/logo.png
+
+color:
+  palette:
+    dark-purple: "#93358c"
+    light-purple: "#f8f6fb"
+    teal: "#04afaf"
+    dark-blue: "#086992"
+    hot-pink: "#eb068c"
+    light-blue: "#1aade4"
+
+  background: white
+  foreground: black
+  primary: dark-purple
+  secondary: hot-pink
+  tertiary: light-blue
+  dark: black
+
+typography:
+  fonts:
+    - family: Gotham Book
+      source: file
+      files:
+        - path: fonts/Gotham-Book.ttf
+    - family: Gotham Bold
+      source: file
+      files:
+        - path: fonts/Gotham-Bold.otf
+
+  base:
+    family: Gotham Book
+    weight: 400
+
+  headings:
+    family: Gotham Bold
+    color: dark-purple
+
+  link:
+    color: primary
+    decoration: none
