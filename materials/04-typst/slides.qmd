@@ -8,3 +8,243 @@ format:
       style: "text-align: right; left: 10%"
 ---
 
+## Hello, Typst!
+
+Typst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.
+
+
+To use Typst with Quarto, set the format in the YAML of your Quarto document:
+
+```markdown
+---
+format: typst
+---
+```
+
+## Page layout
+
+Control the size of the page (`papersize`), the page margins (`margin`), and the number of columns used for page content (`columns`):
+
+```markdown
+---
+title: Page Layout
+format:
+  typst:
+    papersize: a5
+    margin:
+      x: 1cm
+      y: 1cm
+    columns: 2
+---
+```
+
+## Margins
+
+Edit the margin's horizontal direction (`x`) and vertical direction (`y`):
+
+```markdown
+margin:
+  x: 1.25in
+  y: 1.25in
+```
+
+Can also use relative length:
+
+```markdown
+margin:
+  left: 10%
+```
+
+## Paper Size
+
+```markdown
+papersize: us-letter
+```
+
+::: aside
+[Supported page sizes](https://typst.app/docs/reference/layout/page/#parameters-paper)
+:::
+
+## Table of contents
+
+```markdown
+toc: true
+toc-depth: 2
+```
+
+## Section numbering
+
+```markdown
+number-sections: true
+```
+
+Use `number-depth`:
+
+```markdown
+number-depth: 3
+```
+
+## Your turn
+
+* Change your document's format to a Typst PDF.
+* Edit your YAML with one of the options we covered.
+
+## Custom formatting with Typst
+
+Typst provides an easy way to define your own templates to produce highly customized documents.
+
+
+::: aside
+[Typst Template Docs](https://typst.app/docs/tutorial/making-a-template/)
+
+[Awesome Typst templates](https://github.com/qjcg/awesome-typst#templates--libraries)
+:::
+
+## Custom formatting with Typst
+
+To create a new custom Typst format (or package an existing Typst template for use with Quarto) use the quarto create command to get started:
+
+``` {.bash filename="Terminal"}
+$ quarto create extension format
+```
+
+Choose `typst` as the base format and provide a name for the extension.
+
+## Custom formatting with Typst
+
+| File                 | Description                                                                                                                                           |
+|-------------------------|-----------------------------------------------|
+| `_extension.yml`     | Basic extension metadata (name, author, description, etc.) and format definition.                                                                     |
+| `README.md`          | Documentation on how to install and use the format.                                                                                                   |
+| `template.qmd`       | A starter document that demonstrates the basics of the format.                                                                                        |
+| `typst-template.typ` | The core Typst template function (documentation on creating Typst templates can be found here: <https://typst.app/docs/tutorial/making-a-template/>). |
+| `typst-show.typ`     | File that calls the template's function (mapping Pandoc metadata to function arguments).                                                              |
+
+## typst-show.typ
+
+```{.markdown filename="typst-show.typ"}
+#show: dept-news.with(
+$if(title)$
+  title: "$title$",
+$endif$
+$if(edition)$
+  edition: [$edition$],
+$endif$
+$if(hero-image)$
+  hero-image: (
+    path: "$hero-image.path$",
+    caption: [$hero-image.caption$]
+  ), 
+$endif$
+$if(dedication)$
+  dedication: [$dedication$],
+$endif$
+$if(publication-info)$
+  publication-info: [$publication-info$],
+$endif$
+)
+```
+
+
+## typst-template.typ
+
+```{.markdown filename="typst-template.typ"}
+#let whr-template(
+  doc,
+  title: none,
+  author: none,
+  cover_image: none,
+  main_logo: none,
+  bottom_logos: none,
+  toc_background_image: none,
+) = {
+  // Page setup for the entire document
+  set text(font: "Linux Libertine", size: 10pt)
+  set heading(numbering: "1.1")
+  set page(paper: "a4", margin: (left: 20mm, right: 30mm, top: 20mm, bottom: 20mm))
+
+  // Define the style for purple headings
+  show heading: it => {
+    set text(fill: rgb("#4B0082")) // A deep purple
+    it
+  }
+
+  // Define the blue bar on the right side of pages
+  #show page: page => {
+    // Add the blue bar (except on the cover page)
+    if counter(page).at(1) > 1 {
+      box(
+        width: 10pt,
+        height: 100%,
+        fill: rgb("#2a87d6"),
+        float: true,
+        inset: 0pt,
+        place(right, top)
+      )
+    }
+    // Render the page content
+    page
+  }
+
+  // Cover page layout
+  page(
+    header: none,
+    footer: none,
+    background: cover_image,
+  )[
+    #place(
+      right, center,
+      image(main_logo)
+    )
+
+    #if bottom_logos != none {
+      #place(bottom, center, [
+        #h(1fr) #bottom_logos #h(1fr)
+      ])
+    }
+  ]
+
+  // Table of Contents page
+  page(
+    header: none,
+    footer: none,
+    background: toc_background_image,
+  )[
+    #show: heading.where(level: 1, 2)
+    #outline(title: "Contents")
+  ]
+
+  // Main content pages
+  #set page(columns: 2)
+  #set page(
+    header: if title != none {
+      box(width: 100%, [
+        #h(1fr) #text(9pt)[#title]
+      ])
+    },
+    footer: box(
+      width: 100%,
+      [#h(1fr) #text(9pt)[#counter(page).at(1)]]
+    )
+  )
+
+  // Insert the main document content
+  #doc
+}
+
+// Apply the template to the document with the required parameters
+#show: doc => whr-template(
+  doc,
+  title: [WORLD HAPPINESS REPORT 2024],
+  cover_image: "../assets/cover-page.jpg",
+  main_logo: "../assets/logo-center-right.png",
+  bottom_logos: [
+    #image("../assets/bottom-logo-1.png", height: 1.5cm)
+    #h(1cm)
+    #image("../assets/bottom-logo-2.png", height: 1.5cm)
+    #h(1cm)
+    #image("../assets/bottom-logo-3.png", height: 1.5cm)
+  ],
+  toc_background_image: "../assets/toc-background.jpg",
+)
+```

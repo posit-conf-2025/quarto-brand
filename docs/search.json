@@ -65,5 +65,61 @@
     "crumbs": [
       "Intro to Quarto"
     ]
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#hello-typst",
+    "href": "materials/04-typst/slides.html#hello-typst",
+    "title": "PDFs with Typst",
+    "section": "Hello, Typst!",
+    "text": "Hello, Typst!\nTypst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.\nTo use Typst with Quarto, set the format in the YAML of your Quarto document:\n---\nformat: typst\n---"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#page-layout",
+    "href": "materials/04-typst/slides.html#page-layout",
+    "title": "PDFs with Typst",
+    "section": "Page layout",
+    "text": "Page layout\nControl the size of the page (papersize), the page margins (margin), and the number of columns used for page content (columns):\n---\ntitle: Page Layout\nformat:\n  typst:\n    papersize: a5\n    margin:\n      x: 1cm\n      y: 1cm\n    columns: 2\n---"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#margins",
+    "href": "materials/04-typst/slides.html#margins",
+    "title": "PDFs with Typst",
+    "section": "Margins",
+    "text": "Margins\nEdit the margin’s horizontal direction (x) and vertical direction (y):\nmargin:\n  x: 1.25in\n  y: 1.25in\nCan also use relative length:\nmargin:\n  left: 10%"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#paper-size",
+    "href": "materials/04-typst/slides.html#paper-size",
+    "title": "PDFs with Typst",
+    "section": "Paper Size",
+    "text": "Paper Size\npapersize: us-letter\n\n\nSupported page sizes"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#table-of-contents",
+    "href": "materials/04-typst/slides.html#table-of-contents",
+    "title": "PDFs with Typst",
+    "section": "Table of contents",
+    "text": "Table of contents\ntoc: true\ntoc-depth: 2"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#section-numbering",
+    "href": "materials/04-typst/slides.html#section-numbering",
+    "title": "PDFs with Typst",
+    "section": "Section numbering",
+    "text": "Section numbering\nnumber-sections: true\nUse number-depth:\nnumber-depth: 3"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#your-turn",
+    "href": "materials/04-typst/slides.html#your-turn",
+    "title": "PDFs with Typst",
+    "section": "Your turn",
+    "text": "Your turn\n\nChange your document’s format to a Typst PDF.\nEdit your YAML with one of the options we covered."
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#custom-formatting-with-typst",
+    "href": "materials/04-typst/slides.html#custom-formatting-with-typst",
+    "title": "PDFs with Typst",
+    "section": "Custom formatting with Typst",
+    "text": "Custom formatting with Typst\nCreate two files to create a custom template:\n\ntypst-show.typ: a file that calls the template. It maps Pandoc metadata to template function arguments.\ntypst-template.typ: the core template file. It defines the styling of the document.\n\n\n\n\n\nTypst Template Docs"
   }
 ]
