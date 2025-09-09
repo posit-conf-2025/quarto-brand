@@ -23,7 +23,7 @@ color:
     hot-pink: "#eb068c"
     light-blue: "#1aade4"
 
-  background: white
+  background: light-purple
   foreground: black
   primary: dark-purple
   secondary: hot-pink
