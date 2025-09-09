@@ -1,0 +1,9 @@
+1. Read in `_brand.yml` with `read_brand_yml` (R) or `Brand.from_yaml()` (Python) to a variable called `brand`.
+3. Change the color of the points and line in the global trends plot to the brand's `teal` color. 
+
+**R**:
+`geom_line(color = brand$color$palette$teal)`
+
+**Python**:
+
+`geom_line(color = brand.color.palette.teal)`
