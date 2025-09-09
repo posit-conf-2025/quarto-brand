@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
     "section": "",
-    "text": "🗓️ Date: 2025-09-12",
+    "text": "🗓️ Date: 2025-09-16",
     "crumbs": [
       "Home"
     ]
@@ -14,7 +14,7 @@
     "href": "index.html#overview",
     "title": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
     "section": "Overview",
-    "text": "Overview",
+    "text": "Overview\nJoin us for a hands-on, one-day workshop at posit::conf(2025), where we’ll explore the versatility of Quarto output formats. Designed for data scientists, analysts, and content creators, this immersive session will teach you how to craft cohesive reports and presentations while refining your workflow with Quarto’s latest features.\nYou will learn how to create dynamic websites, professional PDF documents, engaging presentations, and interactive dashboards using Quarto. This workshop highlights Quarto’s powerful theming capabilities, including the new support for brand.yml, which ensures that your work maintains a professional and cohesive style across all formats.\nBy the end of the session, you’ll be equipped to:\n\nBuild and deploy Quarto websites.\nGenerate professional presentations and PDF reports.\nCreate interactive dashboards for data visualization and reporting.\nUse brand.yml to define and apply consistent theming across all outputs.\n\nWhether you’re looking to enhance your personal projects or streamline organizational outputs, this workshop will equip you with the tools to create polished, professional results.",
     "crumbs": [
       "Home"
     ]
@@ -24,7 +24,7 @@
     "href": "index.html#schedule",
     "title": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
     "section": "Schedule",
-    "text": "Schedule",
+    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00 - 10:30\nIntro to Quarto & brand.yml\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nPresentations & Dashboards\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nPDFs & Websites\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nCustomizing your brand",
     "crumbs": [
       "Home"
     ]
@@ -34,7 +34,7 @@
     "href": "index.html#instructors",
     "title": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
     "section": "Instructors",
-    "text": "Instructors",
+    "text": "Instructors\nIsabella Velásquez is a Senior Product Marketing Manager at Posit Software, where she develops strategic content to increase brand visibility and drive product adoption. She has a background in data analysis, reporting, and visualization and holds an MS in Analytics and a BA in Economics and East Asian Languages and Civilizations from the University of Chicago.\nSara Altman is a Data Science Educator at Posit on the Developer Relations team. She creates technical content to help developers and data scientists achieve their goals with Posit tools. Prior to joining the Developer Relations team, she worked on Posit Academy, Posit’s educational platform. Before Posit, Sara taught data science and R at Stanford. She holds a MS and BS in Symbolic Systems from Stanford.",
     "crumbs": [
       "Home"
     ]

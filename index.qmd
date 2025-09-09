@@ -7,7 +7,7 @@ subtitle: "posit::conf(2025)"
 
 ## Overview
 
-Join us for a hands-on, one-day workshop at posit::conf(2025), where we’ll explore the versatility of Quarto output formats. Designed for data scientists, analysts, and content creators, this immersive session will teach you how to craft cohesive reports and presentations while refining your workflow with Quarto’s latest features.
+Join us for a hands-on, one-day workshop at posit::conf(2025), where we’ll explore the versatility of [Quarto](https://quarto.org/) output formats. Designed for data scientists, analysts, and content creators, this immersive session will teach you how to craft cohesive reports and presentations while refining your workflow with Quarto’s latest features.
 
 You will learn how to create dynamic websites, professional PDF documents, engaging presentations, and interactive dashboards using Quarto. This workshop highlights Quarto's powerful theming capabilities, including the new support for brand.yml, which ensures that your work maintains a professional and cohesive style across all formats.
 
@@ -24,15 +24,13 @@ Whether you're looking to enhance your personal projects or streamline organizat
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | Session 1        |
+| 09:00 - 10:30 | Intro to Quarto & brand.yml      |
 | 10:30 - 11:00 | *Coffee break*   |
-| 11:00 - 12:30 | Session 2        |
+| 11:00 - 12:30 | Presentations & Dashboards        |
 | 12:30 - 13:30 | *Lunch break*    |
-| 13:30 - 15:00 | Session 3        |
+| 13:30 - 15:00 | PDFs & Websites        |
 | 15:00 - 15:30 | *Coffee break*   |
-| 15:30 - 17:00 | Session 4        |
-
-
+| 15:30 - 17:00 | Customizing your brand        |
 
 ## Instructors
 
