@@ -1,6 +1,38 @@
 ---
-title: "Intro to Quarto"
+title: "Quarto Documents"
 format: html
 ---
 
-# Instructions
+## Slides
+
+[View slides in full screen](01-intro.html)
+
+```{=html}
+<iframe class="slide-deck" src="01-intro.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+## Exercises
+
+### Exercise 1
+
+{{< include exercise-01.qmd >}}
+
+### Exercise 2
+
+{{< include exercise-02.qmd >}}
+
+### Exercise 3
+
+{{< include exercise-03.qmd >}}
+
+### Exercise 4
+
+{{< include exercise-04.qmd >}}
+
+### Exercise 5
+
+{{< include exercise-05.qmd >}}
+
+### Exercise 6
+
+{{< include exercise-06.qmd >}}
