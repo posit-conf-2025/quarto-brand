@@ -10,8 +10,13 @@ format:
 
 ## Hello, Typst!
 
-Typst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.
+![](images/typst.png)
 
+::: notes
+Typst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.
+:::
+
+## Hello, Typst!
 
 To use Typst with Quarto, set the format in the YAML of your Quarto document:
 
