@@ -10,9 +10,9 @@ meta:
 logo:
   images:
     icon:
-      path: ../images/logo.png
+      path: images/logo.png
       alt: Posit Conf icon.
-  small: ../images/logo.png
+  small: images/logo.png
 
 color:
   palette:
