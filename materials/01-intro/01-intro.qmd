@@ -36,7 +36,7 @@ library(countdown)
 
 [{{< fa brands github >}} \@skaltman](https://github.com/skaltman)
 
-[{{< fa brands bluesky >}} @sara-altman.bsky.social](https://bsky.app/profile/sara-altman.bsky.social)
+[{{< fa brands linkedin >}} sarakaltman](https://www.linkedin.com/in/sarakaltman/)
 
 :::
 :::
@@ -145,19 +145,6 @@ We'll teach you
 
 # Introduction to Quarto
 
-## A tour of Quarto
-
-::: {.hand-blue-large style="text-align: center;"}
-Sit back and enjoy!
-:::
-
-::: demo
--   Understanding the relationship between Quarto and the Jupyter engine
--   Using Quarto in VS Code
--   Creating Quarto documents (metadata, markdown text, and code)
--   Working with Quarto projects
-:::
-
 ## {auto-animate="true"}
 
 <center>
@@ -197,11 +184,10 @@ you can **weave** together **narrative** and **code** to produce elegantly forma
 -   Share technical content by publishing to Posit Connect, Confluence, or other publishing systems
 :::
 
-## 
 
 ## "Literate programming"
 
-![](images/literate-programming.png){fig-align="center"}
+![](images/literate-programming.png)
 
 ::: notes
 Quarto sits inside the big and broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!
@@ -389,7 +375,7 @@ Quarto is a command line interface (**CLI**) that renders plain text formats (`.
 -   Quarto applies Lua filters + CSS/LaTeX which is then evaluated alongside the `.md` file by Pandoc and converted to a final output format
 :::
 
-## Our turn {background-color='{{< brand color light-blue >}}'}
+## Our turn {background-color='{{< brand color dark-blue >}}'}
 
 Let's walk through your options for today.
 
@@ -406,7 +392,7 @@ Let's walk through your options for today.
 Posit Cloud has R, RStudio, Quarto, packages, installed. You just need a free account. But I will delete in a few days. If you prefer Python, there is a GitHub Codespace. It takes many minutes to load so please open it up as soon as you can if you'd like to go this route. The packages will not come preinstalled, but the instructions are on the website. Finally, you can always install Positron, RStudio, or VS Code locally, but you will also need R or Python installed. You'll also have to install the packages and download the repo materials. And for VS Code, you'll need to install the Quarto extension. So, if you do not have these set up, I recommend going with Posit Cloud or GitHub Codespace for now, and coming back to the materials after the workshop.
 :::
 
-## Your turn {background-color='{{< brand color dark-blue >}}'}
+## Your turn {background-color='{{< brand color light-blue >}}'}
 
 Go to the workshop website and click on `Setup` in the sidebar.
 
@@ -425,7 +411,7 @@ Follow the setup instructions at the bottom.
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
 
-## Our turn: Quarto workflow {background-color='{{< brand color light-blue >}}'}
+## Our turn: Quarto workflow {background-color='{{< brand color dark-blue >}}'}
 
 * Open a `.qmd` file.
 * Preview/render the document.
@@ -595,7 +581,7 @@ from plotnine import ggplot, aes, geom_col
 :::: columns
 ::: {.column}
 
-````{.markdown filename="my-document.qmd" code-line-numbers=|8-15}
+````{.markdown filename="my-document.qmd" code-line-numbers=8-15}
 ---
 title: "World Happiness Report"
 format: html
@@ -714,7 +700,7 @@ from plotnine import ggplot, aes, geom_col
 
 Other options: <https://quarto.org/docs/computations/execution-options.html>
 
-## Your turn  {background-color='{{< brand color dark-blue >}}' .smaller}
+## Your turn  {background-color='{{< brand color light-blue >}}' .smaller}
   
 {{< include exercise-02.qmd >}} 
 
@@ -955,7 +941,7 @@ format: pdf
 :::
 ::::
 
-## Your turn  {background-color='{{< brand color dark-blue >}}' .smaller}
+## Your turn  {background-color='{{< brand color light-blue >}}' .smaller}
   
 {{< include exercise-03.qmd >}}
 
@@ -1012,7 +998,7 @@ theme:
 
 ## However, we often want a custom theme 
 
-![](images/whr.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+![](images/whr.png){fig-align="center" width="70%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
 
 ::: aside
 [https://www.worldhappiness.report/](https://www.worldhappiness.report/)
@@ -1142,9 +1128,9 @@ meta:
 logo:
   images:
     icon:
-      path: ../images/whr_logo.png
+      path: images/whr_logo.png
       alt: World Happiness Report icon.
-  small: ../images/whr_logo.png
+  small: images/whr_logo.png
 
 color:
   palette:
@@ -1189,7 +1175,7 @@ typography:
 ## How to apply brand.yml automatically
 
 1. Define branding in a single` _brand.yml` file.
-2. Save in the root directory of your Quarto project (alongside `_quarto.yml`)
+2. Save in the root directory of your Quarto project.
 
 Quarto will detect the presence of `_brand.yml` and automatically apply the brand to all documents of the supported formats in the project.
 
@@ -1223,7 +1209,7 @@ brand: false
 ---
 ```
 
-## Your turn {background-color='{{< brand color dark-blue >}}'}
+## Your turn {background-color='{{< brand color light-blue >}}'}
 
 {{< include exercise-04.qmd >}}
 
@@ -1233,10 +1219,6 @@ brand: false
 # 5 minutes, warning at 1 minute
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
-
-##
-
-![](images/brand-applied.png){fig-align="center" width="70%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
 
 ## Specify light and dark themes for documents
 
@@ -1258,7 +1240,7 @@ create separate brand files
 
 ## What about plots?
 
-![](images/plot-unbranded.png){fig-align="center" width="70%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+![](images/plot-unbranded.png){fig-align="center" width="60%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
 
 ::: notes
 The plots, at least for the R version, are unbranded. how can we apply brand.yml to plots too?
@@ -1266,7 +1248,7 @@ The plots, at least for the R version, are unbranded. how can we apply brand.yml
 
 ## Theme helpers
 
-The quarto package contains theme helpers that apply branding to plots. 
+The quarto packages contain theme helpers that apply branding to plots. 
 
 ::: {.panel-tabset}
 ### R
@@ -1362,7 +1344,7 @@ brand = Brand.from_yaml_str(
 
 ## brand.yml packages
 
-Or access and apply specific brand elements. 
+Access and apply specific brand elements. 
 
 ::: {.panel-tabset}
 ### R

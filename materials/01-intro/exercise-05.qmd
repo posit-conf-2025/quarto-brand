@@ -1,14 +1,14 @@
 ::: {.panel-tabset}
 ### R
 
-1. In the first code chunk of `01-exercise-r.qmd`, use call `quarto::theme_brand_ggplot2()` instead of `theme_minimal()`. 
+1. In the first code chunk of `01-exercise-r.qmd`, replace  `theme_minimal()` with `theme_brand_ggplot2()`. You will need to supply a brand file path (`"_brand.yml"`).  
 
 1. Re-render and see what changes. 
 
 ### Python
 
-1. In the first code chunk of `01-exercise-python.qmd`, use `quarto.theme_brand_plotnine()` instead of `theme_minimal()`. 
+1. In the first code chunk of `01-exercise-python.qmd`, add `theme_brand_plotnine()` right before `theme_minimal()`. You will need to supply a brand file path (`"_brand.yml"`). 
 
-1. Re-render and see what changes. Does anything change? What if you change `foreground` in `_brand.yml` to `hot-pink`? Re-render with and without `theme_brand_plotnine()` and see if there is any difference.
+1. Re-render. Does anything change? What if you change `foreground` in `_brand.yml` to `hot-pink`? Re-render with and without `theme_brand_plotnine()`.
 
 :::
