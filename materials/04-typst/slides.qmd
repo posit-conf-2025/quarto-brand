@@ -390,3 +390,11 @@ $endif$
   toc_background_image: "../assets/toc-background.jpg",
 )
 ```
+
+## Fonts
+
+Check what fonts are available with:
+
+```
+quarto typst fonts
+```
