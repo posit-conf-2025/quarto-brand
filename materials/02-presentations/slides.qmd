@@ -1,0 +1,735 @@
+---
+title: "Quarto<br>Presentations"
+format:
+  revealjs:
+    title-slide-attributes: 
+      data-background-image: ../images/title-slide-light.svg
+      data-background-color: "white"
+      style: "text-align: right; left: 10%"
+filters:
+  - shinylive
+---
+
+## File formats
+
+Quarto supports a variety of formats for creating presentations, including:
+
+* `revealjs`
+* `pptx`
+* `beamer`
+
+. . .
+
+brand.yml is currently supported only in `revealjs`.
+
+## reveal.js
+
+reveal.js presentations allow you to create stunning presentations on the web.
+
+* Present code and LaTeX equations
+* Include computations in slide output
+* Add image, video, and iFrame backgrounds
+* Add fancy transitions and animations
+* Activate scroll view
+
+…and much more
+
+# reveal.js basics {background-color='{{< brand color foreground >}}'}
+
+## Converting to reveal.js
+
+Convert your document to a reveal.js presentation by editing `format` in the YAML heading:
+
+```markdown
+format: revealjs
+```
+
+::: footer
+Learn more: [Revealjs](https://quarto.org/docs/presentations/revealjs/)
+:::
+
+## Example {auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+````{.markdown}
+---
+title: "Habits"
+author: "John Doe"
+format: html
+---
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+````
+:::
+
+::: {.column width="60%"}
+
+```{=html}
+<iframe src="./_example-01.html" width="100%" height="500"></iframe>
+```
+
+:::
+
+::::
+
+## Example {auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+````{.markdown code-line-numbers=4}
+---
+title: "Habits"
+author: "John Doe"
+format: revealjs
+---
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+````
+ 
+:::
+
+::: {.column width="60%"}
+
+```{=html}
+<iframe src="./_example-02.html" width="100%" height="500"></iframe>
+```
+
+:::
+
+::::
+
+## Example with sections {auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+````markdown
+---
+title: "Habits"
+author: "John Doe"
+format: revealjs
+---
+
+# In the morning
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Breakfast
+
+- Eat eggs
+- Drink coffee
+
+# In the evening
+
+## Dinner
+
+- Eat spaghetti
+- Drink wine
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+````
+
+:::
+
+::: {.column width="60%"}
+
+```{=html}
+<iframe src="./_example-03.html" width="100%" height="500"></iframe>
+```
+
+:::
+
+::::
+
+## Example with sections {auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+````markdown
+---
+title: "Habits"
+author: "John Doe"
+format: revealjs
+---
+
+- Turn off alarm
+- Get out of bed
+
+---
+
+- Get in bed
+- Count sheep
+````
+
+:::
+
+::: {.column width="60%"}
+
+```{=html}
+<iframe src="./_example-04.html" width="100%" height="500"></iframe>
+```
+
+:::
+
+::::
+
+## Your turn {background-color='{{< brand color primary >}}'}
+
+{{< include exercise-01.qmd >}}
+
+# Building slides
+
+## Editing slides
+
+The quarto-revealjs-editable extension allows the repositioning and resizing of images and text divs directly in the previewed slides.
+
+![](images/demo-text.gif){fig-align="center"}
+
+::: footer
+Learn more: [quarto-revealjs-editable](https://github.com/EmilHvitfeldt/quarto-revealjs-editable)
+:::
+
+## Content overflow {.smaller}
+
+Use the `.smaller` class to use a smaller typeface so that more text fits on the slide. For example:
+
+```markdown
+## Slide Title {.smaller}
+```
+
+Use the .scrollable class to make off-slide content available by scrolling. For example:
+
+```markdown
+## Slide Title {.scrollable}
+```
+
+## Slide transitions
+
+Edit the YAML to change the slide transitions:
+
+```markdown
+---
+title: "Presentation"
+format:
+  revealjs:
+    transition: slide
+    transition-speed: fast
+---
+```
+
+::: footer
+Learn more: [Slide Transitions](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions)
+:::
+
+## Slide transitions {.smaller}
+
+The next few slides will transition using the `slide` transition
+
+| Transition | Description                                                            |
+|------------|------------------------------------------------------------------------|
+| `none`     | No transition (default, switch instantly)                              |
+| `fade`     | Cross fade                                                             |
+| `slide`    | Slide horizontally                                                     |
+| `convex`   | Slide at a convex angle                                                |
+| `concave`  | Slide at a concave angle                                               |
+| `zoom`     | Scale the incoming slide so it grows in from the center of the screen. |
+
+## Tabsets {.smaller .scrollable transition="slide"}
+
+::: panel-tabset
+### Plot
+
+```{r}
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg, color = am)) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, method = "loess")
+```
+
+### Data
+
+```{r}
+knitr::kable(mtcars)
+```
+:::
+
+::: footer
+Learn more: [Tabsets](https://quarto.org/docs/presentations/revealjs/#tabsets)
+:::
+
+## Column layout {.smaller}
+
+Arrange content into columns of varying widths:
+
+::: columns
+::: {.column width="35%"}
+#### Motor Trend Car Road Tests
+
+The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="62%"}
+```{r}
+knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
+```
+:::
+:::
+
+::: footer
+Learn more: [Multiple Columns](https://quarto.org/docs/presentations/revealjs/#multiple-columns)
+:::
+
+## Line highlighting
+
+-   Highlight specific lines for emphasis
+-   Incrementally highlight additional lines
+
+``` {.python code-line-numbers="4-5|7|10"}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+::: footer
+Learn more: [Line Highlighting](https://quarto.org/docs/presentations/revealjs/#line-highlighting)
+:::
+
+## Executable code
+
+```{r}
+#| echo: true
+#| fig-width: 10
+#| fig-height: 4.5
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg, color = am)) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, method = "loess")
+```
+
+::: footer
+Learn more: [Executable Code](https://quarto.org/docs/presentations/revealjs/#executable-code)
+:::
+
+## LaTeX equations
+
+[MathJax](https://www.mathjax.org/) rendering of equations to HTML
+
+::: columns
+::: {.column width="40%"}
+``` tex
+\begin{gather*}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather*}
+
+\begin{align}
+a_{11}& =b_{11}&
+  a_{12}& =b_{12}\\
+a_{21}& =b_{21}&
+  a_{22}& =b_{22}+c_{22}
+\end{align}
+```
+:::
+
+::: {.column width="60%"}
+```{=tex}
+\begin{gather*}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather*}
+```
+```{=tex}
+\begin{align}
+a_{11}& =b_{11}&
+  a_{12}& =b_{12}\\
+a_{21}& =b_{21}&
+  a_{22}& =b_{22}+c_{22}
+\end{align}
+```
+:::
+:::
+
+::: footer
+Learn more: [LaTeX Equations](https://quarto.org/docs/authoring/markdown-basics.html#equations)
+:::
+
+## Incremental lists
+
+Lists can optionally be displayed incrementally:
+
+::: incremental
+-   First item
+-   Second item
+-   Third item
+:::
+
+. . .
+
+<br/> Insert pauses to make other types of content display incrementally.
+
+::: footer
+Learn more: [Incremental Lists](https://quarto.org/docs/presentations/revealjs/#incremental-lists)
+:::
+
+## Fragments
+
+Incremental text display and animation with fragments:
+
+<br/>
+
+::: {.fragment .fade-in}
+Fade in
+:::
+
+::: {.fragment .fade-up}
+Slide up while fading in
+:::
+
+::: {.fragment .fade-left}
+Slide left while fading in
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Fade in then semi out
+:::
+
+. . .
+
+::: {.fragment .strike}
+Strike
+:::
+
+::: {.fragment .highlight-red}
+Highlight red
+:::
+
+::: footer
+Learn more: [Fragments](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments)
+:::
+
+## Absolute position
+
+Position images or other elements at precise locations
+
+![](images/kitten-400-350.jpeg){.absolute top="170" left="30" width="400" height="400"}
+
+![](images/kitten-450-250.jpeg){.absolute .fragment top="150" right="80" width="450"}
+
+![](images/kitten-300-200.jpeg){.absolute .fragment bottom="110" right="130" width="300"}
+
+::: footer
+Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position)
+:::
+
+## Interactive slides {.smaller transition="slide"}
+
+Include Jupyter widgets and htmlwidgets in your presentations
+
+```{r}
+#| echo: false
+#| fig-height: 5
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+```
+
+::: footer
+Learn more: [Jupyter widgets](https://quarto.org/docs/interactive/widgets/jupyter.html), [htmlwidgets](https://quarto.org/docs/interactive/widgets/htmlwidgets.html)
+:::
+
+## Interactive slides {.smaller transition="slide"}
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 500
+
+library(shiny)
+library(bslib)
+
+# Define UI for app that draws a histogram ----
+ui <- page_sidebar(
+  sidebar = sidebar(open = "open",
+    numericInput("n", "Sample count", 100),
+    checkboxInput("pause", "Pause", FALSE),
+  ),
+  plotOutput("plot", width=1100)
+)
+
+server <- function(input, output, session) {
+  data <- reactive({
+    input$resample
+    if (!isTRUE(input$pause)) {
+      invalidateLater(1000)
+    }
+    rnorm(input$n)
+  })
+  
+  output$plot <- renderPlot({
+    hist(data(),
+      breaks = 40,
+      xlim = c(-2, 2),
+      ylim = c(0, 1),
+      lty = "blank",
+      xlab = "value",
+      freq = FALSE,
+      main = ""
+    )
+    
+    x <- seq(from = -2, to = 2, length.out = 500)
+    y <- dnorm(x)
+    lines(x, y, lwd=1.5)
+    
+    lwd <- 5
+    abline(v=0, col="red", lwd=lwd, lty=2)
+    abline(v=mean(data()), col="blue", lwd=lwd, lty=1)
+
+    legend(legend = c("Normal", "Mean", "Sample mean"),
+      col = c("black", "red", "blue"),
+      lty = c(1, 2, 1),
+      lwd = c(1, lwd, lwd),
+      x = 1,
+      y = 0.9
+    )
+  }, res=140)
+}
+
+# Create Shiny app ----
+shinyApp(ui = ui, server = server)
+```
+
+
+::: footer
+Learn more: [Observable](https://quarto.org/docs/interactive/ojs/), [Shiny](https://quarto.org/docs/interactive/shiny/), [Component Layout](https://quarto.org/docs/interactive/layout.html)
+:::
+
+## Your turn {background-color='{{< brand color primary >}}'}
+
+{{< include exercise-02.qmd >}}
+
+# Presenting slides
+
+## Easy navigation
+
+::: {style="margin-bottom: 0.9em;"}
+Quickly jump to other parts of your presentation
+:::
+
+::: {layout="[1, 20]"}
+![](images/presentation-menu.png){width="41"}
+
+Toggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.
+:::
+
+You can also press {{< kbd m >}} to toggle the menu open and closed.
+
+You can also press {{< kbd g >}} to toggle 'Jump To Slide' modal box to quickly go to one of your slide using its number or id.
+
+::: footer
+Learn more: [Navigation](/docs/presentations/revealjs/presenting.qmd#navigation-menu) / [Jump To Slide](/docs/presentations/revealjs/presenting.qmd#jump-to-slide)
+:::
+
+## Jump to slide
+
+::: {style="margin-bottom: 0.9em;"}
+Quickly jump to other parts of your presentation
+:::
+
+## Chalkboard {chalkboard-buttons="true"}
+
+::: {style="margin-bottom: 0.9em;"}
+Free form drawing and slide annotations
+:::
+
+::: {layout="[1, 20]"}
+![](images/presentation-chalkboard.png){width="41"}
+
+Use the chalkboard button at the bottom left of the slide to toggle the chalkboard.
+:::
+
+::: {layout="[1, 20]"}
+![](images/presentation-notes-canvas.png){width="41"}
+
+Use the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.
+:::
+
+You can also press {{< kbd b >}} to toggle the chalkboard or {{< kbd c >}} to toggle the notes canvas.
+
+::: footer
+Learn more: [Chalkboard](https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard)
+:::
+
+## Point of view
+
+press {{< kbd o >}} to toggle overview mode:
+
+![](images/overview-mode.png){.border}
+
+Hold down the {{< kbd Alt linux=Ctrl >}}/{{< kbd Option linux=Ctrl >}} and click on any element to zoom towards it---try it now on this slide.
+
+::: footer
+Learn more: [Overview Mode](https://quarto.org/docs/presentations/revealjs/presenting.html#overview-mode), [Slide Zoom](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-zoom)
+:::
+
+## Preview links
+
+Navigate to hyperlinks without disrupting the flow of your presentation.
+
+Use the `preview-links` option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:
+
+::: {style="text-align: center; margin-top: 1em"}
+[Matplotlib: Visualization with Python](https://matplotlib.org/){preview-link="true" style="text-align: center"}
+:::
+
+::: footer
+Learn more: [Preview Links](https://quarto.org/docs/presentations/revealjs/presenting.html#preview-links)
+:::
+
+
+## Speaker view
+
+press {{< kbd s >}} (or use the tools in presentation menu ![](images/navigation-menu-icon.png){style="padding-bottom: 1px; margin: 0" width="0.5em" height="0.5em"}) to open speaker view
+
+```markdown
+## Slide with speaker notes
+
+Slide content
+
+::: {.notes}
+Speaker notes go here.
+:::
+```
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+::: footer
+Learn more: [Speaker View](https://quarto.org/docs/presentations/revealjs/presenting.html#speaker-view)
+:::
+
+# Branding slides {background-color='{{< brand color foreground >}}'}
+
+## Themes
+
+10 Built-in themes 
+
+::: {layout-ncol="2"}
+![](images/moon.png)
+
+![](images/sky.png)
+:::
+
+::: footer
+Learn more: [Themes](https://quarto.org/docs/presentations/revealjs/themes.html)
+:::
+
+## reveal.js with brand.yml
+
+The `_brand.yml` file in the root directory of your project (with or without a `_quarto.yml` file) will automatically apply the brand to your `revealjs` documents.
+
+* The `revealjs` format does not support switching between light and dark modes.
+
+## Title slide background
+
+Add a custom background to the title slide using the `title-slide-attributes` key:
+
+```markdown
+---
+format: revealjs
+title-slide-attributes:
+    data-background-image: images/milky-way.jpeg
+    data-background-size: cover
+---
+```
+
+::: footer
+Learn more: [Custom Background](https://quarto.org/docs/presentations/revealjs/advanced.html#custom-background)
+:::
+
+## Slide backgrounds {background="#43464B"}
+
+Set the `background` attribute on a slide to change the background color (all CSS color formats are supported).
+
+Use `{{{< brand color COLOR_NAME BRAND_MODE >}}}` to return the brand color named `COLOR_NAME` as a string.
+
+````markdown
+---
+format: revealjs
+---
+
+## Slide Title {background-color='{{{< brand color primary >}}}'}
+````
+
+::: footer
+Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#color-backgrounds)
+:::
+
+## Media backgrounds {background="#43464B" background-image="images/milky-way.jpeg"}
+
+You can also use the following as a slide background:
+
+-   An image: `background-image`
+
+-   A video: `background-video`
+
+-   An iframe: `background-iframe`
+
+::: footer
+:::
+
+
+## And more...
+
+-   [Touch](https://quarto.org/docs/presentations/revealjs/advanced.html#touch-navigation) optimized (presentations look great on mobile, swipe to navigate slides)
+-   [Footer & Logo](https://quarto.org/docs/presentations/revealjs/#footer-logo) (optionally specify custom footer per-slide or hide global footer)
+-   [Auto-Slide](https://quarto.org/docs/presentations/revealjs/presenting.html#auto-slide) (step through slides automatically, without any user input)
+-   [Multiplex](https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex) (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).
+
+::: footer
+Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/)
+:::
+
+## Your turn {background-color='{{< brand color primary >}}'}
+
+{{< include exercise-03.qmd >}}
