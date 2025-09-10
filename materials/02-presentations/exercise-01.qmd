@@ -1,4 +1,5 @@
-* Turn your Quarto document into a `revealjs` presentation
-  * Change `html` to `revealjs` in the YAML heading
-* Add a section by using a first-level heading (`#`)
-* Render your document
+* Change the format: In your document's YAML header, change `format: html` to `format: revealjs`.
+* Add slides: Use first-level headings (`#`) to create a new slide. Use other Markdown headings and text for content on each slide.
+* Render: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.
+
+Note: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.

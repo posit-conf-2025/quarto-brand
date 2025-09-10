@@ -6,6 +6,8 @@ format:
       data-background-image: ../images/title-slide-light.svg
       data-background-color: "white"
       style: "text-align: right; left: 10%"
+filters:
+  - shinylive
 ---
 
 ## File formats
@@ -32,19 +34,25 @@ reveal.js presentations allow you to create stunning presentations on the web.
 
 …and much more
 
-# Anatomy of a Quarto presentation {background-color='{{< brand color foreground >}}'}
+# reveal.js basics {background-color='{{< brand color foreground >}}'}
 
-## Components
+## Converting to reveal.js
 
-1. Metadata: YAML
-2. Text: Markdown
-3. Code: Executed via knitr or jupyter
+Convert your document to a reveal.js presentation by editing `format` in the YAML heading:
 
-. . .
+```markdown
+format: revealjs
+```
 
-**Weave it all together**, and you have a beautiful, functional slide deck!
+::: footer
+Learn more: [Revealjs](https://quarto.org/docs/presentations/revealjs/)
+:::
 
 ## Example {auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width="40%"}
 
 ````{.markdown}
 ---
@@ -63,8 +71,23 @@ format: html
 - Get in bed
 - Count sheep
 ````
+:::
+
+::: {.column width="60%"}
+
+```{=html}
+<iframe src="./_example-01.html" width="100%" height="500"></iframe>
+```
+
+:::
+
+::::
 
 ## Example {auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width="40%"}
 
 ````{.markdown code-line-numbers=4}
 ---
@@ -83,8 +106,24 @@ format: revealjs
 - Get in bed
 - Count sheep
 ````
+ 
+:::
+
+::: {.column width="60%"}
+
+```{=html}
+<iframe src="./_example-02.html" width="100%" height="500"></iframe>
+```
+
+:::
+
+::::
 
 ## Example with sections {auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width="40%"}
 
 ````markdown
 ---
@@ -118,7 +157,23 @@ format: revealjs
 - Count sheep
 ````
 
+:::
+
+::: {.column width="60%"}
+
+```{=html}
+<iframe src="./_example-03.html" width="100%" height="500"></iframe>
+```
+
+:::
+
+::::
+
 ## Example with sections {auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width="40%"}
 
 ````markdown
 ---
@@ -136,9 +191,19 @@ format: revealjs
 - Count sheep
 ````
 
-## Your turn {background-color='{{< brand color primary >}}'}
+:::
 
-<br>
+::: {.column width="60%"}
+
+```{=html}
+<iframe src="./_example-04.html" width="100%" height="500"></iframe>
+```
+
+:::
+
+::::
+
+## Your turn {background-color='{{< brand color primary >}}'}
 
 {{< include exercise-01.qmd >}}
 
@@ -154,7 +219,21 @@ The quarto-revealjs-editable extension allows the repositioning and resizing of 
 Learn more: [quarto-revealjs-editable](https://github.com/EmilHvitfeldt/quarto-revealjs-editable)
 :::
 
-## Slide transitions 
+## Content overflow {.smaller}
+
+Use the `.smaller` class to use a smaller typeface so that more text fits on the slide. For example:
+
+```markdown
+## Slide Title {.smaller}
+```
+
+Use the .scrollable class to make off-slide content available by scrolling. For example:
+
+```markdown
+## Slide Title {.scrollable}
+```
+
+## Slide transitions
 
 Edit the YAML to change the slide transitions:
 
@@ -168,7 +247,11 @@ format:
 ---
 ```
 
-## Slide transitions 
+::: footer
+Learn more: [Slide Transitions](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions)
+:::
+
+## Slide transitions {.smaller}
 
 The next few slides will transition using the `slide` transition
 
@@ -180,10 +263,6 @@ The next few slides will transition using the `slide` transition
 | `convex`   | Slide at a convex angle                                                |
 | `concave`  | Slide at a concave angle                                               |
 | `zoom`     | Scale the incoming slide so it grows in from the center of the screen. |
-
-::: footer
-Learn more: [Slide Transitions](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions)
-:::
 
 ## Tabsets {.smaller .scrollable transition="slide"}
 
@@ -401,23 +480,72 @@ Learn more: [Jupyter widgets](https://quarto.org/docs/interactive/widgets/jupyte
 
 ## Interactive slides {.smaller transition="slide"}
 
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 500
+
+library(shiny)
+library(bslib)
+
+# Define UI for app that draws a histogram ----
+ui <- page_sidebar(
+  sidebar = sidebar(open = "open",
+    numericInput("n", "Sample count", 100),
+    checkboxInput("pause", "Pause", FALSE),
+  ),
+  plotOutput("plot", width=1100)
+)
+
+server <- function(input, output, session) {
+  data <- reactive({
+    input$resample
+    if (!isTRUE(input$pause)) {
+      invalidateLater(1000)
+    }
+    rnorm(input$n)
+  })
+  
+  output$plot <- renderPlot({
+    hist(data(),
+      breaks = 40,
+      xlim = c(-2, 2),
+      ylim = c(0, 1),
+      lty = "blank",
+      xlab = "value",
+      freq = FALSE,
+      main = ""
+    )
+    
+    x <- seq(from = -2, to = 2, length.out = 500)
+    y <- dnorm(x)
+    lines(x, y, lwd=1.5)
+    
+    lwd <- 5
+    abline(v=0, col="red", lwd=lwd, lty=2)
+    abline(v=mean(data()), col="blue", lwd=lwd, lty=1)
+
+    legend(legend = c("Normal", "Mean", "Sample mean"),
+      col = c("black", "red", "blue"),
+      lty = c(1, 2, 1),
+      lwd = c(1, lwd, lwd),
+      x = 1,
+      y = 0.9
+    )
+  }, res=140)
+}
+
+# Create Shiny app ----
+shinyApp(ui = ui, server = server)
+```
+
+
 ::: footer
 Learn more: [Observable](https://quarto.org/docs/interactive/ojs/), [Shiny](https://quarto.org/docs/interactive/shiny/), [Component Layout](https://quarto.org/docs/interactive/layout.html)
 :::
 
-## Preview links
+## Your turn {background-color='{{< brand color primary >}}'}
 
-Navigate to hyperlinks without disrupting the flow of your presentation.
-
-Use the `preview-links` option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:
-
-::: {style="text-align: center; margin-top: 1em"}
-[Matplotlib: Visualization with Python](https://matplotlib.org/){preview-link="true" style="text-align: center"}
-:::
-
-::: footer
-Learn more: [Preview Links](https://quarto.org/docs/presentations/revealjs/presenting.html#preview-links)
-:::
+{{< include exercise-02.qmd >}}
 
 # Presenting slides
 
@@ -483,6 +611,21 @@ Hold down the {{< kbd Alt linux=Ctrl >}}/{{< kbd Option linux=Ctrl >}} and click
 Learn more: [Overview Mode](https://quarto.org/docs/presentations/revealjs/presenting.html#overview-mode), [Slide Zoom](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-zoom)
 :::
 
+## Preview links
+
+Navigate to hyperlinks without disrupting the flow of your presentation.
+
+Use the `preview-links` option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:
+
+::: {style="text-align: center; margin-top: 1em"}
+[Matplotlib: Visualization with Python](https://matplotlib.org/){preview-link="true" style="text-align: center"}
+:::
+
+::: footer
+Learn more: [Preview Links](https://quarto.org/docs/presentations/revealjs/presenting.html#preview-links)
+:::
+
+
 ## Speaker view
 
 press {{< kbd s >}} (or use the tools in presentation menu ![](images/navigation-menu-icon.png){style="padding-bottom: 1px; margin: 0" width="0.5em" height="0.5em"}) to open speaker view
@@ -509,7 +652,7 @@ Learn more: [Speaker View](https://quarto.org/docs/presentations/revealjs/presen
 
 ## Themes
 
-10 Built-in Themes (or [create your own](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes))
+10 Built-in themes 
 
 ::: {layout-ncol="2"}
 ![](images/moon.png)
@@ -521,11 +664,28 @@ Learn more: [Speaker View](https://quarto.org/docs/presentations/revealjs/presen
 Learn more: [Themes](https://quarto.org/docs/presentations/revealjs/themes.html)
 :::
 
-## RevealJS with brand.yml
+## reveal.js with brand.yml
 
 The `_brand.yml` file in the root directory of your project (with or without a `_quarto.yml` file) will automatically apply the brand to your `revealjs` documents.
 
 * The `revealjs` format does not support switching between light and dark modes.
+
+## Title slide background
+
+Add a custom background to the title slide using the `title-slide-attributes` key:
+
+```markdown
+---
+format: revealjs
+title-slide-attributes:
+    data-background-image: images/milky-way.jpeg
+    data-background-size: cover
+---
+```
+
+::: footer
+Learn more: [Custom Background](https://quarto.org/docs/presentations/revealjs/advanced.html#custom-background)
+:::
 
 ## Slide backgrounds {background="#43464B"}
 
@@ -556,24 +716,10 @@ You can also use the following as a slide background:
 -   An iframe: `background-iframe`
 
 ::: footer
-Learn more: [Media Backgrounds](https://quarto.org/docs/presentations/revealjs/#image-backgrounds)
 :::
 
-## Title slide
 
-```markdown
----
-format: revealjs
-title-slide-attributes:
-    data-background-image: images/milky-way.jpeg
-    data-background-size: cover
----
-```
-
-
-
-
-## And More...
+## And more...
 
 -   [Touch](https://quarto.org/docs/presentations/revealjs/advanced.html#touch-navigation) optimized (presentations look great on mobile, swipe to navigate slides)
 -   [Footer & Logo](https://quarto.org/docs/presentations/revealjs/#footer-logo) (optionally specify custom footer per-slide or hide global footer)
@@ -583,3 +729,7 @@ title-slide-attributes:
 ::: footer
 Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/)
 :::
+
+## Your turn {background-color='{{< brand color primary >}}'}
+
+{{< include exercise-03.qmd >}}
