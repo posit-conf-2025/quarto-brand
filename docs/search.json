@@ -139,44 +139,44 @@
   {
     "objectID": "materials/02-presentations/slides.html#components",
     "href": "materials/02-presentations/slides.html#components",
-    "title": "QuartoPresentations",
+    "title": "Habits",
     "section": "Components",
-    "text": "Components\n\nMetadata: YAML\nText: Markdown\nCode: Executed via knitr or jupyter\n\n\nWeave it all together, and you have a beautiful, functional slide deck!"
+    "text": "Components\nConvert your document to revealjs by editing format in the YAML heading:\nformat: revealjs"
   },
   {
     "objectID": "materials/02-presentations/slides.html#example",
     "href": "materials/02-presentations/slides.html#example",
     "title": "QuartoPresentations",
     "section": "Example",
-    "text": "Example\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: html\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+    "text": "Example\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: html\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
   },
   {
     "objectID": "materials/02-presentations/slides.html#example-1",
     "href": "materials/02-presentations/slides.html#example-1",
     "title": "QuartoPresentations",
     "section": "Example",
-    "text": "Example\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+    "text": "Example\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
   },
   {
     "objectID": "materials/02-presentations/slides.html#example-with-sections",
     "href": "materials/02-presentations/slides.html#example-with-sections",
     "title": "QuartoPresentations",
     "section": "Example with sections",
-    "text": "Example with sections\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n# In the morning\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Breakfast\n\n- Eat eggs\n- Drink coffee\n\n# In the evening\n\n## Dinner\n\n- Eat spaghetti\n- Drink wine\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+    "text": "Example with sections\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n# In the morning\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Breakfast\n\n- Eat eggs\n- Drink coffee\n\n# In the evening\n\n## Dinner\n\n- Eat spaghetti\n- Drink wine\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
   },
   {
     "objectID": "materials/02-presentations/slides.html#example-with-sections-1",
     "href": "materials/02-presentations/slides.html#example-with-sections-1",
     "title": "QuartoPresentations",
     "section": "Example with sections",
-    "text": "Example with sections\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n- Turn off alarm\n- Get out of bed\n\n---\n\n- Get in bed\n- Count sheep"
+    "text": "Example with sections\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n- Turn off alarm\n- Get out of bed\n\n---\n\n- Get in bed\n- Count sheep"
   },
   {
     "objectID": "materials/02-presentations/slides.html#your-turn",
     "href": "materials/02-presentations/slides.html#your-turn",
     "title": "QuartoPresentations",
     "section": "Your turn",
-    "text": "Your turn\n\n\nTurn your Quarto document into a revealjs presentation\n\nChange html to revealjs in the YAML heading\n\nAdd a section by using a first-level heading (#)\nRender your document"
+    "text": "Your turn\n\nChange the format: In your document’s YAML header, change format: html to format: revealjs.\nAdd slides: Use first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nRender: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.\n\nNote: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations."
   },
   {
     "objectID": "materials/02-presentations/slides.html#multiple-columns",
@@ -197,7 +197,7 @@
     "href": "materials/02-presentations/slides.html#line-highlighting",
     "title": "QuartoPresentations",
     "section": "Line highlighting",
-    "text": "Line highlighting\n```{.python code-line-numbers=\"1-2\"}\nimport numpy as np\nimport matplotlib.pyplot as plt\n```"
+    "text": "Line highlighting\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\nLearn more: Line Highlighting"
   },
   {
     "objectID": "materials/02-presentations/slides.html#incremental-content",
@@ -233,5 +233,287 @@
     "title": "QuartoPresentations",
     "section": "Shortcodes in slides",
     "text": "Shortcodes in slides\nUse {{&lt; brand color COLOR_NAME BRAND_MODE &gt;}} to return the brand color named COLOR_NAME as a string.\n---\nformat: revealjs\n---\n\n## Slide Title {background-color='{{&lt; brand color primary &gt;}}'}"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#reveal.js",
+    "href": "materials/02-presentations/slides.html#reveal.js",
+    "title": "QuartoPresentations",
+    "section": "reveal.js",
+    "text": "reveal.js\nreveal.js presentations allow you to create stunning presentations on the web.\n\nPresent code and LaTeX equations\nInclude computations in slide output\nAdd image, video, and iFrame backgrounds\nAdd fancy transitions and animations\nActivate scroll view\n\n…and much more"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#editing-slides",
+    "href": "materials/02-presentations/slides.html#editing-slides",
+    "title": "QuartoPresentations",
+    "section": "Editing slides",
+    "text": "Editing slides\nThe quarto-revealjs-editable extension allows the repositioning and resizing of images and text divs directly in the previewed slides.\n\n\nLearn more: quarto-revealjs-editable"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#slide-transitions",
+    "href": "materials/02-presentations/slides.html#slide-transitions",
+    "title": "QuartoPresentations",
+    "section": "Slide transitions",
+    "text": "Slide transitions\nEdit the YAML to change the slide transitions:\n---\ntitle: \"Presentation\"\nformat:\n  revealjs:\n    transition: slide\n    transition-speed: fast\n---\n\nLearn more: Slide Transitions"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#slide-transitions-1",
+    "href": "materials/02-presentations/slides.html#slide-transitions-1",
+    "title": "QuartoPresentations",
+    "section": "Slide transitions",
+    "text": "Slide transitions\nThe next few slides will transition using the slide transition\n\n\n\n\n\n\n\nTransition\nDescription\n\n\n\n\nnone\nNo transition (default, switch instantly)\n\n\nfade\nCross fade\n\n\nslide\nSlide horizontally\n\n\nconvex\nSlide at a convex angle\n\n\nconcave\nSlide at a concave angle\n\n\nzoom\nScale the incoming slide so it grows in from the center of the screen."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#tabsets",
+    "href": "materials/02-presentations/slides.html#tabsets",
+    "title": "QuartoPresentations",
+    "section": "Tabsets",
+    "text": "Tabsets\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nMazda RX4\n21.0\n6\n160.0\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160.0\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nDatsun 710\n22.8\n4\n108.0\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nHornet 4 Drive\n21.4\n6\n258.0\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nHornet Sportabout\n18.7\n8\n360.0\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nValiant\n18.1\n6\n225.0\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\nDuster 360\n14.3\n8\n360.0\n245\n3.21\n3.570\n15.84\n0\n0\n3\n4\n\n\nMerc 240D\n24.4\n4\n146.7\n62\n3.69\n3.190\n20.00\n1\n0\n4\n2\n\n\nMerc 230\n22.8\n4\n140.8\n95\n3.92\n3.150\n22.90\n1\n0\n4\n2\n\n\nMerc 280\n19.2\n6\n167.6\n123\n3.92\n3.440\n18.30\n1\n0\n4\n4\n\n\nMerc 280C\n17.8\n6\n167.6\n123\n3.92\n3.440\n18.90\n1\n0\n4\n4\n\n\nMerc 450SE\n16.4\n8\n275.8\n180\n3.07\n4.070\n17.40\n0\n0\n3\n3\n\n\nMerc 450SL\n17.3\n8\n275.8\n180\n3.07\n3.730\n17.60\n0\n0\n3\n3\n\n\nMerc 450SLC\n15.2\n8\n275.8\n180\n3.07\n3.780\n18.00\n0\n0\n3\n3\n\n\nCadillac Fleetwood\n10.4\n8\n472.0\n205\n2.93\n5.250\n17.98\n0\n0\n3\n4\n\n\nLincoln Continental\n10.4\n8\n460.0\n215\n3.00\n5.424\n17.82\n0\n0\n3\n4\n\n\nChrysler Imperial\n14.7\n8\n440.0\n230\n3.23\n5.345\n17.42\n0\n0\n3\n4\n\n\nFiat 128\n32.4\n4\n78.7\n66\n4.08\n2.200\n19.47\n1\n1\n4\n1\n\n\nHonda Civic\n30.4\n4\n75.7\n52\n4.93\n1.615\n18.52\n1\n1\n4\n2\n\n\nToyota Corolla\n33.9\n4\n71.1\n65\n4.22\n1.835\n19.90\n1\n1\n4\n1\n\n\nToyota Corona\n21.5\n4\n120.1\n97\n3.70\n2.465\n20.01\n1\n0\n3\n1\n\n\nDodge Challenger\n15.5\n8\n318.0\n150\n2.76\n3.520\n16.87\n0\n0\n3\n2\n\n\nAMC Javelin\n15.2\n8\n304.0\n150\n3.15\n3.435\n17.30\n0\n0\n3\n2\n\n\nCamaro Z28\n13.3\n8\n350.0\n245\n3.73\n3.840\n15.41\n0\n0\n3\n4\n\n\nPontiac Firebird\n19.2\n8\n400.0\n175\n3.08\n3.845\n17.05\n0\n0\n3\n2\n\n\nFiat X1-9\n27.3\n4\n79.0\n66\n4.08\n1.935\n18.90\n1\n1\n4\n1\n\n\nPorsche 914-2\n26.0\n4\n120.3\n91\n4.43\n2.140\n16.70\n0\n1\n5\n2\n\n\nLotus Europa\n30.4\n4\n95.1\n113\n3.77\n1.513\n16.90\n1\n1\n5\n2\n\n\nFord Pantera L\n15.8\n8\n351.0\n264\n4.22\n3.170\n14.50\n0\n1\n5\n4\n\n\nFerrari Dino\n19.7\n6\n145.0\n175\n3.62\n2.770\n15.50\n0\n1\n5\n6\n\n\nMaserati Bora\n15.0\n8\n301.0\n335\n3.54\n3.570\n14.60\n0\n1\n5\n8\n\n\nVolvo 142E\n21.4\n4\n121.0\n109\n4.11\n2.780\n18.60\n1\n1\n4\n2\n\n\n\n\n\n\n\n\n\nLearn more: Tabsets"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#column-layout",
+    "href": "materials/02-presentations/slides.html#column-layout",
+    "title": "QuartoPresentations",
+    "section": "Column layout",
+    "text": "Column layout\nArrange content into columns of varying widths:\n\n\nMotor Trend Car Road Tests\nThe data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\nHornet 4 Drive\n21.4\n6\n258\n110\n3.215\n\n\nHornet Sportabout\n18.7\n8\n360\n175\n3.440\n\n\nValiant\n18.1\n6\n225\n105\n3.460\n\n\n\n\n\n\n\nLearn more: Multiple Columns"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#executable-code",
+    "href": "materials/02-presentations/slides.html#executable-code",
+    "title": "QuartoPresentations",
+    "section": "Executable code",
+    "text": "Executable code\n\nlibrary(ggplot2)\nggplot(mtcars, aes(hp, mpg, color = am)) +\n  geom_point() +\n  geom_smooth(formula = y ~ x, method = \"loess\")\n\n\n\nLearn more: Executable Code"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#latex-equations",
+    "href": "materials/02-presentations/slides.html#latex-equations",
+    "title": "QuartoPresentations",
+    "section": "LaTeX equations",
+    "text": "LaTeX equations\nMathJax rendering of equations to HTML\n\n\n\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\n\n\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\n\n\\[\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\\]\n\\[\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\\]\n\n\nLearn more: LaTeX Equations"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#incremental-lists",
+    "href": "materials/02-presentations/slides.html#incremental-lists",
+    "title": "QuartoPresentations",
+    "section": "Incremental lists",
+    "text": "Incremental lists\nLists can optionally be displayed incrementally:\n\nFirst item\nSecond item\nThird item\n\n\n Insert pauses to make other types of content display incrementally.\n\nLearn more: Incremental Lists"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#fragments",
+    "href": "materials/02-presentations/slides.html#fragments",
+    "title": "QuartoPresentations",
+    "section": "Fragments",
+    "text": "Fragments\nIncremental text display and animation with fragments:\n\n\nFade in\n\n\nSlide up while fading in\n\n\nSlide left while fading in\n\n\nFade in then semi out\n\n\n\nStrike\n\n\nHighlight red\n\n\nLearn more: Fragments"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#absolute-position",
+    "href": "materials/02-presentations/slides.html#absolute-position",
+    "title": "QuartoPresentations",
+    "section": "Absolute position",
+    "text": "Absolute position\nPosition images or other elements at precise locations\n\n\n\n\nLearn more: Absolute Position"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#interactive-slides",
+    "href": "materials/02-presentations/slides.html#interactive-slides",
+    "title": "QuartoPresentations",
+    "section": "Interactive slides",
+    "text": "Interactive slides\nInclude Jupyter widgets and htmlwidgets in your presentations\n\n\n\n\n\n\n\nLearn more: Jupyter widgets, htmlwidgets"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#interactive-slides-1",
+    "href": "materials/02-presentations/slides.html#interactive-slides-1",
+    "title": "QuartoPresentations",
+    "section": "Interactive slides",
+    "text": "Interactive slides\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\nlibrary(bslib)\n\n# Define UI for app that draws a histogram ----\nui &lt;- page_sidebar(\n  sidebar = sidebar(open = \"open\",\n    numericInput(\"n\", \"Sample count\", 100),\n    checkboxInput(\"pause\", \"Pause\", FALSE),\n  ),\n  plotOutput(\"plot\", width=1100)\n)\n\nserver &lt;- function(input, output, session) {\n  data &lt;- reactive({\n    input$resample\n    if (!isTRUE(input$pause)) {\n      invalidateLater(1000)\n    }\n    rnorm(input$n)\n  })\n  \n  output$plot &lt;- renderPlot({\n    hist(data(),\n      breaks = 40,\n      xlim = c(-2, 2),\n      ylim = c(0, 1),\n      lty = \"blank\",\n      xlab = \"value\",\n      freq = FALSE,\n      main = \"\"\n    )\n    \n    x &lt;- seq(from = -2, to = 2, length.out = 500)\n    y &lt;- dnorm(x)\n    lines(x, y, lwd=1.5)\n    \n    lwd &lt;- 5\n    abline(v=0, col=\"red\", lwd=lwd, lty=2)\n    abline(v=mean(data()), col=\"blue\", lwd=lwd, lty=1)\n\n    legend(legend = c(\"Normal\", \"Mean\", \"Sample mean\"),\n      col = c(\"black\", \"red\", \"blue\"),\n      lty = c(1, 2, 1),\n      lwd = c(1, lwd, lwd),\n      x = 1,\n      y = 0.9\n    )\n  }, res=140)\n}\n\n# Create Shiny app ----\nshinyApp(ui = ui, server = server)\n\nLearn more: Observable, Shiny, Component Layout"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#preview-links",
+    "href": "materials/02-presentations/slides.html#preview-links",
+    "title": "QuartoPresentations",
+    "section": "Preview links",
+    "text": "Preview links\nNavigate to hyperlinks without disrupting the flow of your presentation.\nUse the preview-links option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:\n\nMatplotlib: Visualization with Python\n\n\nLearn more: Preview Links"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#easy-navigation",
+    "href": "materials/02-presentations/slides.html#easy-navigation",
+    "title": "QuartoPresentations",
+    "section": "Easy navigation",
+    "text": "Easy navigation\n\nQuickly jump to other parts of your presentation\n\n\n\n\n\n\n\nToggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.\n\n\n\nYou can also press mm to toggle the menu open and closed.\nYou can also press gg to toggle ‘Jump To Slide’ modal box to quickly go to one of your slide using its number or id.\n\nLearn more: Navigation / Jump To Slide"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#jump-to-slide",
+    "href": "materials/02-presentations/slides.html#jump-to-slide",
+    "title": "QuartoPresentations",
+    "section": "Jump to slide",
+    "text": "Jump to slide\n\nQuickly jump to other parts of your presentation"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#chalkboard",
+    "href": "materials/02-presentations/slides.html#chalkboard",
+    "title": "QuartoPresentations",
+    "section": "Chalkboard",
+    "text": "Chalkboard\n\nFree form drawing and slide annotations\n\n\n\n\n\n\n\nUse the chalkboard button at the bottom left of the slide to toggle the chalkboard.\n\n\n\n\n\n\n\n\n\nUse the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.\n\n\n\nYou can also press bb to toggle the chalkboard or cc to toggle the notes canvas.\n\nLearn more: Chalkboard"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#point-of-view",
+    "href": "materials/02-presentations/slides.html#point-of-view",
+    "title": "QuartoPresentations",
+    "section": "Point of view",
+    "text": "Point of view\npress oo to toggle overview mode:\n\nHold down the AltAlt/OptionOption and click on any element to zoom towards it—try it now on this slide.\n\nLearn more: Overview Mode, Slide Zoom"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#speaker-view",
+    "href": "materials/02-presentations/slides.html#speaker-view",
+    "title": "QuartoPresentations",
+    "section": "Speaker view",
+    "text": "Speaker view\npress ss (or use the tools in presentation menu ) to open speaker view\n## Slide with speaker notes\n\nSlide content\n\n::: {.notes}\nSpeaker notes go here.\n:::\n\nSpeaker notes go here.\n\n\nLearn more: Speaker View"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#themes",
+    "href": "materials/02-presentations/slides.html#themes",
+    "title": "QuartoPresentations",
+    "section": "Themes",
+    "text": "Themes\n10 Built-in themes\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Themes"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#revealjs-with-brand.yml",
+    "href": "materials/02-presentations/slides.html#revealjs-with-brand.yml",
+    "title": "QuartoPresentations",
+    "section": "RevealJS with brand.yml",
+    "text": "RevealJS with brand.yml\nThe _brand.yml file in the root directory of your project (with or without a _quarto.yml file) will automatically apply the brand to your revealjs documents.\n\nThe revealjs format does not support switching between light and dark modes."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#slide-backgrounds",
+    "href": "materials/02-presentations/slides.html#slide-backgrounds",
+    "title": "QuartoPresentations",
+    "section": "Slide backgrounds",
+    "text": "Slide backgrounds\nSet the background attribute on a slide to change the background color (all CSS color formats are supported).\nUse {{&lt; brand color COLOR_NAME BRAND_MODE &gt;}} to return the brand color named COLOR_NAME as a string.\n---\nformat: revealjs\n---\n\n## Slide Title {background-color='{{&lt; brand color primary &gt;}}'}\n\nLearn more: Slide Backgrounds"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#media-backgrounds",
+    "href": "materials/02-presentations/slides.html#media-backgrounds",
+    "title": "QuartoPresentations",
+    "section": "Media backgrounds",
+    "text": "Media backgrounds\nYou can also use the following as a slide background:\n\nAn image: background-image\nA video: background-video\nAn iframe: background-iframe"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#title-slide",
+    "href": "materials/02-presentations/slides.html#title-slide",
+    "title": "QuartoPresentations",
+    "section": "Title slide",
+    "text": "Title slide\nAdd a custom background to the title slide using the title-slide-attributes key:\n---\nformat: revealjs\ntitle-slide-attributes:\n    data-background-image: images/milky-way.jpeg\n    data-background-size: cover\n---\n\nLearn more: Custom Background"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#and-more",
+    "href": "materials/02-presentations/slides.html#and-more",
+    "title": "QuartoPresentations",
+    "section": "And more…",
+    "text": "And more…\n\nTouch optimized (presentations look great on mobile, swipe to navigate slides)\nFooter & Logo (optionally specify custom footer per-slide or hide global footer)\nAuto-Slide (step through slides automatically, without any user input)\nMultiplex (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).\n\n\nLearn more: Quarto Presentations"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#getting-up",
+    "href": "materials/02-presentations/slides.html#getting-up",
+    "title": "Habits",
+    "section": "Getting up",
+    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#going-to-sleep",
+    "href": "materials/02-presentations/slides.html#going-to-sleep",
+    "title": "Habits",
+    "section": "Going to sleep",
+    "text": "Going to sleep\n\nGet in bed\nCount sheep"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#converting-to-reveal.js",
+    "href": "materials/02-presentations/slides.html#converting-to-reveal.js",
+    "title": "QuartoPresentations",
+    "section": "Converting to reveal.js",
+    "text": "Converting to reveal.js\nConvert your document to a reveal.js presentation by editing format in the YAML heading:\nformat: revealjs\n\nLearn more: Revealjs"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#your-turn-1",
+    "href": "materials/02-presentations/slides.html#your-turn-1",
+    "title": "QuartoPresentations",
+    "section": "Your turn",
+    "text": "Your turn\n\nShrink the heading: Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nCreate two columns: Place your plot and table side-by-side. Adjust the percentages as needed.\nAdd tabsets: Use ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nAdd a transition: To improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#reveal.js-with-brand.yml",
+    "href": "materials/02-presentations/slides.html#reveal.js-with-brand.yml",
+    "title": "QuartoPresentations",
+    "section": "reveal.js with brand.yml",
+    "text": "reveal.js with brand.yml\nThe _brand.yml file in the root directory of your project (with or without a _quarto.yml file) will automatically apply the brand to your revealjs documents.\n\nThe revealjs format does not support switching between light and dark modes."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#content-overflow",
+    "href": "materials/02-presentations/slides.html#content-overflow",
+    "title": "QuartoPresentations",
+    "section": "Content overflow",
+    "text": "Content overflow\nUse the .smaller class to use a smaller typeface so that more text fits on the slide. For example:\n## Slide Title {.smaller}\nUse the .scrollable class to make off-slide content available by scrolling. For example:\n## Slide Title {.scrollable}"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#title-slide-background",
+    "href": "materials/02-presentations/slides.html#title-slide-background",
+    "title": "QuartoPresentations",
+    "section": "Title slide background",
+    "text": "Title slide background\nAdd a custom background to the title slide using the title-slide-attributes key:\n---\nformat: revealjs\ntitle-slide-attributes:\n    data-background-image: images/milky-way.jpeg\n    data-background-size: cover\n---\n\nLearn more: Custom Background"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#your-turn-2",
+    "href": "materials/02-presentations/slides.html#your-turn-2",
+    "title": "QuartoPresentations",
+    "section": "Your turn",
+    "text": "Your turn\n\nChange the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that it uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary."
+  },
+  {
+    "objectID": "materials/02-presentations/index.html",
+    "href": "materials/02-presentations/index.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Presentations"
+    ]
+  },
+  {
+    "objectID": "materials/02-presentations/index.html#slides",
+    "href": "materials/02-presentations/index.html#slides",
+    "title": "Presentations",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Presentations"
+    ]
+  },
+  {
+    "objectID": "materials/02-presentations/exercise-02.html",
+    "href": "materials/02-presentations/exercise-02.html",
+    "title": "",
+    "section": "",
+    "text": "Shrink the heading: Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nCreate two columns: Place your plot and table side-by-side. Adjust the percentages as needed.\nAdd tabsets: Use ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nAdd a transition: To improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom."
+  },
+  {
+    "objectID": "materials/02-presentations/exercise-03.html",
+    "href": "materials/02-presentations/exercise-03.html",
+    "title": "",
+    "section": "",
+    "text": "Change the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that it uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary."
+  },
+  {
+    "objectID": "materials/02-presentations/exercise-01.html",
+    "href": "materials/02-presentations/exercise-01.html",
+    "title": "",
+    "section": "",
+    "text": "Change the format: In your document’s YAML header, change format: html to format: revealjs.\nAdd slides: Use first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nRender: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.\n\nNote: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations."
+  },
+  {
+    "objectID": "materials/02-presentations/index.html#exercises",
+    "href": "materials/02-presentations/index.html#exercises",
+    "title": "Presentations",
+    "section": "Exercises",
+    "text": "Exercises\n\nExercise 1\n\nChange the format: In your document’s YAML header, change format: html to format: revealjs.\nAdd slides: Use first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nRender: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.\n\nNote: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.\n\n\nExercise 2\n\nShrink the heading: Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nCreate two columns: Place your plot and table side-by-side. Adjust the percentages as needed.\nAdd tabsets: Use ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nAdd a transition: To improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom.\n\n\n\nExercise 3\n\nChange the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that it uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary.",
+    "crumbs": [
+      "Presentations"
+    ]
   }
 ]

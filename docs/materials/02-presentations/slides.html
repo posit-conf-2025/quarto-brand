@@ -7,7 +7,14 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<meta name="shinylive:serviceworker_dir" content="../..">
+<script src="../../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/load-shinylive-sw.js" type="module"></script>
+<script src="../../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/run-python-blocks.js" type="module"></script>
+<link href="../../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/shinylive.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.23">
 
   <title>Quarto Presentations</title>
@@ -187,6 +194,16 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+  <script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="../../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+  <script src="../../site_libs/leaflet-1.3.1/leaflet.js"></script>
+  <link href="../../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+  <script src="../../site_libs/proj4-2.6.2/proj4.min.js"></script>
+  <script src="../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+  <link href="../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+  <script src="../../site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -211,46 +228,39 @@
 <p>brand.yml is currently supported only in <code>revealjs</code>.</p>
 </div>
 </section>
+<section id="reveal.js" class="slide level2">
+<h2>reveal.js</h2>
+<p>reveal.js presentations allow you to create stunning presentations on the web.</p>
+<ul>
+<li>Present code and LaTeX equations</li>
+<li>Include computations in slide output</li>
+<li>Add image, video, and iFrame backgrounds</li>
+<li>Add fancy transitions and animations</li>
+<li>Activate scroll view</li>
+</ul>
+<p>…and much more</p>
+</section>
 <section>
-<section id="anatomy-of-a-quarto-presentation" class="title-slide slide level1 center" data-background-color="#223e50">
-<h1>Anatomy of a Quarto presentation</h1>
+<section id="reveal.js-basics" class="title-slide slide level1 center" data-background-color="#223e50">
+<h1>reveal.js basics</h1>
 
 </section>
-<section id="components" class="slide level2">
-<h2>Components</h2>
-<ol type="1">
-<li>Metadata: YAML</li>
-<li>Text: Markdown</li>
-<li>Code: Executed via knitr or jupyter</li>
-</ol>
-<div class="fragment">
-<p><strong>Weave it all together</strong>, and you have a beautiful, functional slide deck!</p>
+<section id="converting-to-reveal.js" class="slide level2">
+<h2>Converting to reveal.js</h2>
+<p>Convert your document to a reveal.js presentation by editing <code>format</code> in the YAML heading:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a></a><span class="an">format:</span><span class="co"> revealjs</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/">Revealjs</a></p>
 </div>
 </section>
 <section id="example" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Example</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb1-1" class="hljs-ln-code"><a></a><span class="co">---</span></span>
-<span id="cb1-2" class="hljs-ln-code"><a></a><span class="an">title:</span><span class="co"> "Habits"</span></span>
-<span id="cb1-3" class="hljs-ln-code"><a></a><span class="an">author:</span><span class="co"> "John Doe"</span></span>
-<span id="cb1-4" class="hljs-ln-code"><a></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb1-5" class="hljs-ln-code"><a></a><span class="co">---</span></span>
-<span id="cb1-6" class="hljs-ln-code"><a></a></span>
-<span id="cb1-7" class="hljs-ln-code"><a></a><span class="fu">## Getting up</span></span>
-<span id="cb1-8" class="hljs-ln-code"><a></a></span>
-<span id="cb1-9" class="hljs-ln-code"><a></a><span class="ss">- </span>Turn off alarm</span>
-<span id="cb1-10" class="hljs-ln-code"><a></a><span class="ss">- </span>Get out of bed</span>
-<span id="cb1-11" class="hljs-ln-code"><a></a></span>
-<span id="cb1-12" class="hljs-ln-code"><a></a><span class="fu">## Going to sleep</span></span>
-<span id="cb1-13" class="hljs-ln-code"><a></a></span>
-<span id="cb1-14" class="hljs-ln-code"><a></a><span class="ss">- </span>Get in bed</span>
-<span id="cb1-15" class="hljs-ln-code"><a></a><span class="ss">- </span>Count sheep</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="example-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Example</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-code-line-numbers="4"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb2-1" class="hljs-ln-code"><a></a><span class="co">---</span></span>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb2-1" class="hljs-ln-code"><a></a><span class="co">---</span></span>
 <span id="cb2-2" class="hljs-ln-code"><a></a><span class="an">title:</span><span class="co"> "Habits"</span></span>
 <span id="cb2-3" class="hljs-ln-code"><a></a><span class="an">author:</span><span class="co"> "John Doe"</span></span>
-<span id="cb2-4" class="hljs-ln-code"><a></a><span class="an">format:</span><span class="co"> revealjs</span></span>
+<span id="cb2-4" class="hljs-ln-code"><a></a><span class="an">format:</span><span class="co"> html</span></span>
 <span id="cb2-5" class="hljs-ln-code"><a></a><span class="co">---</span></span>
 <span id="cb2-6" class="hljs-ln-code"><a></a></span>
 <span id="cb2-7" class="hljs-ln-code"><a></a><span class="fu">## Getting up</span></span>
@@ -262,163 +272,1170 @@
 <span id="cb2-13" class="hljs-ln-code"><a></a></span>
 <span id="cb2-14" class="hljs-ln-code"><a></a><span class="ss">- </span>Get in bed</span>
 <span id="cb2-15" class="hljs-ln-code"><a></a><span class="ss">- </span>Count sheep</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:60%;">
+<iframe src="./_example-01.html" width="100%" height="500"></iframe>
+</div></div>
 </section>
-<section id="example-with-sections" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Example with sections</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb3-1" class="hljs-ln-code"><a></a><span class="co">---</span></span>
+<section id="example-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Example</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-code-line-numbers="4"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb3-1" class="hljs-ln-code"><a></a><span class="co">---</span></span>
 <span id="cb3-2" class="hljs-ln-code"><a></a><span class="an">title:</span><span class="co"> "Habits"</span></span>
 <span id="cb3-3" class="hljs-ln-code"><a></a><span class="an">author:</span><span class="co"> "John Doe"</span></span>
 <span id="cb3-4" class="hljs-ln-code"><a></a><span class="an">format:</span><span class="co"> revealjs</span></span>
 <span id="cb3-5" class="hljs-ln-code"><a></a><span class="co">---</span></span>
 <span id="cb3-6" class="hljs-ln-code"><a></a></span>
-<span id="cb3-7" class="hljs-ln-code"><a></a><span class="fu"># In the morning</span></span>
+<span id="cb3-7" class="hljs-ln-code"><a></a><span class="fu">## Getting up</span></span>
 <span id="cb3-8" class="hljs-ln-code"><a></a></span>
-<span id="cb3-9" class="hljs-ln-code"><a></a><span class="fu">## Getting up</span></span>
-<span id="cb3-10" class="hljs-ln-code"><a></a></span>
-<span id="cb3-11" class="hljs-ln-code"><a></a><span class="ss">- </span>Turn off alarm</span>
-<span id="cb3-12" class="hljs-ln-code"><a></a><span class="ss">- </span>Get out of bed</span>
+<span id="cb3-9" class="hljs-ln-code"><a></a><span class="ss">- </span>Turn off alarm</span>
+<span id="cb3-10" class="hljs-ln-code"><a></a><span class="ss">- </span>Get out of bed</span>
+<span id="cb3-11" class="hljs-ln-code"><a></a></span>
+<span id="cb3-12" class="hljs-ln-code"><a></a><span class="fu">## Going to sleep</span></span>
 <span id="cb3-13" class="hljs-ln-code"><a></a></span>
-<span id="cb3-14" class="hljs-ln-code"><a></a><span class="fu">## Breakfast</span></span>
-<span id="cb3-15" class="hljs-ln-code"><a></a></span>
-<span id="cb3-16" class="hljs-ln-code"><a></a><span class="ss">- </span>Eat eggs</span>
-<span id="cb3-17" class="hljs-ln-code"><a></a><span class="ss">- </span>Drink coffee</span>
-<span id="cb3-18" class="hljs-ln-code"><a></a></span>
-<span id="cb3-19" class="hljs-ln-code"><a></a><span class="fu"># In the evening</span></span>
-<span id="cb3-20" class="hljs-ln-code"><a></a></span>
-<span id="cb3-21" class="hljs-ln-code"><a></a><span class="fu">## Dinner</span></span>
-<span id="cb3-22" class="hljs-ln-code"><a></a></span>
-<span id="cb3-23" class="hljs-ln-code"><a></a><span class="ss">- </span>Eat spaghetti</span>
-<span id="cb3-24" class="hljs-ln-code"><a></a><span class="ss">- </span>Drink wine</span>
-<span id="cb3-25" class="hljs-ln-code"><a></a></span>
-<span id="cb3-26" class="hljs-ln-code"><a></a><span class="fu">## Going to sleep</span></span>
-<span id="cb3-27" class="hljs-ln-code"><a></a></span>
-<span id="cb3-28" class="hljs-ln-code"><a></a><span class="ss">- </span>Get in bed</span>
-<span id="cb3-29" class="hljs-ln-code"><a></a><span class="ss">- </span>Count sheep</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-14" class="hljs-ln-code"><a></a><span class="ss">- </span>Get in bed</span>
+<span id="cb3-15" class="hljs-ln-code"><a></a><span class="ss">- </span>Count sheep</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:60%;">
+<iframe src="./_example-02.html" width="100%" height="500"></iframe>
+</div></div>
 </section>
-<section id="example-with-sections-1" class="slide level2" data-auto-animate="true">
+<section id="example-with-sections" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Example with sections</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb4-1" class="hljs-ln-code"><a></a><span class="co">---</span></span>
 <span id="cb4-2" class="hljs-ln-code"><a></a><span class="an">title:</span><span class="co"> "Habits"</span></span>
 <span id="cb4-3" class="hljs-ln-code"><a></a><span class="an">author:</span><span class="co"> "John Doe"</span></span>
 <span id="cb4-4" class="hljs-ln-code"><a></a><span class="an">format:</span><span class="co"> revealjs</span></span>
 <span id="cb4-5" class="hljs-ln-code"><a></a><span class="co">---</span></span>
 <span id="cb4-6" class="hljs-ln-code"><a></a></span>
-<span id="cb4-7" class="hljs-ln-code"><a></a><span class="ss">- </span>Turn off alarm</span>
-<span id="cb4-8" class="hljs-ln-code"><a></a><span class="ss">- </span>Get out of bed</span>
-<span id="cb4-9" class="hljs-ln-code"><a></a></span>
-<span id="cb4-10" class="hljs-ln-code"><a></a>---</span>
-<span id="cb4-11" class="hljs-ln-code"><a></a></span>
-<span id="cb4-12" class="hljs-ln-code"><a></a><span class="ss">- </span>Get in bed</span>
-<span id="cb4-13" class="hljs-ln-code"><a></a><span class="ss">- </span>Count sheep</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-7" class="hljs-ln-code"><a></a><span class="fu"># In the morning</span></span>
+<span id="cb4-8" class="hljs-ln-code"><a></a></span>
+<span id="cb4-9" class="hljs-ln-code"><a></a><span class="fu">## Getting up</span></span>
+<span id="cb4-10" class="hljs-ln-code"><a></a></span>
+<span id="cb4-11" class="hljs-ln-code"><a></a><span class="ss">- </span>Turn off alarm</span>
+<span id="cb4-12" class="hljs-ln-code"><a></a><span class="ss">- </span>Get out of bed</span>
+<span id="cb4-13" class="hljs-ln-code"><a></a></span>
+<span id="cb4-14" class="hljs-ln-code"><a></a><span class="fu">## Breakfast</span></span>
+<span id="cb4-15" class="hljs-ln-code"><a></a></span>
+<span id="cb4-16" class="hljs-ln-code"><a></a><span class="ss">- </span>Eat eggs</span>
+<span id="cb4-17" class="hljs-ln-code"><a></a><span class="ss">- </span>Drink coffee</span>
+<span id="cb4-18" class="hljs-ln-code"><a></a></span>
+<span id="cb4-19" class="hljs-ln-code"><a></a><span class="fu"># In the evening</span></span>
+<span id="cb4-20" class="hljs-ln-code"><a></a></span>
+<span id="cb4-21" class="hljs-ln-code"><a></a><span class="fu">## Dinner</span></span>
+<span id="cb4-22" class="hljs-ln-code"><a></a></span>
+<span id="cb4-23" class="hljs-ln-code"><a></a><span class="ss">- </span>Eat spaghetti</span>
+<span id="cb4-24" class="hljs-ln-code"><a></a><span class="ss">- </span>Drink wine</span>
+<span id="cb4-25" class="hljs-ln-code"><a></a></span>
+<span id="cb4-26" class="hljs-ln-code"><a></a><span class="fu">## Going to sleep</span></span>
+<span id="cb4-27" class="hljs-ln-code"><a></a></span>
+<span id="cb4-28" class="hljs-ln-code"><a></a><span class="ss">- </span>Get in bed</span>
+<span id="cb4-29" class="hljs-ln-code"><a></a><span class="ss">- </span>Count sheep</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:60%;">
+<iframe src="./_example-03.html" width="100%" height="500"></iframe>
+</div></div>
+</section>
+<section id="example-with-sections-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Example with sections</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb5-1" class="hljs-ln-code"><a></a><span class="co">---</span></span>
+<span id="cb5-2" class="hljs-ln-code"><a></a><span class="an">title:</span><span class="co"> "Habits"</span></span>
+<span id="cb5-3" class="hljs-ln-code"><a></a><span class="an">author:</span><span class="co"> "John Doe"</span></span>
+<span id="cb5-4" class="hljs-ln-code"><a></a><span class="an">format:</span><span class="co"> revealjs</span></span>
+<span id="cb5-5" class="hljs-ln-code"><a></a><span class="co">---</span></span>
+<span id="cb5-6" class="hljs-ln-code"><a></a></span>
+<span id="cb5-7" class="hljs-ln-code"><a></a><span class="ss">- </span>Turn off alarm</span>
+<span id="cb5-8" class="hljs-ln-code"><a></a><span class="ss">- </span>Get out of bed</span>
+<span id="cb5-9" class="hljs-ln-code"><a></a></span>
+<span id="cb5-10" class="hljs-ln-code"><a></a>---</span>
+<span id="cb5-11" class="hljs-ln-code"><a></a></span>
+<span id="cb5-12" class="hljs-ln-code"><a></a><span class="ss">- </span>Get in bed</span>
+<span id="cb5-13" class="hljs-ln-code"><a></a><span class="ss">- </span>Count sheep</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:60%;">
+<iframe src="./_example-04.html" width="100%" height="500"></iframe>
+</div></div>
 </section>
 <section id="your-turn" class="slide level2" data-background-color="#f3c13d">
 <h2>Your turn</h2>
-<p><br></p>
 <ul>
-<li>Turn your Quarto document into a <code>revealjs presentation</code>
-<ul>
-<li>Change <code>html</code> to <code>revealjs</code> in the YAML heading</li>
-</ul></li>
-<li>Add a section by using a first-level heading (<code>#</code>)</li>
-<li>Render your document</li>
+<li>Change the format: In your document’s YAML header, change <code>format: html</code> to <code>format: revealjs</code>.</li>
+<li>Add slides: Use first-level headings (<code>#</code>) to create a new slide. Use other Markdown headings and text for content on each slide.</li>
+<li>Render: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.</li>
 </ul>
+<p>Note: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.</p>
 </section></section>
 <section>
 <section id="building-slides" class="title-slide slide level1 center">
 <h1>Building slides</h1>
 
 </section>
-<section id="multiple-columns" class="slide level2">
-<h2>Multiple columns</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a>:::: {.columns}</span>
-<span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a>::: {.column width="40%"}</span>
-<span id="cb5-4"><a></a>Left column</span>
-<span id="cb5-5"><a></a>:::</span>
-<span id="cb5-6"><a></a></span>
-<span id="cb5-7"><a></a>::: {.column width="60%"}</span>
-<span id="cb5-8"><a></a>Right column</span>
-<span id="cb5-9"><a></a>:::</span>
-<span id="cb5-10"><a></a></span>
-<span id="cb5-11"><a></a>::::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="editing-slides" class="slide level2">
+<h2>Editing slides</h2>
+<p>The quarto-revealjs-editable extension allows the repositioning and resizing of images and text divs directly in the previewed slides.</p>
+
+<img data-src="images/demo-text.gif" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<p>Learn more: <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-editable">quarto-revealjs-editable</a></p>
+</div>
 </section>
-<section id="speaker-notes" class="slide level2">
-<h2>Speaker notes</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="fu">## Slide with speaker notes</span></span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a>Slide content</span>
-<span id="cb6-4"><a></a></span>
-<span id="cb6-5"><a></a>::: {.notes}</span>
-<span id="cb6-6"><a></a>Speaker notes go here.</span>
-<span id="cb6-7"><a></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="content-overflow" class="slide level2 smaller">
+<h2>Content overflow</h2>
+<p>Use the <code>.smaller</code> class to use a smaller typeface so that more text fits on the slide. For example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="fu">## Slide Title {.smaller}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use the .scrollable class to make off-slide content available by scrolling. For example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="fu">## Slide Title {.scrollable}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="slide-transitions" class="slide level2">
+<h2>Slide transitions</h2>
+<p>Edit the YAML to change the slide transitions:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a><span class="co">---</span></span>
+<span id="cb8-2"><a></a><span class="an">title:</span><span class="co"> "Presentation"</span></span>
+<span id="cb8-3"><a></a><span class="an">format:</span></span>
+<span id="cb8-4"><a></a><span class="co">  revealjs:</span></span>
+<span id="cb8-5"><a></a><span class="co">    transition: slide</span></span>
+<span id="cb8-6"><a></a><span class="co">    transition-speed: fast</span></span>
+<span id="cb8-7"><a></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions">Slide Transitions</a></p>
+</div>
+</section>
+<section id="slide-transitions-1" class="slide level2 smaller">
+<h2>Slide transitions</h2>
+<p>The next few slides will transition using the <code>slide</code> transition</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 85%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Transition</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>none</code></td>
+<td>No transition (default, switch instantly)</td>
+</tr>
+<tr class="even">
+<td><code>fade</code></td>
+<td>Cross fade</td>
+</tr>
+<tr class="odd">
+<td><code>slide</code></td>
+<td>Slide horizontally</td>
+</tr>
+<tr class="even">
+<td><code>convex</code></td>
+<td>Slide at a convex angle</td>
+</tr>
+<tr class="odd">
+<td><code>concave</code></td>
+<td>Slide at a concave angle</td>
+</tr>
+<tr class="even">
+<td><code>zoom</code></td>
+<td>Scale the incoming slide so it grows in from the center of the screen.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabsets" class="slide level2 smaller scrollable" data-transition="slide">
+<h2>Tabsets</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Plot</a></li><li><a href="#tabset-1-2">Data</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 6%">
+<col style="width: 5%">
+<col style="width: 8%">
+<col style="width: 5%">
+<col style="width: 6%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">mpg</th>
+<th style="text-align: right;">cyl</th>
+<th style="text-align: right;">disp</th>
+<th style="text-align: right;">hp</th>
+<th style="text-align: right;">drat</th>
+<th style="text-align: right;">wt</th>
+<th style="text-align: right;">qsec</th>
+<th style="text-align: right;">vs</th>
+<th style="text-align: right;">am</th>
+<th style="text-align: right;">gear</th>
+<th style="text-align: right;">carb</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mazda RX4</td>
+<td style="text-align: right;">21.0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">160.0</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">3.90</td>
+<td style="text-align: right;">2.620</td>
+<td style="text-align: right;">16.46</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mazda RX4 Wag</td>
+<td style="text-align: right;">21.0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">160.0</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">3.90</td>
+<td style="text-align: right;">2.875</td>
+<td style="text-align: right;">17.02</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Datsun 710</td>
+<td style="text-align: right;">22.8</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">108.0</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">3.85</td>
+<td style="text-align: right;">2.320</td>
+<td style="text-align: right;">18.61</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hornet 4 Drive</td>
+<td style="text-align: right;">21.4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">258.0</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">3.08</td>
+<td style="text-align: right;">3.215</td>
+<td style="text-align: right;">19.44</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hornet Sportabout</td>
+<td style="text-align: right;">18.7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">360.0</td>
+<td style="text-align: right;">175</td>
+<td style="text-align: right;">3.15</td>
+<td style="text-align: right;">3.440</td>
+<td style="text-align: right;">17.02</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Valiant</td>
+<td style="text-align: right;">18.1</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">225.0</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">2.76</td>
+<td style="text-align: right;">3.460</td>
+<td style="text-align: right;">20.22</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Duster 360</td>
+<td style="text-align: right;">14.3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">360.0</td>
+<td style="text-align: right;">245</td>
+<td style="text-align: right;">3.21</td>
+<td style="text-align: right;">3.570</td>
+<td style="text-align: right;">15.84</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Merc 240D</td>
+<td style="text-align: right;">24.4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">146.7</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">3.69</td>
+<td style="text-align: right;">3.190</td>
+<td style="text-align: right;">20.00</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Merc 230</td>
+<td style="text-align: right;">22.8</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">140.8</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">3.92</td>
+<td style="text-align: right;">3.150</td>
+<td style="text-align: right;">22.90</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Merc 280</td>
+<td style="text-align: right;">19.2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">167.6</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">3.92</td>
+<td style="text-align: right;">3.440</td>
+<td style="text-align: right;">18.30</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Merc 280C</td>
+<td style="text-align: right;">17.8</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">167.6</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">3.92</td>
+<td style="text-align: right;">3.440</td>
+<td style="text-align: right;">18.90</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Merc 450SE</td>
+<td style="text-align: right;">16.4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">275.8</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">3.07</td>
+<td style="text-align: right;">4.070</td>
+<td style="text-align: right;">17.40</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Merc 450SL</td>
+<td style="text-align: right;">17.3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">275.8</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">3.07</td>
+<td style="text-align: right;">3.730</td>
+<td style="text-align: right;">17.60</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Merc 450SLC</td>
+<td style="text-align: right;">15.2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">275.8</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">3.07</td>
+<td style="text-align: right;">3.780</td>
+<td style="text-align: right;">18.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cadillac Fleetwood</td>
+<td style="text-align: right;">10.4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">472.0</td>
+<td style="text-align: right;">205</td>
+<td style="text-align: right;">2.93</td>
+<td style="text-align: right;">5.250</td>
+<td style="text-align: right;">17.98</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lincoln Continental</td>
+<td style="text-align: right;">10.4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">460.0</td>
+<td style="text-align: right;">215</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">5.424</td>
+<td style="text-align: right;">17.82</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Chrysler Imperial</td>
+<td style="text-align: right;">14.7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">440.0</td>
+<td style="text-align: right;">230</td>
+<td style="text-align: right;">3.23</td>
+<td style="text-align: right;">5.345</td>
+<td style="text-align: right;">17.42</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fiat 128</td>
+<td style="text-align: right;">32.4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">78.7</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">4.08</td>
+<td style="text-align: right;">2.200</td>
+<td style="text-align: right;">19.47</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Honda Civic</td>
+<td style="text-align: right;">30.4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">75.7</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">4.93</td>
+<td style="text-align: right;">1.615</td>
+<td style="text-align: right;">18.52</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Toyota Corolla</td>
+<td style="text-align: right;">33.9</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">71.1</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">4.22</td>
+<td style="text-align: right;">1.835</td>
+<td style="text-align: right;">19.90</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Toyota Corona</td>
+<td style="text-align: right;">21.5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">120.1</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">3.70</td>
+<td style="text-align: right;">2.465</td>
+<td style="text-align: right;">20.01</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dodge Challenger</td>
+<td style="text-align: right;">15.5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">318.0</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">2.76</td>
+<td style="text-align: right;">3.520</td>
+<td style="text-align: right;">16.87</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AMC Javelin</td>
+<td style="text-align: right;">15.2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">304.0</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">3.15</td>
+<td style="text-align: right;">3.435</td>
+<td style="text-align: right;">17.30</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Camaro Z28</td>
+<td style="text-align: right;">13.3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">350.0</td>
+<td style="text-align: right;">245</td>
+<td style="text-align: right;">3.73</td>
+<td style="text-align: right;">3.840</td>
+<td style="text-align: right;">15.41</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pontiac Firebird</td>
+<td style="text-align: right;">19.2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">400.0</td>
+<td style="text-align: right;">175</td>
+<td style="text-align: right;">3.08</td>
+<td style="text-align: right;">3.845</td>
+<td style="text-align: right;">17.05</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fiat X1-9</td>
+<td style="text-align: right;">27.3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">79.0</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">4.08</td>
+<td style="text-align: right;">1.935</td>
+<td style="text-align: right;">18.90</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Porsche 914-2</td>
+<td style="text-align: right;">26.0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">120.3</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">4.43</td>
+<td style="text-align: right;">2.140</td>
+<td style="text-align: right;">16.70</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lotus Europa</td>
+<td style="text-align: right;">30.4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">95.1</td>
+<td style="text-align: right;">113</td>
+<td style="text-align: right;">3.77</td>
+<td style="text-align: right;">1.513</td>
+<td style="text-align: right;">16.90</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ford Pantera L</td>
+<td style="text-align: right;">15.8</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">351.0</td>
+<td style="text-align: right;">264</td>
+<td style="text-align: right;">4.22</td>
+<td style="text-align: right;">3.170</td>
+<td style="text-align: right;">14.50</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ferrari Dino</td>
+<td style="text-align: right;">19.7</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">145.0</td>
+<td style="text-align: right;">175</td>
+<td style="text-align: right;">3.62</td>
+<td style="text-align: right;">2.770</td>
+<td style="text-align: right;">15.50</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Maserati Bora</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">301.0</td>
+<td style="text-align: right;">335</td>
+<td style="text-align: right;">3.54</td>
+<td style="text-align: right;">3.570</td>
+<td style="text-align: right;">14.60</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Volvo 142E</td>
+<td style="text-align: right;">21.4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">121.0</td>
+<td style="text-align: right;">109</td>
+<td style="text-align: right;">4.11</td>
+<td style="text-align: right;">2.780</td>
+<td style="text-align: right;">18.60</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#tabsets">Tabsets</a></p>
+</div>
+</section>
+<section id="column-layout" class="slide level2 smaller">
+<h2>Column layout</h2>
+<p>Arrange content into columns of varying widths:</p>
+<div class="columns">
+<div class="column" style="width:35%;">
+<h4 id="motor-trend-car-road-tests">Motor Trend Car Road Tests</h4>
+<p>The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.</p>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:62%;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">mpg</th>
+<th style="text-align: right;">cyl</th>
+<th style="text-align: right;">disp</th>
+<th style="text-align: right;">hp</th>
+<th style="text-align: right;">wt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mazda RX4</td>
+<td style="text-align: right;">21.0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">2.620</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mazda RX4 Wag</td>
+<td style="text-align: right;">21.0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">2.875</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Datsun 710</td>
+<td style="text-align: right;">22.8</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">108</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">2.320</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hornet 4 Drive</td>
+<td style="text-align: right;">21.4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">258</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">3.215</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hornet Sportabout</td>
+<td style="text-align: right;">18.7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">360</td>
+<td style="text-align: right;">175</td>
+<td style="text-align: right;">3.440</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Valiant</td>
+<td style="text-align: right;">18.1</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">225</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">3.460</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#multiple-columns">Multiple Columns</a></p>
+</div>
 </section>
 <section id="line-highlighting" class="slide level2">
 <h2>Line highlighting</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="in">```{.python code-line-numbers="1-2"}</span></span>
-<span id="cb7-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb7-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb7-4"><a></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Highlight specific lines for emphasis</li>
+<li>Incrementally highlight additional lines</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-code-line-numbers="4-5|7|10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb9-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb9-3"><a></a></span>
+<span id="cb9-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb9-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb9-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
+<span id="cb9-7"><a></a>ax.plot(theta, r)</span>
+<span id="cb9-8"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb9-9"><a></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb9-10"><a></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#line-highlighting">Line Highlighting</a></p>
+</div>
 </section>
-<section id="incremental-content" class="slide level2">
-<h2>Incremental content</h2>
-<p>Incremental lists:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a>::: {.incremental}</span>
-<span id="cb8-2"><a></a><span class="ss">- </span>Eat spaghetti</span>
-<span id="cb8-3"><a></a><span class="ss">- </span>Drink wine</span>
-<span id="cb8-4"><a></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Add a pause:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a></a><span class="fu">## Slide with a pause</span></span>
-<span id="cb9-2"><a></a></span>
-<span id="cb9-3"><a></a>content before the pause</span>
-<span id="cb9-4"><a></a></span>
-<span id="cb9-5"><a></a>. . .</span>
-<span id="cb9-6"><a></a></span>
-<span id="cb9-7"><a></a>content after the pause</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="executable-code" class="slide level2">
+<h2>Executable code</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-2"><a></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(hp, mpg, <span class="at">color =</span> am)) <span class="sc">+</span></span>
+<span id="cb10-3"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb10-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"loess"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"><div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#executable-code">Executable Code</a></p>
+</div>
 </section>
-<section id="multiple-columns-1" class="slide level2">
-<h2>Multiple columns</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a></a>:::: {.columns}</span>
-<span id="cb10-2"><a></a></span>
-<span id="cb10-3"><a></a>::: {.column width="40%"}</span>
-<span id="cb10-4"><a></a>Left column</span>
-<span id="cb10-5"><a></a>:::</span>
-<span id="cb10-6"><a></a></span>
-<span id="cb10-7"><a></a>::: {.column width="60%"}</span>
-<span id="cb10-8"><a></a>Right column</span>
-<span id="cb10-9"><a></a>:::</span>
-<span id="cb10-10"><a></a></span>
-<span id="cb10-11"><a></a>::::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="latex-equations" class="slide level2">
+<h2>LaTeX equations</h2>
+<p><a href="https://www.mathjax.org/">MathJax</a> rendering of equations to HTML</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb11-1"><a></a><span class="kw">\begin</span>{<span class="ex">gather*</span>}</span>
+<span id="cb11-2"><a></a><span class="ss">a_1=b_1+c_1</span><span class="sc">\\</span></span>
+<span id="cb11-3"><a></a><span class="ss">a_2=b_2+c_2-d_2+e_2</span></span>
+<span id="cb11-4"><a></a><span class="kw">\end</span>{<span class="ex">gather*</span>}</span>
+<span id="cb11-5"><a></a></span>
+<span id="cb11-6"><a></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
+<span id="cb11-7"><a></a><span class="ss">a_{11}&amp; =b_{11}&amp;</span></span>
+<span id="cb11-8"><a></a><span class="ss">  a_{12}&amp; =b_{12}</span><span class="sc">\\</span></span>
+<span id="cb11-9"><a></a><span class="ss">a_{21}&amp; =b_{21}&amp;</span></span>
+<span id="cb11-10"><a></a><span class="ss">  a_{22}&amp; =b_{22}+c_{22}</span></span>
+<span id="cb11-11"><a></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:60%;">
+<span class="math display">\[\begin{gather*}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather*}\]</span>
+<span class="math display">\[\begin{align}
+a_{11}&amp; =b_{11}&amp;
+  a_{12}&amp; =b_{12}\\
+a_{21}&amp; =b_{21}&amp;
+  a_{22}&amp; =b_{22}+c_{22}
+\end{align}\]</span>
+</div></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">LaTeX Equations</a></p>
+</div>
 </section>
-<section id="speaker-notes-1" class="slide level2">
-<h2>Speaker notes</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a></a><span class="fu">## Slide with speaker notes</span></span>
-<span id="cb11-2"><a></a></span>
-<span id="cb11-3"><a></a>Slide content</span>
-<span id="cb11-4"><a></a></span>
-<span id="cb11-5"><a></a>::: {.notes}</span>
-<span id="cb11-6"><a></a>Speaker notes go here.</span>
-<span id="cb11-7"><a></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="incremental-lists" class="slide level2">
+<h2>Incremental lists</h2>
+<p>Lists can optionally be displayed incrementally:</p>
+<ul>
+<li class="fragment">First item</li>
+<li class="fragment">Second item</li>
+<li class="fragment">Third item</li>
+</ul>
+<div class="fragment">
+<p><br> Insert pauses to make other types of content display incrementally.</p>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#incremental-lists">Incremental Lists</a></p>
+</div>
+</div>
+</section>
+<section id="fragments" class="slide level2">
+<h2>Fragments</h2>
+<p>Incremental text display and animation with fragments:</p>
+<p><br></p>
+<div class="fragment fade-in">
+<p>Fade in</p>
+</div>
+<div class="fragment fade-up">
+<p>Slide up while fading in</p>
+</div>
+<div class="fragment fade-left">
+<p>Slide left while fading in</p>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<p>Fade in then semi out</p>
+</div>
+<div class="fragment">
+<div class="fragment strike">
+<p>Strike</p>
+</div>
+<div class="fragment highlight-red">
+<p>Highlight red</p>
+</div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#fragments">Fragments</a></p>
+</div>
+</div>
+</section>
+<section id="absolute-position" class="slide level2">
+<h2>Absolute position</h2>
+<p>Position images or other elements at precise locations</p>
+<p><img data-src="images/kitten-400-350.jpeg" class="absolute" style="top: 170px; left: 30px; width: 400px; height: 400px; "></p>
+<p><img data-src="images/kitten-450-250.jpeg" class="absolute fragment" style="top: 150px; right: 80px; width: 450px; "></p>
+<p><img data-src="images/kitten-300-200.jpeg" class="absolute fragment" style="bottom: 110px; right: 130px; width: 300px; "></p>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position">Absolute Position</a></p>
+</div>
+</section>
+<section id="interactive-slides" class="slide level2 smaller" data-transition="slide">
+<h2>Interactive slides</h2>
+<p>Include Jupyter widgets and htmlwidgets in your presentations</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-cd31fc75a9c928329e2c" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-cd31fc75a9c928329e2c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/interactive/widgets/jupyter.html">Jupyter widgets</a>, <a href="https://quarto.org/docs/interactive/widgets/htmlwidgets.html">htmlwidgets</a></p>
+</div>
+</section>
+<section id="interactive-slides-1" class="slide level2 smaller" data-transition="slide">
+<h2>Interactive slides</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-engine="r"><pre class="sourceCode numberSource shinylive-r number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>#| '!! shinylive warning !!': |</span>
+<span id="cb12-2"><a></a>#|   shinylive does not work in self-contained HTML documents.</span>
+<span id="cb12-3"><a></a>#|   Please set `embed-resources: false` in your metadata.</span>
+<span id="cb12-4"><a></a>#| standalone: true</span>
+<span id="cb12-5"><a></a>#| viewerHeight: 500</span>
+<span id="cb12-6"><a></a></span>
+<span id="cb12-7"><a></a>library(shiny)</span>
+<span id="cb12-8"><a></a>library(bslib)</span>
+<span id="cb12-9"><a></a></span>
+<span id="cb12-10"><a></a># Define UI for app that draws a histogram ----</span>
+<span id="cb12-11"><a></a>ui &lt;- page_sidebar(</span>
+<span id="cb12-12"><a></a>  sidebar = sidebar(open = "open",</span>
+<span id="cb12-13"><a></a>    numericInput("n", "Sample count", 100),</span>
+<span id="cb12-14"><a></a>    checkboxInput("pause", "Pause", FALSE),</span>
+<span id="cb12-15"><a></a>  ),</span>
+<span id="cb12-16"><a></a>  plotOutput("plot", width=1100)</span>
+<span id="cb12-17"><a></a>)</span>
+<span id="cb12-18"><a></a></span>
+<span id="cb12-19"><a></a>server &lt;- function(input, output, session) {</span>
+<span id="cb12-20"><a></a>  data &lt;- reactive({</span>
+<span id="cb12-21"><a></a>    input$resample</span>
+<span id="cb12-22"><a></a>    if (!isTRUE(input$pause)) {</span>
+<span id="cb12-23"><a></a>      invalidateLater(1000)</span>
+<span id="cb12-24"><a></a>    }</span>
+<span id="cb12-25"><a></a>    rnorm(input$n)</span>
+<span id="cb12-26"><a></a>  })</span>
+<span id="cb12-27"><a></a>  </span>
+<span id="cb12-28"><a></a>  output$plot &lt;- renderPlot({</span>
+<span id="cb12-29"><a></a>    hist(data(),</span>
+<span id="cb12-30"><a></a>      breaks = 40,</span>
+<span id="cb12-31"><a></a>      xlim = c(-2, 2),</span>
+<span id="cb12-32"><a></a>      ylim = c(0, 1),</span>
+<span id="cb12-33"><a></a>      lty = "blank",</span>
+<span id="cb12-34"><a></a>      xlab = "value",</span>
+<span id="cb12-35"><a></a>      freq = FALSE,</span>
+<span id="cb12-36"><a></a>      main = ""</span>
+<span id="cb12-37"><a></a>    )</span>
+<span id="cb12-38"><a></a>    </span>
+<span id="cb12-39"><a></a>    x &lt;- seq(from = -2, to = 2, length.out = 500)</span>
+<span id="cb12-40"><a></a>    y &lt;- dnorm(x)</span>
+<span id="cb12-41"><a></a>    lines(x, y, lwd=1.5)</span>
+<span id="cb12-42"><a></a>    </span>
+<span id="cb12-43"><a></a>    lwd &lt;- 5</span>
+<span id="cb12-44"><a></a>    abline(v=0, col="red", lwd=lwd, lty=2)</span>
+<span id="cb12-45"><a></a>    abline(v=mean(data()), col="blue", lwd=lwd, lty=1)</span>
+<span id="cb12-46"><a></a></span>
+<span id="cb12-47"><a></a>    legend(legend = c("Normal", "Mean", "Sample mean"),</span>
+<span id="cb12-48"><a></a>      col = c("black", "red", "blue"),</span>
+<span id="cb12-49"><a></a>      lty = c(1, 2, 1),</span>
+<span id="cb12-50"><a></a>      lwd = c(1, lwd, lwd),</span>
+<span id="cb12-51"><a></a>      x = 1,</span>
+<span id="cb12-52"><a></a>      y = 0.9</span>
+<span id="cb12-53"><a></a>    )</span>
+<span id="cb12-54"><a></a>  }, res=140)</span>
+<span id="cb12-55"><a></a>}</span>
+<span id="cb12-56"><a></a></span>
+<span id="cb12-57"><a></a># Create Shiny app ----</span>
+<span id="cb12-58"><a></a>shinyApp(ui = ui, server = server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/interactive/ojs/">Observable</a>, <a href="https://quarto.org/docs/interactive/shiny/">Shiny</a>, <a href="https://quarto.org/docs/interactive/layout.html">Component Layout</a></p>
+</div>
+</section>
+<section id="your-turn-1" class="slide level2" data-background-color="#f3c13d">
+<h2>Your turn</h2>
+<ul>
+<li>Shrink the heading: Add <code>{.smaller}</code> to your heading to decrease its font size, like this: <code>## Global Happiness Trends {.smaller}</code>.</li>
+<li>Create two columns: Place your plot and table side-by-side. Adjust the percentages as needed.</li>
+<li>Add tabsets: Use :<code>:: panel-tabset</code> on the “Country-Level Analysis” slide to organize your content.</li>
+<li>Add a transition: To improve the flow, add <code>slide-transition: slide</code> to your YAML header. Other options include <code>fade</code>, <code>convex</code>, <code>concave</code>, or <code>zoom.</code></li>
+</ul>
+</section></section>
+<section>
+<section id="presenting-slides" class="title-slide slide level1 center">
+<h1>Presenting slides</h1>
+
+</section>
+<section id="easy-navigation" class="slide level2">
+<h2>Easy navigation</h2>
+<div style="margin-bottom: 0.9em;">
+<p>Quickly jump to other parts of your presentation</p>
+</div>
+<div class="quarto-layout-panel" data-layout="[1, 20]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 4.8%;justify-content: center;">
+<p><img data-src="images/presentation-menu.png" width="41"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 95.2%;justify-content: flex-start;">
+<p>Toggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.</p>
+</div>
+</div>
+</div>
+<p>You can also press <kbd title="m" aria-hidden="true">m</kbd><span class="visually-hidden">m</span> to toggle the menu open and closed.</p>
+<p>You can also press <kbd title="g" aria-hidden="true">g</kbd><span class="visually-hidden">g</span> to toggle ‘Jump To Slide’ modal box to quickly go to one of your slide using its number or id.</p>
+<div class="footer">
+<p>Learn more: <a href="../../docs/presentations/revealjs/presenting.qmd#navigation-menu">Navigation</a> / <a href="../../docs/presentations/revealjs/presenting.qmd#jump-to-slide">Jump To Slide</a></p>
+</div>
+</section>
+<section id="jump-to-slide" class="slide level2">
+<h2>Jump to slide</h2>
+<div style="margin-bottom: 0.9em;">
+<p>Quickly jump to other parts of your presentation</p>
+</div>
+</section>
+<section id="chalkboard" class="slide level2" data-chalkboard-buttons="true">
+<h2>Chalkboard</h2>
+<div style="margin-bottom: 0.9em;">
+<p>Free form drawing and slide annotations</p>
+</div>
+<div class="quarto-layout-panel" data-layout="[1, 20]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 4.8%;justify-content: center;">
+<p><img data-src="images/presentation-chalkboard.png" width="41"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 95.2%;justify-content: flex-start;">
+<p>Use the chalkboard button at the bottom left of the slide to toggle the chalkboard.</p>
+</div>
+</div>
+</div>
+<div class="quarto-layout-panel" data-layout="[1, 20]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 4.8%;justify-content: center;">
+<p><img data-src="images/presentation-notes-canvas.png" width="41"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 95.2%;justify-content: flex-start;">
+<p>Use the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.</p>
+</div>
+</div>
+</div>
+<p>You can also press <kbd title="b" aria-hidden="true">b</kbd><span class="visually-hidden">b</span> to toggle the chalkboard or <kbd title="c" aria-hidden="true">c</kbd><span class="visually-hidden">c</span> to toggle the notes canvas.</p>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard">Chalkboard</a></p>
+</div>
+</section>
+<section id="point-of-view" class="slide level2">
+<h2>Point of view</h2>
+<p>press <kbd title="o" aria-hidden="true">o</kbd><span class="visually-hidden">o</span> to toggle overview mode:</p>
+
+<img data-src="images/overview-mode.png" class="border r-stretch"><p>Hold down the <kbd title="Alt, linux: Ctrl" aria-hidden="true" data-linux="Ctrl">Alt</kbd><span class="visually-hidden">Alt</span>/<kbd title="Option, linux: Ctrl" aria-hidden="true" data-linux="Ctrl">Option</kbd><span class="visually-hidden">Option</span> and click on any element to zoom towards it—try it now on this slide.</p>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#overview-mode">Overview Mode</a>, <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#slide-zoom">Slide Zoom</a></p>
+</div>
+</section>
+<section id="preview-links" class="slide level2">
+<h2>Preview links</h2>
+<p>Navigate to hyperlinks without disrupting the flow of your presentation.</p>
+<p>Use the <code>preview-links</code> option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:</p>
+<div style="text-align: center; margin-top: 1em">
+<p><a href="https://matplotlib.org/" data-preview-link="true" style="text-align: center">Matplotlib: Visualization with Python</a></p>
+</div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#preview-links">Preview Links</a></p>
+</div>
+</section>
+<section id="speaker-view" class="slide level2">
+<h2>Speaker view</h2>
+<p>press <kbd title="s" aria-hidden="true">s</kbd><span class="visually-hidden">s</span> (or use the tools in presentation menu <img data-src="images/navigation-menu-icon.png" style="padding-bottom: 1px; margin: 0;width:0.5em;height:0.5em">) to open speaker view</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a></a><span class="fu">## Slide with speaker notes</span></span>
+<span id="cb13-2"><a></a></span>
+<span id="cb13-3"><a></a>Slide content</span>
+<span id="cb13-4"><a></a></span>
+<span id="cb13-5"><a></a>::: {.notes}</span>
+<span id="cb13-6"><a></a>Speaker notes go here.</span>
+<span id="cb13-7"><a></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>Speaker notes go here.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#speaker-view">Speaker View</a></p>
+</div>
 </section></section>
 <section>
 <section id="branding-slides" class="title-slide slide level1 center" data-background-color="#223e50">
 <h1>Branding slides</h1>
 
 </section>
-<section id="root-directory" class="slide level2">
-<h2>Root directory</h2>
+<section id="themes" class="slide level2">
+<h2>Themes</h2>
+<p>10 Built-in themes</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/moon.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/sky.png"></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/themes.html">Themes</a></p>
+</div>
+</section>
+<section id="reveal.js-with-brand.yml" class="slide level2">
+<h2>reveal.js with brand.yml</h2>
 <p>The <code>_brand.yml</code> file in the root directory of your project (with or without a <code>_quarto.yml</code> file) will automatically apply the brand to your <code>revealjs</code> documents.</p>
 <ul>
 <li>The <code>revealjs</code> format does not support switching between light and dark modes.</li>
 </ul>
 </section>
-<section id="shortcodes-in-slides" class="slide level2">
-<h2>Shortcodes in slides</h2>
+<section id="title-slide-background" class="slide level2">
+<h2>Title slide background</h2>
+<p>Add a custom background to the title slide using the <code>title-slide-attributes</code> key:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a></a><span class="co">---</span></span>
+<span id="cb14-2"><a></a><span class="an">format:</span><span class="co"> revealjs</span></span>
+<span id="cb14-3"><a></a><span class="an">title-slide-attributes:</span></span>
+<span id="cb14-4"><a></a><span class="co">    data-background-image: images/milky-way.jpeg</span></span>
+<span id="cb14-5"><a></a><span class="co">    data-background-size: cover</span></span>
+<span id="cb14-6"><a></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#custom-background">Custom Background</a></p>
+</div>
+</section>
+<section id="slide-backgrounds" class="slide level2" data-background="#43464B">
+<h2>Slide backgrounds</h2>
+<p>Set the <code>background</code> attribute on a slide to change the background color (all CSS color formats are supported).</p>
 <p>Use <code>{{&lt; brand color COLOR_NAME BRAND_MODE &gt;}}</code> to return the brand color named <code>COLOR_NAME</code> as a string.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a></a><span class="co">---</span></span>
-<span id="cb12-2"><a></a><span class="an">format:</span><span class="co"> revealjs</span></span>
-<span id="cb12-3"><a></a><span class="co">---</span></span>
-<span id="cb12-4"><a></a></span>
-<span id="cb12-5"><a></a><span class="fu">## Slide Title {background-color='{{&lt; brand color primary &gt;}}'}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a></a><span class="co">---</span></span>
+<span id="cb15-2"><a></a><span class="an">format:</span><span class="co"> revealjs</span></span>
+<span id="cb15-3"><a></a><span class="co">---</span></span>
+<span id="cb15-4"><a></a></span>
+<span id="cb15-5"><a></a><span class="fu">## Slide Title {background-color='{{&lt; brand color primary &gt;}}'}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#color-backgrounds">Slide Backgrounds</a></p>
+</div>
+</section>
+<section id="media-backgrounds" class="slide level2" data-background="#43464B" data-background-image="images/milky-way.jpeg">
+<h2>Media backgrounds</h2>
+<p>You can also use the following as a slide background:</p>
+<ul>
+<li><p>An image: <code>background-image</code></p></li>
+<li><p>A video: <code>background-video</code></p></li>
+<li><p>An iframe: <code>background-iframe</code></p></li>
+</ul>
+<div class="footer">
+
+</div>
+</section>
+<section id="and-more" class="slide level2">
+<h2>And more…</h2>
+<ul>
+<li><a href="https://quarto.org/docs/presentations/revealjs/advanced.html#touch-navigation">Touch</a> optimized (presentations look great on mobile, swipe to navigate slides)</li>
+<li><a href="https://quarto.org/docs/presentations/revealjs/#footer-logo">Footer &amp; Logo</a> (optionally specify custom footer per-slide or hide global footer)</li>
+<li><a href="https://quarto.org/docs/presentations/revealjs/presenting.html#auto-slide">Auto-Slide</a> (step through slides automatically, without any user input)</li>
+<li><a href="https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex">Multiplex</a> (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).</li>
+</ul>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/">Quarto Presentations</a></p>
+</div>
+</section>
+<section id="your-turn-2" class="slide level2" data-background-color="#f3c13d">
+<h2>Your turn</h2>
+<ul>
+<li>Change the title slide background.
+<ul>
+<li>Find an image on Unsplash and get the direct URL to the image file.</li>
+<li>Add <code>title-slide-attributes</code> to your YAML header and specify the <code>data-background-image</code> attribute with the image’s URL.</li>
+<li>If it’s a dark photo, you may want to change <code>data-background-color</code> to a dark color so that it uses a light font color.</li>
+</ul></li>
+<li>Edit Conclusion slide background color: Use the <strong>brand.yml</strong> shortcodes to change the color to <code>primary</code>.</li>
+</ul>
 
 
 </section></section>
@@ -638,6 +1655,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
