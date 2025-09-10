@@ -78,7 +78,10 @@ git clone https://github.com/posit-dev/quarto-brand-exercises.git
 
 If you are using Posit Cloud, the packages will be pre-installed. If you are using RStudio or Positron locally, install the packages by running:
 
-<!--TODO: add final packages-->
+```r
+if (!require("pak")) install.packages("pak")
+pak::pak(c("tidyverse", "quarto", "patchwork"))
+```
 
 ### Python
 
