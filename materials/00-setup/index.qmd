@@ -80,7 +80,7 @@ If you are using Posit Cloud, the packages will be pre-installed. If you are usi
 
 ```r
 if (!require("pak")) install.packages("pak")
-pak::pak(c("tidyverse", "quarto", "patchwork"))
+pak::pak(c("tidyverse", "quarto", "patchwork", "posit-dev/brand-yml/pkg-r"))
 ```
 
 ### Python
