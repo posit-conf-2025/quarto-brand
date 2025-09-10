@@ -10,15 +10,25 @@ format:
 
 ## Hello, Typst!
 
-![](images/typst.png)
+![](images/typst-logo.png)
+
+![](images/typst-workflow.png){fig-align="center" width="70%"}
 
 ::: notes
 Typst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.
 :::
 
+::: footer
+Learn more: [Typst in Quarto](https://quarto.org/docs/output-formats/typst.html)
+:::
+
 ## Hello, Typst!
 
 To use Typst with Quarto, set the format in the YAML of your Quarto document:
+
+:::: {.columns}
+
+::: {.column width="40%"}
 
 ```markdown
 ---
@@ -26,9 +36,30 @@ format: typst
 ---
 ```
 
+:::
+
+
+::: {.column width="60%"}
+
+![](images/typst-default-page.png){.border width="50%" fig-align="center" fig-alt="Screenshot of one page of PDF document. The document shows a single column of text." style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+:::
+::::
+
+::: footer
+Learn more: [Typst in Quarto](https://quarto.org/docs/output-formats/typst.html)
+:::
+
+# Building PDFs
+
 ## Page layout
 
 Control the size of the page (`papersize`), the page margins (`margin`), and the number of columns used for page content (`columns`):
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
 
 ```markdown
 ---
@@ -41,7 +72,20 @@ format:
       y: 1cm
     columns: 2
 ---
-```
+``` 
+
+:::
+
+::: {.column width="60%"}
+
+![](images/typst-custom-page.png){.border width="40%" fig-align="center" fig-alt="Screenshot of one page of PDF document. The document shows a two columns of text. Compared to the previous screenshot, the page is narrower and longer, and the margins are smaller." style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+:::
+::::
+
+::: footer
+Learn more: [Page Layout](https://quarto.org/docs/output-formats/typst.html#page-layout)
+:::
 
 ## Margins
 
@@ -60,14 +104,19 @@ margin:
   left: 10%
 ```
 
+::: footer
+Learn more: [Margins](https://quarto.org/docs/output-formats/typst.html#margins)
+:::
+
+
 ## Paper Size
 
 ```markdown
 papersize: us-letter
 ```
 
-::: aside
-[Supported page sizes](https://typst.app/docs/reference/layout/page/#parameters-paper)
+::: footer
+Learn more: [Supported page sizes](https://typst.app/docs/reference/layout/page/#parameters-paper)
 :::
 
 ## Table of contents
@@ -76,6 +125,10 @@ papersize: us-letter
 toc: true
 toc-depth: 2
 ```
+
+::: footer
+Learn more: [Table of Contents](https://quarto.org/docs/output-formats/typst.html#table-of-contents)
+:::
 
 ## Section numbering
 
@@ -89,25 +142,66 @@ Use `number-depth`:
 number-depth: 3
 ```
 
-## Your turn
-
-* Change your document's format to a Typst PDF.
-* Edit your YAML with one of the options we covered.
-
-## Custom formatting with Typst
-
-Typst provides an easy way to define your own templates to produce highly customized documents.
-
-
-::: aside
-[Typst Template Docs](https://typst.app/docs/tutorial/making-a-template/)
-
-[Awesome Typst templates](https://github.com/qjcg/awesome-typst#templates--libraries)
+::: footer
+Learn more: [Section Numbering](https://quarto.org/docs/output-formats/typst.html#section-numbering)
 :::
 
-## Custom formatting with Typst
+## Typst blocks
 
-To create a new custom Typst format (or package an existing Typst template for use with Quarto) use the quarto create command to get started:
+Add a `.block` class to change appearance of blocks:
+
+```markdown
+::: {.block fill="luma(230)" inset="8pt" radius="4pt"}
+
+This is a block with gray background and slightly rounded corners.
+
+:::
+```
+
+## Your turn
+
+{{< include exercise-01.qmd >}}
+
+# Customizing templates
+
+## Custom Typst formats
+
+Typst allows you to define your own templates to produce highly customized documents.
+
+::: {layout-ncol=4}
+
+![IEEE](images/typst-format-ieee.png){.lightbox group="custom-formats" fig-alt="Screenshot of a page showing a article styled according IEEE standards. The title is centered with authors below in two columns."}
+
+![Poster](images/typst-format-poster.png){.lightbox group="custom-formats" fig-alt="Screenshot of a poster in landscape orientiation. The poster includes a logo in the top right, a title in the top left, and content arranged in three columns."}
+
+![Letter](images/typst-format-letter.png){.lightbox group="custom-formats" fig-alt="Screenshot of a page showing a letter. A sender address is across the top of the page, followed by a recipient address left justified. The body of the letter includes a subject line in bold."}
+
+![Dept News](images/typst-format-dept-news.png){.lightbox group="custom-formats" fig-alt="Screenshot of a page showing a department newsletter. The page is split vertically with a white column on the left and a red one on the right. An image spans across the column with the text \"Award Winning Science\" oriented to run vertically down its right side."}
+
+:::
+
+::: footer
+Learn more: [Custom Typst Formats](https://quarto.org/docs/output-formats/typst-custom.html)
+:::
+
+## Custom Typst formats {.smaller}
+
+| Format                                                                         | Usage                                                      |
+|--------------------------|----------------------------------------------|
+| [Poster](https://github.com/quarto-ext/typst-templates/tree/main/poster)       | `quarto use template quarto-ext/typst-templates/poster`    |
+| [IEEE](https://github.com/quarto-ext/typst-templates/tree/main/ieee)           | `quarto use template quarto-ext/typst-templates/ieee`      |
+| [AMS](https://github.com/quarto-ext/typst-templates/tree/main/ams)             | `quarto use template quarto-ext/typst-templates/ams`       |
+| [Letter](https://github.com/quarto-ext/typst-templates/tree/main/letter)       | `quarto use template quarto-ext/typst-templates/letter`    |
+| [Fiction](https://github.com/quarto-ext/typst-templates/tree/main/fiction)     | `quarto use template quarto-ext/typst-templates/fiction`   |
+| [Dept News](https://github.com/quarto-ext/typst-templates/tree/main/dept-news) | `quarto use template quarto-ext/typst-templates/dept-news` |
+
+::: footer
+Learn more: [Custom Typst Formats](https://quarto.org/docs/output-formats/typst-custom.html)
+:::
+
+## Creating a new Typst format
+
+Use the `quarto create command` to get started:
 
 ``` {.bash filename="Terminal"}
 $ quarto create extension format
@@ -115,7 +209,7 @@ $ quarto create extension format
 
 Choose `typst` as the base format and provide a name for the extension.
 
-## Custom formatting with Typst
+## Creating a new Typst format {.smaller}
 
 | File                 | Description                                                                                                                                           |
 |-------------------------|-----------------------------------------------|
@@ -128,28 +222,71 @@ Choose `typst` as the base format and provide a name for the extension.
 ## typst-show.typ
 
 ```{.markdown filename="typst-show.typ"}
-#show: dept-news.with(
+#show: whr.with(
 $if(title)$
-  title: "$title$",
+  title: [$title$],
 $endif$
-$if(edition)$
-  edition: [$edition$],
+$if(subtitle)$
+  subtitle: [$subtitle$],
 $endif$
-$if(hero-image)$
-  hero-image: (
-    path: "$hero-image.path$",
-    caption: [$hero-image.caption$]
-  ), 
+$if(date)$
+  date: [$date$],
 $endif$
-$if(dedication)$
-  dedication: [$dedication$],
+$if(lang)$
+  lang: "$lang$",
 $endif$
-$if(publication-info)$
-  publication-info: [$publication-info$],
+$if(region)$
+  region: "$region$",
+$endif$
+$if(abstract)$
+  abstract: [$abstract$],
+$endif$
+$if(thanks)$
+  thanks: [$thanks$],
+$endif$
+$if(keywords)$
+  keywords: ($for(keywords)$"$keywords$",$endfor$),
+$endif$
+$if(margin)$
+  margin: ($for(margin/pairs)$$margin.key$: $margin.value$,$endfor$),
+$endif$
+$if(papersize)$
+  paper: "$papersize$",
+$endif$
+$if(mainfont)$
+  font: ($for(mainfont)$"$mainfont$",$endfor$),
+$endif$
+$if(fontsize)$
+  fontsize: $fontsize$,
+$endif$
+$if(mathfont)$
+  mathfont: ($for(mathfont)$"$mathfont$",$endfor$),
+$endif$
+$if(codefont)$
+  codefont: ($for(codefont)$"$codefont$",$endfor$),
+$endif$
+$if(toc)$
+  toc: $toc$,
+$endif$
+$if(toc-title)$
+  toc_title: [$toc-title$],
+$endif$
+$if(toc-indent)$
+  toc_indent: $toc-indent$,
+$endif$
+  toc_depth: $toc-depth$,
+  cols: $if(columns)$$columns$$else$1$endif$
+$if(linkcolor)$
+  linkcolor: "$linkcolor$",
+$endif$
+$if(title-page)$
+  title-page: $title-page$,
+$endif$
+$if(blind)$
+  blind: $blind$,
 $endif$
 )
 ```
-
 
 ## typst-template.typ
 

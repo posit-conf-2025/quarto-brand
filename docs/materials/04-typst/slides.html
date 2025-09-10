@@ -7,7 +7,10 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.23">
 
   <title>PDFs with Typst</title>
@@ -201,15 +204,58 @@
 </section>
 <section id="hello-typst" class="slide level2">
 <h2>Hello, Typst!</h2>
+<p><img data-src="images/typst-logo.png"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/typst-workflow.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+<aside class="notes">
 <p>Typst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html">Typst in Quarto</a></p>
+</div>
+</section>
+<section id="hello-typst-1" class="slide level2">
+<h2>Hello, Typst!</h2>
 <p>To use Typst with Quarto, set the format in the YAML of your Quarto document:</p>
+<div class="columns">
+<div class="column" style="width:40%;">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a></a><span class="co">---</span></span>
 <span id="cb1-2"><a></a><span class="an">format:</span><span class="co"> typst</span></span>
 <span id="cb1-3"><a></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/typst-default-page.png" class="border quarto-figure quarto-figure-center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;;width:50.0%" alt="Screenshot of one page of PDF document. The document shows a single column of text."></p>
+</figure>
+</div>
+</div></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html">Typst in Quarto</a></p>
+</div>
+</section>
+<section>
+<section id="building-pdfs" class="title-slide slide level1 center">
+<h1>Building PDFs</h1>
+
 </section>
 <section id="page-layout" class="slide level2">
 <h2>Page layout</h2>
 <p>Control the size of the page (<code>papersize</code>), the page margins (<code>margin</code>), and the number of columns used for page content (<code>columns</code>):</p>
+<div class="columns">
+<div class="column" style="width:40%;">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a></a><span class="co">---</span></span>
 <span id="cb2-2"><a></a><span class="an">title:</span><span class="co"> Page Layout</span></span>
 <span id="cb2-3"><a></a><span class="an">format:</span></span>
@@ -220,6 +266,16 @@
 <span id="cb2-8"><a></a><span class="co">      y: 1cm</span></span>
 <span id="cb2-9"><a></a><span class="co">    columns: 2</span></span>
 <span id="cb2-10"><a></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/typst-custom-page.png" class="border quarto-figure quarto-figure-center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;;width:40.0%" alt="Screenshot of one page of PDF document. The document shows a two columns of text. Compared to the previous screenshot, the page is narrower and longer, and the margins are smaller."></p>
+</figure>
+</div>
+</div></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html#page-layout">Page Layout</a></p>
+</div>
 </section>
 <section id="margins" class="slide level2">
 <h2>Margins</h2>
@@ -230,45 +286,319 @@
 <p>Can also use relative length:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a><span class="an">margin:</span></span>
 <span id="cb4-2"><a></a>  left: 10%</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html#margins">Margins</a></p>
+</div>
 </section>
 <section id="paper-size" class="slide level2">
 <h2>Paper Size</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a><span class="an">papersize:</span><span class="co"> us-letter</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-<aside><div>
-<p><a href="https://typst.app/docs/reference/layout/page/#parameters-paper">Supported page sizes</a></p>
-</div></aside></section>
+<div class="footer">
+<p>Learn more: <a href="https://typst.app/docs/reference/layout/page/#parameters-paper">Supported page sizes</a></p>
+</div>
+</section>
 <section id="table-of-contents" class="slide level2">
 <h2>Table of contents</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="an">toc:</span><span class="co"> true</span></span>
 <span id="cb6-2"><a></a><span class="an">toc-depth:</span><span class="co"> 2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html#table-of-contents">Table of Contents</a></p>
+</div>
 </section>
 <section id="section-numbering" class="slide level2">
 <h2>Section numbering</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="an">number-sections:</span><span class="co"> true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Use <code>number-depth</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a><span class="an">number-depth:</span><span class="co"> 3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html#section-numbering">Section Numbering</a></p>
+</div>
+</section>
+<section id="typst-blocks" class="slide level2">
+<h2>Typst blocks</h2>
+<p>Add a <code>.block</code> class to change appearance of blocks:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a></a>::: {.block fill="luma(230)" inset="8pt" radius="4pt"}</span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a>This is a block with gray background and slightly rounded corners.</span>
+<span id="cb9-4"><a></a></span>
+<span id="cb9-5"><a></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="your-turn" class="slide level2">
 <h2>Your turn</h2>
 <ul>
-<li>Change your document’s format to a Typst PDF.</li>
-<li>Edit your YAML with one of the options we covered.</li>
+<li>In your document’s YAML header, change the format option from its current value (e.g., <code>html</code>) to <code>typst</code>.</li>
+<li>Edit your YAML with one of the options we covered: <code>margin</code>, <code>papersize</code>, etc.</li>
+<li>Add a block to a section of the text.</li>
 </ul>
+</section></section>
+<section>
+<section id="customizing-templates" class="title-slide slide level1 center">
+<h1>Customizing templates</h1>
+
 </section>
-<section id="custom-formatting-with-typst" class="slide level2">
-<h2>Custom formatting with Typst</h2>
-<p>Create two files to create a custom template:</p>
-<ul>
-<li>typst-show.typ: a file that calls the template. It maps Pandoc metadata to template function arguments.</li>
-<li>typst-template.typ: the core template file. It defines the styling of the document.</li>
-</ul>
+<section id="custom-typst-formats" class="slide level2">
+<h2>Custom Typst formats</h2>
+<p>Typst allows you to define your own templates to produce highly customized documents.</p>
+<div class="quarto-layout-panel" data-layout-ncol="4">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/typst-format-ieee.png" class="lightbox" data-gallery="custom-formats" title="IEEE"><img data-src="images/typst-format-ieee.png" alt="Screenshot of a page showing a article styled according IEEE standards. The title is centered with authors below in two columns."></a></p>
+<figcaption>IEEE</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/typst-format-poster.png" class="lightbox" data-gallery="custom-formats" title="Poster"><img data-src="images/typst-format-poster.png" alt="Screenshot of a poster in landscape orientiation. The poster includes a logo in the top right, a title in the top left, and content arranged in three columns."></a></p>
+<figcaption>Poster</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/typst-format-letter.png" class="lightbox" data-gallery="custom-formats" title="Letter"><img data-src="images/typst-format-letter.png" alt="Screenshot of a page showing a letter. A sender address is across the top of the page, followed by a recipient address left justified. The body of the letter includes a subject line in bold."></a></p>
+<figcaption>Letter</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/typst-format-dept-news.png" class="lightbox" data-gallery="custom-formats" title="Dept News"><img data-src="images/typst-format-dept-news.png" alt="Screenshot of a page showing a department newsletter. The page is split vertically with a white column on the left and a red one on the right. An image spans across the column with the text &quot;Award Winning Science&quot; oriented to run vertically down its right side."></a></p>
+<figcaption>Dept News</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst-custom.html">Custom Typst Formats</a></p>
+</div>
+</section>
+<section id="custom-typst-formats-1" class="slide level2 smaller">
+<h2>Custom Typst formats</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://github.com/quarto-ext/typst-templates/tree/main/poster">Poster</a></td>
+<td><code>quarto use template quarto-ext/typst-templates/poster</code></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/quarto-ext/typst-templates/tree/main/ieee">IEEE</a></td>
+<td><code>quarto use template quarto-ext/typst-templates/ieee</code></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/quarto-ext/typst-templates/tree/main/ams">AMS</a></td>
+<td><code>quarto use template quarto-ext/typst-templates/ams</code></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/quarto-ext/typst-templates/tree/main/letter">Letter</a></td>
+<td><code>quarto use template quarto-ext/typst-templates/letter</code></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/quarto-ext/typst-templates/tree/main/fiction">Fiction</a></td>
+<td><code>quarto use template quarto-ext/typst-templates/fiction</code></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/quarto-ext/typst-templates/tree/main/dept-news">Dept News</a></td>
+<td><code>quarto use template quarto-ext/typst-templates/dept-news</code></td>
+</tr>
+</tbody>
+</table>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst-custom.html">Custom Typst Formats</a></p>
+</div>
+</section>
+<section id="creating-a-new-typst-format" class="slide level2">
+<h2>Creating a new Typst format</h2>
+<p>Use the <code>quarto create command</code> to get started:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="ex">$</span> quarto create extension format</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Choose <code>typst</code> as the base format and provide a name for the extension.</p>
+</section>
+<section id="creating-a-new-typst-format-1" class="slide level2 smaller">
+<h2>Creating a new Typst format</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_extension.yml</code></td>
+<td>Basic extension metadata (name, author, description, etc.) and format definition.</td>
+</tr>
+<tr class="even">
+<td><code>README.md</code></td>
+<td>Documentation on how to install and use the format.</td>
+</tr>
+<tr class="odd">
+<td><code>template.qmd</code></td>
+<td>A starter document that demonstrates the basics of the format.</td>
+</tr>
+<tr class="even">
+<td><code>typst-template.typ</code></td>
+<td>The core Typst template function (documentation on creating Typst templates can be found here: <a href="https://typst.app/docs/tutorial/making-a-template/" class="uri">https://typst.app/docs/tutorial/making-a-template/</a>).</td>
+</tr>
+<tr class="odd">
+<td><code>typst-show.typ</code></td>
+<td>File that calls the template’s function (mapping Pandoc metadata to function arguments).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="typst-show.typ" class="slide level2">
+<h2>typst-show.typ</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>typst-show.typ</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="typst-show.typ"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a></a>#show: dept-news.with(</span>
+<span id="cb11-2"><a></a>$if(title)$</span>
+<span id="cb11-3"><a></a>  title: "$title$",</span>
+<span id="cb11-4"><a></a>$endif$</span>
+<span id="cb11-5"><a></a>$if(edition)$</span>
+<span id="cb11-6"><a></a>  edition: <span class="co">[</span><span class="ot">$edition$</span><span class="co">]</span>,</span>
+<span id="cb11-7"><a></a>$endif$</span>
+<span id="cb11-8"><a></a>$if(hero-image)$</span>
+<span id="cb11-9"><a></a>  hero-image: (</span>
+<span id="cb11-10"><a></a>    path: "$hero-image.path$",</span>
+<span id="cb11-11"><a></a>    caption: <span class="co">[</span><span class="ot">$hero-image.caption$</span><span class="co">]</span></span>
+<span id="cb11-12"><a></a>  ), </span>
+<span id="cb11-13"><a></a>$endif$</span>
+<span id="cb11-14"><a></a>$if(dedication)$</span>
+<span id="cb11-15"><a></a>  dedication: <span class="co">[</span><span class="ot">$dedication$</span><span class="co">]</span>,</span>
+<span id="cb11-16"><a></a>$endif$</span>
+<span id="cb11-17"><a></a>$if(publication-info)$</span>
+<span id="cb11-18"><a></a>  publication-info: <span class="co">[</span><span class="ot">$publication-info$</span><span class="co">]</span>,</span>
+<span id="cb11-19"><a></a>$endif$</span>
+<span id="cb11-20"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="typst-template.typ" class="slide level2">
+<h2>typst-template.typ</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>typst-template.typ</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-filename="typst-template.typ"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a></a>#let whr-template(</span>
+<span id="cb12-2"><a></a>  doc,</span>
+<span id="cb12-3"><a></a>  title: none,</span>
+<span id="cb12-4"><a></a>  author: none,</span>
+<span id="cb12-5"><a></a>  cover_image: none,</span>
+<span id="cb12-6"><a></a>  main_logo: none,</span>
+<span id="cb12-7"><a></a>  bottom_logos: none,</span>
+<span id="cb12-8"><a></a>  toc_background_image: none,</span>
+<span id="cb12-9"><a></a>) = {</span>
+<span id="cb12-10"><a></a>  // Page setup for the entire document</span>
+<span id="cb12-11"><a></a>  set text(font: "Linux Libertine", size: 10pt)</span>
+<span id="cb12-12"><a></a>  set heading(numbering: "1.1")</span>
+<span id="cb12-13"><a></a>  set page(paper: "a4", margin: (left: 20mm, right: 30mm, top: 20mm, bottom: 20mm))</span>
+<span id="cb12-14"><a></a></span>
+<span id="cb12-15"><a></a>  // Define the style for purple headings</span>
+<span id="cb12-16"><a></a>  show heading: it =&gt; {</span>
+<span id="cb12-17"><a></a>    set text(fill: rgb("#4B0082")) // A deep purple</span>
+<span id="cb12-18"><a></a>    it</span>
+<span id="cb12-19"><a></a>  }</span>
+<span id="cb12-20"><a></a></span>
+<span id="cb12-21"><a></a>  // Define the blue bar on the right side of pages</span>
+<span id="cb12-22"><a></a>  #show page: page =&gt; {</span>
+<span id="cb12-23"><a></a>    // Add the blue bar (except on the cover page)</span>
+<span id="cb12-24"><a></a>    if counter(page).at(1) &gt; 1 {</span>
+<span id="cb12-25"><a></a>      box(</span>
+<span id="cb12-26"><a></a>        width: 10pt,</span>
+<span id="cb12-27"><a></a>        height: 100%,</span>
+<span id="cb12-28"><a></a>        fill: rgb("#2a87d6"),</span>
+<span id="cb12-29"><a></a>        float: true,</span>
+<span id="cb12-30"><a></a>        inset: 0pt,</span>
+<span id="cb12-31"><a></a>        place(right, top)</span>
+<span id="cb12-32"><a></a>      )</span>
+<span id="cb12-33"><a></a>    }</span>
+<span id="cb12-34"><a></a>    // Render the page content</span>
+<span id="cb12-35"><a></a>    page</span>
+<span id="cb12-36"><a></a>  }</span>
+<span id="cb12-37"><a></a></span>
+<span id="cb12-38"><a></a>  // Cover page layout</span>
+<span id="cb12-39"><a></a>  page(</span>
+<span id="cb12-40"><a></a>    header: none,</span>
+<span id="cb12-41"><a></a>    footer: none,</span>
+<span id="cb12-42"><a></a>    background: cover_image,</span>
+<span id="cb12-43"><a></a>  )[</span>
+<span id="cb12-44"><a></a>    #place(</span>
+<span id="cb12-45"><a></a>      right, center,</span>
+<span id="cb12-46"><a></a>      image(main_logo)</span>
+<span id="cb12-47"><a></a>    )</span>
+<span id="cb12-48"><a></a></span>
+<span id="cb12-49"><a></a><span class="in">    #if bottom_logos != none {</span></span>
+<span id="cb12-50"><a></a><span class="in">      #place(bottom, center, [</span></span>
+<span id="cb12-51"><a></a><span class="in">        #h(1fr) #bottom_logos #h(1fr)</span></span>
+<span id="cb12-52"><a></a><span class="in">      ])</span></span>
+<span id="cb12-53"><a></a><span class="in">    }</span></span>
+<span id="cb12-54"><a></a>  ]</span>
+<span id="cb12-55"><a></a></span>
+<span id="cb12-56"><a></a>  // Table of Contents page</span>
+<span id="cb12-57"><a></a>  page(</span>
+<span id="cb12-58"><a></a>    header: none,</span>
+<span id="cb12-59"><a></a>    footer: none,</span>
+<span id="cb12-60"><a></a>    background: toc_background_image,</span>
+<span id="cb12-61"><a></a>  )[</span>
+<span id="cb12-62"><a></a>    #show: heading.where(level: 1, 2)</span>
+<span id="cb12-63"><a></a>    #outline(title: "Contents")</span>
+<span id="cb12-64"><a></a>  ]</span>
+<span id="cb12-65"><a></a></span>
+<span id="cb12-66"><a></a>  // Main content pages</span>
+<span id="cb12-67"><a></a>  #set page(columns: 2)</span>
+<span id="cb12-68"><a></a>  #set page(</span>
+<span id="cb12-69"><a></a>    header: if title != none {</span>
+<span id="cb12-70"><a></a>      box(width: 100%, [</span>
+<span id="cb12-71"><a></a>        #h(1fr) #text(9pt)<span class="co">[</span><span class="ot">#title</span><span class="co">]</span></span>
+<span id="cb12-72"><a></a>      ])</span>
+<span id="cb12-73"><a></a>    },</span>
+<span id="cb12-74"><a></a>    footer: box(</span>
+<span id="cb12-75"><a></a>      width: 100%,</span>
+<span id="cb12-76"><a></a>      <span class="co">[</span><span class="ot">#h(1fr) #text(9pt)[#counter(page).at(1)]</span><span class="co">]</span></span>
+<span id="cb12-77"><a></a>    )</span>
+<span id="cb12-78"><a></a>  )</span>
+<span id="cb12-79"><a></a></span>
+<span id="cb12-80"><a></a>  // Insert the main document content</span>
+<span id="cb12-81"><a></a>  #doc</span>
+<span id="cb12-82"><a></a>}</span>
+<span id="cb12-83"><a></a></span>
+<span id="cb12-84"><a></a>// Apply the template to the document with the required parameters</span>
+<span id="cb12-85"><a></a>#show: doc =&gt; whr-template(</span>
+<span id="cb12-86"><a></a>  doc,</span>
+<span id="cb12-87"><a></a>  title: <span class="co">[</span><span class="ot">WORLD HAPPINESS REPORT 2024</span><span class="co">]</span>,</span>
+<span id="cb12-88"><a></a>  cover_image: "../assets/cover-page.jpg",</span>
+<span id="cb12-89"><a></a>  main_logo: "../assets/logo-center-right.png",</span>
+<span id="cb12-90"><a></a>  bottom_logos: [</span>
+<span id="cb12-91"><a></a>    #image("../assets/bottom-logo-1.png", height: 1.5cm)</span>
+<span id="cb12-92"><a></a>    #h(1cm)</span>
+<span id="cb12-93"><a></a>    #image("../assets/bottom-logo-2.png", height: 1.5cm)</span>
+<span id="cb12-94"><a></a>    #h(1cm)</span>
+<span id="cb12-95"><a></a>    #image("../assets/bottom-logo-3.png", height: 1.5cm)</span>
+<span id="cb12-96"><a></a>  ],</span>
+<span id="cb12-97"><a></a>  toc_background_image: "../assets/toc-background.jpg",</span>
+<span id="cb12-98"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 
 
-
-<aside><div>
-<p><a href="https://typst.app/docs/tutorial/making-a-template/">Typst Template Docs</a></p>
-</div></aside></section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../../../images/logo.png" class="slide-logo"></p>
@@ -653,6 +983,38 @@
         }
       });
       </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>
