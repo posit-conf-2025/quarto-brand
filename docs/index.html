@@ -170,15 +170,65 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>🗓️ Date: 2025-09-12</p>
+<p>🗓️ Date: 2025-09-16</p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Join us for a hands-on, one-day workshop at posit::conf(2025), where we’ll explore the versatility of <a href="https://quarto.org/">Quarto</a> output formats. Designed for data scientists, analysts, and content creators, this immersive session will teach you how to craft cohesive reports and presentations while refining your workflow with Quarto’s latest features.</p>
+<p>You will learn how to create dynamic websites, professional PDF documents, engaging presentations, and interactive dashboards using Quarto. This workshop highlights Quarto’s powerful theming capabilities, including the new support for brand.yml, which ensures that your work maintains a professional and cohesive style across all formats.</p>
+<p>By the end of the session, you’ll be equipped to:</p>
+<ul>
+<li>Build and deploy Quarto websites.</li>
+<li>Generate professional presentations and PDF reports.</li>
+<li>Create interactive dashboards for data visualization and reporting.</li>
+<li>Use brand.yml to define and apply consistent theming across all outputs.</li>
+</ul>
+<p>Whether you’re looking to enhance your personal projects or streamline organizational outputs, this workshop will equip you with the tools to create polished, professional results.</p>
 </section>
 <section id="schedule" class="level2">
 <h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">09:00 - 10:30</td>
+<td style="text-align: left;">Intro to Quarto &amp; brand.yml</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10:30 - 11:00</td>
+<td style="text-align: left;"><em>Coffee break</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">11:00 - 12:30</td>
+<td style="text-align: left;">Presentations &amp; Dashboards</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">12:30 - 13:30</td>
+<td style="text-align: left;"><em>Lunch break</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">13:30 - 15:00</td>
+<td style="text-align: left;">PDFs &amp; Websites</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">15:00 - 15:30</td>
+<td style="text-align: left;"><em>Coffee break</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">15:30 - 17:00</td>
+<td style="text-align: left;">Customizing your brand</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="instructors" class="level2">
 <h2 class="anchored" data-anchor-id="instructors">Instructors</h2>
+<p><a href="https://ivelasq.rbind.io/">Isabella Velásquez</a> is a Senior Product Marketing Manager at Posit Software, where she develops strategic content to increase brand visibility and drive product adoption. She has a background in data analysis, reporting, and visualization and holds an MS in Analytics and a BA in Economics and East Asian Languages and Civilizations from the University of Chicago.</p>
+<p><a href="https://www.linkedin.com/in/sarakaltman">Sara Altman</a> is a Data Science Educator at Posit on the Developer Relations team. She creates technical content to help developers and data scientists achieve their goals with Posit tools. Prior to joining the Developer Relations team, she worked on <a href="https://posit.co/products/enterprise/academy/">Posit Academy</a>, Posit’s educational platform. Before Posit, Sara taught data science and R at Stanford. She holds a MS and BS in Symbolic Systems from Stanford.</p>
 
 
 </section>
@@ -257,7 +307,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/posit-conf-2025\.github\.io\/quarto-brand\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

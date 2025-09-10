@@ -1,0 +1,25 @@
+* Open `01-exercise-r.qmd` and run the first three code chunks (in order).
+* Preview the file.
+* Add a `#| include: false` chunk option to the first cell. Preview the file and note the differences.
+* In the YAML, add an `author` field and add your name. Preview the file.
+* Change `code-fold` to be `true`. Preview the file.
+* Edit the first paragraph to (1) make something bold by surrounding the text with `**` and (2) use inline code instead of hardcoded values for the number of countries. You can use the following code to calculate the number of countries. 
+
+::: {.panel-tabset}
+### R
+
+```{r}
+#| eval: false
+#| echo: true
+length(unique(whr$country_name))
+```
+
+### Python
+
+```{python}
+#| eval: false
+#| echo: true
+whr['country_name'].nunique()
+```
+
+:::

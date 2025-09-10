@@ -1,0 +1,14 @@
+* Add an `important` callout box to the introduction summarizing the report's findings.
+
+```markdown
+::: {.callout-important}
+_text here_
+:::
+```
+
+* Change the `format` to `revealjs`. Preview the document.
+* Change the `format` to `pdf`. Preview the document.
+
+::: {.callout-note}
+Removing `code-fold`, `code-summary`, and `embed-resources` is not required because these are `html` only features. However, I'd recommend removing them to keep your document tidy.
+:::
