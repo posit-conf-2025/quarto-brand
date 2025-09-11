@@ -47,5 +47,5 @@ typography:
 
   link:
     weight: 700
-    color: primary
+    color: secondary
     decoration: none

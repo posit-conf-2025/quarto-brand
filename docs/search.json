@@ -40,21 +40,62 @@
     ]
   },
   {
-    "objectID": "materials/00-setup/index.html",
-    "href": "materials/00-setup/index.html",
-    "title": "Setup",
+    "objectID": "materials/02-presentations/exercise-02.html",
+    "href": "materials/02-presentations/exercise-02.html",
+    "title": "",
     "section": "",
-    "text": "Instructions",
+    "text": "Shrink the heading: Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nCreate two columns: Place your plot and table side-by-side. Adjust the percentages as needed.\nAdd tabsets: Use ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nAdd a transition: To improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom."
+  },
+  {
+    "objectID": "materials/02-presentations/index.html",
+    "href": "materials/02-presentations/index.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "View slides in full screen",
     "crumbs": [
-      "Setup"
+      "Presentations"
     ]
   },
   {
-    "objectID": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
-    "href": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
-    "title": "Attribution-ShareAlike 4.0 International",
-    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
-    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. __Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.t stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org"
+    "objectID": "materials/02-presentations/index.html#slides",
+    "href": "materials/02-presentations/index.html#slides",
+    "title": "Presentations",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Presentations"
+    ]
+  },
+  {
+    "objectID": "materials/02-presentations/index.html#exercises",
+    "href": "materials/02-presentations/index.html#exercises",
+    "title": "Presentations",
+    "section": "Exercises",
+    "text": "Exercises\n\nExercise 1\n\nChange the format: In your document’s YAML header, change format: html to format: revealjs.\nAdd slides: Use first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nRender: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.\n\nNote: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.\n\n\nExercise 2\n\nShrink the heading: Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nCreate two columns: Place your plot and table side-by-side. Adjust the percentages as needed.\nAdd tabsets: Use ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nAdd a transition: To improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom.\n\n\n\nExercise 3\n\nChange the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that it uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary.",
+    "crumbs": [
+      "Presentations"
+    ]
+  },
+  {
+    "objectID": "materials/01-intro/exercise-01.html",
+    "href": "materials/01-intro/exercise-01.html",
+    "title": "",
+    "section": "",
+    "text": "Open the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again."
+  },
+  {
+    "objectID": "materials/01-intro/exercise-03.html",
+    "href": "materials/01-intro/exercise-03.html",
+    "title": "",
+    "section": "",
+    "text": "Add an important callout box to the introduction summarizing the report’s findings.\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nNote\n\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy."
+  },
+  {
+    "objectID": "materials/01-intro/exercise-04.html",
+    "href": "materials/01-intro/exercise-04.html",
+    "title": "",
+    "section": "",
+    "text": "In the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes."
   },
   {
     "objectID": "materials/01-intro/index.html",
@@ -67,25 +108,41 @@
     ]
   },
   {
-    "objectID": "materials/01-intro/exercise-02.html",
-    "href": "materials/01-intro/exercise-02.html",
-    "title": "",
+    "objectID": "materials/01-intro/index.html#slides",
+    "href": "materials/01-intro/index.html#slides",
+    "title": "Quarto Documents",
     "section": "",
-    "text": "Open 01-exercise-r.qmd and run the first three code chunks (in order).\nPreview the file.\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of countries. You can use the following code to calculate the number of countries.\n\n\nRPython\n\n\n\nlength(unique(whr$country_name))\n\n\n\n\nwhr['country_name'].nunique()"
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Intro to Quarto"
+    ]
   },
   {
-    "objectID": "materials/01-intro/exercise-06.html",
-    "href": "materials/01-intro/exercise-06.html",
-    "title": "",
-    "section": "",
-    "text": "Read in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette$teal)\n\n\n\n\ngeom_line(color = brand.color.palette.teal)"
+    "objectID": "materials/01-intro/index.html#exercises",
+    "href": "materials/01-intro/index.html#exercises",
+    "title": "Quarto Documents",
+    "section": "Exercises",
+    "text": "Exercises\n\nExercise 1\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\nExercise 2\n\nOpen 01-exercise-r.qmd and run the first three code chunks (in order).\nPreview the file.\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of countries. You can use the following code to calculate the number of countries.\n\n\nRPython\n\n\n\nlength(unique(whr$country_name))\n\n\n\n\nwhr['country_name'].nunique()\n\n\n\n\n\n\nExercise 3\n\nAdd an important callout box to the introduction summarizing the report’s findings.\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nNote\n\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy.\n\n\n\n\nExercise 4\n\nIn the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes.\n\n\n\nExercise 5\n\nRPython\n\n\n\nIn the first code chunk of 01-exercise-r.qmd, replace theme_minimal() with theme_brand_ggplot2(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render and see what changes.\n\n\n\n\nIn the first code chunk of 01-exercise-python.qmd, add theme_brand_plotnine() right before theme_minimal(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render. Does anything change? What if you change foreground in _brand.yml to hot-pink? Re-render with and without theme_brand_plotnine().\n\n\n\n\n\n\nExercise 6\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette$teal)\n\n\n\n\ngeom_line(color = brand.color.palette.teal)",
+    "crumbs": [
+      "Intro to Quarto"
+    ]
   },
   {
-    "objectID": "materials/01-intro/exercise-05.html",
-    "href": "materials/01-intro/exercise-05.html",
-    "title": "",
+    "objectID": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "href": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
+    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. __Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.t stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org"
+  },
+  {
+    "objectID": "materials/00-setup/index.html",
+    "href": "materials/00-setup/index.html",
+    "title": "Setup",
     "section": "",
-    "text": "RPython\n\n\n\nIn the first code chunk of 01-exercise-r.qmd, replace theme_minimal() with theme_brand_ggplot2(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render and see what changes.\n\n\n\n\nIn the first code chunk of 01-exercise-python.qmd, add theme_brand_plotnine() right before theme_minimal(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render. Does anything change? What if you change foreground in _brand.yml to hot-pink? Re-render with and without theme_brand_plotnine()."
+    "text": "Instructions",
+    "crumbs": [
+      "Setup"
+    ]
   },
   {
     "objectID": "materials/01-intro/01-intro.html#about-us",
@@ -571,44 +628,290 @@
     "text": "Your turn\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette$teal)\n\n\n\n\ngeom_line(color = brand.color.palette.teal)\n\n\n\n\n\n\n\n−+\n05:00"
   },
   {
-    "objectID": "materials/01-intro/index.html#slides",
-    "href": "materials/01-intro/index.html#slides",
-    "title": "Quarto Documents",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Intro to Quarto"
-    ]
-  },
-  {
-    "objectID": "materials/01-intro/index.html#exercises",
-    "href": "materials/01-intro/index.html#exercises",
-    "title": "Quarto Documents",
-    "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\nExercise 2\n\nOpen 01-exercise-r.qmd and run the first three code chunks (in order).\nPreview the file.\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of countries. You can use the following code to calculate the number of countries.\n\n\nRPython\n\n\n\nlength(unique(whr$country_name))\n\n\n\n\nwhr['country_name'].nunique()\n\n\n\n\n\n\nExercise 3\n\nAdd an important callout box to the introduction summarizing the report’s findings.\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nNote\n\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy.\n\n\n\n\nExercise 4\n\nIn the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes.\n\n\n\nExercise 5\n\nRPython\n\n\n\nIn the first code chunk of 01-exercise-r.qmd, replace theme_minimal() with theme_brand_ggplot2(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render and see what changes.\n\n\n\n\nIn the first code chunk of 01-exercise-python.qmd, add theme_brand_plotnine() right before theme_minimal(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render. Does anything change? What if you change foreground in _brand.yml to hot-pink? Re-render with and without theme_brand_plotnine().\n\n\n\n\n\n\nExercise 6\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette$teal)\n\n\n\n\ngeom_line(color = brand.color.palette.teal)",
-    "crumbs": [
-      "Intro to Quarto"
-    ]
-  },
-  {
-    "objectID": "materials/01-intro/exercise-04.html",
-    "href": "materials/01-intro/exercise-04.html",
+    "objectID": "materials/01-intro/exercise-05.html",
+    "href": "materials/01-intro/exercise-05.html",
     "title": "",
     "section": "",
-    "text": "In the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes."
+    "text": "RPython\n\n\n\nIn the first code chunk of 01-exercise-r.qmd, replace theme_minimal() with theme_brand_ggplot2(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render and see what changes.\n\n\n\n\nIn the first code chunk of 01-exercise-python.qmd, add theme_brand_plotnine() right before theme_minimal(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render. Does anything change? What if you change foreground in _brand.yml to hot-pink? Re-render with and without theme_brand_plotnine()."
   },
   {
-    "objectID": "materials/01-intro/exercise-03.html",
-    "href": "materials/01-intro/exercise-03.html",
+    "objectID": "materials/01-intro/exercise-06.html",
+    "href": "materials/01-intro/exercise-06.html",
     "title": "",
     "section": "",
-    "text": "Add an important callout box to the introduction summarizing the report’s findings.\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nNote\n\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy."
+    "text": "Read in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette$teal)\n\n\n\n\ngeom_line(color = brand.color.palette.teal)"
   },
   {
-    "objectID": "materials/01-intro/exercise-01.html",
-    "href": "materials/01-intro/exercise-01.html",
+    "objectID": "materials/01-intro/exercise-02.html",
+    "href": "materials/01-intro/exercise-02.html",
     "title": "",
     "section": "",
-    "text": "Open the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again."
+    "text": "Open 01-exercise-r.qmd and run the first three code chunks (in order).\nPreview the file.\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of countries. You can use the following code to calculate the number of countries.\n\n\nRPython\n\n\n\nlength(unique(whr$country_name))\n\n\n\n\nwhr['country_name'].nunique()"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#file-formats",
+    "href": "materials/02-presentations/slides.html#file-formats",
+    "title": "Quarto\nPresentations",
+    "section": "File formats",
+    "text": "File formats\nQuarto supports a variety of formats for creating presentations, including:\n\nrevealjs\npptx\nbeamer\n\n\nbrand.yml is currently supported only in revealjs."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#reveal.js",
+    "href": "materials/02-presentations/slides.html#reveal.js",
+    "title": "Quarto\nPresentations",
+    "section": "reveal.js",
+    "text": "reveal.js\nreveal.js presentations allow you to create stunning presentations on the web.\n\nPresent code and LaTeX equations\nInclude computations in slide output\nAdd image, video, and iFrame backgrounds\nAdd fancy transitions and animations\nActivate scroll view\n\n…and much more"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#converting-to-reveal.js",
+    "href": "materials/02-presentations/slides.html#converting-to-reveal.js",
+    "title": "Quarto\nPresentations",
+    "section": "Converting to reveal.js",
+    "text": "Converting to reveal.js\nConvert your document to a reveal.js presentation by editing format in the YAML heading:\nformat: revealjs\n\nLearn more: Revealjs"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#example",
+    "href": "materials/02-presentations/slides.html#example",
+    "title": "Quarto\nPresentations",
+    "section": "Example",
+    "text": "Example\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: html\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#example-1",
+    "href": "materials/02-presentations/slides.html#example-1",
+    "title": "Quarto\nPresentations",
+    "section": "Example",
+    "text": "Example\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#example-with-sections",
+    "href": "materials/02-presentations/slides.html#example-with-sections",
+    "title": "Quarto\nPresentations",
+    "section": "Example with sections",
+    "text": "Example with sections\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n# In the morning\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Breakfast\n\n- Eat eggs\n- Drink coffee\n\n# In the evening\n\n## Dinner\n\n- Eat spaghetti\n- Drink wine\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#example-with-sections-1",
+    "href": "materials/02-presentations/slides.html#example-with-sections-1",
+    "title": "Quarto\nPresentations",
+    "section": "Example with sections",
+    "text": "Example with sections\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n- Turn off alarm\n- Get out of bed\n\n---\n\n- Get in bed\n- Count sheep"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#your-turn",
+    "href": "materials/02-presentations/slides.html#your-turn",
+    "title": "Quarto\nPresentations",
+    "section": "Your turn",
+    "text": "Your turn\n\nChange the format: In your document’s YAML header, change format: html to format: revealjs.\nAdd slides: Use first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nRender: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.\n\nNote: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#editing-slides",
+    "href": "materials/02-presentations/slides.html#editing-slides",
+    "title": "Quarto\nPresentations",
+    "section": "Editing slides",
+    "text": "Editing slides\nThe quarto-revealjs-editable extension allows the repositioning and resizing of images and text divs directly in the previewed slides.\n\n\nLearn more: quarto-revealjs-editable"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#content-overflow",
+    "href": "materials/02-presentations/slides.html#content-overflow",
+    "title": "Quarto\nPresentations",
+    "section": "Content overflow",
+    "text": "Content overflow\nUse the .smaller class to use a smaller typeface so that more text fits on the slide. For example:\n## Slide Title {.smaller}\nUse the .scrollable class to make off-slide content available by scrolling. For example:\n## Slide Title {.scrollable}"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#slide-transitions",
+    "href": "materials/02-presentations/slides.html#slide-transitions",
+    "title": "Quarto\nPresentations",
+    "section": "Slide transitions",
+    "text": "Slide transitions\nEdit the YAML to change the slide transitions:\n---\ntitle: \"Presentation\"\nformat:\n  revealjs:\n    transition: slide\n    transition-speed: fast\n---\n\nLearn more: Slide Transitions"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#slide-transitions-1",
+    "href": "materials/02-presentations/slides.html#slide-transitions-1",
+    "title": "Quarto\nPresentations",
+    "section": "Slide transitions",
+    "text": "Slide transitions\nThe next few slides will transition using the slide transition\n\n\n\n\n\n\n\nTransition\nDescription\n\n\n\n\nnone\nNo transition (default, switch instantly)\n\n\nfade\nCross fade\n\n\nslide\nSlide horizontally\n\n\nconvex\nSlide at a convex angle\n\n\nconcave\nSlide at a concave angle\n\n\nzoom\nScale the incoming slide so it grows in from the center of the screen."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#tabsets",
+    "href": "materials/02-presentations/slides.html#tabsets",
+    "title": "Quarto\nPresentations",
+    "section": "Tabsets",
+    "text": "Tabsets\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nMazda RX4\n21.0\n6\n160.0\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160.0\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nDatsun 710\n22.8\n4\n108.0\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nHornet 4 Drive\n21.4\n6\n258.0\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nHornet Sportabout\n18.7\n8\n360.0\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nValiant\n18.1\n6\n225.0\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\nDuster 360\n14.3\n8\n360.0\n245\n3.21\n3.570\n15.84\n0\n0\n3\n4\n\n\nMerc 240D\n24.4\n4\n146.7\n62\n3.69\n3.190\n20.00\n1\n0\n4\n2\n\n\nMerc 230\n22.8\n4\n140.8\n95\n3.92\n3.150\n22.90\n1\n0\n4\n2\n\n\nMerc 280\n19.2\n6\n167.6\n123\n3.92\n3.440\n18.30\n1\n0\n4\n4\n\n\nMerc 280C\n17.8\n6\n167.6\n123\n3.92\n3.440\n18.90\n1\n0\n4\n4\n\n\nMerc 450SE\n16.4\n8\n275.8\n180\n3.07\n4.070\n17.40\n0\n0\n3\n3\n\n\nMerc 450SL\n17.3\n8\n275.8\n180\n3.07\n3.730\n17.60\n0\n0\n3\n3\n\n\nMerc 450SLC\n15.2\n8\n275.8\n180\n3.07\n3.780\n18.00\n0\n0\n3\n3\n\n\nCadillac Fleetwood\n10.4\n8\n472.0\n205\n2.93\n5.250\n17.98\n0\n0\n3\n4\n\n\nLincoln Continental\n10.4\n8\n460.0\n215\n3.00\n5.424\n17.82\n0\n0\n3\n4\n\n\nChrysler Imperial\n14.7\n8\n440.0\n230\n3.23\n5.345\n17.42\n0\n0\n3\n4\n\n\nFiat 128\n32.4\n4\n78.7\n66\n4.08\n2.200\n19.47\n1\n1\n4\n1\n\n\nHonda Civic\n30.4\n4\n75.7\n52\n4.93\n1.615\n18.52\n1\n1\n4\n2\n\n\nToyota Corolla\n33.9\n4\n71.1\n65\n4.22\n1.835\n19.90\n1\n1\n4\n1\n\n\nToyota Corona\n21.5\n4\n120.1\n97\n3.70\n2.465\n20.01\n1\n0\n3\n1\n\n\nDodge Challenger\n15.5\n8\n318.0\n150\n2.76\n3.520\n16.87\n0\n0\n3\n2\n\n\nAMC Javelin\n15.2\n8\n304.0\n150\n3.15\n3.435\n17.30\n0\n0\n3\n2\n\n\nCamaro Z28\n13.3\n8\n350.0\n245\n3.73\n3.840\n15.41\n0\n0\n3\n4\n\n\nPontiac Firebird\n19.2\n8\n400.0\n175\n3.08\n3.845\n17.05\n0\n0\n3\n2\n\n\nFiat X1-9\n27.3\n4\n79.0\n66\n4.08\n1.935\n18.90\n1\n1\n4\n1\n\n\nPorsche 914-2\n26.0\n4\n120.3\n91\n4.43\n2.140\n16.70\n0\n1\n5\n2\n\n\nLotus Europa\n30.4\n4\n95.1\n113\n3.77\n1.513\n16.90\n1\n1\n5\n2\n\n\nFord Pantera L\n15.8\n8\n351.0\n264\n4.22\n3.170\n14.50\n0\n1\n5\n4\n\n\nFerrari Dino\n19.7\n6\n145.0\n175\n3.62\n2.770\n15.50\n0\n1\n5\n6\n\n\nMaserati Bora\n15.0\n8\n301.0\n335\n3.54\n3.570\n14.60\n0\n1\n5\n8\n\n\nVolvo 142E\n21.4\n4\n121.0\n109\n4.11\n2.780\n18.60\n1\n1\n4\n2\n\n\n\n\n\n\n\n\n\nLearn more: Tabsets"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#column-layout",
+    "href": "materials/02-presentations/slides.html#column-layout",
+    "title": "Quarto\nPresentations",
+    "section": "Column layout",
+    "text": "Column layout\nArrange content into columns of varying widths:\n\n\nMotor Trend Car Road Tests\nThe data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\nHornet 4 Drive\n21.4\n6\n258\n110\n3.215\n\n\nHornet Sportabout\n18.7\n8\n360\n175\n3.440\n\n\nValiant\n18.1\n6\n225\n105\n3.460\n\n\n\n\n\n\n\nLearn more: Multiple Columns"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#line-highlighting",
+    "href": "materials/02-presentations/slides.html#line-highlighting",
+    "title": "Quarto\nPresentations",
+    "section": "Line highlighting",
+    "text": "Line highlighting\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\nLearn more: Line Highlighting"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#executable-code",
+    "href": "materials/02-presentations/slides.html#executable-code",
+    "title": "Quarto\nPresentations",
+    "section": "Executable code",
+    "text": "Executable code\n\nlibrary(ggplot2)\nggplot(mtcars, aes(hp, mpg, color = am)) +\n  geom_point() +\n  geom_smooth(formula = y ~ x, method = \"loess\")\n\n\n\nLearn more: Executable Code"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#latex-equations",
+    "href": "materials/02-presentations/slides.html#latex-equations",
+    "title": "Quarto\nPresentations",
+    "section": "LaTeX equations",
+    "text": "LaTeX equations\nMathJax rendering of equations to HTML\n\n\n\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\n\n\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\n\n\\[\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\\]\n\\[\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\\]\n\n\nLearn more: LaTeX Equations"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#incremental-lists",
+    "href": "materials/02-presentations/slides.html#incremental-lists",
+    "title": "Quarto\nPresentations",
+    "section": "Incremental lists",
+    "text": "Incremental lists\nLists can optionally be displayed incrementally:\n\nFirst item\nSecond item\nThird item\n\n\n Insert pauses to make other types of content display incrementally.\n\nLearn more: Incremental Lists"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#fragments",
+    "href": "materials/02-presentations/slides.html#fragments",
+    "title": "Quarto\nPresentations",
+    "section": "Fragments",
+    "text": "Fragments\nIncremental text display and animation with fragments:\n\n\nFade in\n\n\nSlide up while fading in\n\n\nSlide left while fading in\n\n\nFade in then semi out\n\n\n\nStrike\n\n\nHighlight red\n\n\nLearn more: Fragments"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#absolute-position",
+    "href": "materials/02-presentations/slides.html#absolute-position",
+    "title": "Quarto\nPresentations",
+    "section": "Absolute position",
+    "text": "Absolute position\nPosition images or other elements at precise locations\n\n\n\n\nLearn more: Absolute Position"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#interactive-slides",
+    "href": "materials/02-presentations/slides.html#interactive-slides",
+    "title": "Quarto\nPresentations",
+    "section": "Interactive slides",
+    "text": "Interactive slides\nInclude Jupyter widgets and htmlwidgets in your presentations\n\n\n\n\n\n\n\nLearn more: Jupyter widgets, htmlwidgets"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#interactive-slides-1",
+    "href": "materials/02-presentations/slides.html#interactive-slides-1",
+    "title": "Quarto\nPresentations",
+    "section": "Interactive slides",
+    "text": "Interactive slides\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\nlibrary(bslib)\n\n# Define UI for app that draws a histogram ----\nui &lt;- page_sidebar(\n  sidebar = sidebar(open = \"open\",\n    numericInput(\"n\", \"Sample count\", 100),\n    checkboxInput(\"pause\", \"Pause\", FALSE),\n  ),\n  plotOutput(\"plot\", width=1100)\n)\n\nserver &lt;- function(input, output, session) {\n  data &lt;- reactive({\n    input$resample\n    if (!isTRUE(input$pause)) {\n      invalidateLater(1000)\n    }\n    rnorm(input$n)\n  })\n  \n  output$plot &lt;- renderPlot({\n    hist(data(),\n      breaks = 40,\n      xlim = c(-2, 2),\n      ylim = c(0, 1),\n      lty = \"blank\",\n      xlab = \"value\",\n      freq = FALSE,\n      main = \"\"\n    )\n    \n    x &lt;- seq(from = -2, to = 2, length.out = 500)\n    y &lt;- dnorm(x)\n    lines(x, y, lwd=1.5)\n    \n    lwd &lt;- 5\n    abline(v=0, col=\"red\", lwd=lwd, lty=2)\n    abline(v=mean(data()), col=\"blue\", lwd=lwd, lty=1)\n\n    legend(legend = c(\"Normal\", \"Mean\", \"Sample mean\"),\n      col = c(\"black\", \"red\", \"blue\"),\n      lty = c(1, 2, 1),\n      lwd = c(1, lwd, lwd),\n      x = 1,\n      y = 0.9\n    )\n  }, res=140)\n}\n\n# Create Shiny app ----\nshinyApp(ui = ui, server = server)\n\nLearn more: Observable, Shiny, Component Layout"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#your-turn-1",
+    "href": "materials/02-presentations/slides.html#your-turn-1",
+    "title": "Quarto\nPresentations",
+    "section": "Your turn",
+    "text": "Your turn\n\nShrink the heading: Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nCreate two columns: Place your plot and table side-by-side. Adjust the percentages as needed.\nAdd tabsets: Use ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nAdd a transition: To improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#easy-navigation",
+    "href": "materials/02-presentations/slides.html#easy-navigation",
+    "title": "Quarto\nPresentations",
+    "section": "Easy navigation",
+    "text": "Easy navigation\n\nQuickly jump to other parts of your presentation\n\n\n\n\n\n\n\nToggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.\n\n\n\nYou can also press mm to toggle the menu open and closed.\nYou can also press gg to toggle ‘Jump To Slide’ modal box to quickly go to one of your slide using its number or id.\n\nLearn more: Navigation / Jump To Slide"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#jump-to-slide",
+    "href": "materials/02-presentations/slides.html#jump-to-slide",
+    "title": "Quarto\nPresentations",
+    "section": "Jump to slide",
+    "text": "Jump to slide\n\nQuickly jump to other parts of your presentation"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#chalkboard",
+    "href": "materials/02-presentations/slides.html#chalkboard",
+    "title": "Quarto\nPresentations",
+    "section": "Chalkboard",
+    "text": "Chalkboard\n\nFree form drawing and slide annotations\n\n\n\n\n\n\n\nUse the chalkboard button at the bottom left of the slide to toggle the chalkboard.\n\n\n\n\n\n\n\n\n\nUse the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.\n\n\n\nYou can also press bb to toggle the chalkboard or cc to toggle the notes canvas.\n\nLearn more: Chalkboard"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#point-of-view",
+    "href": "materials/02-presentations/slides.html#point-of-view",
+    "title": "Quarto\nPresentations",
+    "section": "Point of view",
+    "text": "Point of view\npress oo to toggle overview mode:\n\nHold down the AltAlt/OptionOption and click on any element to zoom towards it—try it now on this slide.\n\nLearn more: Overview Mode, Slide Zoom"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#preview-links",
+    "href": "materials/02-presentations/slides.html#preview-links",
+    "title": "Quarto\nPresentations",
+    "section": "Preview links",
+    "text": "Preview links\nNavigate to hyperlinks without disrupting the flow of your presentation.\nUse the preview-links option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:\n\nMatplotlib: Visualization with Python\n\n\nLearn more: Preview Links"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#speaker-view",
+    "href": "materials/02-presentations/slides.html#speaker-view",
+    "title": "Quarto\nPresentations",
+    "section": "Speaker view",
+    "text": "Speaker view\npress ss (or use the tools in presentation menu ) to open speaker view\n## Slide with speaker notes\n\nSlide content\n\n::: {.notes}\nSpeaker notes go here.\n:::\n\nSpeaker notes go here.\n\n\nLearn more: Speaker View"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#themes",
+    "href": "materials/02-presentations/slides.html#themes",
+    "title": "Quarto\nPresentations",
+    "section": "Themes",
+    "text": "Themes\n10 Built-in themes\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Themes"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#reveal.js-with-brand.yml",
+    "href": "materials/02-presentations/slides.html#reveal.js-with-brand.yml",
+    "title": "Quarto\nPresentations",
+    "section": "reveal.js with brand.yml",
+    "text": "reveal.js with brand.yml\nThe _brand.yml file in the root directory of your project (with or without a _quarto.yml file) will automatically apply the brand to your revealjs documents.\n\nThe revealjs format does not support switching between light and dark modes."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#title-slide-background",
+    "href": "materials/02-presentations/slides.html#title-slide-background",
+    "title": "Quarto\nPresentations",
+    "section": "Title slide background",
+    "text": "Title slide background\nAdd a custom background to the title slide using the title-slide-attributes key:\n---\nformat: revealjs\ntitle-slide-attributes:\n    data-background-image: images/milky-way.jpeg\n    data-background-size: cover\n---\n\nLearn more: Custom Background"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#slide-backgrounds",
+    "href": "materials/02-presentations/slides.html#slide-backgrounds",
+    "title": "Quarto\nPresentations",
+    "section": "Slide backgrounds",
+    "text": "Slide backgrounds\nSet the background attribute on a slide to change the background color (all CSS color formats are supported).\nUse {{&lt; brand color COLOR_NAME BRAND_MODE &gt;}} to return the brand color named COLOR_NAME as a string.\n---\nformat: revealjs\n---\n\n## Slide Title {background-color='{{&lt; brand color primary &gt;}}'}\n\nLearn more: Slide Backgrounds"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#media-backgrounds",
+    "href": "materials/02-presentations/slides.html#media-backgrounds",
+    "title": "Quarto\nPresentations",
+    "section": "Media backgrounds",
+    "text": "Media backgrounds\nYou can also use the following as a slide background:\n\nAn image: background-image\nA video: background-video\nAn iframe: background-iframe"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#and-more",
+    "href": "materials/02-presentations/slides.html#and-more",
+    "title": "Quarto\nPresentations",
+    "section": "And more…",
+    "text": "And more…\n\nTouch optimized (presentations look great on mobile, swipe to navigate slides)\nFooter & Logo (optionally specify custom footer per-slide or hide global footer)\nAuto-Slide (step through slides automatically, without any user input)\nMultiplex (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).\n\n\nLearn more: Quarto Presentations"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#your-turn-2",
+    "href": "materials/02-presentations/slides.html#your-turn-2",
+    "title": "Quarto\nPresentations",
+    "section": "Your turn",
+    "text": "Your turn\n\nChange the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that it uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary."
+  },
+  {
+    "objectID": "materials/02-presentations/exercise-03.html",
+    "href": "materials/02-presentations/exercise-03.html",
+    "title": "",
+    "section": "",
+    "text": "Change the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that it uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary."
+  },
+  {
+    "objectID": "materials/02-presentations/exercise-01.html",
+    "href": "materials/02-presentations/exercise-01.html",
+    "title": "",
+    "section": "",
+    "text": "Change the format: In your document’s YAML header, change format: html to format: revealjs.\nAdd slides: Use first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nRender: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.\n\nNote: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations."
   }
 ]

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<link href="../../../images/logo.png" rel="icon" type="image/png">
+<link href="../../images/logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -13,6 +13,7 @@
 <script src="../../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/run-python-blocks.js" type="module"></script>
 <link href="../../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/shinylive.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet">
 <script src="../../site_libs/quarto-contrib/kbd/kbd.js"></script>
 <link href="../../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.23">
@@ -102,7 +103,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-4be20af235b990f299b8454a41ed67e9.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-1ac5a57485cb8370f76bf52a61a1e1d2.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -209,8 +210,9 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="white" data-background-image="../images/title-slide-light.svg" style="text-align: right; left: 10%" class="quarto-title-block center">
-  <h1 class="title">Quarto<br>Presentations</h1>
+<section id="title-slide" data-background-color="white" data-background-image="../../images/title-slide-light.svg" style="text-align: right; left: 10%" class="quarto-title-block center">
+  <h1 class="title">Quarto<br>
+Presentations</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -241,9 +243,24 @@
 <p>…and much more</p>
 </section>
 <section>
-<section id="reveal.js-basics" class="title-slide slide level1 center" data-background-color="#223e50">
+<section id="reveal.js-basics" class="title-slide slide level1 agenda-slide center" data-background-color="#223e50">
 <h1>reveal.js basics</h1>
-
+<div class="agenda">
+<ul>
+<li><div class="agenda-active">
+<p>reveal.js basics</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Building slides</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Presenting slides</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Branding slides</p>
+</div></li>
+</ul>
+</div>
 </section>
 <section id="converting-to-reveal.js" class="slide level2">
 <h2>Converting to reveal.js</h2>
@@ -367,9 +384,24 @@
 <p>Note: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.</p>
 </section></section>
 <section>
-<section id="building-slides" class="title-slide slide level1 center">
+<section id="building-slides" class="title-slide slide level1 agenda-slide center">
 <h1>Building slides</h1>
-
+<div class="agenda">
+<ul>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>reveal.js basics</p>
+</div></li>
+<li><div class="agenda-active">
+<p>Building slides</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Presenting slides</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Branding slides</p>
+</div></li>
+</ul>
+</div>
 </section>
 <section id="editing-slides" class="slide level2">
 <h2>Editing slides</h2>
@@ -1156,8 +1188,8 @@ a_{21}&amp; =b_{21}&amp;
 <p>Include Jupyter widgets and htmlwidgets in your presentations</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-cd31fc75a9c928329e2c" style="width:960px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-cd31fc75a9c928329e2c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-b2043ad87746d3ec54f2" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-b2043ad87746d3ec54f2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="footer">
@@ -1238,9 +1270,24 @@ a_{21}&amp; =b_{21}&amp;
 </ul>
 </section></section>
 <section>
-<section id="presenting-slides" class="title-slide slide level1 center">
+<section id="presenting-slides" class="title-slide slide level1 agenda-slide center">
 <h1>Presenting slides</h1>
-
+<div class="agenda">
+<ul>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>reveal.js basics</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Building slides</p>
+</div></li>
+<li><div class="agenda-active">
+<p>Presenting slides</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Branding slides</p>
+</div></li>
+</ul>
+</div>
 </section>
 <section id="easy-navigation" class="slide level2">
 <h2>Easy navigation</h2>
@@ -1347,9 +1394,24 @@ a_{21}&amp; =b_{21}&amp;
 </div>
 </section></section>
 <section>
-<section id="branding-slides" class="title-slide slide level1 center" data-background-color="#223e50">
+<section id="branding-slides" class="title-slide slide level1 agenda-slide center" data-background-color="#223e50">
 <h1>Branding slides</h1>
-
+<div class="agenda">
+<ul>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>reveal.js basics</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Building slides</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Presenting slides</p>
+</div></li>
+<li><div class="agenda-active">
+<p>Branding slides</p>
+</div></li>
+</ul>
+</div>
 </section>
 <section id="themes" class="slide level2">
 <h2>Themes</h2>
@@ -1441,7 +1503,7 @@ a_{21}&amp; =b_{21}&amp;
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../../images/logo.png" class="slide-logo"></p>
+<p><img src="../../images/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>

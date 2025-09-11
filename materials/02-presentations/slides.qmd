@@ -1,13 +1,16 @@
 ---
-title: "Quarto<br>Presentations"
+title: "Quarto\n\nPresentations"
+footer: ""
+logo: ""
 format:
   revealjs:
     title-slide-attributes: 
-      data-background-image: ../images/title-slide-light.svg
+      data-background-image: ../../images/title-slide-light.svg
       data-background-color: "white"
       style: "text-align: right; left: 10%"
 filters:
   - shinylive
+  - reveal-auto-agenda
 ---
 
 ## File formats
