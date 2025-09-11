@@ -1,0 +1,30 @@
+---
+title: "Dashboards"
+format: html
+---
+
+## Slides
+
+[View slides in full screen](slides.html)
+
+```{=html}
+<iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+## Exercises
+
+### Exercise 1
+
+{{< include exercise-01.qmd >}} 
+
+### Exercise 2
+
+{{< include exercise-02.qmd >}} 
+
+### Exercise 3
+
+{{< include exercise-03.qmd >}} 
+
+### Exercise 4
+
+{{< include exercise-04.qmd >}} 

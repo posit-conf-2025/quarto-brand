@@ -1,0 +1,753 @@
+---
+title: "Quarto<br>Dashboards"
+footer: ""
+logo: ""
+format:
+  revealjs:
+    title-slide-attributes: 
+      data-background-image: ../../images/title-slide-light.svg
+      data-background-color: "white"
+      style: "text-align: right; left: 10%"
+filters:
+  - reveal-auto-agenda
+---
+
+# Hello, Dashboards!
+
+## Quarto ➝ many outputs {background-image="images/quarto-to-docs.png"}
+
+With Quarto you can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books, and more...
+
+## Quarto ➝ dashboards {background-image="images/quarto-to-dashboard.png"}
+
+## 
+
+![](images/dashboards/customer-churn.png){fig-align="center" width="100%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::: {.notes}
+rows and columns
+value boxes
+multiple pages
+:::
+
+##
+
+![](images/dashboards/dashing-through-snow.png){fig-align="center" width="100%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::: {.notes}
+sidebar
+:::
+
+## 
+
+![](images/dashboards/earthquakes.png){fig-align="center" width="100%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::: {.notes}
+interactive leaflet widget
+html widget
+:::
+
+## 
+
+![](images/dashboards/model-card.png){fig-align="center" width="100%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::: {.notes}
+dashboard for a model
+provides context into the model by adding narrative to the dashboard
+not just raw json dump
+:::
+
+## 
+
+![](images/dashboards/shiny-penguins.png){fig-align="center" width="100%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::: {.notes}
+uses shiny for python
+select island and penguins and distributions will change
+can see all these dashboards and their code on the quarto website under gallery
+:::
+
+## 🌎 World Happiness Report dashboard
+
+![](images/whr-dashboard-final.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::: {.notes}
+Walk through
+Click link to interact with the dashboard yourself
+:::
+
+## Notebook ➝ Dashboard
+
+::: python-box
+``` {.markdown filename="olympicdash.qmd" style="overflow-y: hidden" code-line-numbers="|3"}
+---
+title: "World Happiness Report"
+format: dashboard
+---
+
+# notebook content goes here...
+```
+:::
+
+::: {.notes}
+How did we create this dashboard? 
+One change to notebook
+format
+
+Once you done that
+Many components you can add
+all components offered in ipynb or plain text qmd
+:::
+
+# Dashboard basics
+
+## Cards {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+Dashboards are composed of **cards**.
+
+::: {.notes}
+cards are the basic building blocks of dashboards
+you often won't need to manually define a card -- they will typically map to cells in your notebook that create plots, display data, display text, etc.
+:::
+
+
+::: r-hstack
+::: {data-id="box1" auto-animate-delay="0" style="background: #73994e; width: 200px; height: 150px; margin: 10px; border: 3px solid #000;"}
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background: #f3c13d; width: 200px; height: 150px; margin: 10px; border: 3px solid #000;"}
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background: #223e50; width: 200px; height: 150px; margin: 10px; border: 3px solid #000;"}
+:::
+:::
+
+## Rows and columns {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+Cards are arranged into **rows** and **columns**.
+
+::: r-stack
+::: {data-id="box1" auto-animate-delay="0" style="background: #73994e; width: 235px; height: 145px; margin-top: 30px; position: absolute; left: 275px; border: 3px solid #000;"}
+:::
+
+::: {data-id="box2" style="background: #f3c13d; width: 235px; height: 145px; margin-top: 30px; position: absolute; right: 275px; border: 3px solid #000;"}
+:::
+
+::: {data-id="box3" style="background: #223e50; width: 500px; height: 300px; margin-top: 200px; border: 3px solid #000;"}
+:::
+:::
+
+::: {.notes}
+to organize content 
+arrange into rows and columns
+:::
+
+## Layouts {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+**Pages**, **tabsets**, and **sidebars** allow for more advanced layouts.
+
+::: r-stack
+::: {data-id="box1" auto-animate-delay="0" style="background: #73994e; width: 235px; height: 145px; margin-top: 30px; position: absolute; left: 275px; border: 3px solid #000;"}
+:::
+
+::: {data-id="box2" style="background: #f3c13d; width: 235px; height: 145px; margin-top: 30px; position: absolute; right: 275px; border: 3px solid #000;"}
+:::
+
+::: {data-id="box3" style="background: #223e50; width: 500px; height: 300px; margin-top: 200px; border: 3px solid #000;"}
+:::
+
+::: {data-id="box4" auto-animate-delay="0" style="background: #a9c7c9; width: 150px; height: 470px; margin-top: 30px; position: absolute; right: 800px; border: 3px solid #000;"}
+:::
+:::
+
+::: {.notes}
+can also control the general layout of the page with things like pages, tabsets, and sidebars
+talk about this in the next slide deck
+:::
+
+## Step-by-step
+
+Let's make a dashboard, step-by-step
+
+# First dashboard
+
+## Step 1: `format: dashboard` {auto-animate="true"}
+
+::: python-box
+``` {.yaml filename="dashboard.qmd"}
+---
+title: "My first Quarto dashboard"
+format: dashboard
+---
+```
+:::
+
+::: {.notes}
+first, need to add that format: dashboard line
+:::
+
+## Step 2: Add a card {auto-animate="true"}
+
+::: python-box
+```` {.yaml filename="dashboard.qmd" code-line-numbers="|10-16"}
+---
+title: "My first Quarto dashboard"
+format: dashboard
+---
+
+```{{python}}
+from plotnine import ggplot, aes, geom_point
+from plotnine.data import mpg
+```
+
+```{{python}}
+(
+    ggplot(mpg, aes(x = "cty", y = "hwy"))
+    + geom_point()
+)
+```
+````
+:::
+
+::: {.notes}
+now, add a card creating a plot
+this is plotnine code
+see what it looks like
+:::
+
+## Step 2: Add a card {.smaller auto-animate="true"}
+
+::: columns
+::: {.column width="40%"}
+::: python-box
+```` {.yaml filename="dashboard.qmd"}
+---
+title: "My first Quarto dashboard"
+format: dashboard
+---
+
+```{{python}}
+from plotnine import ggplot, aes, geom_point
+from plotnine.data import mpg
+```
+
+```{{python}}
+(
+    ggplot(mpg, aes(x = "cty", y = "hwy"))
+    + geom_point()
+)
+```
+````
+:::
+:::
+
+::: {.column width="60%"}
+![](images/first-dashboard-py-1.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+:::
+
+## Step 3: Add another card {auto-animate="true"}
+
+::: python-box
+```` {.yaml filename="dashboard.qmd" code-line-numbers="|18-23"}
+---
+title: "My first Quarto dashboard"
+format: dashboard
+---
+
+```{{python}}
+from plotnine import ggplot, aes, geom_point, geom_bar
+from plotnine.data import mpg
+```
+
+```{{python}}
+(
+    ggplot(mpg, aes(x = "cty", y = "hwy"))
+    + geom_point()
+)
+```
+
+```{{python}}
+(
+    ggplot(mpg, aes(x = "drv"))
+    + geom_bar()
+)
+```
+````
+:::
+
+## Step 3: Add another card {.smaller auto-animate="true"}
+
+::: columns
+::: {.column width="40%"}
+::: python-box
+```` {.yaml filename="dashboard.qmd"}
+---
+title: "My first Quarto dashboard"
+format: dashboard
+---
+
+```{{python}}
+from plotnine import ggplot, aes, geom_point, geom_bar
+from plotnine.data import mpg
+```
+
+```{{python}}
+(
+    ggplot(mpg, aes(x = "cty", y = "hwy"))
+    + geom_point()
+)
+```
+
+```{{python}}
+(
+    ggplot(mpg, aes(x = "drv"))
+    + geom_bar()
+)
+```
+````
+:::
+:::
+
+::: {.column width="60%"}
+![](images/first-dashboard-py-2.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+:::
+
+::: {.notes}
+will appear below by default
+:::
+
+## Step 4: Add titles to cards {auto-animate="true"}
+
+::: python-box
+```` {.yaml filename="dashboard.qmd" code-line-numbers="|12,20"}
+---
+title: "My first Quarto dashboard"
+format: dashboard
+---
+
+```{{python}}
+from plotnine import ggplot, aes, geom_point, geom_bar
+from plotnine.data import mpg
+```
+
+```{{python}}
+#| title: Highway vs. city mileage
+(
+    ggplot(mpg, aes(x = "cty", y = "hwy"))
+    + geom_point()
+)
+```
+
+```{{python}}
+#| title: Drive types
+(
+    ggplot(mpg, aes(x = "drv"))
+    + geom_bar()
+)
+```
+````
+:::
+
+## Step 4: Add titles to cards {.smaller auto-animate="true"}
+
+::: {.notes}
+add titles using the title option in the cell
+:::
+
+::: columns
+::: {.column width="40%"}
+::: python-box
+```` {.yaml filename="dashboard.qmd"}
+---
+title: "My first Quarto dashboard"
+format: dashboard
+---
+
+```{{python}}
+from plotnine import ggplot, aes, geom_point, geom_bar
+from plotnine.data import mpg
+```
+
+```{{python}}
+#| title: Highway vs. city mileage
+(
+    ggplot(mpg, aes(x = "cty", y = "hwy"))
+    + geom_point()
+)
+```
+
+```{{python}}
+#| title: Drive types
+(
+    ggplot(mpg, aes(x = "drv"))
+    + geom_bar()
+)
+```
+````
+:::
+:::
+
+::: {.column width="60%"}
+![](images/first-dashboard-py-3.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+:::
+
+## Steps 1 - 4 {auto-animate="true"}
+
+![](images/first-dashboard-py-3.png){fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::: {.notes}
+now have a dashboard
+:::
+
+## brand.yml works with dashboards too! {.smaller}
+
+![](images/first-dashboard-py-brand.png){fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+{{< include exercise-01.qmd >}} 
+
+```{r}
+#| label: clock-1
+#| echo: false
+countdown::countdown(minutes = 3, seconds = 0, play_sound = TRUE)
+```
+
+# Layout
+
+## Rows {auto-animate="true"}
+
+By default, cards are laid out in rows:
+
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="|11,21"}
+{{< include _rows.qmd >}}
+````
+:::
+
+## Rows {.smaller auto-animate="true"}
+
+::: columns
+::: {.column width="40%"}
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="11,21"}
+{{< include _rows.qmd >}}
+````
+:::
+:::
+
+::: {.column width="60%"}
+![](images/first-dashboard-py-3.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+:::
+
+## Rows {auto-animate="true"}
+
+Default value of `orientation` is `rows`:
+
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="4-5"}
+{{< include _rows-orientation.qmd >}}
+````
+:::
+
+## Columns {auto-animate="true"}
+
+Setting `orientation` to `columns` makes each `##` indicate a column instead of a row:
+
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="4-5"}
+{{< include _columns.qmd >}}
+````
+:::
+
+## Columns {.smaller auto-animate="true"}
+
+::: columns
+::: {.column width="40%"}
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="4-5,14,24"}
+{{< include _columns.qmd >}}
+````
+:::
+:::
+
+::: {.column width="60%"}
+![](images/first-dashboard-py-columns.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+:::
+
+## Rows, then columns {auto-animate="true"}
+
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd"}
+{{< include _rows-then-columns.qmd >}}
+````
+:::
+
+## Rows, then columns {.smaller auto-animate="true"}
+
+::: columns
+::: {.column width="40%"}
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd"}
+{{< include _rows-then-columns.qmd >}}
+````
+:::
+:::
+
+::: {.column width="60%"}
+![](images/first-dashboard-py-rows-columns.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+:::
+
+## Columns, then rows {auto-animate="true"}
+
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="|5|13-23|25-45"}
+{{< include _columns-then-rows.qmd >}}
+````
+:::
+
+## Columns, then rows {.smaller auto-animate="true"}
+
+::: columns
+::: {.column width="40%"}
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="5"}
+{{< include _columns-then-rows.qmd >}}
+````
+:::
+:::
+
+::: {.column width="60%"}
+![](images/first-dashboard-py-columns-rows.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+:::
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+{{< include exercise-02.qmd >}} 
+
+```{r}
+#| label: clock-2
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+# Dashboard components
+
+## Quarto dashboards are highly customizable! {.center}
+
+## Navigation bar and pages
+
+Icon, title, and author along with links to sub-pages if more than one page is defined.
+
+![](images/navbar-pages.png){fig-align="center"}
+
+## Sidebars, rows, columns, and tabsets
+
+Rows and columns using markdown headings, with optional attributes to control height, width, etc.
+Sidebars, mostly used for for interactive inputs.
+Tabsets to further divide content.
+
+![](images/sidebar-rows-columns-tabsets.png){fig-align="center"}
+
+## Cards
+
+Cards are containers for code cell outputs (e.g., plots, tables, value boxes) and free form markdown text.
+The content of cards typically maps to *cells* in your notebook or source document.
+
+![](images/cards.png){fig-align="center"}
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+{{< include exercise-03.qmd >}}
+
+## Tabsets {auto-animate="true"}
+
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="|11|23"}
+{{< include _tabsets.qmd >}}
+````
+:::
+
+## Tabsets {.smaller auto-animate="true"}
+
+Each card within a row/column or each row/column within another becomes a tab:
+
+::: columns
+::: {.column width="40%"}
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="13,25"}
+{{< include _tabsets.qmd >}}
+````
+:::
+:::
+
+::: {.column width="60%"}
+![](images/tabsets.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+:::
+
+## Pages {auto-animate="true"}
+
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="|11,21"}
+{{< include _pages.qmd >}}
+````
+:::
+
+## Pages {.smaller auto-animate="true"}
+
+::: columns
+::: {.column width="40%"}
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="11"}
+{{< include _pages.qmd >}}
+````
+:::
+:::
+
+::: {.column width="60%"}
+![](images/pages-scatter.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+:::
+
+## Pages {.smaller auto-animate="true"}
+
+::: columns
+::: {.column width="40%"}
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="21"}
+{{< include _pages.qmd >}}
+````
+:::
+:::
+
+::: {.column width="60%"}
+![](images/pages-bar.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+:::
+
+## Navigation buttons {auto-animate="true"}
+
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="|6-15"}
+{{< include _nav-buttons.qmd >}}
+````
+:::
+
+## Navigation buttons {.smaller auto-animate="true"}
+
+::: columns
+::: {.column width="40%"}
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="6-15"}
+{{< include _nav-buttons.qmd >}}
+````
+:::
+:::
+
+::: {.column width="60%"}
+![](images/nav-buttons.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+:::
+
+## Value boxes {.smaller}
+
+::: {.notes}
+multiple ways to make value boxes
+:::
+
+::: incremental
+-   Value boxes are a great way to prominently display simple values within a dashboard
+
+-   You can create value boxes in executable cells or plain markdown in divs
+
+-   Value boxes use Bootstrap icons (<https://icons.getbootstrap.com>) and can be set to any color (e.g., with a HEX code) or color alias defined by the theme (we'll get to themes later!)
+
+    | Color alias | Default theme color(s) |
+    |-------------|------------------------|
+    | `primary`   | Blue                   |
+    | `secondary` | Gray                   |
+    | `success`   | Green                  |
+    | `info`      | Bright Blue            |
+    | `warning`   | Yellow/Orange          |
+    | `danger`    | Red                    |
+    | `light`     | Light Gray             |
+    | `dark`      | Black                  |
+:::
+
+## Value boxes {auto-animate="true"}
+
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="|11|13-25|27-35|37-45|47-51|53"}
+{{< include _valueboxes-py.qmd >}}
+````
+:::
+
+## Value boxes {.smaller auto-animate="true"}
+
+::: columns
+::: {.column width="40%"}
+::: {data-id="code"}
+```` {.yaml filename="dashboard.qmd" code-line-numbers="27-35,37-45,47-51"}
+{{< include _valueboxes-py.qmd >}}
+````
+:::
+:::
+
+::: {.column width="60%"}
+![](images/valueboxes-py.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+:::
+
+## Markdown text {.smaller}
+
+::: incremental
+-   You can include markdown text anywhere within a dashboard
+
+-   Markdown text is automatically placed in cards, but you can also explicitly put them in cards with fenced divs, and add titles to cards
+
+    ```` {.yaml}
+    ::: {.card title="Title goes here"}
+    Text goes here.
+    :::
+    ````
+
+-   You can place markdown text and other cell output in a single card as well
+
+    ```` {.yaml}
+    ::: {.card title="Title goes here"}
+    Text goes here.
+
+    ```{{r}}
+    # code generating output goes here
+    ```
+    :::    
+    ````
+:::
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+{{< include exercise-04.qmd >}} 
+
+```{r}
+#| label: clock-4
+#| echo: false
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE)
+```
+
+## ...and much more!
+
+There's much more you can adjust and do with Quarto dashboards, including:
+
+* Specify [additional layout options](https://quarto.org/docs/dashboards/layout.html#layout), like scrolling
+* Use [dynamic cell titles](https://quarto.org/docs/dashboards/data-display.html#dynamic-titles)
+* Add a [sidebar](https://quarto.org/docs/dashboards/inputs.html#sidebars)

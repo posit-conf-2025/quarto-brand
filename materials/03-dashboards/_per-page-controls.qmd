@@ -1,0 +1,38 @@
+---
+title: "Rows, then columns"
+format: dashboard
+---
+
+```{{r}}
+library(ggplot2)
+```
+
+## Overview {orientation="rows"}
+
+### 
+
+This dashboard summarizes an illuminating analysis of fuel economy of cars.
+
+### 
+
+This is a car.
+
+![](images/car.png){fig-alt="Illustration of a teal color car."}
+
+## Plots {orientation="columns" scrolling="true"}
+
+### Scatter
+
+```{{r}}
+#| title: Highway vs. city mileage
+ggplot(mpg, aes(x = cty, y = hwy)) +
+  geom_point()
+```
+
+### Bar
+
+```{{r}}
+#| title: Drive types
+ggplot(mpg, aes(x = drv)) +
+  geom_bar()
+```

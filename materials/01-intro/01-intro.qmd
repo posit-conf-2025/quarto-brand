@@ -1,19 +1,1384 @@
 ---
-title: "Intro to Quarto"
-subtitle: "posit::conf(2025)"
-author:   
-  - name: Isabella Velásquez
-    affiliations:
-      - name: Posit, PBC
-  - name: Sara Altman
-    affiliations:
-      - name: Posit, PBC
+title: "Quarto\n\nDocuments"
 footer: ""
 logo: ""
 format:
   revealjs:
-    transition: fade
-    slide-number: true
-    chalkboard: true
+    title-slide-attributes: 
+      data-background-image: ../../images/title-slide-light.svg
+      data-background-color: "white"
+      style: "text-align: right; left: 10%"
+filters:
+  - reveal-auto-agenda
 ---
 
+```{r}
+#| include: false
+
+library(countdown)
+```
+
+# Welcome
+
+## About us
+
+::: columns
+::: {.column width="50%"}
+-   Data Science Educator
+
+    Developer Relations, Posit
+:::
+
+::: {.column width="50%" style="text-align: center;"}
+![](images/sara.png){fig-alt="Sara's headshot" fig-align="center" width=250px style="border-radius: 50%;"}
+
+**Sara Altman**
+
+[{{< fa brands github >}} \@skaltman](https://github.com/skaltman)
+
+[{{< fa brands linkedin >}} sarakaltman](https://www.linkedin.com/in/sarakaltman/)
+
+:::
+:::
+
+## About us
+
+::: columns
+::: {.column width="50%"}
+-   Sr. Product Marketing Manager
+
+    Developer Relations, Posit
+:::
+
+::: {.column width="50%" style="text-align: center;"}
+![](images/isabella.jpg){fig-alt="Isabella's headshot" fig-align="center" width=250px style="border-radius: 50%;"}
+
+**Isabella Velásquez**
+
+[{{< fa brands github >}} \@ivelasq](https://github.com/ivelasq)
+
+[{{< fa link >}} ivelasq.rbind.io](https://ivelasq.rbind.io)
+
+:::
+:::
+
+## About you
+
+::: task
+Please share
+
+-   Name
+-   Professional affiliation
+-   What do you hope to get out of this workshop?
+:::
+
+```{r}
+#| echo: false
+
+countdown(minutes = 4)
+```
+
+## Meeting you where you are
+
+::: columns
+::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+These materials are pitched at someone who:
+
+-   Knows some R or Python 
+
+-   Has R or Python installed
+
+-   Wants to create outputs that weave text and code
+
+-   Relatively new to Quarto
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment .fade-in}
+We'll teach you
+
+- What Quarto is
+
+- How to create documents, websites, and presentations with Quarto
+
+- How to brand those Quarto outputs with brand.yml
+:::
+:::
+:::
+
+## Workshop structure
+
+::: columns
+::: {.column .fragment width="33%"}
+**My turn**
+
+-   Lecture segments
+-   Feel free to just watch, take notes, browse docs, or tinker around with the code
+:::
+
+::: {.column .fragment width="33%"}
+::: demo
+**Our turn**
+
+-   Lecture segments + live coding
+-   Follow along with live coding
+:::
+:::
+
+::: {.column .fragment width="33%"}
+::: task
+**Your turn**
+
+-   Practice exercises for you
+-   Work on your own or with the person next to you
+:::
+:::
+:::
+
+## Getting help
+
+-   During **my turn** and **your turn** segments -- raise your hand
+
+-   During **our turn** segments -- also feel free to raise your hand for questions but if your question seems specific to your setup, we might come around and help during the next your turn break
+
+# Introduction to Quarto
+
+## {auto-animate="true"}
+
+<center>
+
+**Quarto is an...**
+
+::: {.fragment .grow .semi-fade-out}
+open-source
+:::
+
+::: {.fragment .grow .semi-fade-out}
+scientific and technical
+:::
+
+::: {.fragment .grow .semi-fade-out}
+publishing system
+:::
+
+::: {.fragment .grow .semi-fade-out}
+built on Pandoc.
+:::
+
+</center>
+
+::: notes
+Quarto is an open-source scientific and technical publishing system built on Pandoc. Let's break this down: Open-source: Posit believes that it's better for everyone if the tools used for research and science are free and open. Free software means more reproducibility, widespread sharing of knowledge and techniques, and elimination of cost barriers. Scientific and technical: Scientific and technical means that Quarto has specific things for journal articles or scientific papers, like support for code execution, citations, footnotes, scientific markdown, equations, citations, crossrefs, so many things. Publishing system: Quarto is a tool for writing dynamic documents that combine code, output, and text. It can embed output from Python, R, Julia, and Observable. Quarto can be rendered to create high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more formats. Pandoc is the tool working behind the scenes to change Quarto documents to their finalized format. Quarto documents are authored with markdown, which is a plain text format. But Pandoc markdown is very rich and lets you control your document in very specific ways while being easy to read and write.
+:::
+
+## With Quarto ...
+
+you can **weave** together **narrative** and **code** to produce elegantly formatted output such as documents, web pages, blog posts, books, dashboards, and more, with...
+
+::: incremental
+-   Create dynamic content with Python, R, Julia, and Observable
+-   Edit documents in your favorite editor
+-   Publish technical content in HTML, PDF, MS Word, and more
+-   Share technical content by publishing to Posit Connect, Confluence, or other publishing systems
+:::
+
+
+## "Literate programming"
+
+![](images/literate-programming.png)
+
+::: notes
+Quarto sits inside the big and broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!
+:::
+
+## Why Quarto?
+
+::: incremental
+- Multilingual and independent of computational systems
+- Quarto comes **"batteries included"** straight out of the box
+- Consistent expression for core features
+- Extension system
+- Enable “single-source publishing” — create Word, PDFs, HTML, etc. from one source
+- Use defaults that meet accessibility guidelines
+:::
+
+::: notes
+So, if there already exist literate programming tools out there, why create a new one? Like mentioned earlier, Quarto was built from the start to support multiple computational systems and ecosystems. You can create presentations, books, websites, and so on after installing Quarto, you do not have to install other tools to create different things. Consistent expression for core features means that regardless of whether you are making a presentation, book, or website, the syntax is written same way. And for things that aren't part of base Quarto, there are extensions that can add further functionality. Single-source publishing, you often need to create all sorts of output, like things that are printed, on the web, on the mobile. The idea is to being able to make publications from one source. And the Quarto team thinks deeply about accessibility and how to have Quarto default to meet accessibility guidelines.
+:::
+
+## Quarto formats {.smaller}
+
+| Feature | Quarto |
+|--------------------------|----------------------------------------------|
+| Basic Formats | [html](https://quarto.org/docs/output-formats/html-basics.html), [pdf](https://quarto.org/docs/output-formats/pdf-basics.html), [docx](https://quarto.org/docs/output-formats/ms-word.html), [typst](https://quarto.org/docs/output-formats/typst.html) |
+| Beamer | [beamer](https://quarto.org/docs/presentations/beamer.html) |
+| PowerPoint | [pptx](https://quarto.org/docs/presentations/powerpoint.html) |
+| HTML Slides | [revealjs](https://quarto.org/docs/presentations/revealjs/) |
+| Advanced Layout | [Quarto Article Layout](https://quarto.org/docs/authoring/article-layout.html) |
+| Cross References | [Quarto Crossrefs](https://quarto.org/docs/authoring/cross-references.html) |
+| Websites & Blogs | [Quarto Websites](https://quarto.org/docs/websites/), [Quarto Blogs](https://quarto.org/docs/websites/website-blog.html) |
+| Books | [Quarto Books](https://quarto.org/docs/books/) |
+| Interactivity | [Quarto Interactive Documents](https://quarto.org/docs/interactive/shiny/) |
+| Journal Articles | [Journal Articles](https://quarto.org/docs/journals/index.html) |
+| Dashboards | [Quarto Dashboards](https://quarto.org/docs/dashboards/) |
+
+: {tbl-colwidths="\[25,75\]"}
+
+## Quarto capabilities
+
+Built for technical documents:
+
+    Cross references
+    Advanced layout
+    Figure/layout panels
+    Callouts
+    Diagrams
+    Extensions
+    Interactivity
+    YAML intelligence
+    Publishing
+    Conditional content
+    Notebook filters
+
+::: notes
+Features are constantly being build into Quarto, like YAML intelligence, figure panels, layouts, which we'll cover later in the session.
+:::
+
+## Display data and results {.smaller}
+
+[Vote Idaho Election Page](https://results.voteidaho.gov){preview-link="true"} by Andrew Heiss (Department of Public Management and Policy, Georgia State University) and the Idaho Secretary of State
+
+[![](images/id-elections.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}](https://fosstodon.org/@andrew@fediscience.org/112485099746718354)
+
+::: notes
+Let's see some examples of how people have used Quarto to tell their stories. Andrew Heiss, in conjunction with the Idaho Secretary of State's office, created a Quarto website for Idaho's primary election results.
+:::
+
+## Display data and results {.smaller}
+
+[Health Trends in England](https://fingertips.phe.org.uk/static-reports/health-trends-in-england/England/overview.html){preview-link="true"} by the  Department of Health & Social Care
+
+[![](images/england-health.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}](https://bsky.app/profile/statsgeekclare.bsky.social/post/3ld6iwagnzs2m)
+
+::: notes
+The Department of Health & Social Care in England created a Health Trends tool to open up public health data to a broader audience, and were shortlisted in the Analysis in Government award.
+:::
+
+## Walk through a story {.smaller}
+
+[Council Housing & Neighborhood Income Inequality in Vienna](https://mschnetzer.github.io/scrollytell_gemeindebau/){preview-link="true"} by Tamara Premrov and Matthias Schnetzer (European Centre for Social Welfare Policy and Research, Austria)
+
+<center><script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/izl69pu9ua.js" async type="module"></script><style>wistia-player[media-id='izl69pu9ua']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/izl69pu9ua/swatch'); display: block; filter: blur(5px); }</style> <wistia-player media-id="izl69pu9ua" aspect="1.7777777777777777" style="width: 800px;height: 463px;"></wistia-player></center>
+
+::: notes
+Posit recently held a Scrollytelling contest. You may have seen articles in newspapers like the New York Times that display visualizations as you scroll through the document. Quarto has an extension called Scrollytelling that lets you create these sorts of stories in Quarto. This one, from folks at the European Centre for Social Welfare Policy and Research which talked about Housing & Neighborhood Income Inequality in Vienna, was one of the winners.
+:::
+
+## Publish papers {.smaller}
+
+::::::: columns
+:::: {.column width="50%"}
+
+[Navigating Hostility: The Effect of Nonprofit Transparency and Accountability on Donor Preferences in the Face of Shrinking Civic Space](https://stats.andrewheiss.com/silent-skywalk/manuscript/output/manuscript.html){preview-link="true"} by Suparna Chaudhry (Lewis & Clark College, International Justice Lab at College of William & Mary) et al.
+::::
+
+:::: {.column width="50%"}
+![](images/manuscript.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+::::
+:::::
+
+::: notes
+Quarto also has extensive features for writing journal articles, from diagrams and technical notation, to being able to publish according to journal standards through extensions.
+:::
+
+## Automate and reproduce your output {.smaller}
+
+[Duplicating Quarto elements with code templates to reduce copy and paste errors](https://waterdata.usgs.gov/blog/quarto-template-demo/){preview-link="true"} by Althea A. Archer (United States Geological Survey)
+
+![](images/quarto_template_overview.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::: notes
+With Quarto, you can create reports or presentations that update automatically when data changes or when you change inputs because you are creating your report with code. There's a software engineering concept called the DRY Principle ("Don't Repeat Yourself") that is useful in data work that encourages writing code that can be reused with functions or loops instead of copy/paste. Use variables (parameters) to dynamically change parts of your analysis or report like to generate the same report for different regions, departments, or time periods, write reusable functions to avoid repeating code and keeps work cleaner, more consistent, and easier to maintain. The folks at United States Geological Survey have great blog posts on how they are implementing these ideas in Quarto.
+:::
+
+## Get your team on the same page {.smaller}
+
+[We Converted Our Documentation to Quarto](https://melissavanbussel.quarto.pub/posit-conf-2023/#/section) by Melissa Van Bussel (Statistics Canada)
+
+::::::: columns
+:::: {.column width="80%"}
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/zjPdBDyIyJ8?si=OIKzKvhMgzr77RFz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+::::
+
+:::: {.column width="20%"}
+* Website for R/Python User Group
+* Training resources
+* Presentations
+::::
+:::::
+
+::: notes
+And finally, Melissa van Bussel gave a talk on how the Statistics Canada team converted not just their documentation, but training resources, presentations, and more to Quarto to streamline efforts.
+:::
+
+## How it works {.smaller}
+
+Quarto is a command line interface (**CLI**) that renders plain text formats (`.qmd`, `.rmd`, `.md`) OR mixed formats (`.ipynb`/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more.
+
+. . .
+
+```{bash}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "|1|2|10|15|16"
+
+  Usage:   quarto 
+  Version: 1.5.57
+
+  Description:
+
+    Quarto CLI
+
+  Options:
+
+    -h, --help     - Show this help.                            
+    -V, --version  - Show the version number for this program.  
+
+  Commands:
+
+    render          [input] [args...]     - Render files or projects to various document types.
+    preview         [file] [args...]      - Render and preview a document or website project.  
+    serve           [input]               - Serve a Shiny interactive document.                
+    create          [type] [commands...]  - Create a Quarto project or extension               
+    create-project  [dir]                 - Create a project for rendering multiple documents  
+    convert         <input>               - Convert documents to alternate representations.    
+    pandoc          [args...]             - Run the version of Pandoc embedded within Quarto.  
+    typst           [args...]             - Run the version of Typst embedded within Quarto.   
+    run             [script] [args...]    - Run a TypeScript, R, Python, or Lua script.        
+    add             <extension>           - Add an extension to this folder or project         
+    install         [target...]           - Installs an extension or global dependency.        
+    publish         [provider] [path]     - Publish a document or project to a provider.       
+    check           [target]              - Verify correct functioning of Quarto installation. 
+    help            [command]             - Show this help or the help of a sub-command.
+```
+
+## Under the hood
+
+![](images/quarto-how-it-works.png){fig-align="center"}
+
+::: incremental
+-   `jupyter` or `knitr` evaluates Python, Julia, R, or Observable code and returns a `.md` file along with the evaluated code
+-   Quarto applies Lua filters + CSS/LaTeX which is then evaluated alongside the `.md` file by Pandoc and converted to a final output format
+:::
+
+## Our turn {background-color='{{< brand color dark-blue >}}'}
+
+Let's walk through your options for today.
+
+::: incremental
+
+1. Posit Cloud
+2. GitHub Codespace
+3. Local installation
+ - GitHub repository
+ - Package installation
+:::
+ 
+::: notes
+Posit Cloud has R, RStudio, Quarto, packages, installed. You just need a free account. But I will delete in a few days. If you prefer Python, there is a GitHub Codespace. It takes many minutes to load so please open it up as soon as you can if you'd like to go this route. The packages will not come preinstalled, but the instructions are on the website. Finally, you can always install Positron, RStudio, or VS Code locally, but you will also need R or Python installed. You'll also have to install the packages and download the repo materials. And for VS Code, you'll need to install the Quarto extension. So, if you do not have these set up, I recommend going with Posit Cloud or GitHub Codespace for now, and coming back to the materials after the workshop.
+:::
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+Go to the workshop website and click on `Setup` in the sidebar.
+
+<br>
+
+<center>[https://posit-conf-2025.github.io/quarto-brand/](https://posit-conf-2025.github.io/quarto-brand/)</center>
+
+<br>
+
+Follow the setup instructions at the bottom.
+
+```{r}
+#| label: intro-clock1
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+## Our turn: Quarto workflow {background-color='{{< brand color dark-blue >}}'}
+
+* Open a `.qmd` file.
+* Preview/render the document.
+* Make a change and preview/render again.
+
+::::: columns
+:::: {.column width="40%"}
+![](images/rstudio-preview.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+::::
+
+:::: {.column width="40%"}
+![](images/positron-preview.png){ style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+::::
+:::::
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+{{< include exercise-01.qmd >}} 
+
+```{r}
+#| label: intro-clock2
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+# Quarto documents
+
+## 
+
+::: incremental
+
+- Anatomy of a Quarto document
+- Authoring Quarto
+- Changing formats
+
+:::
+
+## Anatomy of a Quarto document
+
+`.qmd` file format with three components:
+
+1.  YAML: Metadata
+
+2.  Text: Markdown
+
+3.  Code: R, Python, Observable, and Julia
+
+. . .
+
+**Weave it all together**, and you have beautiful, powerful, and useful outputs!
+
+::: notes
+A Quarto document contains three types of content: a YAML header, code chunks, and markdown text.
+:::
+
+## Anatomy of a Quarto document
+
+**Metadata: YAML**
+
+:::: columns
+::: {.column .fragment}
+
+````{.markdown filename="my-document.qmd"}
+---
+title: "World Happiness Report"
+format: html
+---
+````
+
+:::
+
+::: {.column .fragment}
+* "Yet another markup language”
+* Metadata of your document
+* Demarcated by three dashes (`---`) on either end
+*  Uses key-value pairs in the format `key: value`
+:::
+
+::::
+
+::: notes
+Quarto documents usually start with an (optional) YAML header demarcated by three dashes on either end. The basic syntax of YAML uses key-value pairs in the format key: value. It controls the output of the document and contain metadata for your document. YAML fields commonly found in headers of documents include metadata like author, subtitle, date as well as customization options like theme, fontcolor, fig-width, etc.
+:::
+
+## Anatomy of a Quarto document
+
+**Text: Markdown**
+
+````{.markdown filename="my-document.qmd"}
+---
+title: "World Happiness Report"
+format: html
+---
+
+This analysis explores the World Happiness Report dataset.
+````
+
+. . .
+
+* Markdown is a lightweight language for creating formatted text
+* Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax
+
+::: notes
+Markdown is a lightweight markup language for creating formatted text using a plain-text editor. Quarto uses markdown syntax for text.
+:::
+
+## Anatomy of a Quarto document
+
+**Text: Markdown**
+
+```{=html}
+<div class="sourceCode">
+<pre class="sourceCode markdown">
+<code class="sourceCode markdown">
+The `whr_2025.csv` dataset contains data from the [**2025 World Happiness Report**](https://www.worldhappiness.report/).
+</code>
+</pre>
+</div>
+```
+
+The `whr_2025.csv` dataset contains data from the [**2025 World Happiness Report**](https://www.worldhappiness.report/).
+
+## Anatomy of a Quarto document
+
+**Text: Markdown**
+
++-----------------------------------+-------------------------------+
+| Markdown syntax                   | Output                        |
++===================================+===============================+
+|     *italics* and **bold**        | *italics* and **bold**        |
++-----------------------------------+-------------------------------+
+|     superscript^2^ / subscript~2~ | superscript^2^ / subscript~2~ |
++-----------------------------------+-------------------------------+
+|     ~~strikethrough~~             | ~~strikethrough~~             |
++-----------------------------------+-------------------------------+
+|     `verbatim code`               | `verbatim code`               |
++-----------------------------------+-------------------------------+
+
+## Anatomy of a Quarto document
+
+**Code**
+
+````{.markdown filename="my-document.qmd" code-line-numbers=|8-15}
+---
+title: "World Happiness Report"
+format: html
+---
+
+This analysis uses data from the [**2025 World Happiness Report**](https://www.worldhappiness.report/). 
+
+```{{python}}
+from plotnine import ggplot, aes, geom_col
+
+(
+    ggplot(df, aes(x = "country", y = "score"))
+    + geom_col()
+)
+```
+
+````
+
+## Anatomy of a Quarto document
+
+**Code**
+
+:::: columns
+::: {.column}
+
+````{.markdown filename="my-document.qmd" code-line-numbers=8-15}
+---
+title: "World Happiness Report"
+format: html
+---
+
+This analysis uses data from the [**2025 World Happiness Report**](https://www.worldhappiness.report/). 
+
+```{{python}}
+from plotnine import ggplot, aes, geom_col
+
+(
+    ggplot(df, aes(x = "country", y = "score"))
+    + geom_col()
+)
+```
+
+````
+
+:::
+
+::: {.column}
+* Code chunks begin and end with three backticks (usually)
+* Code chunks are identified with a programming language in between `{}`
+:::
+
+::::
+
+::: notes
+Code chunks are identified with three backticks, the language in curly brackets, and can have optional chunk options identified by the hashpipe at the beginning of the line within the chunk.
+:::
+
+## Anatomy of a Quarto document
+
+**Inline code** executes code *within Markdown*
+
+````{.markdown filename="my-document.qmd"}
+```{{python}}
+countries = 147
+```
+
+The number of countries in the dataset `{python} countries`.
+````
+
+Results in:
+
+The number of countries in the dataset is 147.
+
+## Anatomy of a Quarto document
+
+**Code** can include optional chunk options, in YAML style, identified by `#|` at the beginning of the line
+
+````{.markdown code-line-numbers=|9}
+---
+title: "World Happiness Report"
+format: html
+---
+
+This analysis uses data from the [**2025 World Happiness Report**](https://www.worldhappiness.report/). 
+
+```{{python}}
+#| echo: false
+from plotnine import ggplot, aes, geom_col
+
+(
+    ggplot(df, aes(x = "country", y = "score"))
+    + geom_col()
+)
+```
+
+````
+
+::: notes
+Code chunks can have optional chunk options identified by the hashpipe at the beginning of the line within the chunk.
+:::
+
+## Anatomy of a Quarto document
+
+**Code** can include optional chunk options, in YAML style, identified by `#|` at the beginning of the line
+
+````{.markdown code-line-numbers=9-10}
+---
+title: "World Happiness Report"
+format: html
+---
+
+This analysis uses data from the [**2025 World Happiness Report**](https://www.worldhappiness.report/). 
+
+```{{python}}
+#| include: false
+#| fig.alt: "A barplot with country on the x-axis and happiness score on the y-axis."
+from plotnine import ggplot, aes, geom_col
+
+(
+    ggplot(df, aes(x = "country", y = "score"))
+    + geom_col()
+)
+```
+
+````
+
+## Anatomy of a Quarto document
+
+**Code** can include optional chunk options, in YAML style, identified by `#|` at the beginning of the line
+
++--------------+------------------------------------------------+
+| Option       | Description                                    |
++==============+================================================+
+| `eval`       | Evaluate the code chunk                        |
++--------------+------------------------------------------------+
+| `echo`       | Include the source code                        |
++--------------+------------------------------------------------+
+| `warning`    | Include warnings                               |
++--------------+------------------------------------------------+
+| `include`    | Include code and results                       |
++--------------+------------------------------------------------+
+
+Other options: <https://quarto.org/docs/computations/execution-options.html>
+
+## Your turn  {background-color='{{< brand color light-blue >}}' .smaller}
+  
+{{< include exercise-02.qmd >}} 
+
+```{r}
+#| label: doc-clock-1
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+# Authoring Quarto
+
+## Images and links
+
++------------------------------------+---------------------------------+
+| Markdown syntax                    | Output                          |
++====================================+=================================+
+|     <https://quarto.org>           | <https://quarto.org>            |
++------------------------------------+---------------------------------+
+|     [Quarto](https://quarto.org)   | [Quarto](https://quarto.org)    |
++------------------------------------+---------------------------------+
+|     ![](earth.jpg)                 | ![](images/earth.jpg)           |
++------------------------------------+---------------------------------+
+
+## Tables  {.small auto-animate="true"}
+
+``` {{markdown}}
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+```
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
+## Tables  {.small auto-animate="true"}
+
+``` {{markdown}}
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
+: Table Column Widths {tbl-colwidths="[10,30,30,30]"}
+```
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
+: Table Column Widths {tbl-colwidths="\[10,30,30,30\]"}
+
+## Diagrams
+
+```{mermaid}
+%%| fig-width: 6
+%%| echo: fenced
+flowchart LR
+  A[1] --> B(2)
+  B --> C{3}
+  C --> D[4]
+  C --> E[5]
+```
+
+::: notes
+There is also native support for diagrams, where the syntax is similar as R or Python where the execution is being run by Quarto. This is a Mermaid diagram, which is a newer project supported on GitHub where you can use it in their documents as well, so it's a pretty handy tool to get to know.
+:::
+
+## Equations
+
+``` {{markdown}}
+$$E = mc^{2}$$
+```
+
+$$E = mc^{2}$$
+
+::: notes
+Math mode in LaTeX
+:::
+
+## Divs and Spans
+
+**Divs**
+
+    ::: {.border}
+    This content can be styled with a border
+    :::
+    
+**Spans**
+
+    [This is *some text*]{.class key="val"}
+
+[This is *some text*]{.class key="val"}
+
+::: notes
+For furture customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well.
+:::
+
+## Divs
+
+**Callout blocks**
+
+```{.markdown filename="my-document.qmd"}
+:::{.callout-tip}
+
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+
+:::
+```
+
+. . .
+
+::: callout-tip
+Note that there are five types of callouts, including: `note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+## Divs
+
+**Multiple columns**
+
+```{.markdown filename="my-document.qmd"}
+::: {layout-ncol=2}
+
+![](earth.jpg)
+
+Photo by <a href="https://unsplash.com/@nypl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">The New York Public Library</a> on <a href="https://unsplash.com/photos/planet-earth-close-up-photography-yEauzeZU6xo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+:::
+```
+
+. . .
+
+
+::: {layout-ncol="2"}
+![](images/earth.jpg)
+
+Photo by <a href="https://unsplash.com/@nypl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">The New York Public Library</a> on <a href="https://unsplash.com/photos/planet-earth-close-up-photography-yEauzeZU6xo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+:::
+
+
+## Divs
+
+**Tabsets**
+
+```{.markdown filename="my-document.qmd"}
+::: {.panel-tabset group="language"}
+## R
+
+`library(dplyr)`
+
+## Python
+
+`import pandas as pd`
+:::
+```
+
+::: {.panel-tabset group="language"}
+## R
+
+`library(dplyr)`
+
+## Python
+
+`import pandas as pd`
+:::
+
+## Spans
+
+```{.markdown filename="my-document.qmd"}
+This is text that is [red]{style="color:red;"}.
+```
+
+This is text that is [red]{style="color:red;"}.
+
+. . .
+
+```{.markdown filename="my-document.qmd"}
+![](earth.jpg){fig-alt="A photo of Earth from Space"}
+```
+
+![](images/earth.jpg){fig-alt="A photo of Earth from Space"}
+
+
+::: notes
+You can also apply styles to inline text by creating spans. Use square brackets to surround the text and curly brackets for the style you would like.
+:::
+
+## Changing formats
+
+````{.markdown code-line-numbers=3 filename="my-document.qmd"}
+---
+title: "World Happiness Report"
+format: html
+---
+````
+
+## Changing formats
+
+:::: columns
+::: {.column}
+
+````{.markdown code-line-numbers=3 filename="my-document.qmd"}
+---
+title: "World Happiness Report"
+format: revealjs
+---
+````
+:::
+
+::: {.column .fragment}
+![](images/revealjs.png)
+:::
+::::
+
+## Changing formats
+
+:::: columns
+::: {.column}
+
+````{.markdown code-line-numbers=3 filename="my-document.qmd"}
+---
+title: "World Happiness Report"
+format: pdf
+---
+````
+:::
+
+::: {.column .fragment}
+![](images/pdf.png)
+:::
+::::
+
+## Your turn  {background-color='{{< brand color light-blue >}}' .smaller}
+  
+{{< include exercise-03.qmd >}}
+
+```{r}
+#| label: doc-clock-2
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+# Theme with brand.yml
+
+## HTML Theming {.scrollable}
+
+Quarto includes 25 themes from the [Bootswatch](https://bootswatch.com/) project:
+
+-   default
+-   cerulean
+-   cosmo
+-   cyborg
+-   darkly
+-   flatly
+-   journal
+-   litera
+-   lumen
+-   lux
+-   materia
+-   minty
+-   morph
+-   pulse
+-   quartz
+-   sandstone
+-   simplex
+-   sketchy
+-   slate
+-   solar
+-   spacelab
+-   superhero
+-   united
+-   vapor
+-   yeti
+-   zephyr
+
+## How to Apply HTML Theming
+
+Provide the custom theme under `theme` in the YAML heading:
+
+````{.markdown filename="my-document.qmd"}
+---
+theme:
+  - flatly
+---
+````
+
+## However, we often want a custom theme 
+
+![](images/whr.png){fig-align="center" width="70%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::: aside
+[https://www.worldhappiness.report/](https://www.worldhappiness.report/)
+:::
+
+::: {.notes}
+to match your organization's or your own personal branding. and you often want to use that same theme over and over, for different kinds of outputs
+:::
+
+## Introducing brand.yml
+
+![](images/brand-yml.png){fig-align="center" width="50%"}
+
+Create reports, apps, dashboards, plots and more that match your company’s brand guidelines with a single `_brand.yml` file.
+
+::: aside
+[brand.yml documentation](https://posit-dev.github.io/brand-yml/), [Quarto documentation](https://quarto.org/docs/authoring/brand.html)
+:::
+::: notes
+brand.yml is a simple, portable YAML file that codifies your company’s brand guidelines into a format that can be used by Quarto, Python and R tooling to create branded outputs. Our goal is to support unified, branded theming for all of Posit’s open source tools—from web applications to printed reports to dashboards and presentations—with a consistent look and feel.
+:::
+
+## 
+
+::: {style="--mermaid-max-height: 600px"}
+```{mermaid}
+---
+config:
+  look: handDrawn
+  theme: neutral
+---
+flowchart LR
+    by{brand.yml}
+    by-->quarto[Quarto]
+    quarto-->quarto-html
+    quarto-->quarto-pdf
+    quarto-html-->quarto-websites[Websites]
+    quarto-html-->quarto-presentations[Presentations]
+    quarto-html-->quarto-dashboards[Dashboards]
+    quarto-html-->quarto-emails[Emails]
+    quarto-pdf-->quarto-typst[Typst]
+
+    by-->R
+    R-->r-bslib["{bslib}"]
+    r-bslib-->r-thematic["{thematic}"]
+    r-bslib-->r-shiny["Shiny for R"]
+    r-bslib-->r-rmd["R Markdown"]
+    r-bslib-->r-pkgdown["pkgdown"]
+    %% r-thematic-->r-ggplot2["{ggplot2}"]
+    %% r-thematic-->r-plot["{plot}"]
+
+    by-->Python
+    Python-->py-brand_yml["brand_yml"]
+    py-brand_yml-->py-shiny[Shiny for Python]
+    py-brand_yml-->py-plots[seaborn, matplotlib, etc.]
+
+    classDef implemented fill:#8CE3A0,stroke:#0A2911,color:#0A2911;
+    classDef partial fill:#A8E5B9,stroke:#4B8A5D,color:#0A2911;
+    classDef in-progress fill:#B3D7FF,stroke:#00254D,color:#00254D;
+    classDef highlighted fill:#FFE8DB,stroke:#612200,color:#612200;
+
+    class quarto-websites,quarto-presentations,quarto-dashboards,quarto-typst,py-brand_yml,py-shiny,r-bslib,r-shiny,r-rmd,r-pkgdown implemented;
+    class r-thematic,py-plots partial;
+    class by highlighted;
+
+    click quarto href "https://prerelease.quarto.org/docs/authoring/brand.html"
+    click quarto-typst href "https://quarto.org/docs/output-formats/typst.html" "Typst in Quarto"
+    click quarto-presentations href "https://quarto.org/docs/presentations/revealjs/" "Reveal.js in Quarto"
+    click quarto-dashboards href "https://quarto.org/docs/dashboards/" "Dashboards in Quarto"
+    click r-shiny href "https://shiny.posit.co/"
+    click r-bslib href "https://rstudio.github.io/bslib/"
+    click r-thematic href "https://rstudio.github.io/thematic/"
+    click r-ggplot2 href "https://ggplot2.tidyverse.org/"
+    click r-rmd href "https://rmarkdown.rstudio.com/"
+    click py-shiny href "https://shiny.posit.co/py/"
+    click py-brand_yml href "pkg/py/"
+```
+:::
+
+<style>
+.mermaid-js {
+  max-height: var(--mermaid-max-height);
+}
+.mermaid-js .nodeLabel {
+  color: var(--bs-black) !important;
+  font-weight: 500;
+}
+.implemented {
+  background-color: #8CE3A0;
+  border-color: #0A2911;
+  color: #0A2911;
+  padding-inline: 0.2rem
+}
+
+.in-progress {
+  background-color: #B3D7FF;
+  border-color: #00254D;
+  color: #00254D;
+  padding-inline: 0.2rem
+}
+</style>
+
+<small>[https://posit-dev.github.io/brand-yml/](https://posit-dev.github.io/brand-yml/)</small>
+
+::: notes
+brand.yml works with a variety of open source projects, including all the Quarto outputs we'll talk about today. as well as Shiny for R and Shiny for Python. This means you can define your organization's branding in a brand.yml file once, and then apply it all over relatively effortlessly. 
+
+over the course of this workshop, we'll use the same brand file to apply to all our outputs
+:::
+
+## brand.yml elements
+
+* `meta`: Identifying information, name of the company, URLs, etc.
+* `logo`: Files or links to the brand’s logos.
+* `color`: Colors in the brand's color palette. 
+* `typography`: Fonts for different elements. 
+* `defaults`: Additional context-specific settings.
+
+## `_brand.yml` structure
+
+```{.yaml code-line-numbers="1-4|6-11|13-27|27-45" filename="_brand.yml"}
+meta:
+  name: World Happiness Report
+  link:
+    home: https://www.worldhappiness.report/
+
+logo:
+  images:
+    icon:
+      path: images/whr_logo.png
+      alt: World Happiness Report icon.
+  small: images/whr_logo.png
+
+color:
+  palette:
+    dark-purple: "#93358c"
+    light-purple: "#f8f6fb"
+    teal: "#04afaf"
+    dark-blue: "#086992"
+    hot-pink: "#eb068c"
+    light-blue: "#1aade4"
+
+  background: light-purple
+  foreground: black
+  primary: dark-purple
+  secondary: hot-pink
+  tertiary: light-blue
+  dark: black
+
+typography:
+  fonts:
+    - family: Gotham Book
+      source: file
+      files:
+        - path: fonts/Gotham-Book.ttf
+    - family: Gotham Bold
+      source: file
+      files:
+        - path: fonts/Gotham-Bold.otf
+
+  base:
+    family: Gotham Book
+    weight: 400
+
+  headings:
+    family: Gotham Bold
+    color: dark-purple
+
+  link:
+    color: primary
+    decoration: none
+```
+
+## How to apply brand.yml automatically
+
+1. Define branding in a single` _brand.yml` file.
+2. Save in the root directory of your Quarto project.
+
+Quarto will detect the presence of `_brand.yml` and automatically apply the brand to all documents of the supported formats in the project.
+
+## 
+
+If your brand file lives somewhere else, use the `brand` key to supply a file path.
+
+```{.yaml code-line-numbers="5" filename="_brand.yml"}
+---
+title: "World Happiness Report"
+subtitle: "Happiness Trends and Contributing Factors (2011-2024)"
+format: html
+brand: ../brand-files/whr.yml
+---
+```
+
+::: notes
+use this if you have a file named something other than brand.yml or it lives elsewhere. 
+:::
+
+## Disable brand.yml
+
+To turn off brand.yml for a document, use `brand: false`.
+
+```{.yaml code-line-numbers="5" filename="_brand.yml"}
+---
+title: "World Happiness Report"
+subtitle: "Happiness Trends and Contributing Factors (2011-2024)"
+format: html
+brand: false
+---
+```
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+{{< include exercise-04.qmd >}}
+
+```{r}
+#| label: brand-clock
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+## Specify light and dark themes for documents
+
+You can also specify a light and dark brand for documents. 
+
+```{.yaml filename="_quarto.yml"}
+brand:
+  light: light-brand.yml
+  dark: dark-brand.yml
+```
+
+::: aside
+(Note: this is not available in reveal.js).
+:::
+
+::: notes
+create separate brand files
+:::
+
+## What about plots?
+
+![](images/plot-unbranded.png){fig-align="center" width="60%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::: notes
+The plots, at least for the R version, are unbranded. how can we apply brand.yml to plots too?
+:::
+
+## Theme helpers
+
+The quarto packages contain theme helpers that apply branding to plots. 
+
+::: {.panel-tabset}
+### R
+
+```{r}
+#| eval: false
+#| echo: true
+library(quarto)
+
+my_theme <- theme_brand_ggplot2("_brand.yml")
+```
+
+### Python
+
+```{python}
+#| eval: false
+#| echo: true
+from quarto import theme_brand_plotnine
+
+my_theme = theme_brand_plotnine('_brand.yml')
+```
+
+:::
+
+::: aside
+R: [https://quarto-dev.github.io/quarto-r/articles/theme-helpers.html](https://quarto-dev.github.io/quarto-r/articles/theme-helpers.html)
+
+
+Python: [https://github.com/quarto-dev/quarto-python?tab=readme-ov-file#theme-helpers](https://github.com/quarto-dev/quarto-python?tab=readme-ov-file#theme-helpers)
+:::
+
+::: notes
+There are other theme helpers for other plotting libraries
+:::
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+{{< include exercise-05.qmd >}} 
+
+```{r}
+#| label: clock-5
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+::: notes
+The R function applies theme_minimal().
+:::
+
+## brand.yml packages
+
+Use the R or Python brand.yml package to create a brand file from a string. 
+
+::: {.panel-tabset}
+### R
+
+```{r}
+#| eval: false
+#| echo: true
+library(brand.yml)
+
+as_brand_yml("
+  meta:
+    name: Example Brand
+
+  color:
+    primary: '#FF5733'
+    secondary: '#33FF57'
+")
+
+```
+
+### Python
+
+```{python}
+#| eval: false
+#| echo: true
+from brand_yml import Brand
+
+brand = Brand.from_yaml_str(
+  """
+  meta:
+    name: Example Brand
+
+  color:
+    primary: '#FF5733'
+    secondary: '#33FF57'
+  """
+)
+```
+:::
+
+## brand.yml packages
+
+Access and apply specific brand elements. 
+
+::: {.panel-tabset}
+### R
+
+```{r}
+#| eval: false
+#| echo: true
+library(brand.yml)
+
+brand <- read_brand_yml("_brand.yml")
+
+brand$color$primary
+```
+
+### Python
+
+```{python}
+#| eval: false
+#| echo: true
+from brand_yml import Brand
+
+brand = Brand.from_yaml("_brand.yml")
+
+brand.color.primary
+```
+:::
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+{{< include exercise-06.qmd >}} 
+
+```{r}
+#| label: clock-6
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
