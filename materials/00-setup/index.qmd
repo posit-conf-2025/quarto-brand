@@ -23,6 +23,10 @@ While Quarto itself doesn't require a programming language, the exercises will i
   * Please note that loading the codespace will take a few minutes.
   * If you are asked to install an extension called markdownlit, say "yes" and trust the publisher.
 * You will need to following the "Install the Necessary Packages" instructions below.
+  * Create your virtual environment by selecting Python: Create Environment in the Command Palette
+  * Select your environment type (recommend Venv)
+  * Choose an interpreter path
+  * Select requirements.txt check box to install dependencies
 
 **Option 3: Local Installation**
 

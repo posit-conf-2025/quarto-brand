@@ -16,12 +16,13 @@ website:
         text: Presentations
       - href: materials/03-dashboards/index.qmd
         text: Dashboards
+      - href: materials/04-typst/index.qmd
+        text: Typst
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
-
 
 

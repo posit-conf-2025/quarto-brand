@@ -29,9 +29,12 @@ By the end of the session, you’ll be equipped to:
 
 Whether you're looking to enhance your personal projects or streamline organizational outputs, this workshop will equip you with the tools to create polished, professional results.
 
-## Setup
+## What to bring
 
-ADD INFORMATION YOU WANT LEARNERS TO HAVE / STEPS THEY WANT THEM TO COMPLETE PRIOR TO THE WORKSHOP. THIS COULD BE A LINK TO A THREAD ON POSIT COMMUNITY, PACKAGE INSTALL INSTRUCTIONS, HOW TO GET AN POSIT CLOUD ACCOUNT, ETC.
+- A charged laptop: This is a must for participating in the exercises.
+- Your preferred IDE and programming language: We'll be working in RStudio, VS Code, or Positron in either R or Python. We will also provide cloud options on Posit Cloud and GitHub Codespaces if you prefer not to work locally.
+- Quarto v1.8: Please download and install the latest version from https://quarto.org/docs/download.
+- Bring your own brand (BYOB): Bring a style guide, branding fonts, colors, or an example project. We'll have time to replicate your or your organization's style in the documents we create.
 
 ## Schedule
 

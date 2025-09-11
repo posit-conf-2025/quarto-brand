@@ -122,9 +122,100 @@
     "href": "materials/01-intro/index.html#exercises",
     "title": "Quarto Documents",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\nExercise 2\n\nOpen 01-exercise-r.qmd and run the first three code chunks (in order).\nPreview the file.\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of countries. You can use the following code to calculate the number of countries.\n\n\nRPython\n\n\n\nlength(unique(whr$country_name))\n\n\n\n\nwhr['country_name'].nunique()\n\n\n\n\n\n\nExercise 3\n\nAdd an important callout box to the introduction summarizing the report’s findings.\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nNote\n\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy.\n\n\n\n\nExercise 4\n\nIn the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes.\n\n\n\nExercise 5\n\nRPython\n\n\n\nIn the first code chunk of 01-exercise-r.qmd, replace theme_minimal() with theme_brand_ggplot2(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render and see what changes.\n\n\n\n\nIn the first code chunk of 01-exercise-python.qmd, add theme_brand_plotnine() right before theme_minimal(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render. Does anything change? What if you change foreground in _brand.yml to hot-pink? Re-render with and without theme_brand_plotnine().\n\n\n\n\n\n\nExercise 6\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette$teal)\n\n\n\n\ngeom_line(color = brand.color.palette.teal)",
+    "text": "Exercises\n\nExercise 1\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\nExercise 2\n\nOpen 01-exercise-r.qmd and run the first three code chunks (in order).\nPreview the file.\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of countries. You can use the following code to calculate the number of countries.\n\n\nRPython\n\n\n\nlength(unique(whr$country_name))\n\n\n\n\nwhr['country_name'].nunique()\n\n\n\n\n\n\nExercise 3\n\nAdd an important callout box to the introduction summarizing the report’s findings.\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nNote\n\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy.\n\n\n\n\nExercise 4\n\nIn the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes.\n\n\n\nExercise 5\n\nRPython\n\n\n\nIn the first code chunk of 01-exercise-r.qmd, replace theme_minimal() with theme_brand_ggplot2(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render and see what changes.\n\n\n\n\nIn the first code chunk of 01-exercise-python.qmd, add theme_brand_plotnine() right before theme_minimal(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render. Does anything change? What if you change foreground in _brand.yml to hot-pink? Re-render with and without theme_brand_plotnine().\n\n\n\n\n\n\nExercise 6\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette['teal'])\n\n\n\n\ngeom_line(color = brand.color.palette.teal)",
     "crumbs": [
       "Intro to Quarto"
+    ]
+  },
+  {
+    "objectID": "materials/04-typst/exercise-01.html",
+    "href": "materials/04-typst/exercise-01.html",
+    "title": "",
+    "section": "",
+    "text": "In your document’s YAML header, change the format option from its current value (e.g., html) to typst.\nChange the number of columns used for the page content to 2 using columns.\nAdd a block to a section of the text and fill it with the tertiary color."
+  },
+  {
+    "objectID": "materials/04-typst/index.html",
+    "href": "materials/04-typst/index.html",
+    "title": "PDFs",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Typst"
+    ]
+  },
+  {
+    "objectID": "materials/04-typst/index.html#slides",
+    "href": "materials/04-typst/index.html#slides",
+    "title": "PDFs",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Typst"
+    ]
+  },
+  {
+    "objectID": "materials/04-typst/index.html#exercises",
+    "href": "materials/04-typst/index.html#exercises",
+    "title": "PDFs",
+    "section": "Exercises",
+    "text": "Exercises\n\nExercise 1\n\nIn your document’s YAML header, change the format option from its current value (e.g., html) to typst.\nChange the number of columns used for the page content to 2 using columns.\nAdd a block to a section of the text and fill it with the tertiary color.\n\n\n\nExercise 2\nInstall the whr-typst-template:\n\n\nTerminal\n\nquarto use template ivelasq/whr-typst-template\n\nOpen the _extensions/whr/typst-show.typ and _extensions/whr/typst-template.typ files to examine their contents.",
+    "crumbs": [
+      "Typst"
+    ]
+  },
+  {
+    "objectID": "materials/00-setup/index.html",
+    "href": "materials/00-setup/index.html",
+    "title": "Setup",
+    "section": "",
+    "text": "To follow along with the workshop exercises, you’ll need Quarto version 1.8+ and access to a code editor that supports R or Python.\nWhile Quarto itself doesn’t require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, we recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python).\n\nRecommended Setup Options\nOption 1: Posit Cloud (RStudio in the cloud)\n\nCreate a free account at https://posit.cloud\nOpen the Posit Cloud project link: https://posit.cloud/spaces/679626/content/10865885\nTo save a copy of the project to your workspace, click “Save a permanent copy”\n\nOption 2: GitHub Codespaces (VS Code in the browser)\n\nRequires a free account at https://github.com/\nGo to the GitHub repo: https://github.com/posit-dev/quarto-brand-codespaces\nClick “Use this template” then “Open in a codespace”\n\nPlease note that loading the codespace will take a few minutes.\nIf you are asked to install an extension called markdownlit, say “yes” and trust the publisher.\n\nYou will need to following the “Install the Necessary Packages” instructions below.\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette\nSelect your environment type (recommend Venv)\nChoose an interpreter path\nSelect requirements.txt check box to install dependencies\n\n\nOption 3: Local Installation\nChoose one editor and follow the steps:\n\nPositronRStudioVS Code\n\n\n\nDownload and install Positron: https://positron.posit.co/download.html\nQuarto comes pre-installed\n\n\n\n\nDownload and install RStudio: https://posit.co/downloads/\n\nMake sure RStudio is version 2022.07+\n\nQuarto comes pre-installed\n\n\n\n\nDownload and install VS Code: https://code.visualstudio.com/download\nDownload and install Quarto: https://quarto.org/docs/get-started/\nInstall the following extensions:\n\nQuarto Extension: https://marketplace.visualstudio.com/items?itemName=quarto.quarto\nJupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter\n\n\n\n\n\n\n\nAccessing the Workshop Materials\nIf you are using a cloud-based option, the files will be included in the project folder.\nIf you are not using a cloud-based option:\nIf you use Git/GitHub:\n\nClone the repository with Git:\n\ngit clone https://github.com/posit-dev/quarto-brand-exercises.git\nIf you don’t use Git/GitHub:\n\nGo to the GitHub repo: https://github.com/posit-dev/quarto-brand-exercises\nClick the green “Code” button → “Download ZIP”\nUnzip the folder and open it in your chosen editor\n\n\n\nInstall the Necessary Packages\n\nRPython\n\n\nIf you are using Posit Cloud, the packages will be pre-installed. If you are using RStudio or Positron locally, install the packages by running:\nif (!require(\"pak\")) install.packages(\"pak\")\npak::pak(c(\"tidyverse\", \"quarto\", \"patchwork\", \"posit-dev/brand-yml/pkg-r\"))\n\n\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette\nSelect your environment type (recommend Venv)\nChoose an interpreter path\nSelect requirements.txt check box to install dependencies",
+    "crumbs": [
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "materials/03-dashboards/exercise-02.html",
+    "href": "materials/03-dashboards/exercise-02.html",
+    "title": "",
+    "section": "",
+    "text": "Change the layout of your dashboard so that it looks like this:"
+  },
+  {
+    "objectID": "materials/03-dashboards/exercise-04.html",
+    "href": "materials/03-dashboards/exercise-04.html",
+    "title": "",
+    "section": "",
+    "text": "Add two value boxes to your dashboard, above the tabset, so that your dashboard looks like this:\n\n\n\n\n\nUse the brand colors. You can either hard-code the value box values (“Finland” and “Social support”) or calculate them using the data."
+  },
+  {
+    "objectID": "materials/03-dashboards/index.html",
+    "href": "materials/03-dashboards/index.html",
+    "title": "Dashboards",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Dashboards"
+    ]
+  },
+  {
+    "objectID": "materials/03-dashboards/index.html#slides",
+    "href": "materials/03-dashboards/index.html#slides",
+    "title": "Dashboards",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Dashboards"
+    ]
+  },
+  {
+    "objectID": "materials/03-dashboards/index.html#exercises",
+    "href": "materials/03-dashboards/index.html#exercises",
+    "title": "Dashboards",
+    "section": "Exercises",
+    "text": "Exercises\n\nExercise 1\n\nOpen dashboard-r.qmd or dashboard-python.qmd.\nChange the format from html to dashboard.\nRe-render.\nAdd relevant titles to each card.\n\nThe brand.yml file should be automatically applied!\n\n\nExercise 2\nChange the layout of your dashboard so that it looks like this:\n\n\n\n\n\n\n\nExercise 3\n\nTake a look at the Tabsets documentation on the Quarto website.\nMove the plots showing the countries that increased and decreased in happiness into a tabset. Your dashboard should then look like this:\n\n\n\n\n\n\n\n\nExercise 4\nAdd two value boxes to your dashboard, above the tabset, so that your dashboard looks like this:\n\n\n\n\n\nUse the brand colors. You can either hard-code the value box values (“Finland” and “Social support”) or calculate them using the data.",
+    "crumbs": [
+      "Dashboards"
     ]
   },
   {
@@ -135,14 +226,536 @@
     "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. __Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.t stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org"
   },
   {
-    "objectID": "materials/00-setup/index.html",
-    "href": "materials/00-setup/index.html",
-    "title": "Setup",
+    "objectID": "materials/03-dashboards/slides.html#quarto-many-outputs",
+    "href": "materials/03-dashboards/slides.html#quarto-many-outputs",
+    "title": "QuartoDashboards",
+    "section": "Quarto ➝ many outputs",
+    "text": "Quarto ➝ many outputs\nWith Quarto you can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books, and more…"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#quarto-dashboards",
+    "href": "materials/03-dashboards/slides.html#quarto-dashboards",
+    "title": "QuartoDashboards",
+    "section": "Quarto ➝ dashboards",
+    "text": "Quarto ➝ dashboards"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#section",
+    "href": "materials/03-dashboards/slides.html#section",
+    "title": "QuartoDashboards",
     "section": "",
-    "text": "Instructions",
-    "crumbs": [
-      "Setup"
-    ]
+    "text": "rows and columns value boxes multiple pages"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#section-1",
+    "href": "materials/03-dashboards/slides.html#section-1",
+    "title": "QuartoDashboards",
+    "section": "",
+    "text": "sidebar"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#section-2",
+    "href": "materials/03-dashboards/slides.html#section-2",
+    "title": "QuartoDashboards",
+    "section": "",
+    "text": "interactive leaflet widget html widget"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#section-3",
+    "href": "materials/03-dashboards/slides.html#section-3",
+    "title": "QuartoDashboards",
+    "section": "",
+    "text": "dashboard for a model provides context into the model by adding narrative to the dashboard not just raw json dump"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#section-4",
+    "href": "materials/03-dashboards/slides.html#section-4",
+    "title": "QuartoDashboards",
+    "section": "",
+    "text": "uses shiny for python select island and penguins and distributions will change can see all these dashboards and their code on the quarto website under gallery"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#world-happiness-report-dashboard",
+    "href": "materials/03-dashboards/slides.html#world-happiness-report-dashboard",
+    "title": "QuartoDashboards",
+    "section": "🌎 World Happiness Report dashboard",
+    "text": "🌎 World Happiness Report dashboard\n\n\nWalk through Click link to interact with the dashboard yourself"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#notebook-dashboard",
+    "href": "materials/03-dashboards/slides.html#notebook-dashboard",
+    "title": "QuartoDashboards",
+    "section": "Notebook ➝ Dashboard",
+    "text": "Notebook ➝ Dashboard\n\n\n\nolympicdash.qmd\n\n---\ntitle: \"World Happiness Report\"\nformat: dashboard\n---\n\n# notebook content goes here...\n\n\n\nHow did we create this dashboard? One change to notebook format\nOnce you done that Many components you can add all components offered in ipynb or plain text qmd"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#cards",
+    "href": "materials/03-dashboards/slides.html#cards",
+    "title": "QuartoDashboards",
+    "section": "Cards",
+    "text": "Cards\nDashboards are composed of cards.\n\ncards are the basic building blocks of dashboards you often won’t need to manually define a card – they will typically map to cells in your notebook that create plots, display data, display text, etc."
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#rows-and-columns",
+    "href": "materials/03-dashboards/slides.html#rows-and-columns",
+    "title": "QuartoDashboards",
+    "section": "Rows and columns",
+    "text": "Rows and columns\nCards are arranged into rows and columns.\n\n\n\n\n\n\n\n\n\n\n\n\nto organize content arrange into rows and columns"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#layouts",
+    "href": "materials/03-dashboards/slides.html#layouts",
+    "title": "QuartoDashboards",
+    "section": "Layouts",
+    "text": "Layouts\nPages, tabsets, and sidebars allow for more advanced layouts.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncan also control the general layout of the page with things like pages, tabsets, and sidebars talk about this in the next slide deck"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#step-by-step",
+    "href": "materials/03-dashboards/slides.html#step-by-step",
+    "title": "QuartoDashboards",
+    "section": "Step-by-step",
+    "text": "Step-by-step\nLet’s make a dashboard, step-by-step"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#step-1-format-dashboard",
+    "href": "materials/03-dashboards/slides.html#step-1-format-dashboard",
+    "title": "QuartoDashboards",
+    "section": "Step 1: format: dashboard",
+    "text": "Step 1: format: dashboard\n\n\n\ndashboard.qmd\n\n---\ntitle: \"My first Quarto dashboard\"\nformat: dashboard\n---\n\n\n\nfirst, need to add that format: dashboard line"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#step-2-add-a-card",
+    "href": "materials/03-dashboards/slides.html#step-2-add-a-card",
+    "title": "QuartoDashboards",
+    "section": "Step 2: Add a card",
+    "text": "Step 2: Add a card\n\n\n\ndashboard.qmd\n\n---\ntitle: \"My first Quarto dashboard\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point\nfrom plotnine.data import mpg\n```\n\n```{python}\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n\n\nnow, add a card creating a plot this is plotnine code see what it looks like"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#step-2-add-a-card-1",
+    "href": "materials/03-dashboards/slides.html#step-2-add-a-card-1",
+    "title": "QuartoDashboards",
+    "section": "Step 2: Add a card",
+    "text": "Step 2: Add a card\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"My first Quarto dashboard\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point\nfrom plotnine.data import mpg\n```\n\n```{python}\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#step-3-add-another-card",
+    "href": "materials/03-dashboards/slides.html#step-3-add-another-card",
+    "title": "QuartoDashboards",
+    "section": "Step 3: Add another card",
+    "text": "Step 3: Add another card\n\n\n\ndashboard.qmd\n\n---\ntitle: \"My first Quarto dashboard\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n```{python}\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n```{python}\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#step-3-add-another-card-1",
+    "href": "materials/03-dashboards/slides.html#step-3-add-another-card-1",
+    "title": "QuartoDashboards",
+    "section": "Step 3: Add another card",
+    "text": "Step 3: Add another card\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"My first Quarto dashboard\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n```{python}\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n```{python}\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```\n\n\n\n\n\n\nwill appear below by default"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#step-4-add-titles-to-cards",
+    "href": "materials/03-dashboards/slides.html#step-4-add-titles-to-cards",
+    "title": "QuartoDashboards",
+    "section": "Step 4: Add titles to cards",
+    "text": "Step 4: Add titles to cards\n\n\n\ndashboard.qmd\n\n---\ntitle: \"My first Quarto dashboard\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#step-4-add-titles-to-cards-1",
+    "href": "materials/03-dashboards/slides.html#step-4-add-titles-to-cards-1",
+    "title": "QuartoDashboards",
+    "section": "Step 4: Add titles to cards",
+    "text": "Step 4: Add titles to cards\n\nadd titles using the title option in the cell\n\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"My first Quarto dashboard\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#steps-1---4",
+    "href": "materials/03-dashboards/slides.html#steps-1---4",
+    "title": "QuartoDashboards",
+    "section": "Steps 1 - 4",
+    "text": "Steps 1 - 4\n\n\nnow have a dashboard"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#brand.yml-works-with-dashboards-too",
+    "href": "materials/03-dashboards/slides.html#brand.yml-works-with-dashboards-too",
+    "title": "QuartoDashboards",
+    "section": "brand.yml works with dashboards too!",
+    "text": "brand.yml works with dashboards too!"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#your-turn",
+    "href": "materials/03-dashboards/slides.html#your-turn",
+    "title": "QuartoDashboards",
+    "section": "Your turn",
+    "text": "Your turn\n\nOpen dashboard-r.qmd or dashboard-python.qmd.\nChange the format from html to dashboard.\nRe-render.\nAdd relevant titles to each card.\n\nThe brand.yml file should be automatically applied!\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#rows",
+    "href": "materials/03-dashboards/slides.html#rows",
+    "title": "QuartoDashboards",
+    "section": "Rows",
+    "text": "Rows\nBy default, cards are laid out in rows:\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Rows\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n## Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#rows-1",
+    "href": "materials/03-dashboards/slides.html#rows-1",
+    "title": "QuartoDashboards",
+    "section": "Rows",
+    "text": "Rows\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Rows\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n## Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#rows-2",
+    "href": "materials/03-dashboards/slides.html#rows-2",
+    "title": "QuartoDashboards",
+    "section": "Rows",
+    "text": "Rows\nDefault value of orientation is rows:\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Rows\"\nformat: \n  dashboard:\n    orientation: rows\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n## Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#columns",
+    "href": "materials/03-dashboards/slides.html#columns",
+    "title": "QuartoDashboards",
+    "section": "Columns",
+    "text": "Columns\nSetting orientation to columns makes each ## indicate a column instead of a row:\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Columns\"\nformat: \n  dashboard:\n    orientation: columns\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n## Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#columns-1",
+    "href": "materials/03-dashboards/slides.html#columns-1",
+    "title": "QuartoDashboards",
+    "section": "Columns",
+    "text": "Columns\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Columns\"\nformat: \n  dashboard:\n    orientation: columns\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n## Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#rows-then-columns",
+    "href": "materials/03-dashboards/slides.html#rows-then-columns",
+    "title": "QuartoDashboards",
+    "section": "Rows, then columns",
+    "text": "Rows, then columns\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Rows, then columns\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Overview\n\n### \n\nThis dashboard summarizes an illuminating analysis of fuel economy of cars.\n\n### \n\nThis is a car.\n\n![](images/car.png){fig-alt=\"Illustration of a teal color car.\"}\n\n## Plots\n\n### Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n### Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#rows-then-columns-1",
+    "href": "materials/03-dashboards/slides.html#rows-then-columns-1",
+    "title": "QuartoDashboards",
+    "section": "Rows, then columns",
+    "text": "Rows, then columns\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Rows, then columns\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Overview\n\n### \n\nThis dashboard summarizes an illuminating analysis of fuel economy of cars.\n\n### \n\nThis is a car.\n\n![](images/car.png){fig-alt=\"Illustration of a teal color car.\"}\n\n## Plots\n\n### Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n### Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#columns-then-rows",
+    "href": "materials/03-dashboards/slides.html#columns-then-rows",
+    "title": "QuartoDashboards",
+    "section": "Columns, then rows",
+    "text": "Columns, then rows\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Rows, then columns\"\nformat: \n  dashboard:\n    orientation: columns\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Overview\n\n### \n\nThis dashboard summarizes an illuminating analysis of fuel economy of cars.\n\n### \n\nThis is a car.\n\n![](images/car.png){fig-alt=\"Illustration of a teal color car.\"}\n\n## Plots\n\n### Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n### Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#columns-then-rows-1",
+    "href": "materials/03-dashboards/slides.html#columns-then-rows-1",
+    "title": "QuartoDashboards",
+    "section": "Columns, then rows",
+    "text": "Columns, then rows\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Rows, then columns\"\nformat: \n  dashboard:\n    orientation: columns\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Overview\n\n### \n\nThis dashboard summarizes an illuminating analysis of fuel economy of cars.\n\n### \n\nThis is a car.\n\n![](images/car.png){fig-alt=\"Illustration of a teal color car.\"}\n\n## Plots\n\n### Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n### Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#your-turn-1",
+    "href": "materials/03-dashboards/slides.html#your-turn-1",
+    "title": "QuartoDashboards",
+    "section": "Your turn",
+    "text": "Your turn\nChange the layout of your dashboard so that it looks like this:\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#quarto-dashboards-are-highly-customizable",
+    "href": "materials/03-dashboards/slides.html#quarto-dashboards-are-highly-customizable",
+    "title": "QuartoDashboards",
+    "section": "Quarto dashboards are highly customizable!",
+    "text": "Quarto dashboards are highly customizable!"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#navigation-bar-and-pages",
+    "href": "materials/03-dashboards/slides.html#navigation-bar-and-pages",
+    "title": "QuartoDashboards",
+    "section": "Navigation bar and pages",
+    "text": "Navigation bar and pages\nIcon, title, and author along with links to sub-pages if more than one page is defined."
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#sidebars-rows-columns-and-tabsets",
+    "href": "materials/03-dashboards/slides.html#sidebars-rows-columns-and-tabsets",
+    "title": "QuartoDashboards",
+    "section": "Sidebars, rows, columns, and tabsets",
+    "text": "Sidebars, rows, columns, and tabsets\nRows and columns using markdown headings, with optional attributes to control height, width, etc. Sidebars, mostly used for for interactive inputs. Tabsets to further divide content."
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#cards-1",
+    "href": "materials/03-dashboards/slides.html#cards-1",
+    "title": "QuartoDashboards",
+    "section": "Cards",
+    "text": "Cards\nCards are containers for code cell outputs (e.g., plots, tables, value boxes) and free form markdown text. The content of cards typically maps to cells in your notebook or source document."
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#your-turn-2",
+    "href": "materials/03-dashboards/slides.html#your-turn-2",
+    "title": "QuartoDashboards",
+    "section": "Your turn",
+    "text": "Your turn\n\nTake a look at the Tabsets documentation on the Quarto website.\nMove the plots showing the countries that increased and decreased in happiness into a tabset. Your dashboard should then look like this:"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#tabsets",
+    "href": "materials/03-dashboards/slides.html#tabsets",
+    "title": "QuartoDashboards",
+    "section": "Tabsets",
+    "text": "Tabsets\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Tabsets\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Overview {.tabset}\n\n### Objective\n\nThis dashboard summarizes an illuminating analysis of fuel economy of cars.\n\n### Car\n\nThis is a car.\n\n![](images/car.png){fig-alt=\"Illustration of a teal color car.\" width=\"299\"}\n\n## Plots {.tabset}\n\n### Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n### Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#tabsets-1",
+    "href": "materials/03-dashboards/slides.html#tabsets-1",
+    "title": "QuartoDashboards",
+    "section": "Tabsets",
+    "text": "Tabsets\nEach card within a row/column or each row/column within another becomes a tab:\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Tabsets\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Overview {.tabset}\n\n### Objective\n\nThis dashboard summarizes an illuminating analysis of fuel economy of cars.\n\n### Car\n\nThis is a car.\n\n![](images/car.png){fig-alt=\"Illustration of a teal color car.\" width=\"299\"}\n\n## Plots {.tabset}\n\n### Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n### Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#pages",
+    "href": "materials/03-dashboards/slides.html#pages",
+    "title": "QuartoDashboards",
+    "section": "Pages",
+    "text": "Pages\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Pages\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n# Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n# Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#pages-1",
+    "href": "materials/03-dashboards/slides.html#pages-1",
+    "title": "QuartoDashboards",
+    "section": "Pages",
+    "text": "Pages\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Pages\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n# Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n# Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#pages-2",
+    "href": "materials/03-dashboards/slides.html#pages-2",
+    "title": "QuartoDashboards",
+    "section": "Pages",
+    "text": "Pages\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Pages\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n# Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n# Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#navigation-buttons",
+    "href": "materials/03-dashboards/slides.html#navigation-buttons",
+    "title": "QuartoDashboards",
+    "section": "Navigation buttons",
+    "text": "Navigation buttons\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Navigation buttons\"\nformat: \n  dashboard:\n    nav-buttons:\n      - icon: github\n        href: https://github.com/quarto-dev/quarto-cli\n        aria-label: GitHub\n      - icon: linkedin\n        href: https://www.linkedin.com/company/posit-software/\n        aria-label: LinkedIn\n      - icon: youtube\n        href: https://youtube.com/\n        aria-label: YouTube\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n# Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n# Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#navigation-buttons-1",
+    "href": "materials/03-dashboards/slides.html#navigation-buttons-1",
+    "title": "QuartoDashboards",
+    "section": "Navigation buttons",
+    "text": "Navigation buttons\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Navigation buttons\"\nformat: \n  dashboard:\n    nav-buttons:\n      - icon: github\n        href: https://github.com/quarto-dev/quarto-cli\n        aria-label: GitHub\n      - icon: linkedin\n        href: https://www.linkedin.com/company/posit-software/\n        aria-label: LinkedIn\n      - icon: youtube\n        href: https://youtube.com/\n        aria-label: YouTube\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n# Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n# Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#value-boxes",
+    "href": "materials/03-dashboards/slides.html#value-boxes",
+    "title": "QuartoDashboards",
+    "section": "Value boxes",
+    "text": "Value boxes\n\nmultiple ways to make value boxes\n\n\nValue boxes are a great way to prominently display simple values within a dashboard\nYou can create value boxes in executable cells or plain markdown in divs\nValue boxes use Bootstrap icons (https://icons.getbootstrap.com) and can be set to any color (e.g., with a HEX code) or color alias defined by the theme (we’ll get to themes later!)\n\n\n\nColor alias\nDefault theme color(s)\n\n\n\n\nprimary\nBlue\n\n\nsecondary\nGray\n\n\nsuccess\nGreen\n\n\ninfo\nBright Blue\n\n\nwarning\nYellow/Orange\n\n\ndanger\nRed\n\n\nlight\nLight Gray\n\n\ndark\nBlack"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#value-boxes-1",
+    "href": "materials/03-dashboards/slides.html#value-boxes-1",
+    "title": "QuartoDashboards",
+    "section": "Value boxes",
+    "text": "Value boxes\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Valueboxes\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Value boxes {height=\"25%\"}\n\n```{python}\n#| label: calculate-values\nlowest_mileage_index = mpg['cty'].idxmin()\nlowest_mileage_car = mpg.iloc[lowest_mileage_index]\nlowest_mileage_cty = mpg.loc[lowest_mileage_index, 'cty']\n\nhighest_mileage_index = mpg['cty'].idxmax()\nhighest_mileage_car = mpg.iloc[highest_mileage_index]\nhighest_mileage_cty = mpg.loc[highest_mileage_index, 'cty']\n\nmean_city_mileage = mpg['cty'].mean()\nrounded_mean_city_mileage = round(mean_city_mileage, 2)\n```\n\n```{python}\n#| content: valuebox\n#| title: \"Least efficient\"\n#| icon: fuel-pump-fill\n#| color: danger\ndict(\n  value = str(f\"{lowest_mileage_cty} mpg\")\n)\n```\n\n```{python}\n#| content: valuebox\n#| title: \"Most efficient\"\ndict(\n  icon = \"fuel-pump\",\n  color = \"success\",\n  value = str(f\"{highest_mileage_cty} mpg\")\n)\n```\n\n::: {.valuebox icon=\"fuel-pump\" color=\"secondary\"}\nAverage city mileage\n\n`{python} str(rounded_mean_city_mileage)` mpg\n:::\n\n## Plots {height=\"75%\"}\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#value-boxes-2",
+    "href": "materials/03-dashboards/slides.html#value-boxes-2",
+    "title": "QuartoDashboards",
+    "section": "Value boxes",
+    "text": "Value boxes\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Valueboxes\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Value boxes {height=\"25%\"}\n\n```{python}\n#| label: calculate-values\nlowest_mileage_index = mpg['cty'].idxmin()\nlowest_mileage_car = mpg.iloc[lowest_mileage_index]\nlowest_mileage_cty = mpg.loc[lowest_mileage_index, 'cty']\n\nhighest_mileage_index = mpg['cty'].idxmax()\nhighest_mileage_car = mpg.iloc[highest_mileage_index]\nhighest_mileage_cty = mpg.loc[highest_mileage_index, 'cty']\n\nmean_city_mileage = mpg['cty'].mean()\nrounded_mean_city_mileage = round(mean_city_mileage, 2)\n```\n\n```{python}\n#| content: valuebox\n#| title: \"Least efficient\"\n#| icon: fuel-pump-fill\n#| color: danger\ndict(\n  value = str(f\"{lowest_mileage_cty} mpg\")\n)\n```\n\n```{python}\n#| content: valuebox\n#| title: \"Most efficient\"\ndict(\n  icon = \"fuel-pump\",\n  color = \"success\",\n  value = str(f\"{highest_mileage_cty} mpg\")\n)\n```\n\n::: {.valuebox icon=\"fuel-pump\" color=\"secondary\"}\nAverage city mileage\n\n`{python} str(rounded_mean_city_mileage)` mpg\n:::\n\n## Plots {height=\"75%\"}\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#markdown-text",
+    "href": "materials/03-dashboards/slides.html#markdown-text",
+    "title": "QuartoDashboards",
+    "section": "Markdown text",
+    "text": "Markdown text\n\nYou can include markdown text anywhere within a dashboard\nMarkdown text is automatically placed in cards, but you can also explicitly put them in cards with fenced divs, and add titles to cards\n::: {.card title=\"Title goes here\"}\nText goes here.\n:::\nYou can place markdown text and other cell output in a single card as well\n::: {.card title=\"Title goes here\"}\nText goes here.\n\n```{r}\n# code generating output goes here\n```\n:::"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#your-turn-3",
+    "href": "materials/03-dashboards/slides.html#your-turn-3",
+    "title": "QuartoDashboards",
+    "section": "Your turn",
+    "text": "Your turn\nAdd two value boxes to your dashboard, above the tabset, so that your dashboard looks like this:\n\nUse the brand colors. You can either hard-code the value box values (“Finland” and “Social support”) or calculate them using the data.\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#and-much-more",
+    "href": "materials/03-dashboards/slides.html#and-much-more",
+    "title": "QuartoDashboards",
+    "section": "…and much more!",
+    "text": "…and much more!\nThere’s much more you can adjust and do with Quarto dashboards, including:\n\nSpecify additional layout options, like scrolling\nUse dynamic cell titles\nAdd a sidebar"
+  },
+  {
+    "objectID": "materials/03-dashboards/exercise-03.html",
+    "href": "materials/03-dashboards/exercise-03.html",
+    "title": "",
+    "section": "",
+    "text": "Take a look at the Tabsets documentation on the Quarto website.\nMove the plots showing the countries that increased and decreased in happiness into a tabset. Your dashboard should then look like this:"
+  },
+  {
+    "objectID": "materials/03-dashboards/exercise-01.html",
+    "href": "materials/03-dashboards/exercise-01.html",
+    "title": "",
+    "section": "",
+    "text": "Open dashboard-r.qmd or dashboard-python.qmd.\nChange the format from html to dashboard.\nRe-render.\nAdd relevant titles to each card.\n\nThe brand.yml file should be automatically applied!"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#hello-typst",
+    "href": "materials/04-typst/slides.html#hello-typst",
+    "title": "PDFs with Typst",
+    "section": "Hello, Typst!",
+    "text": "Hello, Typst!\n\n\n\n\n\n\n\nTypst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.\n\n\nLearn more: Typst in Quarto"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#hello-typst-1",
+    "href": "materials/04-typst/slides.html#hello-typst-1",
+    "title": "PDFs with Typst",
+    "section": "Hello, Typst!",
+    "text": "Hello, Typst!\nTo use Typst with Quarto, set the format in the YAML of your Quarto document:\n\n\n---\nformat: typst\n---\n\n\n\n\n\n\n\n\nLearn more: Typst in Quarto"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#page-layout",
+    "href": "materials/04-typst/slides.html#page-layout",
+    "title": "PDFs with Typst",
+    "section": "Page layout",
+    "text": "Page layout\nControl the size of the page (papersize), the page margins (margin), and the number of columns used for page content (columns):\n\n\n---\ntitle: Page Layout\nformat:\n  typst:\n    papersize: a5\n    margin:\n      x: 1cm\n      y: 1cm\n    columns: 2\n---\n\n\n\n\n\n\n\n\nLearn more: Page Layout"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#margins",
+    "href": "materials/04-typst/slides.html#margins",
+    "title": "PDFs with Typst",
+    "section": "Margins",
+    "text": "Margins\nEdit the margin’s horizontal direction (x) and vertical direction (y):\nmargin:\n  x: 1.25in\n  y: 1.25in\nCan also use relative length:\nmargin:\n  left: 10%\n\nLearn more: Margins"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#paper-size",
+    "href": "materials/04-typst/slides.html#paper-size",
+    "title": "PDFs with Typst",
+    "section": "Paper Size",
+    "text": "Paper Size\npapersize: us-letter\n\n\nLearn more: Supported page sizes"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#more-options",
+    "href": "materials/04-typst/slides.html#more-options",
+    "title": "PDFs with Typst",
+    "section": "More options",
+    "text": "More options\nTable of contents\ntoc: true\ntoc-depth: 2\n\nSection numbering\nnumber-sections: true\nUse number-depth:\nnumber-depth: 3\n\nLearn more: Section Numbering, Table of Contents"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#typst-blocks",
+    "href": "materials/04-typst/slides.html#typst-blocks",
+    "title": "PDFs with Typst",
+    "section": "Typst blocks",
+    "text": "Typst blocks\nAdd a .block class to change appearance of blocks:\n::: {.block fill=\"luma(230)\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with gray background and slightly rounded corners.\n\n:::"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#color",
+    "href": "materials/04-typst/slides.html#color",
+    "title": "PDFs with Typst",
+    "section": "Color",
+    "text": "Color\nUse colors from the _brand.yml file in Typst using brand-color:\n::: {.block fill=\"brand-color.primary\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with the primary color and slightly rounded corners.\n\n:::\n\nLearn more: Typst Brand YAML"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#typography",
+    "href": "materials/04-typst/slides.html#typography",
+    "title": "PDFs with Typst",
+    "section": "Typography",
+    "text": "Typography\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbase\nheadings\ntitle1\nsubtitle\nmonospace-inline\nmonospace-block\nlink\n\n\n\n\nfamily\n✓\n✓\n✓\n✓\n✓\n✓\nNA\n\n\nsize\n✓\nNA\nNA\nNA\n✓\n✓\nNA\n\n\nweight\n✓\n✓\n✓\n✓\n✓\n✓\n✓\n\n\nstyle\nNA\n✓\n✓\n✓\nNA\nNA\nNA\n\n\ncolor\n✓\n✓\n✓\n✓\n✓\n✓\n✓\n\n\nbackground-color\nNA\nNA\nNA\nNA\n✓\n✓\n✓\n\n\ndecoration\nNA\nNA\nNA\nNA\nNA\nNA\n✓\n\n\nline-height\n✓\n✓\n✓\n✓\nNA\n✓\nNA\n\n\n\nWhile being styled as headings, title and subtitle have a separate implementation."
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#your-turn",
+    "href": "materials/04-typst/slides.html#your-turn",
+    "title": "PDFs with Typst",
+    "section": "Your turn",
+    "text": "Your turn\n\nIn your document’s YAML header, change the format option from its current value (e.g., html) to typst.\nChange the number of columns used for the page content to 2 using columns.\nAdd a block to a section of the text and fill it with the tertiary color."
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#custom-typst-formats",
+    "href": "materials/04-typst/slides.html#custom-typst-formats",
+    "title": "PDFs with Typst",
+    "section": "Custom Typst formats",
+    "text": "Custom Typst formats\nTypst allows you to define your own templates to produce highly customized documents.\n\n\n\n\n\n\nIEEE\n\n\n\n\n\n\n\nPoster\n\n\n\n\n\n\n\nLetter\n\n\n\n\n\n\n\nDept News\n\n\n\n\n\n\nLearn more: Custom Typst Formats"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#custom-typst-formats-1",
+    "href": "materials/04-typst/slides.html#custom-typst-formats-1",
+    "title": "PDFs with Typst",
+    "section": "Custom Typst formats",
+    "text": "Custom Typst formats\n\n\n\nFormat\nUsage\n\n\n\n\nPoster\nquarto use template quarto-ext/typst-templates/poster\n\n\nIEEE\nquarto use template quarto-ext/typst-templates/ieee\n\n\nAMS\nquarto use template quarto-ext/typst-templates/ams\n\n\nLetter\nquarto use template quarto-ext/typst-templates/letter\n\n\nFiction\nquarto use template quarto-ext/typst-templates/fiction\n\n\nDept News\nquarto use template quarto-ext/typst-templates/dept-news\n\n\n\n\nLearn more: Custom Typst Formats"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#creating-a-new-typst-format",
+    "href": "materials/04-typst/slides.html#creating-a-new-typst-format",
+    "title": "PDFs with Typst",
+    "section": "Creating a new Typst format",
+    "text": "Creating a new Typst format\nUse the quarto create command to get started:\n\n\nTerminal\n\n$ quarto create extension format\n\nChoose typst as the base format and provide a name for the extension.\n\nLearn more: Create a Format"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#creating-a-new-typst-format-1",
+    "href": "materials/04-typst/slides.html#creating-a-new-typst-format-1",
+    "title": "PDFs with Typst",
+    "section": "Creating a new Typst format",
+    "text": "Creating a new Typst format\n\n\n\nFile\nDescription\n\n\n\n\n_extension.yml\nBasic extension metadata (name, author, description, etc.) and format definition.\n\n\nREADME.md\nDocumentation on how to install and use the format.\n\n\ntemplate.qmd\nA starter document that demonstrates the basics of the format.\n\n\ntypst-template.typ\nThe core Typst template function (documentation on creating Typst templates can be found here: https://typst.app/docs/tutorial/making-a-template/).\n\n\ntypst-show.typ\nFile that calls the template’s function (mapping Pandoc metadata to function arguments).\n\n\n\n\nLearn more: Making a template, Awesome Typst"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#typst-show.typ",
+    "href": "materials/04-typst/slides.html#typst-show.typ",
+    "title": "PDFs with Typst",
+    "section": "typst-show.typ",
+    "text": "typst-show.typ\n\n\n./_extensions/article/typst-show.typ\n\n// Typst custom formats typically consist of a 'typst-template.typ' (which is\n// the source code for a typst template) and a 'typst-show.typ' which calls the\n// template's function (forwarding Pandoc metadata values as required)\n//\n// This is an example 'typst-show.typ' file (based on the default template  \n// that ships with Quarto). It calls the typst function named 'article' which \n// is defined in the 'typst-template.typ' file. \n//\n// If you are creating or packaging a custom typst template you will likely\n// want to replace this file and 'typst-template.typ' entirely. You can find\n// documentation on creating typst templates here and some examples here:\n//   - https://typst.app/docs/tutorial/making-a-template/\n//   - https://github.com/typst/templates\n#show: doc =&gt; article(\n$if(title)$\n  title: [$title$],\n$endif$\n$if(subtitle)$\n  subtitle: [$subtitle$],\n$endif$\n$if(by-author)$\n  authors: (\n$for(by-author)$\n$if(it.name.literal)$\n    ( name: [$it.name.literal$],\n      affiliation: [$for(it.affiliations)$$it.name$$sep$, $endfor$],\n      email: [$it.email$] ),\n$endif$\n$endfor$\n    ),\n$endif$\n$if(date)$\n  date: [$date$],\n$endif$\n$if(lang)$\n  lang: \"$lang$\",\n$endif$\n$if(region)$\n  region: \"$region$\",\n$endif$\n$if(abstract)$\n  abstract: [$abstract$],\n  abstract-title: \"$labels.abstract$\",\n$endif$\n$if(margin)$\n  margin: ($for(margin/pairs)$$margin.key$: $margin.value$,$endfor$),\n$endif$\n$if(papersize)$\n  paper: \"$papersize$\",\n$endif$\n$if(mainfont)$\n  font: (\"$mainfont$\",),\n$elseif(brand.typography.base.family)$\n  font: $brand.typography.base.family$,\n$endif$\n$if(fontsize)$\n  fontsize: $fontsize$,\n$elseif(brand.typography.base.size)$\n  fontsize: $brand.typography.base.size$,\n$endif$\n$if(title)$\n$if(brand.typography.headings.family)$\n  heading-family: $brand.typography.headings.family$,\n$endif$\n$if(brand.typography.headings.weight)$\n  heading-weight: $brand.typography.headings.weight$,\n$endif$\n$if(brand.typography.headings.style)$\n  heading-style: \"$brand.typography.headings.style$\",\n$endif$\n$if(brand.typography.headings.color)$\n  heading-color: $brand.typography.headings.color$,\n$endif$\n$if(brand.typography.headings.line-height)$\n  heading-line-height: $brand.typography.headings.line-height$,\n$endif$\n$endif$\n$if(section-numbering)$\n  sectionnumbering: \"$section-numbering$\",\n$endif$\n  pagenumbering: $if(page-numbering)$\"$page-numbering$\"$else$none$endif$,\n$if(toc)$\n  toc: $toc$,\n$endif$\n$if(toc-title)$\n  toc_title: [$toc-title$],\n$endif$\n$if(toc-indent)$\n  toc_indent: $toc-indent$,\n$endif$\n  toc_depth: $toc-depth$,\n  cols: $if(columns)$$columns$$else$1$endif$,\n  doc,\n)"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#typst-template.typ",
+    "href": "materials/04-typst/slides.html#typst-template.typ",
+    "title": "PDFs with Typst",
+    "section": "typst-template.typ",
+    "text": "typst-template.typ\n\n\n./_extensions/article/typst-template.typ\n\n// This is an example typst template (based on the default template that ships\n// with Quarto). It defines a typst function named 'article' which provides\n// various customization options. This function is called from the \n// 'typst-show.typ' file (which maps Pandoc metadata function arguments)\n//\n// If you are creating or packaging a custom typst template you will likely\n// want to replace this file and 'typst-show.typ' entirely. You can find \n// documentation on creating typst templates and some examples here: \n//   - https://typst.app/docs/tutorial/making-a-template/\n//   - https://github.com/typst/templates\n\n\n#let article(\n  title: none,\n  subtitle: none,\n  authors: none,\n  date: none,\n  abstract: none,\n  abstract-title: none,\n  cols: 1,\n  margin: (x: 1.25in, y: 1.25in),\n  paper: \"us-letter\",\n  lang: \"en\",\n  region: \"US\",\n  font: \"libertinus serif\",\n  fontsize: 11pt,\n  title-size: 1.5em,\n  subtitle-size: 1.25em,\n  heading-family: \"libertinus serif\",\n  heading-weight: \"bold\",\n  heading-style: \"normal\",\n  heading-color: black,\n  heading-line-height: 0.65em,\n  sectionnumbering: none,\n  pagenumbering: \"1\",\n  toc: false,\n  toc_title: none,\n  toc_depth: none,\n  toc_indent: 1.5em,\n  doc,\n) = {\n  set page(\n    paper: paper,\n    margin: margin,\n    numbering: pagenumbering,\n  )\n  set par(justify: true)\n  set text(lang: lang,\n           region: region,\n           font: font,\n           size: fontsize)\n  set heading(numbering: sectionnumbering)\n  if title != none {\n    align(center)[#block(inset: 2em)[\n      #set par(leading: heading-line-height)\n      #if (heading-family != none or heading-weight != \"bold\" or heading-style != \"normal\"\n           or heading-color != black) {\n        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)\n        text(size: title-size)[#title]\n        if subtitle != none {\n          parbreak()\n          text(size: subtitle-size)[#subtitle]\n        }\n      } else {\n        text(weight: \"bold\", size: title-size)[#title]\n        if subtitle != none {\n          parbreak()\n          text(weight: \"bold\", size: subtitle-size)[#subtitle]\n        }\n      }\n    ]]\n  }\n\n  if authors != none {\n    let count = authors.len()\n    let ncols = calc.min(count, 3)\n    grid(\n      columns: (1fr,) * ncols,\n      row-gutter: 1.5em,\n      ..authors.map(author =&gt;\n          align(center)[\n            #author.name \\\n            #author.affiliation \\\n            #author.email\n          ]\n      )\n    )\n  }\n\n  if date != none {\n    align(center)[#block(inset: 1em)[\n      #date\n    ]]\n  }\n\n  if abstract != none {\n    block(inset: 2em)[\n    #text(weight: \"semibold\")[#abstract-title] #h(1em) #abstract\n    ]\n  }\n\n  if toc {\n    let title = if toc_title == none {\n      auto\n    } else {\n      toc_title\n    }\n    block(above: 0em, below: 2em)[\n    #outline(\n      title: toc_title,\n      depth: toc_depth,\n      indent: toc_indent\n    );\n    ]\n  }\n\n  if cols == 1 {\n    doc\n  } else {\n    columns(cols, doc)\n  }\n}\n\n#set table(\n  inset: 6pt,\n  stroke: none\n)"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#quick-note-about-fonts",
+    "href": "materials/04-typst/slides.html#quick-note-about-fonts",
+    "title": "PDFs with Typst",
+    "section": "Quick note about fonts",
+    "text": "Quick note about fonts\nCheck what fonts are available on your system with:\n\n\nTerminal\n\nquarto typst fonts\n\nSet additional paths using font-paths:\n---\nformat: \n  typst:\n    font-paths: myfonts\n---"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#world-happiness-report-example",
+    "href": "materials/04-typst/slides.html#world-happiness-report-example",
+    "title": "PDFs with Typst",
+    "section": "World Happiness Report example",
+    "text": "World Happiness Report example\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLink to World Happiness Report"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#example-report-with-brand.yml",
+    "href": "materials/04-typst/slides.html#example-report-with-brand.yml",
+    "title": "PDFs with Typst",
+    "section": "Example report with brand.yml",
+    "text": "Example report with brand.yml"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#advanced-styling",
+    "href": "materials/04-typst/slides.html#advanced-styling",
+    "title": "PDFs with Typst",
+    "section": "Advanced styling",
+    "text": "Advanced styling\nWith brand.yml:\n✅ Table of contents\n✅ Simple heading styling\n✅ Logo in top left\n✅ Fonts\n❌ Cover page\n❌ Advanced headings\n❌ Exact customization\n\nLearn more: Advanced Styling"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#adding-a-title-page-with-image",
+    "href": "materials/04-typst/slides.html#adding-a-title-page-with-image",
+    "title": "PDFs with Typst",
+    "section": "Adding a title page with image",
+    "text": "Adding a title page with image\n\n\nSet rules:\n\n\ntypst-template.typ\n\n#let title_page(title)={\n    page(margin: 0in,\n        background: image(\"cover.jpg\", height: 100%, fit: \"cover\"))[\n        #set text(fill: white)\n\n        #place(center + horizon, dy: -2.5in)[\n            #set align(center + horizon)\n            #block(width: 100%, fill: rgb(\"#983e91\"), outset: 5em)[\n                #text(weight: \"light\", size: 36pt, title)\n            ]\n        ]\n        #place(center + bottom, dy: -40pt)[\n          #block(height: 40pt)[\n            #image(\"whr_logo.png\")\n          ]\n        ]\n    ]\n}"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#your-turn-1",
+    "href": "materials/04-typst/slides.html#your-turn-1",
+    "title": "PDFs with Typst",
+    "section": "Your turn",
+    "text": "Your turn\nInstall the whr-typst-template:\n\n\nTerminal\n\nquarto use template ivelasq/whr-typst-template\n\nOpen the _extensions/whr/typst-show.typ and _extensions/whr/typst-template.typ files to examine their contents."
+  },
+  {
+    "objectID": "materials/04-typst/exercise-02.html",
+    "href": "materials/04-typst/exercise-02.html",
+    "title": "",
+    "section": "",
+    "text": "Install the whr-typst-template:\n\n\nTerminal\n\nquarto use template ivelasq/whr-typst-template\n\nOpen the _extensions/whr/typst-show.typ and _extensions/whr/typst-template.typ files to examine their contents."
   },
   {
     "objectID": "materials/01-intro/01-intro.html#about-us",
@@ -625,7 +1238,7 @@
     "href": "materials/01-intro/01-intro.html#your-turn-6",
     "title": "Quarto\nDocuments",
     "section": "Your turn",
-    "text": "Your turn\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette$teal)\n\n\n\n\ngeom_line(color = brand.color.palette.teal)\n\n\n\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette['teal'])\n\n\n\n\ngeom_line(color = brand.color.palette.teal)\n\n\n\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/01-intro/exercise-05.html",
@@ -639,7 +1252,7 @@
     "href": "materials/01-intro/exercise-06.html",
     "title": "",
     "section": "",
-    "text": "Read in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette$teal)\n\n\n\n\ngeom_line(color = brand.color.palette.teal)"
+    "text": "Read in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette['teal'])\n\n\n\n\ngeom_line(color = brand.color.palette.teal)"
   },
   {
     "objectID": "materials/01-intro/exercise-02.html",
