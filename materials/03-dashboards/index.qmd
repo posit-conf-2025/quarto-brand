@@ -15,6 +15,16 @@ format: html
 
 ### Exercise 1
 
-<!--
-{{< include exercise-01.qmd >}} --> 
+{{< include exercise-01.qmd >}} 
 
+### Exercise 2
+
+{{< include exercise-02.qmd >}} 
+
+### Exercise 3
+
+{{< include exercise-03.qmd >}} 
+
+### Exercise 4
+
+{{< include exercise-04.qmd >}} 

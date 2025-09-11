@@ -14,6 +14,8 @@ website:
         text: Intro to Quarto
       - href: materials/02-presentations/index.qmd
         text: Presentations
+      - href: materials/03-dashboards/index.qmd
+        text: Dashboards
 
 format:
   html:
