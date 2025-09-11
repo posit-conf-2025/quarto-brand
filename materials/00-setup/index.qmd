@@ -3,4 +3,90 @@ title: "Setup"
 format: html
 ---
 
-# Instructions
+To follow along with the workshop exercises, you'll need Quarto version 1.8+ and access to a code editor that supports R or Python.
+
+While Quarto itself doesn't require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, we recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python).
+
+### Recommended Setup Options
+
+**Option 1: Posit Cloud (RStudio in the cloud)**
+
+* Create a free account at <https://posit.cloud>
+* Open the Posit Cloud project link: <https://posit.cloud/spaces/679626/content/10865885>
+* To save a copy of the project to your workspace, click "Save a permanent copy"
+
+**Option 2: GitHub Codespaces (VS Code in the browser)**
+
+* Requires a free account at <https://github.com/>
+* Go to the GitHub repo: <https://github.com/posit-dev/quarto-brand-codespaces>
+* Click "Use this template" then "Open in a codespace"
+  * Please note that loading the codespace will take a few minutes.
+  * If you are asked to install an extension called markdownlit, say "yes" and trust the publisher.
+* You will need to following the "Install the Necessary Packages" instructions below.
+
+**Option 3: Local Installation**
+
+Choose one editor and follow the steps:
+
+::: {.panel-tabset}
+
+#### Positron
+
+* Download and install Positron: <https://positron.posit.co/download.html>
+* Quarto comes pre-installed
+
+#### RStudio
+
+* Download and install RStudio: <https://posit.co/downloads/>
+  * Make sure RStudio is version 2022.07+
+* Quarto comes pre-installed
+  
+#### VS Code
+
+* Download and install VS Code: <https://code.visualstudio.com/download>
+* Download and install Quarto: <https://quarto.org/docs/get-started/>
+* Install the following extensions:
+  * Quarto Extension: <https://marketplace.visualstudio.com/items?itemName=quarto.quarto>
+  * Jupyter Extension: <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter> 
+:::
+
+### Accessing the Workshop Materials
+
+If you are using a cloud-based option, the files will be included in the project folder.
+
+If you are not using a cloud-based option:
+
+**If you use Git/GitHub:**
+
+* Clone the repository with Git:
+
+```bash
+git clone https://github.com/posit-dev/quarto-brand-exercises.git
+```
+
+**If you don’t use Git/GitHub:**
+
+* Go to the GitHub repo: <https://github.com/posit-dev/quarto-brand-exercises>
+* Click the green "Code" button → "Download ZIP"
+* Unzip the folder and open it in your chosen editor
+
+### Install the Necessary Packages
+
+:::: {.panel-tabset}
+
+### R
+
+If you are using Posit Cloud, the packages will be pre-installed. If you are using RStudio or Positron locally, install the packages by running:
+
+```r
+if (!require("pak")) install.packages("pak")
+pak::pak(c("tidyverse", "quarto", "patchwork", "posit-dev/brand-yml/pkg-r"))
+```
+
+### Python
+
+- Create your virtual environment by selecting `Python: Create Environment` in the Command Palette
+- Select your environment type (recommend `Venv`)
+- Choose an interpreter path
+- Select `requirements.txt` check box to install dependencies
+:::
