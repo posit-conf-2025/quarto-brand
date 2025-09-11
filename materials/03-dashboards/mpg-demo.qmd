@@ -1,0 +1,47 @@
+---
+title: "My first Quarto dashboard"
+format: dashboard
+brand: false
+---
+
+
+```{python}
+from plotnine import ggplot, aes, geom_point, geom_bar, theme_minimal
+from plotnine.data import mpg
+from quarto import theme_brand_plotnine
+from brand_yml import Brand
+```
+
+## Overview
+
+### 
+
+This dashboard summarizes an illuminating analysis of fuel economy of cars.
+
+### 
+
+This is a car.
+
+![](images/car.png){fig-alt="Illustration of a car."}
+
+## Plots
+
+### Scatter
+
+```{python}
+#| title: Highway vs. city mileage
+(
+    ggplot(mpg, aes(x = "cty", y = "hwy"))
+    + geom_point()
+)
+```
+
+### Bar
+
+```{python}
+#| title: Drive types
+(
+    ggplot(mpg, aes(x = "drv"))
+    + geom_bar()
+)
+```

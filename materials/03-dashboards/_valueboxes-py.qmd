@@ -1,0 +1,69 @@
+---
+title: "Valueboxes"
+format: dashboard
+---
+
+```{{python}}
+from plotnine import ggplot, aes, geom_point, geom_bar
+from plotnine.data import mpg
+```
+
+## Value boxes {height="25%"}
+
+```{{python}}
+#| label: calculate-values
+lowest_mileage_index = mpg['cty'].idxmin()
+lowest_mileage_car = mpg.iloc[lowest_mileage_index]
+lowest_mileage_cty = mpg.loc[lowest_mileage_index, 'cty']
+
+highest_mileage_index = mpg['cty'].idxmax()
+highest_mileage_car = mpg.iloc[highest_mileage_index]
+highest_mileage_cty = mpg.loc[highest_mileage_index, 'cty']
+
+mean_city_mileage = mpg['cty'].mean()
+rounded_mean_city_mileage = round(mean_city_mileage, 2)
+```
+
+```{{python}}
+#| content: valuebox
+#| title: "Least efficient"
+#| icon: fuel-pump-fill
+#| color: danger
+dict(
+  value = str(f"{lowest_mileage_cty} mpg")
+)
+```
+
+```{{python}}
+#| content: valuebox
+#| title: "Most efficient"
+dict(
+  icon = "fuel-pump",
+  color = "success",
+  value = str(f"{highest_mileage_cty} mpg")
+)
+```
+
+::: {.valuebox icon="fuel-pump" color="secondary"}
+Average city mileage
+
+`{python} str(rounded_mean_city_mileage)` mpg
+:::
+
+## Plots {height="75%"}
+
+```{{python}}
+#| title: Highway vs. city mileage
+(
+    ggplot(mpg, aes(x = "cty", y = "hwy"))
+    + geom_point()
+)
+```
+
+```{{python}}
+#| title: Drive types
+(
+    ggplot(mpg, aes(x = "drv"))
+    + geom_bar()
+)
+```

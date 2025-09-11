@@ -1,0 +1,68 @@
+---
+title: "Valueboxes"
+format: dashboard
+---
+
+```{{r}}
+library(ggplot2)
+library(dplyr)
+```
+
+## Value boxes {height="25%"}
+
+```{{r}}
+#| label: calculate-values
+lowest_mileage_cty <- mpg |>
+  filter(cty == min(cty)) |>
+  distinct(cty) |>
+  pull(cty)
+
+highest_mileage_cty <- mpg |>
+  filter(cty == max(cty)) |>
+  distinct(cty) |>
+  pull(cty)
+  
+rounded_mean_city_mileage <- mpg |>
+  summarize(round(mean(cty), 2)) |>
+  pull()
+```
+
+```{{r}}
+#| content: valuebox
+#| title: "Least efficient"
+#| icon: fuel-pump-fill
+#| color: danger
+list(
+  value = paste(lowest_mileage_cty, "mpg")
+)
+```
+
+```{{r}}
+#| content: valuebox
+#| title: "Most efficient"
+list(
+  icon = "fuel-pump",
+  color = "success",
+  value = paste(highest_mileage_cty, "mpg")
+)
+```
+
+::: {.valuebox icon="fuel-pump" color="secondary"}
+Average city mileage
+
+`{r} rounded_mean_city_mileage` mpg
+:::
+
+## Plots {height="75%"}
+
+```{{r}}
+#| title: Highway vs. city mileage
+ggplot(mpg, aes(x = cty, y = hwy)) +
+  geom_point()
+```
+
+```{{r}}
+#| title: Drive types
+ggplot(mpg, aes(x = drv)) +
+  geom_bar()
+```

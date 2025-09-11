@@ -1,0 +1,5 @@
+1. Take a look at the [Tabsets](https://quarto.org/docs/dashboards/layout.html#tabsets) documentation on the Quarto website. 
+
+2. Move the plots showing the countries that increased and decreased in happiness into a tabset. Your dashboard should then look like this:
+
+![](images/exercise-03.png){fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}

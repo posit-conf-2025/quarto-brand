@@ -1,0 +1,6 @@
+1. Open `dashboard-r.qmd` or `dashboard-python.qmd`.
+2. Change the format from `html` to `dashboard`. 
+3. Re-render.
+4. Add relevant titles to each card. 
+
+The brand.yml file should be automatically applied!

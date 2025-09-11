@@ -1,0 +1,45 @@
+---
+title: "Rows, then columns"
+format: 
+  dashboard:
+    orientation: columns
+---
+
+```{{python}}
+from plotnine import ggplot, aes, geom_point, geom_bar
+from plotnine.data import mpg
+```
+
+## Overview
+
+### 
+
+This dashboard summarizes an illuminating analysis of fuel economy of cars.
+
+### 
+
+This is a car.
+
+![](images/car.png){fig-alt="Illustration of a teal color car."}
+
+## Plots
+
+### Scatter
+
+```{{python}}
+#| title: Highway vs. city mileage
+(
+    ggplot(mpg, aes(x = "cty", y = "hwy"))
+    + geom_point()
+)
+```
+
+### Bar
+
+```{{python}}
+#| title: Drive types
+(
+    ggplot(mpg, aes(x = "drv"))
+    + geom_bar()
+)
+```

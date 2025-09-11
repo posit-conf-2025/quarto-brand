@@ -1,0 +1,45 @@
+---
+title: "Sidebars"
+format: 
+  dashboard:
+    logo: images/beetle.png
+    nav-buttons:
+      - icon: github
+        href: https://github.com/quarto-dev/quarto-cli
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/company/posit-software/
+        aria-label: LinkedIn
+      - icon: youtube
+        href: https://youtube.com/
+        aria-label: YouTube
+---
+
+```{{python}}
+from plotnine import ggplot, aes, geom_point, geom_bar
+from plotnine.data import mpg
+```
+
+# {.sidebar}
+
+Information and/or interactivity tools that you want on every page go here.
+
+# Scatter
+
+```{{python}}
+#| title: Highway vs. city mileage
+(
+    ggplot(mpg, aes(x = "cty", y = "hwy"))
+    + geom_point()
+)
+```
+
+# Bar
+
+```{{python}}
+#| title: Drive types
+(
+    ggplot(mpg, aes(x = "drv"))
+    + geom_bar()
+)
+```

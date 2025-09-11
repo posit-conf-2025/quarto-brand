@@ -1,0 +1,20 @@
+---
+title: "Multiple output layout"
+format: 
+  dashboard:
+    logo: images/beetle.png
+---
+
+```{{r}}
+library(ggplot2)
+```
+
+```{{r}}
+#| title: One cell = one card
+#| layout-ncol: 2
+ggplot(mpg, aes(x = cty, y = hwy)) +
+  geom_point()
+
+ggplot(mpg, aes(x = drv)) +
+  geom_bar()
+```

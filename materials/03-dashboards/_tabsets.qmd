@@ -1,0 +1,43 @@
+---
+title: "Tabsets"
+format: dashboard
+---
+
+```{{python}}
+from plotnine import ggplot, aes, geom_point, geom_bar
+from plotnine.data import mpg
+```
+
+## Overview {.tabset}
+
+### Objective
+
+This dashboard summarizes an illuminating analysis of fuel economy of cars.
+
+### Car
+
+This is a car.
+
+![](images/car.png){fig-alt="Illustration of a teal color car." width="299"}
+
+## Plots {.tabset}
+
+### Scatter
+
+```{{python}}
+#| title: Highway vs. city mileage
+(
+    ggplot(mpg, aes(x = "cty", y = "hwy"))
+    + geom_point()
+)
+```
+
+### Bar
+
+```{{python}}
+#| title: Drive types
+(
+    ggplot(mpg, aes(x = "drv"))
+    + geom_bar()
+)
+```
