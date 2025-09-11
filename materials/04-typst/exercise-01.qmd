@@ -1,3 +1,3 @@
 * In your document's YAML header, change the format option from its current value (e.g., `html`) to `typst`.
 * Edit your YAML with one of the options we covered: `margin`, `papersize`, etc.
-* Add a block to a section of the text.
+* Add a block to a section of the text and fill it with the `tertiary` color.

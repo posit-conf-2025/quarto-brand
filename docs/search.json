@@ -92,7 +92,7 @@
     "href": "materials/04-typst/slides.html#paper-size",
     "title": "PDFs with Typst",
     "section": "Paper Size",
-    "text": "Paper Size\npapersize: us-letter\n\nLearn more: Supported page sizes"
+    "text": "Paper Size\npapersize: us-letter\n\n\nLearn more: Supported page sizes"
   },
   {
     "objectID": "materials/04-typst/slides.html#table-of-contents",
@@ -113,7 +113,7 @@
     "href": "materials/04-typst/slides.html#your-turn",
     "title": "PDFs with Typst",
     "section": "Your turn",
-    "text": "Your turn\n\nIn your document’s YAML header, change the format option from its current value (e.g., html) to typst.\nEdit your YAML with one of the options we covered: margin, papersize, etc.\nAdd a block to a section of the text."
+    "text": "Your turn\n\nIn your document’s YAML header, change the format option from its current value (e.g., html) to typst.\nEdit your YAML with one of the options we covered: margin, papersize, etc.\nAdd a block to a section of the text and fill it with the tertiary color."
   },
   {
     "objectID": "materials/04-typst/slides.html#custom-formatting-with-typst",
@@ -148,14 +148,14 @@
     "href": "materials/04-typst/slides.html#typst-show.typ",
     "title": "PDFs with Typst",
     "section": "typst-show.typ",
-    "text": "typst-show.typ\n\n\ntypst-show.typ\n\n#show: dept-news.with(\n$if(title)$\n  title: \"$title$\",\n$endif$\n$if(edition)$\n  edition: [$edition$],\n$endif$\n$if(hero-image)$\n  hero-image: (\n    path: \"$hero-image.path$\",\n    caption: [$hero-image.caption$]\n  ), \n$endif$\n$if(dedication)$\n  dedication: [$dedication$],\n$endif$\n$if(publication-info)$\n  publication-info: [$publication-info$],\n$endif$\n)"
+    "text": "typst-show.typ\n\n\n./_extensions/article/typst-show.typ\n\n// Typst custom formats typically consist of a 'typst-template.typ' (which is\n// the source code for a typst template) and a 'typst-show.typ' which calls the\n// template's function (forwarding Pandoc metadata values as required)\n//\n// This is an example 'typst-show.typ' file (based on the default template  \n// that ships with Quarto). It calls the typst function named 'article' which \n// is defined in the 'typst-template.typ' file. \n//\n// If you are creating or packaging a custom typst template you will likely\n// want to replace this file and 'typst-template.typ' entirely. You can find\n// documentation on creating typst templates here and some examples here:\n//   - https://typst.app/docs/tutorial/making-a-template/\n//   - https://github.com/typst/templates\n#show: doc =&gt; article(\n$if(title)$\n  title: [$title$],\n$endif$\n$if(subtitle)$\n  subtitle: [$subtitle$],\n$endif$\n$if(by-author)$\n  authors: (\n$for(by-author)$\n$if(it.name.literal)$\n    ( name: [$it.name.literal$],\n      affiliation: [$for(it.affiliations)$$it.name$$sep$, $endfor$],\n      email: [$it.email$] ),\n$endif$\n$endfor$\n    ),\n$endif$\n$if(date)$\n  date: [$date$],\n$endif$\n$if(lang)$\n  lang: \"$lang$\",\n$endif$\n$if(region)$\n  region: \"$region$\",\n$endif$\n$if(abstract)$\n  abstract: [$abstract$],\n  abstract-title: \"$labels.abstract$\",\n$endif$\n$if(margin)$\n  margin: ($for(margin/pairs)$$margin.key$: $margin.value$,$endfor$),\n$endif$\n$if(papersize)$\n  paper: \"$papersize$\",\n$endif$\n$if(mainfont)$\n  font: (\"$mainfont$\",),\n$elseif(brand.typography.base.family)$\n  font: $brand.typography.base.family$,\n$endif$\n$if(fontsize)$\n  fontsize: $fontsize$,\n$elseif(brand.typography.base.size)$\n  fontsize: $brand.typography.base.size$,\n$endif$\n$if(title)$\n$if(brand.typography.headings.family)$\n  heading-family: $brand.typography.headings.family$,\n$endif$\n$if(brand.typography.headings.weight)$\n  heading-weight: $brand.typography.headings.weight$,\n$endif$\n$if(brand.typography.headings.style)$\n  heading-style: \"$brand.typography.headings.style$\",\n$endif$\n$if(brand.typography.headings.color)$\n  heading-color: $brand.typography.headings.color$,\n$endif$\n$if(brand.typography.headings.line-height)$\n  heading-line-height: $brand.typography.headings.line-height$,\n$endif$\n$endif$\n$if(section-numbering)$\n  sectionnumbering: \"$section-numbering$\",\n$endif$\n  pagenumbering: $if(page-numbering)$\"$page-numbering$\"$else$none$endif$,\n$if(toc)$\n  toc: $toc$,\n$endif$\n$if(toc-title)$\n  toc_title: [$toc-title$],\n$endif$\n$if(toc-indent)$\n  toc_indent: $toc-indent$,\n$endif$\n  toc_depth: $toc-depth$,\n  cols: $if(columns)$$columns$$else$1$endif$,\n  doc,\n)"
   },
   {
     "objectID": "materials/04-typst/slides.html#typst-template.typ",
     "href": "materials/04-typst/slides.html#typst-template.typ",
     "title": "PDFs with Typst",
     "section": "typst-template.typ",
-    "text": "typst-template.typ\n\n\ntypst-template.typ\n\n#let whr-template(\n  doc,\n  title: none,\n  author: none,\n  cover_image: none,\n  main_logo: none,\n  bottom_logos: none,\n  toc_background_image: none,\n) = {\n  // Page setup for the entire document\n  set text(font: \"Linux Libertine\", size: 10pt)\n  set heading(numbering: \"1.1\")\n  set page(paper: \"a4\", margin: (left: 20mm, right: 30mm, top: 20mm, bottom: 20mm))\n\n  // Define the style for purple headings\n  show heading: it =&gt; {\n    set text(fill: rgb(\"#4B0082\")) // A deep purple\n    it\n  }\n\n  // Define the blue bar on the right side of pages\n  #show page: page =&gt; {\n    // Add the blue bar (except on the cover page)\n    if counter(page).at(1) &gt; 1 {\n      box(\n        width: 10pt,\n        height: 100%,\n        fill: rgb(\"#2a87d6\"),\n        float: true,\n        inset: 0pt,\n        place(right, top)\n      )\n    }\n    // Render the page content\n    page\n  }\n\n  // Cover page layout\n  page(\n    header: none,\n    footer: none,\n    background: cover_image,\n  )[\n    #place(\n      right, center,\n      image(main_logo)\n    )\n\n    #if bottom_logos != none {\n      #place(bottom, center, [\n        #h(1fr) #bottom_logos #h(1fr)\n      ])\n    }\n  ]\n\n  // Table of Contents page\n  page(\n    header: none,\n    footer: none,\n    background: toc_background_image,\n  )[\n    #show: heading.where(level: 1, 2)\n    #outline(title: \"Contents\")\n  ]\n\n  // Main content pages\n  #set page(columns: 2)\n  #set page(\n    header: if title != none {\n      box(width: 100%, [\n        #h(1fr) #text(9pt)[#title]\n      ])\n    },\n    footer: box(\n      width: 100%,\n      [#h(1fr) #text(9pt)[#counter(page).at(1)]]\n    )\n  )\n\n  // Insert the main document content\n  #doc\n}\n\n// Apply the template to the document with the required parameters\n#show: doc =&gt; whr-template(\n  doc,\n  title: [WORLD HAPPINESS REPORT 2024],\n  cover_image: \"../assets/cover-page.jpg\",\n  main_logo: \"../assets/logo-center-right.png\",\n  bottom_logos: [\n    #image(\"../assets/bottom-logo-1.png\", height: 1.5cm)\n    #h(1cm)\n    #image(\"../assets/bottom-logo-2.png\", height: 1.5cm)\n    #h(1cm)\n    #image(\"../assets/bottom-logo-3.png\", height: 1.5cm)\n  ],\n  toc_background_image: \"../assets/toc-background.jpg\",\n)"
+    "text": "typst-template.typ\n\n\n./_extensions/article/typst-template.typ\n\n\n// This is an example typst template (based on the default template that ships\n// with Quarto). It defines a typst function named 'article' which provides\n// various customization options. This function is called from the \n// 'typst-show.typ' file (which maps Pandoc metadata function arguments)\n//\n// If you are creating or packaging a custom typst template you will likely\n// want to replace this file and 'typst-show.typ' entirely. You can find \n// documentation on creating typst templates and some examples here: \n//   - https://typst.app/docs/tutorial/making-a-template/\n//   - https://github.com/typst/templates\n\n\n#let article(\n  title: none,\n  subtitle: none,\n  authors: none,\n  date: none,\n  abstract: none,\n  abstract-title: none,\n  cols: 1,\n  margin: (x: 1.25in, y: 1.25in),\n  paper: \"us-letter\",\n  lang: \"en\",\n  region: \"US\",\n  font: \"libertinus serif\",\n  fontsize: 11pt,\n  title-size: 1.5em,\n  subtitle-size: 1.25em,\n  heading-family: \"libertinus serif\",\n  heading-weight: \"bold\",\n  heading-style: \"normal\",\n  heading-color: black,\n  heading-line-height: 0.65em,\n  sectionnumbering: none,\n  pagenumbering: \"1\",\n  toc: false,\n  toc_title: none,\n  toc_depth: none,\n  toc_indent: 1.5em,\n  doc,\n) = {\n  set page(\n    paper: paper,\n    margin: margin,\n    numbering: pagenumbering,\n  )\n  set par(justify: true)\n  set text(lang: lang,\n           region: region,\n           font: font,\n           size: fontsize)\n  set heading(numbering: sectionnumbering)\n  if title != none {\n    align(center)[#block(inset: 2em)[\n      #set par(leading: heading-line-height)\n      #if (heading-family != none or heading-weight != \"bold\" or heading-style != \"normal\"\n           or heading-color != black) {\n        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)\n        text(size: title-size)[#title]\n        if subtitle != none {\n          parbreak()\n          text(size: subtitle-size)[#subtitle]\n        }\n      } else {\n        text(weight: \"bold\", size: title-size)[#title]\n        if subtitle != none {\n          parbreak()\n          text(weight: \"bold\", size: subtitle-size)[#subtitle]\n        }\n      }\n    ]]\n  }\n\n  if authors != none {\n    let count = authors.len()\n    let ncols = calc.min(count, 3)\n    grid(\n      columns: (1fr,) * ncols,\n      row-gutter: 1.5em,\n      ..authors.map(author =&gt;\n          align(center)[\n            #author.name \\\n            #author.affiliation \\\n            #author.email\n          ]\n      )\n    )\n  }\n\n  if date != none {\n    align(center)[#block(inset: 1em)[\n      #date\n    ]]\n  }\n\n  if abstract != none {\n    block(inset: 2em)[\n    #text(weight: \"semibold\")[#abstract-title] #h(1em) #abstract\n    ]\n  }\n\n  if toc {\n    let title = if toc_title == none {\n      auto\n    } else {\n      toc_title\n    }\n    block(above: 0em, below: 2em)[\n    #outline(\n      title: toc_title,\n      depth: toc_depth,\n      indent: toc_indent\n    );\n    ]\n  }\n\n  if cols == 1 {\n    doc\n  } else {\n    columns(cols, doc)\n  }\n}\n\n#set table(\n  inset: 6pt,\n  stroke: none\n)"
   },
   {
     "objectID": "materials/04-typst/slides.html#custom-typst-formats",
@@ -176,21 +176,21 @@
     "href": "materials/04-typst/slides.html#creating-a-new-typst-format",
     "title": "PDFs with Typst",
     "section": "Creating a new Typst format",
-    "text": "Creating a new Typst format\nUse the quarto create command to get started:\n\n\nTerminal\n\n$ quarto create extension format\n\nChoose typst as the base format and provide a name for the extension."
+    "text": "Creating a new Typst format\nUse the quarto create command to get started:\n\n\nTerminal\n\n$ quarto create extension format\n\nChoose typst as the base format and provide a name for the extension.\n\nLearn more: Create a Format"
   },
   {
     "objectID": "materials/04-typst/slides.html#creating-a-new-typst-format-1",
     "href": "materials/04-typst/slides.html#creating-a-new-typst-format-1",
     "title": "PDFs with Typst",
     "section": "Creating a new Typst format",
-    "text": "Creating a new Typst format\n\n\n\nFile\nDescription\n\n\n\n\n_extension.yml\nBasic extension metadata (name, author, description, etc.) and format definition.\n\n\nREADME.md\nDocumentation on how to install and use the format.\n\n\ntemplate.qmd\nA starter document that demonstrates the basics of the format.\n\n\ntypst-template.typ\nThe core Typst template function (documentation on creating Typst templates can be found here: https://typst.app/docs/tutorial/making-a-template/).\n\n\ntypst-show.typ\nFile that calls the template’s function (mapping Pandoc metadata to function arguments)."
+    "text": "Creating a new Typst format\n\n\n\nFile\nDescription\n\n\n\n\n_extension.yml\nBasic extension metadata (name, author, description, etc.) and format definition.\n\n\nREADME.md\nDocumentation on how to install and use the format.\n\n\ntemplate.qmd\nA starter document that demonstrates the basics of the format.\n\n\ntypst-template.typ\nThe core Typst template function (documentation on creating Typst templates can be found here: https://typst.app/docs/tutorial/making-a-template/).\n\n\ntypst-show.typ\nFile that calls the template’s function (mapping Pandoc metadata to function arguments).\n\n\n\n\nLearn more: Making a template, Awesome Typst"
   },
   {
     "objectID": "materials/04-typst/exercise-01.html",
     "href": "materials/04-typst/exercise-01.html",
     "title": "",
     "section": "",
-    "text": "In your document’s YAML header, change the format option from its current value (e.g., html) to typst.\nEdit your YAML with one of the options we covered: margin, papersize, etc.\nAdd a block to a section of the text."
+    "text": "In your document’s YAML header, change the format option from its current value (e.g., html) to typst.\nEdit your YAML with one of the options we covered: margin, papersize, etc.\nAdd a block to a section of the text and fill it with the tertiary color."
   },
   {
     "objectID": "typst-template.typ.html",
@@ -232,6 +232,34 @@
     "href": "materials/04-typst/slides.html#typst-blocks",
     "title": "PDFs with Typst",
     "section": "Typst blocks",
-    "text": "Typst blocks\nAdd a .block class to change appearance of blocks:\n::: {.block fill=\"luma(230)\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with gray background and slightly rounded corners.\n\n:::"
+    "text": "Typst blocks\nAdd a .block class to change appearance of blocks:\n::: {.block fill=\"luma(230)\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with gray background and slightly rounded corners.\n\n:::\nUse colors from the _brand.yml file using brand-color:\n::: {.block fill=\"brand-color.primary\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with the primary color and slightly rounded corners.\n\n:::"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#fonts",
+    "href": "materials/04-typst/slides.html#fonts",
+    "title": "PDFs with Typst",
+    "section": "Fonts",
+    "text": "Fonts\nCheck what fonts are available with:\nquarto typst fonts"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#more-configurations",
+    "href": "materials/04-typst/slides.html#more-configurations",
+    "title": "PDFs with Typst",
+    "section": "More configurations",
+    "text": "More configurations\nTable of contents\ntoc: true\ntoc-depth: 2\nSection numbering\nnumber-sections: true\nUse number-depth:\nnumber-depth: 3\n\nLearn more: Section Numbering, Table of Contents"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#more-options",
+    "href": "materials/04-typst/slides.html#more-options",
+    "title": "PDFs with Typst",
+    "section": "More options",
+    "text": "More options\nTable of contents\ntoc: true\ntoc-depth: 2\n\nSection numbering\nnumber-sections: true\nUse number-depth:\nnumber-depth: 3\n\nLearn more: Section Numbering, Table of Contents"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#quick-note-about-fonts",
+    "href": "materials/04-typst/slides.html#quick-note-about-fonts",
+    "title": "PDFs with Typst",
+    "section": "Quick note about fonts",
+    "text": "Quick note about fonts\nCheck what fonts are available on your system with:\n\n\nTerminal\n\nquarto typst fonts\n\nSet additional paths using font-paths:\n---\nformat: \n  typst:\n    font-paths: myfonts\n---"
   }
 ]

@@ -293,25 +293,23 @@
 <section id="paper-size" class="slide level2">
 <h2>Paper Size</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a><span class="an">papersize:</span><span class="co"> us-letter</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="footer">
+
+<img data-src="images/papersizes.png" class="border quarto-figure quarto-figure-center r-stretch" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;;width:40.0%"><div class="footer">
 <p>Learn more: <a href="https://typst.app/docs/reference/layout/page/#parameters-paper">Supported page sizes</a></p>
 </div>
 </section>
-<section id="table-of-contents" class="slide level2">
-<h2>Table of contents</h2>
+<section id="more-options" class="slide level2">
+<h2>More options</h2>
+<h4 id="table-of-contents">Table of contents</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="an">toc:</span><span class="co"> true</span></span>
 <span id="cb6-2"><a></a><span class="an">toc-depth:</span><span class="co"> 2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html#table-of-contents">Table of Contents</a></p>
-</div>
-</section>
-<section id="section-numbering" class="slide level2">
-<h2>Section numbering</h2>
+<p><br></p>
+<h4 id="section-numbering">Section numbering</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="an">number-sections:</span><span class="co"> true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Use <code>number-depth</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a><span class="an">number-depth:</span><span class="co"> 3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html#section-numbering">Section Numbering</a></p>
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html#section-numbering">Section Numbering</a>, <a href="https://quarto.org/docs/output-formats/typst.html#table-of-contents">Table of Contents</a></p>
 </div>
 </section>
 <section id="typst-blocks" class="slide level2">
@@ -322,13 +320,19 @@
 <span id="cb9-3"><a></a>This is a block with gray background and slightly rounded corners.</span>
 <span id="cb9-4"><a></a></span>
 <span id="cb9-5"><a></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use colors from the <code>_brand.yml</code> file using <code>brand-color</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a></a>::: {.block fill="brand-color.primary" inset="8pt" radius="4pt"}</span>
+<span id="cb10-2"><a></a></span>
+<span id="cb10-3"><a></a>This is a block with the primary color and slightly rounded corners.</span>
+<span id="cb10-4"><a></a></span>
+<span id="cb10-5"><a></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="your-turn" class="slide level2">
+<section id="your-turn" class="slide level2" data-background-color="#f3c13d">
 <h2>Your turn</h2>
 <ul>
 <li>In your document’s YAML header, change the format option from its current value (e.g., <code>html</code>) to <code>typst</code>.</li>
 <li>Edit your YAML with one of the options we covered: <code>margin</code>, <code>papersize</code>, etc.</li>
-<li>Add a block to a section of the text.</li>
+<li>Add a block to a section of the text and fill it with the <code>tertiary</code> color.</li>
 </ul>
 </section></section>
 <section>
@@ -426,9 +430,12 @@
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="ex">$</span> quarto create extension format</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="ex">$</span> quarto create extension format</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Choose <code>typst</code> as the base format and provide a name for the extension.</p>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst-custom.html#create-a-format">Create a Format</a></p>
+</div>
 </section>
 <section id="creating-a-new-typst-format-1" class="slide level2 smaller">
 <h2>Creating a new Typst format</h2>
@@ -462,140 +469,263 @@
 </tr>
 </tbody>
 </table>
+<div class="footer">
+<p>Learn more: <a href="https://typst.app/docs/tutorial/making-a-template/">Making a template</a>, <a href="https://github.com/qjcg/awesome-typst#templates--libraries">Awesome Typst</a></p>
+</div>
 </section>
 <section id="typst-show.typ" class="slide level2">
 <h2>typst-show.typ</h2>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>typst-show.typ</strong></pre>
+<pre><strong>./_extensions/article/typst-show.typ</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="typst-show.typ"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a></a>#show: dept-news.with(</span>
-<span id="cb11-2"><a></a>$if(title)$</span>
-<span id="cb11-3"><a></a>  title: "$title$",</span>
-<span id="cb11-4"><a></a>$endif$</span>
-<span id="cb11-5"><a></a>$if(edition)$</span>
-<span id="cb11-6"><a></a>  edition: <span class="co">[</span><span class="ot">$edition$</span><span class="co">]</span>,</span>
-<span id="cb11-7"><a></a>$endif$</span>
-<span id="cb11-8"><a></a>$if(hero-image)$</span>
-<span id="cb11-9"><a></a>  hero-image: (</span>
-<span id="cb11-10"><a></a>    path: "$hero-image.path$",</span>
-<span id="cb11-11"><a></a>    caption: <span class="co">[</span><span class="ot">$hero-image.caption$</span><span class="co">]</span></span>
-<span id="cb11-12"><a></a>  ), </span>
-<span id="cb11-13"><a></a>$endif$</span>
-<span id="cb11-14"><a></a>$if(dedication)$</span>
-<span id="cb11-15"><a></a>  dedication: <span class="co">[</span><span class="ot">$dedication$</span><span class="co">]</span>,</span>
-<span id="cb11-16"><a></a>$endif$</span>
-<span id="cb11-17"><a></a>$if(publication-info)$</span>
-<span id="cb11-18"><a></a>  publication-info: <span class="co">[</span><span class="ot">$publication-info$</span><span class="co">]</span>,</span>
-<span id="cb11-19"><a></a>$endif$</span>
-<span id="cb11-20"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-filename="./_extensions/article/typst-show.typ"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a></a>// Typst custom formats typically consist of a 'typst-template.typ' (which is</span>
+<span id="cb12-2"><a></a>// the source code for a typst template) and a 'typst-show.typ' which calls the</span>
+<span id="cb12-3"><a></a>// template's function (forwarding Pandoc metadata values as required)</span>
+<span id="cb12-4"><a></a>//</span>
+<span id="cb12-5"><a></a>// This is an example 'typst-show.typ' file (based on the default template  </span>
+<span id="cb12-6"><a></a>// that ships with Quarto). It calls the typst function named 'article' which </span>
+<span id="cb12-7"><a></a>// is defined in the 'typst-template.typ' file. </span>
+<span id="cb12-8"><a></a>//</span>
+<span id="cb12-9"><a></a>// If you are creating or packaging a custom typst template you will likely</span>
+<span id="cb12-10"><a></a>// want to replace this file and 'typst-template.typ' entirely. You can find</span>
+<span id="cb12-11"><a></a>// documentation on creating typst templates here and some examples here:</span>
+<span id="cb12-12"><a></a>//   - https://typst.app/docs/tutorial/making-a-template/</span>
+<span id="cb12-13"><a></a>//   - https://github.com/typst/templates</span>
+<span id="cb12-14"><a></a>#show: doc =&gt; article(</span>
+<span id="cb12-15"><a></a>$if(title)$</span>
+<span id="cb12-16"><a></a>  title: <span class="co">[</span><span class="ot">$title$</span><span class="co">]</span>,</span>
+<span id="cb12-17"><a></a>$endif$</span>
+<span id="cb12-18"><a></a>$if(subtitle)$</span>
+<span id="cb12-19"><a></a>  subtitle: <span class="co">[</span><span class="ot">$subtitle$</span><span class="co">]</span>,</span>
+<span id="cb12-20"><a></a>$endif$</span>
+<span id="cb12-21"><a></a>$if(by-author)$</span>
+<span id="cb12-22"><a></a>  authors: (</span>
+<span id="cb12-23"><a></a>$for(by-author)$</span>
+<span id="cb12-24"><a></a>$if(it.name.literal)$</span>
+<span id="cb12-25"><a></a>    ( name: <span class="co">[</span><span class="ot">$it.name.literal$</span><span class="co">]</span>,</span>
+<span id="cb12-26"><a></a>      affiliation: <span class="co">[</span><span class="ot">$for(it.affiliations)$$it.name$$sep$, $endfor$</span><span class="co">]</span>,</span>
+<span id="cb12-27"><a></a>      email: <span class="co">[</span><span class="ot">$it.email$</span><span class="co">]</span> ),</span>
+<span id="cb12-28"><a></a>$endif$</span>
+<span id="cb12-29"><a></a>$endfor$</span>
+<span id="cb12-30"><a></a>    ),</span>
+<span id="cb12-31"><a></a>$endif$</span>
+<span id="cb12-32"><a></a>$if(date)$</span>
+<span id="cb12-33"><a></a>  date: <span class="co">[</span><span class="ot">$date$</span><span class="co">]</span>,</span>
+<span id="cb12-34"><a></a>$endif$</span>
+<span id="cb12-35"><a></a>$if(lang)$</span>
+<span id="cb12-36"><a></a>  lang: "$lang$",</span>
+<span id="cb12-37"><a></a>$endif$</span>
+<span id="cb12-38"><a></a>$if(region)$</span>
+<span id="cb12-39"><a></a>  region: "$region$",</span>
+<span id="cb12-40"><a></a>$endif$</span>
+<span id="cb12-41"><a></a>$if(abstract)$</span>
+<span id="cb12-42"><a></a>  abstract: <span class="co">[</span><span class="ot">$abstract$</span><span class="co">]</span>,</span>
+<span id="cb12-43"><a></a>  abstract-title: "$labels.abstract$",</span>
+<span id="cb12-44"><a></a>$endif$</span>
+<span id="cb12-45"><a></a>$if(margin)$</span>
+<span id="cb12-46"><a></a>  margin: ($for(margin/pairs)$$margin.key$: $margin.value$,$endfor$),</span>
+<span id="cb12-47"><a></a>$endif$</span>
+<span id="cb12-48"><a></a>$if(papersize)$</span>
+<span id="cb12-49"><a></a>  paper: "$papersize$",</span>
+<span id="cb12-50"><a></a>$endif$</span>
+<span id="cb12-51"><a></a>$if(mainfont)$</span>
+<span id="cb12-52"><a></a>  font: ("$mainfont$",),</span>
+<span id="cb12-53"><a></a>$elseif(brand.typography.base.family)$</span>
+<span id="cb12-54"><a></a>  font: $brand.typography.base.family$,</span>
+<span id="cb12-55"><a></a>$endif$</span>
+<span id="cb12-56"><a></a>$if(fontsize)$</span>
+<span id="cb12-57"><a></a>  fontsize: $fontsize$,</span>
+<span id="cb12-58"><a></a>$elseif(brand.typography.base.size)$</span>
+<span id="cb12-59"><a></a>  fontsize: $brand.typography.base.size$,</span>
+<span id="cb12-60"><a></a>$endif$</span>
+<span id="cb12-61"><a></a>$if(title)$</span>
+<span id="cb12-62"><a></a>$if(brand.typography.headings.family)$</span>
+<span id="cb12-63"><a></a>  heading-family: $brand.typography.headings.family$,</span>
+<span id="cb12-64"><a></a>$endif$</span>
+<span id="cb12-65"><a></a>$if(brand.typography.headings.weight)$</span>
+<span id="cb12-66"><a></a>  heading-weight: $brand.typography.headings.weight$,</span>
+<span id="cb12-67"><a></a>$endif$</span>
+<span id="cb12-68"><a></a>$if(brand.typography.headings.style)$</span>
+<span id="cb12-69"><a></a>  heading-style: "$brand.typography.headings.style$",</span>
+<span id="cb12-70"><a></a>$endif$</span>
+<span id="cb12-71"><a></a>$if(brand.typography.headings.color)$</span>
+<span id="cb12-72"><a></a>  heading-color: $brand.typography.headings.color$,</span>
+<span id="cb12-73"><a></a>$endif$</span>
+<span id="cb12-74"><a></a>$if(brand.typography.headings.line-height)$</span>
+<span id="cb12-75"><a></a>  heading-line-height: $brand.typography.headings.line-height$,</span>
+<span id="cb12-76"><a></a>$endif$</span>
+<span id="cb12-77"><a></a>$endif$</span>
+<span id="cb12-78"><a></a>$if(section-numbering)$</span>
+<span id="cb12-79"><a></a>  sectionnumbering: "$section-numbering$",</span>
+<span id="cb12-80"><a></a>$endif$</span>
+<span id="cb12-81"><a></a>  pagenumbering: $if(page-numbering)$"$page-numbering$"$else$none$endif$,</span>
+<span id="cb12-82"><a></a>$if(toc)$</span>
+<span id="cb12-83"><a></a>  toc: $toc$,</span>
+<span id="cb12-84"><a></a>$endif$</span>
+<span id="cb12-85"><a></a>$if(toc-title)$</span>
+<span id="cb12-86"><a></a>  toc_title: <span class="co">[</span><span class="ot">$toc-title$</span><span class="co">]</span>,</span>
+<span id="cb12-87"><a></a>$endif$</span>
+<span id="cb12-88"><a></a>$if(toc-indent)$</span>
+<span id="cb12-89"><a></a>  toc_indent: $toc-indent$,</span>
+<span id="cb12-90"><a></a>$endif$</span>
+<span id="cb12-91"><a></a>  toc_depth: $toc-depth$,</span>
+<span id="cb12-92"><a></a>  cols: $if(columns)$$columns$$else$1$endif$,</span>
+<span id="cb12-93"><a></a>  doc,</span>
+<span id="cb12-94"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="typst-template.typ" class="slide level2">
 <h2>typst-template.typ</h2>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>typst-template.typ</strong></pre>
+<pre><strong>./_extensions/article/typst-template.typ</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-filename="typst-template.typ"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a></a>#let whr-template(</span>
-<span id="cb12-2"><a></a>  doc,</span>
-<span id="cb12-3"><a></a>  title: none,</span>
-<span id="cb12-4"><a></a>  author: none,</span>
-<span id="cb12-5"><a></a>  cover_image: none,</span>
-<span id="cb12-6"><a></a>  main_logo: none,</span>
-<span id="cb12-7"><a></a>  bottom_logos: none,</span>
-<span id="cb12-8"><a></a>  toc_background_image: none,</span>
-<span id="cb12-9"><a></a>) = {</span>
-<span id="cb12-10"><a></a>  // Page setup for the entire document</span>
-<span id="cb12-11"><a></a>  set text(font: "Linux Libertine", size: 10pt)</span>
-<span id="cb12-12"><a></a>  set heading(numbering: "1.1")</span>
-<span id="cb12-13"><a></a>  set page(paper: "a4", margin: (left: 20mm, right: 30mm, top: 20mm, bottom: 20mm))</span>
-<span id="cb12-14"><a></a></span>
-<span id="cb12-15"><a></a>  // Define the style for purple headings</span>
-<span id="cb12-16"><a></a>  show heading: it =&gt; {</span>
-<span id="cb12-17"><a></a>    set text(fill: rgb("#4B0082")) // A deep purple</span>
-<span id="cb12-18"><a></a>    it</span>
-<span id="cb12-19"><a></a>  }</span>
-<span id="cb12-20"><a></a></span>
-<span id="cb12-21"><a></a>  // Define the blue bar on the right side of pages</span>
-<span id="cb12-22"><a></a>  #show page: page =&gt; {</span>
-<span id="cb12-23"><a></a>    // Add the blue bar (except on the cover page)</span>
-<span id="cb12-24"><a></a>    if counter(page).at(1) &gt; 1 {</span>
-<span id="cb12-25"><a></a>      box(</span>
-<span id="cb12-26"><a></a>        width: 10pt,</span>
-<span id="cb12-27"><a></a>        height: 100%,</span>
-<span id="cb12-28"><a></a>        fill: rgb("#2a87d6"),</span>
-<span id="cb12-29"><a></a>        float: true,</span>
-<span id="cb12-30"><a></a>        inset: 0pt,</span>
-<span id="cb12-31"><a></a>        place(right, top)</span>
-<span id="cb12-32"><a></a>      )</span>
-<span id="cb12-33"><a></a>    }</span>
-<span id="cb12-34"><a></a>    // Render the page content</span>
-<span id="cb12-35"><a></a>    page</span>
-<span id="cb12-36"><a></a>  }</span>
-<span id="cb12-37"><a></a></span>
-<span id="cb12-38"><a></a>  // Cover page layout</span>
-<span id="cb12-39"><a></a>  page(</span>
-<span id="cb12-40"><a></a>    header: none,</span>
-<span id="cb12-41"><a></a>    footer: none,</span>
-<span id="cb12-42"><a></a>    background: cover_image,</span>
-<span id="cb12-43"><a></a>  )[</span>
-<span id="cb12-44"><a></a>    #place(</span>
-<span id="cb12-45"><a></a>      right, center,</span>
-<span id="cb12-46"><a></a>      image(main_logo)</span>
-<span id="cb12-47"><a></a>    )</span>
-<span id="cb12-48"><a></a></span>
-<span id="cb12-49"><a></a><span class="in">    #if bottom_logos != none {</span></span>
-<span id="cb12-50"><a></a><span class="in">      #place(bottom, center, [</span></span>
-<span id="cb12-51"><a></a><span class="in">        #h(1fr) #bottom_logos #h(1fr)</span></span>
-<span id="cb12-52"><a></a><span class="in">      ])</span></span>
-<span id="cb12-53"><a></a><span class="in">    }</span></span>
-<span id="cb12-54"><a></a>  ]</span>
-<span id="cb12-55"><a></a></span>
-<span id="cb12-56"><a></a>  // Table of Contents page</span>
-<span id="cb12-57"><a></a>  page(</span>
-<span id="cb12-58"><a></a>    header: none,</span>
-<span id="cb12-59"><a></a>    footer: none,</span>
-<span id="cb12-60"><a></a>    background: toc_background_image,</span>
-<span id="cb12-61"><a></a>  )[</span>
-<span id="cb12-62"><a></a>    #show: heading.where(level: 1, 2)</span>
-<span id="cb12-63"><a></a>    #outline(title: "Contents")</span>
-<span id="cb12-64"><a></a>  ]</span>
-<span id="cb12-65"><a></a></span>
-<span id="cb12-66"><a></a>  // Main content pages</span>
-<span id="cb12-67"><a></a>  #set page(columns: 2)</span>
-<span id="cb12-68"><a></a>  #set page(</span>
-<span id="cb12-69"><a></a>    header: if title != none {</span>
-<span id="cb12-70"><a></a>      box(width: 100%, [</span>
-<span id="cb12-71"><a></a>        #h(1fr) #text(9pt)<span class="co">[</span><span class="ot">#title</span><span class="co">]</span></span>
-<span id="cb12-72"><a></a>      ])</span>
-<span id="cb12-73"><a></a>    },</span>
-<span id="cb12-74"><a></a>    footer: box(</span>
-<span id="cb12-75"><a></a>      width: 100%,</span>
-<span id="cb12-76"><a></a>      <span class="co">[</span><span class="ot">#h(1fr) #text(9pt)[#counter(page).at(1)]</span><span class="co">]</span></span>
-<span id="cb12-77"><a></a>    )</span>
-<span id="cb12-78"><a></a>  )</span>
-<span id="cb12-79"><a></a></span>
-<span id="cb12-80"><a></a>  // Insert the main document content</span>
-<span id="cb12-81"><a></a>  #doc</span>
-<span id="cb12-82"><a></a>}</span>
-<span id="cb12-83"><a></a></span>
-<span id="cb12-84"><a></a>// Apply the template to the document with the required parameters</span>
-<span id="cb12-85"><a></a>#show: doc =&gt; whr-template(</span>
-<span id="cb12-86"><a></a>  doc,</span>
-<span id="cb12-87"><a></a>  title: <span class="co">[</span><span class="ot">WORLD HAPPINESS REPORT 2024</span><span class="co">]</span>,</span>
-<span id="cb12-88"><a></a>  cover_image: "../assets/cover-page.jpg",</span>
-<span id="cb12-89"><a></a>  main_logo: "../assets/logo-center-right.png",</span>
-<span id="cb12-90"><a></a>  bottom_logos: [</span>
-<span id="cb12-91"><a></a>    #image("../assets/bottom-logo-1.png", height: 1.5cm)</span>
-<span id="cb12-92"><a></a>    #h(1cm)</span>
-<span id="cb12-93"><a></a>    #image("../assets/bottom-logo-2.png", height: 1.5cm)</span>
-<span id="cb12-94"><a></a>    #h(1cm)</span>
-<span id="cb12-95"><a></a>    #image("../assets/bottom-logo-3.png", height: 1.5cm)</span>
-<span id="cb12-96"><a></a>  ],</span>
-<span id="cb12-97"><a></a>  toc_background_image: "../assets/toc-background.jpg",</span>
-<span id="cb12-98"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="./_extensions/article/typst-template.typ"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a></a></span>
+<span id="cb13-2"><a></a>// This is an example typst template (based on the default template that ships</span>
+<span id="cb13-3"><a></a>// with Quarto). It defines a typst function named 'article' which provides</span>
+<span id="cb13-4"><a></a>// various customization options. This function is called from the </span>
+<span id="cb13-5"><a></a>// 'typst-show.typ' file (which maps Pandoc metadata function arguments)</span>
+<span id="cb13-6"><a></a>//</span>
+<span id="cb13-7"><a></a>// If you are creating or packaging a custom typst template you will likely</span>
+<span id="cb13-8"><a></a>// want to replace this file and 'typst-show.typ' entirely. You can find </span>
+<span id="cb13-9"><a></a>// documentation on creating typst templates and some examples here: </span>
+<span id="cb13-10"><a></a>//   - https://typst.app/docs/tutorial/making-a-template/</span>
+<span id="cb13-11"><a></a>//   - https://github.com/typst/templates</span>
+<span id="cb13-12"><a></a></span>
+<span id="cb13-13"><a></a></span>
+<span id="cb13-14"><a></a>#let article(</span>
+<span id="cb13-15"><a></a>  title: none,</span>
+<span id="cb13-16"><a></a>  subtitle: none,</span>
+<span id="cb13-17"><a></a>  authors: none,</span>
+<span id="cb13-18"><a></a>  date: none,</span>
+<span id="cb13-19"><a></a>  abstract: none,</span>
+<span id="cb13-20"><a></a>  abstract-title: none,</span>
+<span id="cb13-21"><a></a>  cols: 1,</span>
+<span id="cb13-22"><a></a>  margin: (x: 1.25in, y: 1.25in),</span>
+<span id="cb13-23"><a></a>  paper: "us-letter",</span>
+<span id="cb13-24"><a></a>  lang: "en",</span>
+<span id="cb13-25"><a></a>  region: "US",</span>
+<span id="cb13-26"><a></a>  font: "libertinus serif",</span>
+<span id="cb13-27"><a></a>  fontsize: 11pt,</span>
+<span id="cb13-28"><a></a>  title-size: 1.5em,</span>
+<span id="cb13-29"><a></a>  subtitle-size: 1.25em,</span>
+<span id="cb13-30"><a></a>  heading-family: "libertinus serif",</span>
+<span id="cb13-31"><a></a>  heading-weight: "bold",</span>
+<span id="cb13-32"><a></a>  heading-style: "normal",</span>
+<span id="cb13-33"><a></a>  heading-color: black,</span>
+<span id="cb13-34"><a></a>  heading-line-height: 0.65em,</span>
+<span id="cb13-35"><a></a>  sectionnumbering: none,</span>
+<span id="cb13-36"><a></a>  pagenumbering: "1",</span>
+<span id="cb13-37"><a></a>  toc: false,</span>
+<span id="cb13-38"><a></a>  toc_title: none,</span>
+<span id="cb13-39"><a></a>  toc_depth: none,</span>
+<span id="cb13-40"><a></a>  toc_indent: 1.5em,</span>
+<span id="cb13-41"><a></a>  doc,</span>
+<span id="cb13-42"><a></a>) = {</span>
+<span id="cb13-43"><a></a>  set page(</span>
+<span id="cb13-44"><a></a>    paper: paper,</span>
+<span id="cb13-45"><a></a>    margin: margin,</span>
+<span id="cb13-46"><a></a>    numbering: pagenumbering,</span>
+<span id="cb13-47"><a></a>  )</span>
+<span id="cb13-48"><a></a>  set par(justify: true)</span>
+<span id="cb13-49"><a></a>  set text(lang: lang,</span>
+<span id="cb13-50"><a></a>           region: region,</span>
+<span id="cb13-51"><a></a>           font: font,</span>
+<span id="cb13-52"><a></a>           size: fontsize)</span>
+<span id="cb13-53"><a></a>  set heading(numbering: sectionnumbering)</span>
+<span id="cb13-54"><a></a>  if title != none {</span>
+<span id="cb13-55"><a></a>    align(center)[#block(inset: 2em)[</span>
+<span id="cb13-56"><a></a>      #set par(leading: heading-line-height)</span>
+<span id="cb13-57"><a></a>      #if (heading-family != none or heading-weight != "bold" or heading-style != "normal"</span>
+<span id="cb13-58"><a></a>           or heading-color != black) {</span>
+<span id="cb13-59"><a></a>        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)</span>
+<span id="cb13-60"><a></a>        text(size: title-size)<span class="co">[</span><span class="ot">#title</span><span class="co">]</span></span>
+<span id="cb13-61"><a></a>        if subtitle != none {</span>
+<span id="cb13-62"><a></a>          parbreak()</span>
+<span id="cb13-63"><a></a>          text(size: subtitle-size)<span class="co">[</span><span class="ot">#subtitle</span><span class="co">]</span></span>
+<span id="cb13-64"><a></a>        }</span>
+<span id="cb13-65"><a></a>      } else {</span>
+<span id="cb13-66"><a></a>        text(weight: "bold", size: title-size)<span class="co">[</span><span class="ot">#title</span><span class="co">]</span></span>
+<span id="cb13-67"><a></a>        if subtitle != none {</span>
+<span id="cb13-68"><a></a>          parbreak()</span>
+<span id="cb13-69"><a></a>          text(weight: "bold", size: subtitle-size)<span class="co">[</span><span class="ot">#subtitle</span><span class="co">]</span></span>
+<span id="cb13-70"><a></a>        }</span>
+<span id="cb13-71"><a></a>      }</span>
+<span id="cb13-72"><a></a>    ]]</span>
+<span id="cb13-73"><a></a>  }</span>
+<span id="cb13-74"><a></a></span>
+<span id="cb13-75"><a></a>  if authors != none {</span>
+<span id="cb13-76"><a></a>    let count = authors.len()</span>
+<span id="cb13-77"><a></a>    let ncols = calc.min(count, 3)</span>
+<span id="cb13-78"><a></a>    grid(</span>
+<span id="cb13-79"><a></a>      columns: (1fr,) * ncols,</span>
+<span id="cb13-80"><a></a>      row-gutter: 1.5em,</span>
+<span id="cb13-81"><a></a>      ..authors.map(author =&gt;</span>
+<span id="cb13-82"><a></a>          align(center)[</span>
+<span id="cb13-83"><a></a>            #author.name \</span>
+<span id="cb13-84"><a></a>            #author.affiliation \</span>
+<span id="cb13-85"><a></a>            #author.email</span>
+<span id="cb13-86"><a></a>          ]</span>
+<span id="cb13-87"><a></a>      )</span>
+<span id="cb13-88"><a></a>    )</span>
+<span id="cb13-89"><a></a>  }</span>
+<span id="cb13-90"><a></a></span>
+<span id="cb13-91"><a></a>  if date != none {</span>
+<span id="cb13-92"><a></a>    align(center)[#block(inset: 1em)[</span>
+<span id="cb13-93"><a></a>      #date</span>
+<span id="cb13-94"><a></a>    ]]</span>
+<span id="cb13-95"><a></a>  }</span>
+<span id="cb13-96"><a></a></span>
+<span id="cb13-97"><a></a>  if abstract != none {</span>
+<span id="cb13-98"><a></a>    block(inset: 2em)[</span>
+<span id="cb13-99"><a></a>    #text(weight: "semibold")<span class="co">[</span><span class="ot">#abstract-title</span><span class="co">]</span> #h(1em) #abstract</span>
+<span id="cb13-100"><a></a>    ]</span>
+<span id="cb13-101"><a></a>  }</span>
+<span id="cb13-102"><a></a></span>
+<span id="cb13-103"><a></a>  if toc {</span>
+<span id="cb13-104"><a></a>    let title = if toc_title == none {</span>
+<span id="cb13-105"><a></a>      auto</span>
+<span id="cb13-106"><a></a>    } else {</span>
+<span id="cb13-107"><a></a>      toc_title</span>
+<span id="cb13-108"><a></a>    }</span>
+<span id="cb13-109"><a></a>    block(above: 0em, below: 2em)[</span>
+<span id="cb13-110"><a></a>    #outline(</span>
+<span id="cb13-111"><a></a>      title: toc_title,</span>
+<span id="cb13-112"><a></a>      depth: toc_depth,</span>
+<span id="cb13-113"><a></a>      indent: toc_indent</span>
+<span id="cb13-114"><a></a>    );</span>
+<span id="cb13-115"><a></a>    ]</span>
+<span id="cb13-116"><a></a>  }</span>
+<span id="cb13-117"><a></a></span>
+<span id="cb13-118"><a></a>  if cols == 1 {</span>
+<span id="cb13-119"><a></a>    doc</span>
+<span id="cb13-120"><a></a>  } else {</span>
+<span id="cb13-121"><a></a>    columns(cols, doc)</span>
+<span id="cb13-122"><a></a>  }</span>
+<span id="cb13-123"><a></a>}</span>
+<span id="cb13-124"><a></a></span>
+<span id="cb13-125"><a></a>#set table(</span>
+<span id="cb13-126"><a></a>  inset: 6pt,</span>
+<span id="cb13-127"><a></a>  stroke: none</span>
+<span id="cb13-128"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+<section id="quick-note-about-fonts" class="slide level2">
+<h2>Quick note about fonts</h2>
+<p>Check what fonts are available on your system with:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a></a><span class="ex">quarto</span> typst fonts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Set additional paths using <code>font-paths</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a></a><span class="co">---</span></span>
+<span id="cb15-2"><a></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb15-3"><a></a><span class="co">  typst:</span></span>
+<span id="cb15-4"><a></a><span class="co">    font-paths: myfonts</span></span>
+<span id="cb15-5"><a></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section></section>

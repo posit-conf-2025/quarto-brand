@@ -115,22 +115,24 @@ Learn more: [Margins](https://quarto.org/docs/output-formats/typst.html#margins)
 papersize: us-letter
 ```
 
+![](images/papersizes.png){.border width="40%" fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
 ::: footer
 Learn more: [Supported page sizes](https://typst.app/docs/reference/layout/page/#parameters-paper)
 :::
 
-## Table of contents
+## More options
+
+#### Table of contents
 
 ```markdown
 toc: true
 toc-depth: 2
 ```
 
-::: footer
-Learn more: [Table of Contents](https://quarto.org/docs/output-formats/typst.html#table-of-contents)
-:::
+<br>
 
-## Section numbering
+#### Section numbering
 
 ```markdown
 number-sections: true
@@ -143,7 +145,7 @@ number-depth: 3
 ```
 
 ::: footer
-Learn more: [Section Numbering](https://quarto.org/docs/output-formats/typst.html#section-numbering)
+Learn more: [Section Numbering](https://quarto.org/docs/output-formats/typst.html#section-numbering), [Table of Contents](https://quarto.org/docs/output-formats/typst.html#table-of-contents)
 :::
 
 ## Typst blocks
@@ -158,7 +160,17 @@ This is a block with gray background and slightly rounded corners.
 :::
 ```
 
-## Your turn
+Use colors from the `_brand.yml` file using `brand-color`:
+
+```markdown
+::: {.block fill="brand-color.primary" inset="8pt" radius="4pt"}
+
+This is a block with the primary color and slightly rounded corners.
+
+:::
+```
+
+## Your turn {background-color='{{< brand color primary >}}'}
 
 {{< include exercise-01.qmd >}}
 
@@ -209,6 +221,10 @@ $ quarto create extension format
 
 Choose `typst` as the base format and provide a name for the extension.
 
+::: footer
+Learn more: [Create a Format](https://quarto.org/docs/output-formats/typst-custom.html#create-a-format)
+:::
+
 ## Creating a new Typst format {.smaller}
 
 | File                 | Description                                                                                                                                           |
@@ -219,15 +235,43 @@ Choose `typst` as the base format and provide a name for the extension.
 | `typst-template.typ` | The core Typst template function (documentation on creating Typst templates can be found here: <https://typst.app/docs/tutorial/making-a-template/>). |
 | `typst-show.typ`     | File that calls the template's function (mapping Pandoc metadata to function arguments).                                                              |
 
+::: footer
+Learn more: [Making a template](https://typst.app/docs/tutorial/making-a-template/), [Awesome Typst](https://github.com/qjcg/awesome-typst#templates--libraries)
+:::
+
 ## typst-show.typ
 
-```{.markdown filename="typst-show.typ"}
-#show: whr.with(
+```{.markdown filename="./_extensions/article/typst-show.typ"}
+// Typst custom formats typically consist of a 'typst-template.typ' (which is
+// the source code for a typst template) and a 'typst-show.typ' which calls the
+// template's function (forwarding Pandoc metadata values as required)
+//
+// This is an example 'typst-show.typ' file (based on the default template  
+// that ships with Quarto). It calls the typst function named 'article' which 
+// is defined in the 'typst-template.typ' file. 
+//
+// If you are creating or packaging a custom typst template you will likely
+// want to replace this file and 'typst-template.typ' entirely. You can find
+// documentation on creating typst templates here and some examples here:
+//   - https://typst.app/docs/tutorial/making-a-template/
+//   - https://github.com/typst/templates
+#show: doc => article(
 $if(title)$
   title: [$title$],
 $endif$
 $if(subtitle)$
   subtitle: [$subtitle$],
+$endif$
+$if(by-author)$
+  authors: (
+$for(by-author)$
+$if(it.name.literal)$
+    ( name: [$it.name.literal$],
+      affiliation: [$for(it.affiliations)$$it.name$$sep$, $endfor$],
+      email: [$it.email$] ),
+$endif$
+$endfor$
+    ),
 $endif$
 $if(date)$
   date: [$date$],
@@ -240,12 +284,7 @@ $if(region)$
 $endif$
 $if(abstract)$
   abstract: [$abstract$],
-$endif$
-$if(thanks)$
-  thanks: [$thanks$],
-$endif$
-$if(keywords)$
-  keywords: ($for(keywords)$"$keywords$",$endfor$),
+  abstract-title: "$labels.abstract$",
 $endif$
 $if(margin)$
   margin: ($for(margin/pairs)$$margin.key$: $margin.value$,$endfor$),
@@ -254,17 +293,36 @@ $if(papersize)$
   paper: "$papersize$",
 $endif$
 $if(mainfont)$
-  font: ($for(mainfont)$"$mainfont$",$endfor$),
+  font: ("$mainfont$",),
+$elseif(brand.typography.base.family)$
+  font: $brand.typography.base.family$,
 $endif$
 $if(fontsize)$
   fontsize: $fontsize$,
+$elseif(brand.typography.base.size)$
+  fontsize: $brand.typography.base.size$,
 $endif$
-$if(mathfont)$
-  mathfont: ($for(mathfont)$"$mathfont$",$endfor$),
+$if(title)$
+$if(brand.typography.headings.family)$
+  heading-family: $brand.typography.headings.family$,
 $endif$
-$if(codefont)$
-  codefont: ($for(codefont)$"$codefont$",$endfor$),
+$if(brand.typography.headings.weight)$
+  heading-weight: $brand.typography.headings.weight$,
 $endif$
+$if(brand.typography.headings.style)$
+  heading-style: "$brand.typography.headings.style$",
+$endif$
+$if(brand.typography.headings.color)$
+  heading-color: $brand.typography.headings.color$,
+$endif$
+$if(brand.typography.headings.line-height)$
+  heading-line-height: $brand.typography.headings.line-height$,
+$endif$
+$endif$
+$if(section-numbering)$
+  sectionnumbering: "$section-numbering$",
+$endif$
+  pagenumbering: $if(page-numbering)$"$page-numbering$"$else$none$endif$,
 $if(toc)$
   toc: $toc$,
 $endif$
@@ -275,126 +333,160 @@ $if(toc-indent)$
   toc_indent: $toc-indent$,
 $endif$
   toc_depth: $toc-depth$,
-  cols: $if(columns)$$columns$$else$1$endif$
-$if(linkcolor)$
-  linkcolor: "$linkcolor$",
-$endif$
-$if(title-page)$
-  title-page: $title-page$,
-$endif$
-$if(blind)$
-  blind: $blind$,
-$endif$
+  cols: $if(columns)$$columns$$else$1$endif$,
+  doc,
 )
 ```
 
 ## typst-template.typ
 
-```{.markdown filename="typst-template.typ"}
-#let whr-template(
-  doc,
+```{.markdown filename="./_extensions/article/typst-template.typ"}
+
+// This is an example typst template (based on the default template that ships
+// with Quarto). It defines a typst function named 'article' which provides
+// various customization options. This function is called from the 
+// 'typst-show.typ' file (which maps Pandoc metadata function arguments)
+//
+// If you are creating or packaging a custom typst template you will likely
+// want to replace this file and 'typst-show.typ' entirely. You can find 
+// documentation on creating typst templates and some examples here: 
+//   - https://typst.app/docs/tutorial/making-a-template/
+//   - https://github.com/typst/templates
+
+
+#let article(
   title: none,
-  author: none,
-  cover_image: none,
-  main_logo: none,
-  bottom_logos: none,
-  toc_background_image: none,
+  subtitle: none,
+  authors: none,
+  date: none,
+  abstract: none,
+  abstract-title: none,
+  cols: 1,
+  margin: (x: 1.25in, y: 1.25in),
+  paper: "us-letter",
+  lang: "en",
+  region: "US",
+  font: "libertinus serif",
+  fontsize: 11pt,
+  title-size: 1.5em,
+  subtitle-size: 1.25em,
+  heading-family: "libertinus serif",
+  heading-weight: "bold",
+  heading-style: "normal",
+  heading-color: black,
+  heading-line-height: 0.65em,
+  sectionnumbering: none,
+  pagenumbering: "1",
+  toc: false,
+  toc_title: none,
+  toc_depth: none,
+  toc_indent: 1.5em,
+  doc,
 ) = {
-  // Page setup for the entire document
-  set text(font: "Linux Libertine", size: 10pt)
-  set heading(numbering: "1.1")
-  set page(paper: "a4", margin: (left: 20mm, right: 30mm, top: 20mm, bottom: 20mm))
-
-  // Define the style for purple headings
-  show heading: it => {
-    set text(fill: rgb("#4B0082")) // A deep purple
-    it
-  }
-
-  // Define the blue bar on the right side of pages
-  #show page: page => {
-    // Add the blue bar (except on the cover page)
-    if counter(page).at(1) > 1 {
-      box(
-        width: 10pt,
-        height: 100%,
-        fill: rgb("#2a87d6"),
-        float: true,
-        inset: 0pt,
-        place(right, top)
-      )
-    }
-    // Render the page content
-    page
-  }
-
-  // Cover page layout
-  page(
-    header: none,
-    footer: none,
-    background: cover_image,
-  )[
-    #place(
-      right, center,
-      image(main_logo)
-    )
-
-    #if bottom_logos != none {
-      #place(bottom, center, [
-        #h(1fr) #bottom_logos #h(1fr)
-      ])
-    }
-  ]
-
-  // Table of Contents page
-  page(
-    header: none,
-    footer: none,
-    background: toc_background_image,
-  )[
-    #show: heading.where(level: 1, 2)
-    #outline(title: "Contents")
-  ]
-
-  // Main content pages
-  #set page(columns: 2)
-  #set page(
-    header: if title != none {
-      box(width: 100%, [
-        #h(1fr) #text(9pt)[#title]
-      ])
-    },
-    footer: box(
-      width: 100%,
-      [#h(1fr) #text(9pt)[#counter(page).at(1)]]
-    )
+  set page(
+    paper: paper,
+    margin: margin,
+    numbering: pagenumbering,
   )
+  set par(justify: true)
+  set text(lang: lang,
+           region: region,
+           font: font,
+           size: fontsize)
+  set heading(numbering: sectionnumbering)
+  if title != none {
+    align(center)[#block(inset: 2em)[
+      #set par(leading: heading-line-height)
+      #if (heading-family != none or heading-weight != "bold" or heading-style != "normal"
+           or heading-color != black) {
+        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)
+        text(size: title-size)[#title]
+        if subtitle != none {
+          parbreak()
+          text(size: subtitle-size)[#subtitle]
+        }
+      } else {
+        text(weight: "bold", size: title-size)[#title]
+        if subtitle != none {
+          parbreak()
+          text(weight: "bold", size: subtitle-size)[#subtitle]
+        }
+      }
+    ]]
+  }
 
-  // Insert the main document content
-  #doc
+  if authors != none {
+    let count = authors.len()
+    let ncols = calc.min(count, 3)
+    grid(
+      columns: (1fr,) * ncols,
+      row-gutter: 1.5em,
+      ..authors.map(author =>
+          align(center)[
+            #author.name \
+            #author.affiliation \
+            #author.email
+          ]
+      )
+    )
+  }
+
+  if date != none {
+    align(center)[#block(inset: 1em)[
+      #date
+    ]]
+  }
+
+  if abstract != none {
+    block(inset: 2em)[
+    #text(weight: "semibold")[#abstract-title] #h(1em) #abstract
+    ]
+  }
+
+  if toc {
+    let title = if toc_title == none {
+      auto
+    } else {
+      toc_title
+    }
+    block(above: 0em, below: 2em)[
+    #outline(
+      title: toc_title,
+      depth: toc_depth,
+      indent: toc_indent
+    );
+    ]
+  }
+
+  if cols == 1 {
+    doc
+  } else {
+    columns(cols, doc)
+  }
 }
 
-// Apply the template to the document with the required parameters
-#show: doc => whr-template(
-  doc,
-  title: [WORLD HAPPINESS REPORT 2024],
-  cover_image: "../assets/cover-page.jpg",
-  main_logo: "../assets/logo-center-right.png",
-  bottom_logos: [
-    #image("../assets/bottom-logo-1.png", height: 1.5cm)
-    #h(1cm)
-    #image("../assets/bottom-logo-2.png", height: 1.5cm)
-    #h(1cm)
-    #image("../assets/bottom-logo-3.png", height: 1.5cm)
-  ],
-  toc_background_image: "../assets/toc-background.jpg",
+#set table(
+  inset: 6pt,
+  stroke: none
 )
-```
-
-## Fonts
-
-Check what fonts are available with:
 
 ```
+
+## Quick note about fonts
+
+Check what fonts are available on your system with:
+
+```{.bash filename="Terminal"}
 quarto typst fonts
 ```
+
+Set additional paths using `font-paths`:
+
+```markdown
+---
+format: 
+  typst:
+    font-paths: myfonts
+---
+```
+
