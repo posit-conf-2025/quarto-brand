@@ -1,0 +1,3 @@
+Change the layout of your dashboard so that it looks like this:
+
+![](images/exercise-02.png){fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}

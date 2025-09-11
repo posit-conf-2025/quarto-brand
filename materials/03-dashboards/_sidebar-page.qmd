@@ -1,0 +1,42 @@
+---
+title: "Sidebars - Per page"
+format: 
+  dashboard:
+    logo: images/beetle.png
+    nav-buttons:
+      - icon: github
+        href: https://github.com/quarto-dev/quarto-cli
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/company/posit-software/
+        aria-label: LinkedIn
+      - icon: youtube
+        href: https://youtube.com/
+        aria-label: YouTube
+---
+
+```{{r}}
+library(ggplot2)
+```
+
+# Scatter
+
+## {.sidebar}
+
+Information and/or interactivity tools that you want on a single page go here.
+
+## 
+
+```{{r}}
+#| title: Highway vs. city mileage
+ggplot(mpg, aes(x = cty, y = hwy)) +
+  geom_point()
+```
+
+# Bar
+
+```{{r}}
+#| title: Drive types
+ggplot(mpg, aes(x = drv)) +
+  geom_bar()
+```
