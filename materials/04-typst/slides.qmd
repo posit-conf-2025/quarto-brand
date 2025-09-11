@@ -160,7 +160,11 @@ This is a block with gray background and slightly rounded corners.
 :::
 ```
 
-Use colors from the `_brand.yml` file using `brand-color`:
+# Branding Typst with brand.yml
+
+## Color
+
+Use colors from the `_brand.yml` file in Typst using `brand-color`:
 
 ```markdown
 ::: {.block fill="brand-color.primary" inset="8pt" radius="4pt"}
@@ -169,6 +173,25 @@ This is a block with the primary color and slightly rounded corners.
 
 :::
 ```
+
+::: footer
+Learn more: [Typst Brand YAML](https://quarto.org/docs/advanced/typst/brand-yaml.html)
+:::
+
+## Typography {.smaller}
+
+|                  | base | headings | title[^1] | subtitle | monospace-inline | monospace-block | link  |
+|------------------|------|----------|-----------|----------|------------------|-----------------|-------|
+| family           |   ✓  |    ✓     |     ✓     |    ✓     |        ✓         |        ✓        |   NA  |
+| size             |   ✓  |    NA    |     NA    |    NA    |        ✓         |        ✓        |   NA  |
+| weight           |   ✓  |    ✓     |     ✓     |    ✓     |        ✓         |        ✓        |   ✓   |
+| style            |  NA  |    ✓     |     ✓     |    ✓     |        NA        |        NA       |   NA  |
+| color            |   ✓  |    ✓     |     ✓     |    ✓     |        ✓         |        ✓        |   ✓   |
+| background-color |  NA  |    NA    |     NA    |    NA    |        ✓         |        ✓        |   ✓   |
+| decoration       |  NA  |    NA    |     NA    |    NA    |        NA        |        NA       |   ✓   |
+| line-height      |   ✓  |    ✓     |     ✓     |    ✓     |        NA        |        ✓        |   NA  |
+
+[^1]: While being styled as headings, title and subtitle have a separate implementation.
 
 ## Your turn {background-color='{{< brand color primary >}}'}
 
@@ -341,7 +364,6 @@ $endif$
 ## typst-template.typ
 
 ```{.markdown filename="./_extensions/article/typst-template.typ"}
-
 // This is an example typst template (based on the default template that ships
 // with Quarto). It defines a typst function named 'article' which provides
 // various customization options. This function is called from the 
@@ -490,3 +512,107 @@ format:
 ---
 ```
 
+# Recreating the World Happiness Report
+
+## World Happiness Report example
+
+:::: {.columns}
+
+::: {.column width="33%"}
+
+![](images/whr1.png){fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+:::
+
+::: {.column width="33%"}
+
+![](images/whr2.png){fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+:::
+
+::: {.column width="33%"}
+
+![](images/whr3.png){fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+:::
+
+::::
+
+
+::: footer
+Link to [World Happiness Report](https://files.worldhappiness.report/WHR25.pdf)
+:::
+
+## Example report with **brand.yml**
+
+![](images/whr-brand-yml.png){fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+## Advanced styling
+
+With **brand.yml**:
+
+✅ Table of contents
+
+✅ Simple heading styling
+
+✅ Logo in top left
+
+✅ Fonts
+
+
+
+❌ Cover page
+
+❌ Advanced headings 
+
+❌ Exact customization
+
+::: footer
+Learn more: [Advanced Styling](https://typst.app/docs/tutorial/advanced-styling/)
+:::
+
+## Adding a title page with image
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+Set rules:
+
+```{.markdown filename="typst-template.typ"}
+#let title_page(title)={
+    page(margin: 0in,
+        background: image("cover.jpg", height: 100%, fit: "cover"))[
+        #set text(fill: white)
+
+        #place(center + horizon, dy: -2.5in)[
+            #set align(center + horizon)
+            #block(width: 100%, fill: rgb("#983e91"), outset: 5em)[
+                #text(weight: "light", size: 36pt, title)
+            ]
+        ]
+        #place(center + bottom, dy: -40pt)[
+          #block(height: 40pt)[
+            #image("whr_logo.png")
+          ]
+        ]
+    ]
+}
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+
+![](images/whr-report-cover.png){fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+:::
+
+::::
+
+## Your turn {background-color='{{< brand color primary >}}'}
+
+{{< include exercise-02.qmd >}}

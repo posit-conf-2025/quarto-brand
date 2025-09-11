@@ -16,3 +16,7 @@ format: html
 ### Exercise 1
 
 {{< include exercise-01.qmd >}}
+
+### Exercise 2
+
+{{< include exercise-02.qmd >}}
