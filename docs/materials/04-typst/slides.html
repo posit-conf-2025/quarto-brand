@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link href="../../../images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.23">
+
+  <title>PDFs with Typst</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-4be20af235b990f299b8454a41ed67e9.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-color="white" data-background-image="../images/title-slide-light.svg" style="text-align: right; left: 10%" class="quarto-title-block center">
+  <h1 class="title">PDFs with Typst</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="hello-typst" class="slide level2">
+<h2>Hello, Typst!</h2>
+<p><img data-src="images/typst-logo.png"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/typst-workflow.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+<aside class="notes">
+<p>Typst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html">Typst in Quarto</a></p>
+</div>
+</section>
+<section id="hello-typst-1" class="slide level2">
+<h2>Hello, Typst!</h2>
+<p>To use Typst with Quarto, set the format in the YAML of your Quarto document:</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a></a><span class="co">---</span></span>
+<span id="cb1-2"><a></a><span class="an">format:</span><span class="co"> typst</span></span>
+<span id="cb1-3"><a></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/typst-default-page.png" class="border quarto-figure quarto-figure-center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;;width:50.0%" alt="Screenshot of one page of PDF document. The document shows a single column of text."></p>
+</figure>
+</div>
+</div></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html">Typst in Quarto</a></p>
+</div>
+</section>
+<section>
+<section id="building-pdfs" class="title-slide slide level1 center">
+<h1>Building PDFs</h1>
+
+</section>
+<section id="page-layout" class="slide level2">
+<h2>Page layout</h2>
+<p>Control the size of the page (<code>papersize</code>), the page margins (<code>margin</code>), and the number of columns used for page content (<code>columns</code>):</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a></a><span class="co">---</span></span>
+<span id="cb2-2"><a></a><span class="an">title:</span><span class="co"> Page Layout</span></span>
+<span id="cb2-3"><a></a><span class="an">format:</span></span>
+<span id="cb2-4"><a></a><span class="co">  typst:</span></span>
+<span id="cb2-5"><a></a><span class="co">    papersize: a5</span></span>
+<span id="cb2-6"><a></a><span class="co">    margin:</span></span>
+<span id="cb2-7"><a></a><span class="co">      x: 1cm</span></span>
+<span id="cb2-8"><a></a><span class="co">      y: 1cm</span></span>
+<span id="cb2-9"><a></a><span class="co">    columns: 2</span></span>
+<span id="cb2-10"><a></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/typst-custom-page.png" class="border quarto-figure quarto-figure-center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;;width:40.0%" alt="Screenshot of one page of PDF document. The document shows a two columns of text. Compared to the previous screenshot, the page is narrower and longer, and the margins are smaller."></p>
+</figure>
+</div>
+</div></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html#page-layout">Page Layout</a></p>
+</div>
+</section>
+<section id="margins" class="slide level2">
+<h2>Margins</h2>
+<p>Edit the margin’s horizontal direction (<code>x</code>) and vertical direction (<code>y</code>):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a><span class="an">margin:</span></span>
+<span id="cb3-2"><a></a>  x: 1.25in</span>
+<span id="cb3-3"><a></a>  y: 1.25in</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Can also use relative length:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a><span class="an">margin:</span></span>
+<span id="cb4-2"><a></a>  left: 10%</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html#margins">Margins</a></p>
+</div>
+</section>
+<section id="paper-size" class="slide level2">
+<h2>Paper Size</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a><span class="an">papersize:</span><span class="co"> us-letter</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+<img data-src="images/papersizes.png" class="border quarto-figure quarto-figure-center r-stretch" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;;width:40.0%"><div class="footer">
+<p>Learn more: <a href="https://typst.app/docs/reference/layout/page/#parameters-paper">Supported page sizes</a></p>
+</div>
+</section>
+<section id="more-options" class="slide level2">
+<h2>More options</h2>
+<h4 id="table-of-contents">Table of contents</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="an">toc:</span><span class="co"> true</span></span>
+<span id="cb6-2"><a></a><span class="an">toc-depth:</span><span class="co"> 2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+<h4 id="section-numbering">Section numbering</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="an">number-sections:</span><span class="co"> true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use <code>number-depth</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a><span class="an">number-depth:</span><span class="co"> 3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst.html#section-numbering">Section Numbering</a>, <a href="https://quarto.org/docs/output-formats/typst.html#table-of-contents">Table of Contents</a></p>
+</div>
+</section>
+<section id="typst-blocks" class="slide level2">
+<h2>Typst blocks</h2>
+<p>Add a <code>.block</code> class to change appearance of blocks:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a></a>::: {.block fill="luma(230)" inset="8pt" radius="4pt"}</span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a>This is a block with gray background and slightly rounded corners.</span>
+<span id="cb9-4"><a></a></span>
+<span id="cb9-5"><a></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use colors from the <code>_brand.yml</code> file using <code>brand-color</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a></a>::: {.block fill="brand-color.primary" inset="8pt" radius="4pt"}</span>
+<span id="cb10-2"><a></a></span>
+<span id="cb10-3"><a></a>This is a block with the primary color and slightly rounded corners.</span>
+<span id="cb10-4"><a></a></span>
+<span id="cb10-5"><a></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="your-turn" class="slide level2" data-background-color="#f3c13d">
+<h2>Your turn</h2>
+<ul>
+<li>In your document’s YAML header, change the format option from its current value (e.g., <code>html</code>) to <code>typst</code>.</li>
+<li>Edit your YAML with one of the options we covered: <code>margin</code>, <code>papersize</code>, etc.</li>
+<li>Add a block to a section of the text and fill it with the <code>tertiary</code> color.</li>
+</ul>
+</section></section>
+<section>
+<section id="customizing-templates" class="title-slide slide level1 center">
+<h1>Customizing templates</h1>
+
+</section>
+<section id="custom-typst-formats" class="slide level2">
+<h2>Custom Typst formats</h2>
+<p>Typst allows you to define your own templates to produce highly customized documents.</p>
+<div class="quarto-layout-panel" data-layout-ncol="4">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/typst-format-ieee.png" class="lightbox" data-gallery="custom-formats" title="IEEE"><img data-src="images/typst-format-ieee.png" alt="Screenshot of a page showing a article styled according IEEE standards. The title is centered with authors below in two columns."></a></p>
+<figcaption>IEEE</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/typst-format-poster.png" class="lightbox" data-gallery="custom-formats" title="Poster"><img data-src="images/typst-format-poster.png" alt="Screenshot of a poster in landscape orientiation. The poster includes a logo in the top right, a title in the top left, and content arranged in three columns."></a></p>
+<figcaption>Poster</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/typst-format-letter.png" class="lightbox" data-gallery="custom-formats" title="Letter"><img data-src="images/typst-format-letter.png" alt="Screenshot of a page showing a letter. A sender address is across the top of the page, followed by a recipient address left justified. The body of the letter includes a subject line in bold."></a></p>
+<figcaption>Letter</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/typst-format-dept-news.png" class="lightbox" data-gallery="custom-formats" title="Dept News"><img data-src="images/typst-format-dept-news.png" alt="Screenshot of a page showing a department newsletter. The page is split vertically with a white column on the left and a red one on the right. An image spans across the column with the text &quot;Award Winning Science&quot; oriented to run vertically down its right side."></a></p>
+<figcaption>Dept News</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst-custom.html">Custom Typst Formats</a></p>
+</div>
+</section>
+<section id="custom-typst-formats-1" class="slide level2 smaller">
+<h2>Custom Typst formats</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://github.com/quarto-ext/typst-templates/tree/main/poster">Poster</a></td>
+<td><code>quarto use template quarto-ext/typst-templates/poster</code></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/quarto-ext/typst-templates/tree/main/ieee">IEEE</a></td>
+<td><code>quarto use template quarto-ext/typst-templates/ieee</code></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/quarto-ext/typst-templates/tree/main/ams">AMS</a></td>
+<td><code>quarto use template quarto-ext/typst-templates/ams</code></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/quarto-ext/typst-templates/tree/main/letter">Letter</a></td>
+<td><code>quarto use template quarto-ext/typst-templates/letter</code></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/quarto-ext/typst-templates/tree/main/fiction">Fiction</a></td>
+<td><code>quarto use template quarto-ext/typst-templates/fiction</code></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/quarto-ext/typst-templates/tree/main/dept-news">Dept News</a></td>
+<td><code>quarto use template quarto-ext/typst-templates/dept-news</code></td>
+</tr>
+</tbody>
+</table>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst-custom.html">Custom Typst Formats</a></p>
+</div>
+</section>
+<section id="creating-a-new-typst-format" class="slide level2">
+<h2>Creating a new Typst format</h2>
+<p>Use the <code>quarto create command</code> to get started:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="ex">$</span> quarto create extension format</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Choose <code>typst</code> as the base format and provide a name for the extension.</p>
+<div class="footer">
+<p>Learn more: <a href="https://quarto.org/docs/output-formats/typst-custom.html#create-a-format">Create a Format</a></p>
+</div>
+</section>
+<section id="creating-a-new-typst-format-1" class="slide level2 smaller">
+<h2>Creating a new Typst format</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_extension.yml</code></td>
+<td>Basic extension metadata (name, author, description, etc.) and format definition.</td>
+</tr>
+<tr class="even">
+<td><code>README.md</code></td>
+<td>Documentation on how to install and use the format.</td>
+</tr>
+<tr class="odd">
+<td><code>template.qmd</code></td>
+<td>A starter document that demonstrates the basics of the format.</td>
+</tr>
+<tr class="even">
+<td><code>typst-template.typ</code></td>
+<td>The core Typst template function (documentation on creating Typst templates can be found here: <a href="https://typst.app/docs/tutorial/making-a-template/" class="uri">https://typst.app/docs/tutorial/making-a-template/</a>).</td>
+</tr>
+<tr class="odd">
+<td><code>typst-show.typ</code></td>
+<td>File that calls the template’s function (mapping Pandoc metadata to function arguments).</td>
+</tr>
+</tbody>
+</table>
+<div class="footer">
+<p>Learn more: <a href="https://typst.app/docs/tutorial/making-a-template/">Making a template</a>, <a href="https://github.com/qjcg/awesome-typst#templates--libraries">Awesome Typst</a></p>
+</div>
+</section>
+<section id="typst-show.typ" class="slide level2">
+<h2>typst-show.typ</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>./_extensions/article/typst-show.typ</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-filename="./_extensions/article/typst-show.typ"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a></a>// Typst custom formats typically consist of a 'typst-template.typ' (which is</span>
+<span id="cb12-2"><a></a>// the source code for a typst template) and a 'typst-show.typ' which calls the</span>
+<span id="cb12-3"><a></a>// template's function (forwarding Pandoc metadata values as required)</span>
+<span id="cb12-4"><a></a>//</span>
+<span id="cb12-5"><a></a>// This is an example 'typst-show.typ' file (based on the default template  </span>
+<span id="cb12-6"><a></a>// that ships with Quarto). It calls the typst function named 'article' which </span>
+<span id="cb12-7"><a></a>// is defined in the 'typst-template.typ' file. </span>
+<span id="cb12-8"><a></a>//</span>
+<span id="cb12-9"><a></a>// If you are creating or packaging a custom typst template you will likely</span>
+<span id="cb12-10"><a></a>// want to replace this file and 'typst-template.typ' entirely. You can find</span>
+<span id="cb12-11"><a></a>// documentation on creating typst templates here and some examples here:</span>
+<span id="cb12-12"><a></a>//   - https://typst.app/docs/tutorial/making-a-template/</span>
+<span id="cb12-13"><a></a>//   - https://github.com/typst/templates</span>
+<span id="cb12-14"><a></a>#show: doc =&gt; article(</span>
+<span id="cb12-15"><a></a>$if(title)$</span>
+<span id="cb12-16"><a></a>  title: <span class="co">[</span><span class="ot">$title$</span><span class="co">]</span>,</span>
+<span id="cb12-17"><a></a>$endif$</span>
+<span id="cb12-18"><a></a>$if(subtitle)$</span>
+<span id="cb12-19"><a></a>  subtitle: <span class="co">[</span><span class="ot">$subtitle$</span><span class="co">]</span>,</span>
+<span id="cb12-20"><a></a>$endif$</span>
+<span id="cb12-21"><a></a>$if(by-author)$</span>
+<span id="cb12-22"><a></a>  authors: (</span>
+<span id="cb12-23"><a></a>$for(by-author)$</span>
+<span id="cb12-24"><a></a>$if(it.name.literal)$</span>
+<span id="cb12-25"><a></a>    ( name: <span class="co">[</span><span class="ot">$it.name.literal$</span><span class="co">]</span>,</span>
+<span id="cb12-26"><a></a>      affiliation: <span class="co">[</span><span class="ot">$for(it.affiliations)$$it.name$$sep$, $endfor$</span><span class="co">]</span>,</span>
+<span id="cb12-27"><a></a>      email: <span class="co">[</span><span class="ot">$it.email$</span><span class="co">]</span> ),</span>
+<span id="cb12-28"><a></a>$endif$</span>
+<span id="cb12-29"><a></a>$endfor$</span>
+<span id="cb12-30"><a></a>    ),</span>
+<span id="cb12-31"><a></a>$endif$</span>
+<span id="cb12-32"><a></a>$if(date)$</span>
+<span id="cb12-33"><a></a>  date: <span class="co">[</span><span class="ot">$date$</span><span class="co">]</span>,</span>
+<span id="cb12-34"><a></a>$endif$</span>
+<span id="cb12-35"><a></a>$if(lang)$</span>
+<span id="cb12-36"><a></a>  lang: "$lang$",</span>
+<span id="cb12-37"><a></a>$endif$</span>
+<span id="cb12-38"><a></a>$if(region)$</span>
+<span id="cb12-39"><a></a>  region: "$region$",</span>
+<span id="cb12-40"><a></a>$endif$</span>
+<span id="cb12-41"><a></a>$if(abstract)$</span>
+<span id="cb12-42"><a></a>  abstract: <span class="co">[</span><span class="ot">$abstract$</span><span class="co">]</span>,</span>
+<span id="cb12-43"><a></a>  abstract-title: "$labels.abstract$",</span>
+<span id="cb12-44"><a></a>$endif$</span>
+<span id="cb12-45"><a></a>$if(margin)$</span>
+<span id="cb12-46"><a></a>  margin: ($for(margin/pairs)$$margin.key$: $margin.value$,$endfor$),</span>
+<span id="cb12-47"><a></a>$endif$</span>
+<span id="cb12-48"><a></a>$if(papersize)$</span>
+<span id="cb12-49"><a></a>  paper: "$papersize$",</span>
+<span id="cb12-50"><a></a>$endif$</span>
+<span id="cb12-51"><a></a>$if(mainfont)$</span>
+<span id="cb12-52"><a></a>  font: ("$mainfont$",),</span>
+<span id="cb12-53"><a></a>$elseif(brand.typography.base.family)$</span>
+<span id="cb12-54"><a></a>  font: $brand.typography.base.family$,</span>
+<span id="cb12-55"><a></a>$endif$</span>
+<span id="cb12-56"><a></a>$if(fontsize)$</span>
+<span id="cb12-57"><a></a>  fontsize: $fontsize$,</span>
+<span id="cb12-58"><a></a>$elseif(brand.typography.base.size)$</span>
+<span id="cb12-59"><a></a>  fontsize: $brand.typography.base.size$,</span>
+<span id="cb12-60"><a></a>$endif$</span>
+<span id="cb12-61"><a></a>$if(title)$</span>
+<span id="cb12-62"><a></a>$if(brand.typography.headings.family)$</span>
+<span id="cb12-63"><a></a>  heading-family: $brand.typography.headings.family$,</span>
+<span id="cb12-64"><a></a>$endif$</span>
+<span id="cb12-65"><a></a>$if(brand.typography.headings.weight)$</span>
+<span id="cb12-66"><a></a>  heading-weight: $brand.typography.headings.weight$,</span>
+<span id="cb12-67"><a></a>$endif$</span>
+<span id="cb12-68"><a></a>$if(brand.typography.headings.style)$</span>
+<span id="cb12-69"><a></a>  heading-style: "$brand.typography.headings.style$",</span>
+<span id="cb12-70"><a></a>$endif$</span>
+<span id="cb12-71"><a></a>$if(brand.typography.headings.color)$</span>
+<span id="cb12-72"><a></a>  heading-color: $brand.typography.headings.color$,</span>
+<span id="cb12-73"><a></a>$endif$</span>
+<span id="cb12-74"><a></a>$if(brand.typography.headings.line-height)$</span>
+<span id="cb12-75"><a></a>  heading-line-height: $brand.typography.headings.line-height$,</span>
+<span id="cb12-76"><a></a>$endif$</span>
+<span id="cb12-77"><a></a>$endif$</span>
+<span id="cb12-78"><a></a>$if(section-numbering)$</span>
+<span id="cb12-79"><a></a>  sectionnumbering: "$section-numbering$",</span>
+<span id="cb12-80"><a></a>$endif$</span>
+<span id="cb12-81"><a></a>  pagenumbering: $if(page-numbering)$"$page-numbering$"$else$none$endif$,</span>
+<span id="cb12-82"><a></a>$if(toc)$</span>
+<span id="cb12-83"><a></a>  toc: $toc$,</span>
+<span id="cb12-84"><a></a>$endif$</span>
+<span id="cb12-85"><a></a>$if(toc-title)$</span>
+<span id="cb12-86"><a></a>  toc_title: <span class="co">[</span><span class="ot">$toc-title$</span><span class="co">]</span>,</span>
+<span id="cb12-87"><a></a>$endif$</span>
+<span id="cb12-88"><a></a>$if(toc-indent)$</span>
+<span id="cb12-89"><a></a>  toc_indent: $toc-indent$,</span>
+<span id="cb12-90"><a></a>$endif$</span>
+<span id="cb12-91"><a></a>  toc_depth: $toc-depth$,</span>
+<span id="cb12-92"><a></a>  cols: $if(columns)$$columns$$else$1$endif$,</span>
+<span id="cb12-93"><a></a>  doc,</span>
+<span id="cb12-94"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="typst-template.typ" class="slide level2">
+<h2>typst-template.typ</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>./_extensions/article/typst-template.typ</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="./_extensions/article/typst-template.typ"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a></a></span>
+<span id="cb13-2"><a></a>// This is an example typst template (based on the default template that ships</span>
+<span id="cb13-3"><a></a>// with Quarto). It defines a typst function named 'article' which provides</span>
+<span id="cb13-4"><a></a>// various customization options. This function is called from the </span>
+<span id="cb13-5"><a></a>// 'typst-show.typ' file (which maps Pandoc metadata function arguments)</span>
+<span id="cb13-6"><a></a>//</span>
+<span id="cb13-7"><a></a>// If you are creating or packaging a custom typst template you will likely</span>
+<span id="cb13-8"><a></a>// want to replace this file and 'typst-show.typ' entirely. You can find </span>
+<span id="cb13-9"><a></a>// documentation on creating typst templates and some examples here: </span>
+<span id="cb13-10"><a></a>//   - https://typst.app/docs/tutorial/making-a-template/</span>
+<span id="cb13-11"><a></a>//   - https://github.com/typst/templates</span>
+<span id="cb13-12"><a></a></span>
+<span id="cb13-13"><a></a></span>
+<span id="cb13-14"><a></a>#let article(</span>
+<span id="cb13-15"><a></a>  title: none,</span>
+<span id="cb13-16"><a></a>  subtitle: none,</span>
+<span id="cb13-17"><a></a>  authors: none,</span>
+<span id="cb13-18"><a></a>  date: none,</span>
+<span id="cb13-19"><a></a>  abstract: none,</span>
+<span id="cb13-20"><a></a>  abstract-title: none,</span>
+<span id="cb13-21"><a></a>  cols: 1,</span>
+<span id="cb13-22"><a></a>  margin: (x: 1.25in, y: 1.25in),</span>
+<span id="cb13-23"><a></a>  paper: "us-letter",</span>
+<span id="cb13-24"><a></a>  lang: "en",</span>
+<span id="cb13-25"><a></a>  region: "US",</span>
+<span id="cb13-26"><a></a>  font: "libertinus serif",</span>
+<span id="cb13-27"><a></a>  fontsize: 11pt,</span>
+<span id="cb13-28"><a></a>  title-size: 1.5em,</span>
+<span id="cb13-29"><a></a>  subtitle-size: 1.25em,</span>
+<span id="cb13-30"><a></a>  heading-family: "libertinus serif",</span>
+<span id="cb13-31"><a></a>  heading-weight: "bold",</span>
+<span id="cb13-32"><a></a>  heading-style: "normal",</span>
+<span id="cb13-33"><a></a>  heading-color: black,</span>
+<span id="cb13-34"><a></a>  heading-line-height: 0.65em,</span>
+<span id="cb13-35"><a></a>  sectionnumbering: none,</span>
+<span id="cb13-36"><a></a>  pagenumbering: "1",</span>
+<span id="cb13-37"><a></a>  toc: false,</span>
+<span id="cb13-38"><a></a>  toc_title: none,</span>
+<span id="cb13-39"><a></a>  toc_depth: none,</span>
+<span id="cb13-40"><a></a>  toc_indent: 1.5em,</span>
+<span id="cb13-41"><a></a>  doc,</span>
+<span id="cb13-42"><a></a>) = {</span>
+<span id="cb13-43"><a></a>  set page(</span>
+<span id="cb13-44"><a></a>    paper: paper,</span>
+<span id="cb13-45"><a></a>    margin: margin,</span>
+<span id="cb13-46"><a></a>    numbering: pagenumbering,</span>
+<span id="cb13-47"><a></a>  )</span>
+<span id="cb13-48"><a></a>  set par(justify: true)</span>
+<span id="cb13-49"><a></a>  set text(lang: lang,</span>
+<span id="cb13-50"><a></a>           region: region,</span>
+<span id="cb13-51"><a></a>           font: font,</span>
+<span id="cb13-52"><a></a>           size: fontsize)</span>
+<span id="cb13-53"><a></a>  set heading(numbering: sectionnumbering)</span>
+<span id="cb13-54"><a></a>  if title != none {</span>
+<span id="cb13-55"><a></a>    align(center)[#block(inset: 2em)[</span>
+<span id="cb13-56"><a></a>      #set par(leading: heading-line-height)</span>
+<span id="cb13-57"><a></a>      #if (heading-family != none or heading-weight != "bold" or heading-style != "normal"</span>
+<span id="cb13-58"><a></a>           or heading-color != black) {</span>
+<span id="cb13-59"><a></a>        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)</span>
+<span id="cb13-60"><a></a>        text(size: title-size)<span class="co">[</span><span class="ot">#title</span><span class="co">]</span></span>
+<span id="cb13-61"><a></a>        if subtitle != none {</span>
+<span id="cb13-62"><a></a>          parbreak()</span>
+<span id="cb13-63"><a></a>          text(size: subtitle-size)<span class="co">[</span><span class="ot">#subtitle</span><span class="co">]</span></span>
+<span id="cb13-64"><a></a>        }</span>
+<span id="cb13-65"><a></a>      } else {</span>
+<span id="cb13-66"><a></a>        text(weight: "bold", size: title-size)<span class="co">[</span><span class="ot">#title</span><span class="co">]</span></span>
+<span id="cb13-67"><a></a>        if subtitle != none {</span>
+<span id="cb13-68"><a></a>          parbreak()</span>
+<span id="cb13-69"><a></a>          text(weight: "bold", size: subtitle-size)<span class="co">[</span><span class="ot">#subtitle</span><span class="co">]</span></span>
+<span id="cb13-70"><a></a>        }</span>
+<span id="cb13-71"><a></a>      }</span>
+<span id="cb13-72"><a></a>    ]]</span>
+<span id="cb13-73"><a></a>  }</span>
+<span id="cb13-74"><a></a></span>
+<span id="cb13-75"><a></a>  if authors != none {</span>
+<span id="cb13-76"><a></a>    let count = authors.len()</span>
+<span id="cb13-77"><a></a>    let ncols = calc.min(count, 3)</span>
+<span id="cb13-78"><a></a>    grid(</span>
+<span id="cb13-79"><a></a>      columns: (1fr,) * ncols,</span>
+<span id="cb13-80"><a></a>      row-gutter: 1.5em,</span>
+<span id="cb13-81"><a></a>      ..authors.map(author =&gt;</span>
+<span id="cb13-82"><a></a>          align(center)[</span>
+<span id="cb13-83"><a></a>            #author.name \</span>
+<span id="cb13-84"><a></a>            #author.affiliation \</span>
+<span id="cb13-85"><a></a>            #author.email</span>
+<span id="cb13-86"><a></a>          ]</span>
+<span id="cb13-87"><a></a>      )</span>
+<span id="cb13-88"><a></a>    )</span>
+<span id="cb13-89"><a></a>  }</span>
+<span id="cb13-90"><a></a></span>
+<span id="cb13-91"><a></a>  if date != none {</span>
+<span id="cb13-92"><a></a>    align(center)[#block(inset: 1em)[</span>
+<span id="cb13-93"><a></a>      #date</span>
+<span id="cb13-94"><a></a>    ]]</span>
+<span id="cb13-95"><a></a>  }</span>
+<span id="cb13-96"><a></a></span>
+<span id="cb13-97"><a></a>  if abstract != none {</span>
+<span id="cb13-98"><a></a>    block(inset: 2em)[</span>
+<span id="cb13-99"><a></a>    #text(weight: "semibold")<span class="co">[</span><span class="ot">#abstract-title</span><span class="co">]</span> #h(1em) #abstract</span>
+<span id="cb13-100"><a></a>    ]</span>
+<span id="cb13-101"><a></a>  }</span>
+<span id="cb13-102"><a></a></span>
+<span id="cb13-103"><a></a>  if toc {</span>
+<span id="cb13-104"><a></a>    let title = if toc_title == none {</span>
+<span id="cb13-105"><a></a>      auto</span>
+<span id="cb13-106"><a></a>    } else {</span>
+<span id="cb13-107"><a></a>      toc_title</span>
+<span id="cb13-108"><a></a>    }</span>
+<span id="cb13-109"><a></a>    block(above: 0em, below: 2em)[</span>
+<span id="cb13-110"><a></a>    #outline(</span>
+<span id="cb13-111"><a></a>      title: toc_title,</span>
+<span id="cb13-112"><a></a>      depth: toc_depth,</span>
+<span id="cb13-113"><a></a>      indent: toc_indent</span>
+<span id="cb13-114"><a></a>    );</span>
+<span id="cb13-115"><a></a>    ]</span>
+<span id="cb13-116"><a></a>  }</span>
+<span id="cb13-117"><a></a></span>
+<span id="cb13-118"><a></a>  if cols == 1 {</span>
+<span id="cb13-119"><a></a>    doc</span>
+<span id="cb13-120"><a></a>  } else {</span>
+<span id="cb13-121"><a></a>    columns(cols, doc)</span>
+<span id="cb13-122"><a></a>  }</span>
+<span id="cb13-123"><a></a>}</span>
+<span id="cb13-124"><a></a></span>
+<span id="cb13-125"><a></a>#set table(</span>
+<span id="cb13-126"><a></a>  inset: 6pt,</span>
+<span id="cb13-127"><a></a>  stroke: none</span>
+<span id="cb13-128"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="quick-note-about-fonts" class="slide level2">
+<h2>Quick note about fonts</h2>
+<p>Check what fonts are available on your system with:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a></a><span class="ex">quarto</span> typst fonts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Set additional paths using <code>font-paths</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a></a><span class="co">---</span></span>
+<span id="cb15-2"><a></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb15-3"><a></a><span class="co">  typst:</span></span>
+<span id="cb15-4"><a></a><span class="co">    font-paths: myfonts</span></span>
+<span id="cb15-5"><a></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../../images/logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
+    
+
+</body></html>

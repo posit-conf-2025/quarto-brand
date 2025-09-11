@@ -1,0 +1,8 @@
+Install the whr-typst-template:
+
+```{.bash filename="Terminal"}
+quarto use template ivelasq/whr-typst-template
+```
+
+
+Open the `_extensions/whr/typst-show.typ` and `_extensions/whr/typst-template.typ` files to examine their contents.
