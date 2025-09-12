@@ -1,0 +1,7 @@
+
+Publish your website to Quarto Pub. 
+
+1. From the Terminal, run `quarto publish`, then select `Quarto Pub`. 
+2. Follow the prompts to set up an account and publish. 
+
+If you have time, publish to Connect Cloud. Note: if you're using R, you will need an `renv.lock` file (learn how [here](https://docs.posit.co/connect-cloud/user/publish/ide.html#r-deployments)) if publishing from Positron or VS Code, or a `manifest.json` file (learn how [here](https://docs.posit.co/connect-cloud/how-to/r/dependencies.html)) if publishing from GitHub. 

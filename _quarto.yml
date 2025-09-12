@@ -16,6 +16,8 @@ website:
         text: Presentations
       - href: materials/03-dashboards/index.qmd
         text: Dashboards
+      - href: materials/05-websites/index.qmd
+        text: Websites
 
 format:
   html:
