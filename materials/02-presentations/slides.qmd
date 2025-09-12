@@ -1,6 +1,6 @@
 ---
 title: "Quarto\n\nPresentations"
-footer: ""
+footer: "pos.it/quarto-brand-conf25"
 logo: ""
 format:
   revealjs:
