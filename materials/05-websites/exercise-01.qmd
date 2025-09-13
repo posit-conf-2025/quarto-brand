@@ -1,0 +1,7 @@
+1.  Get the starter template. If you're using Posit Cloud, skip this step and instead open the `whr-website` project.
+
+2.  Open `index.qmd` and click Render/Preview.
+
+3.  Edit `title` `index.qmd` YAML to better reflect the site and add a `subtitle`. Preview.
+
+5. Add some text to `index.qmd` explaining the plot. Preview.

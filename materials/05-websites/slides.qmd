@@ -1,0 +1,497 @@
+---
+title: "Quarto<br>Websites"
+footer: ""
+logo: ""
+format:
+  revealjs:
+    title-slide-attributes: 
+      data-background-image: ../../images/title-slide-light.svg
+      data-background-color: "white"
+      style: "text-align: right; left: 10%" 
+---
+
+## <span style="color:white; font-weight:bold; font-size:90px;">Basic website</span> {.center background-color='{{< brand color dark-blue >}}'}
+
+## <span style="font-weight:bold; font-size:70px;">Let's dive right in!</span> {background-image="images/dolphin.jpg" background="#43464B"}
+
+::: footer
+[https://unsplash.com/@noaa](https://unsplash.com/@noaa)
+:::
+
+::: notes
+
+We're going to temporarily leave our work in `quarto-brand-exercises` and create a new folder for our website. 
+
+:::
+
+
+## Get the template
+
+1.  Start somewhere logical:
+
+``` {.default filename="Terminal"}
+cd ~/Documents
+```
+
+2.  Get the website template:
+
+``` {.default filename="Terminal"}
+quarto use template skaltman/whr-website-template
+```
+
+## Get the template
+
+3.  Follow the prompts:
+
+``` {.default filename="Terminal"}
+Quarto templates may execute code when documents are rendered. If you do not 
+trust the authors of the template, we recommend that you do not install or 
+use the template.
+? Do you trust the authors of this template (Y/n) › Y
+? Create a subdirectory for template? (Y/n) › Y
+? Directory name: › website
+```
+
+4.  Open the folder:
+
+    **RStudio**: New Project \> Existing Directory \>
+
+    **VS Code**: File \> Open Folder \>
+
+5.  Open `index.qmd`
+
+## Workflow
+
+::: r-fit-text
+Preview. Edit. Save. Preview.
+:::
+
+## Preview
+
+:::::::::::: panel-tabset
+## RStudio
+
+::::: columns
+::: column
+### Current page
+
+![](images/basics-rstudio-render.png){style="margin-bottom: 0px"}
+
+Cmd/Ctrl + Shift + K
+:::
+
+::: column
+### Whole site
+
+**Build** \> **Render Website**
+
+![](images/basics-rstudio-render-website.png)
+:::
+:::::
+
+## VS Code
+
+::::: columns
+::: column
+### Current page
+
+![](images/basics-vscode-preview.png){style="margin-bottom: 0px"}
+
+Cmd/Ctrl + Shift + K
+:::
+
+::: column
+### Whole site
+
+No command, use Terminal:
+
+``` {.default filename="Terminal"}
+quarto preview 
+```
+
+:::
+:::::
+
+Requires [Quarto Extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+
+## Terminal
+
+::::: columns
+::: column
+### Current page
+
+``` {.default filename="Terminal"}
+quarto preview index.qmd
+```
+:::
+
+::: column
+### Whole site
+
+``` {.default filename="Terminal"}
+quarto preview 
+```
+:::
+:::::
+::::::::::::
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+{{< include exercise-01.qmd >}}
+
+```{r}
+#| label: clock-1
+#| echo: false
+countdown::countdown(minutes = 5)
+```
+
+## Page Structure
+
+::::: columns
+::: column
+```` {.yaml filename="index.qmd"}
+---
+title: "Global Happiness"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+Data from: [World Happiness Report](https://www.worldhappiness.report/).
+
+```{{r}}
+#| label: setup
+library(tidyverse)
+library(quarto)
+library(brand.yml)
+
+whr <- read_csv(here::here("data/whr.csv"))
+
+brand <- read_brand_yml("_brand.yml")
+
+theme_whr <-
+  theme_brand_ggplot2("_brand.yml") +
+  theme(
+    plot.title = element_text(size = 14, face = "bold"),
+    plot.subtitle = element_text(size = 12)
+  ) 
+```
+````
+:::
+
+::: column
+Webpages are like any other Quarto document:
+
+1.  Start with a YAML header
+2.  Can include code cells
+3.  Everything else is markdown content
+
+:::
+:::::
+
+## Website Structure
+
+A minimal website has two files: `index.qmd` and `_quarto.yml`
+
+* `index.qmd`: Renders to `index.html`, your home page.
+
+* `_quarto.yml`: Controls project and website properties.
+
+When rendered you will get a  `_site/` folder. This contains everything needed to serve the site.
+
+## `_quarto.yml` {.scrollable}
+
+```{.yaml filename="_quarto.yml" code-line-numbers="|1-2|4-10|11-15"}
+project:
+  type: website
+
+website:
+  title: "whr-website"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+format:
+  html:
+    toc: true
+
+```
+
+## Quarto projects
+
+::: incremental
+
+Our website is a **Quarto project**.
+
+All Quarto projects include a `_quarto.yml` file. 
+
+::: columns
+::: {.column .fragment .fade-right width="50%"}
+This is a Quarto Project.
+
+```         
+my-folder/
+├── _quarto.yml
+├── my-document.qmd
+```
+:::
+
+::: {.column .fragment .fade-left width="50%"}
+This is not.
+
+```         
+my-folder/
+├── my-document.qmd
+```
+:::
+:::
+
+:::
+
+## Quarto projects
+
+A Quarto project is a _directory_ that provides:
+
+::: {.incremental}
+- A way to render all or some of the files in a directory with a single command (e.g. `quarto render myproject`).
+- A way to share YAML configuration across multiple documents.
+:::
+
+##
+
+::: r-fit-text
+Why didn't we need this before?
+:::
+
+Only some Quarto outputs _require_ a Quarto project, including:
+
+::: {.incremental}
+- websites
+- books
+- blogs
+:::
+
+## <span style="color:white; font-weight:bold; font-size:90px;">Navigation</span> {.center background-color='{{< brand color dark-blue >}}'}
+
+## Navbar
+
+::::: {.columns}
+::: {.column width="40%"}
+```` {.yaml filename="_quarto.yml" code-line-numbers="|6-9"}
+project:
+  type: website
+
+website:
+  title: "whr-website"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+format:
+  html:
+    toc: true
+````
+:::
+
+::: {.column width="60%"}
+![](images/site-navbar-home.png){width="100%"}
+:::
+:::::
+
+## Navbar - add a page {.scrollable}
+
+::::: {.columns}
+::: {.column width="40%"}
+```` {.yaml filename="_quarto.yml" code-line-numbers="|10-11"}
+project:
+  type: website
+
+website:
+  title: "whr-website"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: new-page.qmd
+        text: New page
+
+format:
+  html:
+    toc: true
+````
+:::
+
+::: {.column width="60%"}
+![](images/site-navbar-new.png){width="100%"}
+:::
+:::::
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+{{< include exercise-02.qmd >}}
+
+```{r}
+#| label: clock-2
+#| echo: false
+countdown::countdown(minutes = 4)
+```
+
+## There's much more!
+
+There are many more options for site navigation, including
+
+::: incremental
+- [Side navigation](https://quarto.org/docs/websites/website-navigation.html#side-navigation)
+- [Navbar tools](https://quarto.org/docs/websites/website-navigation.html#navbar-tools) (e.g., view source on GitHub)
+- [Navigational breadcrumbs](https://quarto.org/docs/websites/website-navigation.html#breadcrumbs)
+
+:::
+
+::: footer
+Learn more: [https://quarto.org/docs/websites/website-navigation.html](https://quarto.org/docs/websites/website-navigation.html)
+:::
+
+
+
+## <span style="color:white; text-shadow:2px 2px 5px rgba(0,0,0,0.7); font-weight:bold; font-size:90px;">Theming</span> {.center background-image="images/themes.jpg" background="#43464B"}
+
+::: footer
+Photo by <a href="https://unsplash.com/@yogidan2012?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Daniele Levis Pelusi</a> on <a href="https://unsplash.com/photos/green-white-and-pink-heart-illustration-ESNNeoUOnvI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+:::
+
+## Built-in theme
+
+Like regular HTML documents and dashboards, you can use a built-in Bootswatch theme. 
+
+``` {.yaml filename="_quarto.yml" code-line-numbers="|14"}
+project:
+  type: website
+
+website:
+  title: "whr-website"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+format:
+  html:
+    toc: true
+    theme: cerulean
+```
+
+::: footer
+Learn more: https://quarto.org/docs/output-formats/html-themes.html
+:::
+
+## Style in `_quarto.yml`
+
+Control basic options like colors and fonts in `_quarto.yml`.
+
+``` {.yaml filename="_quarto.yml" code-line-numbers="|14-15"}
+project:
+  type: website
+
+website:
+  title: "whr-website"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+format:
+  html:
+    toc: true
+    fontcolor: "blue"
+    backgroundcolor: "white"
+```
+
+::: footer
+Learn more: [https://quarto.org/docs/output-formats/html-themes.html](https://quarto.org/docs/output-formats/html-themes.html)
+:::
+
+## Or...
+
+![](images/brand-yml.png)
+
+## <span style="color:white; font-weight:bold; font-size:90px; text-shadow:3px 3px 6px rgba(230,115,0,0.9);">Deployment</span> {.center background-image="images/cloud.jpg"}
+
+::: footer
+Photo by <a href="https://unsplash.com/@enginakyurt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">engin akyurt</a> on <a href="https://unsplash.com/photos/white-clouds-and-blue-sky-during-daytime-A9_IsUtjHm4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+:::
+
+## Publishing options
+
+There are a variety of ways to publish Quarto documents, presentations, dashboards, and websites. 
+
+::: incremental
+
+-   [Posit Connect Cloud](https://connect.posit.cloud/)
+-   [GitHub Pages](https://pages.github.com/)
+-   [Quarto Pub](https://quartopub.com/)
+-   [Posit Connect](https://posit.co/products/enterprise/connect/)
+
+:::
+
+::: footer
+Learn more: [https://quarto.org/docs/publishing/](https://quarto.org/docs/publishing/)
+:::
+
+## Posit Connect Cloud
+
+![](images/pcc.png){fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+[https://connect.posit.cloud/](https://connect.posit.cloud/)
+
+Easily publish and share data applications and documents in a cloud environment within minutes.
+
+## Posit Connect Cloud
+
+::: incremental
+Publish from:
+
+- GitHub
+- Positron with the [Publisher extension](https://marketplace.visualstudio.com/items?itemName=Posit.publisher)
+- VS Code with the [Publisher extension](https://marketplace.visualstudio.com/items?itemName=Posit.publisher)
+:::
+
+## Posit Connect Cloud
+
+![](images/pcc-options.png){fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+## Quarto Pub
+
+Free publishing service for static content created with Quarto.
+
+::: footer
+Learn more: https://quarto.org/docs/publishing/quarto-pub.html
+:::
+
+## Quarto Pub
+
+Easiest option for today. [https://quartopub.com/](https://quartopub.com/).
+
+1. Run
+
+``` {.bash filename="Terminal"}
+quarto publish
+```
+
+2. Select `Quarto Pub`.
+
+::: footer
+Learn more: https://quarto.org/docs/publishing/quarto-pub.html
+:::
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+{{< include exercise-03.qmd >}}
+
+```{r}
+#| label: clock-3
+#| echo: false
+countdown::countdown(minutes = 7)
+```

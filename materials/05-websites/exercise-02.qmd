@@ -1,0 +1,4 @@
+
+1. Add some information to `about.qmd`.
+2. Edit `_quarto.yml` so that the navbar includes the about page. 
+3. How do you think you change the position of the links in the navbar? Change them to appear on the right.
