@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../../images/logo.png" rel="icon" type="image/png">
+<link href="../../images/logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -43,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c7b816dc5d2c538875ecf1695c627c31.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-c7b816dc5d2c538875ecf1695c627c31.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-c7b816dc5d2c538875ecf1695c627c31.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-849e84fa49a6f34e6fbc4edab34e7799.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-849e84fa49a6f34e6fbc4edab34e7799.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-849e84fa49a6f34e6fbc4edab34e7799.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -102,8 +137,8 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -131,6 +166,30 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Intro to Quarto</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/02-presentations/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/03-dashboards/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboards</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/04-typst/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Typst</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/05-websites/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Websites</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -141,7 +200,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
+  <li><a href="#recommended-setup-options" id="toc-recommended-setup-options" class="nav-link active" data-scroll-target="#recommended-setup-options">Recommended Setup Options</a></li>
+  <li><a href="#accessing-the-workshop-materials" id="toc-accessing-the-workshop-materials" class="nav-link" data-scroll-target="#accessing-the-workshop-materials">Accessing the Workshop Materials</a></li>
+  <li><a href="#install-the-necessary-packages" id="toc-install-the-necessary-packages" class="nav-link" data-scroll-target="#install-the-necessary-packages">Install the Necessary Packages</a></li>
   </ul>
 </nav>
     </div>
@@ -167,8 +228,103 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="instructions" class="level1">
-<h1>Instructions</h1>
+<p>To follow along with the workshop exercises, you’ll need Quarto version 1.8+ and access to a code editor that supports R or Python.</p>
+<p>While Quarto itself doesn’t require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, we recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python).</p>
+<section id="recommended-setup-options" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-setup-options">Recommended Setup Options</h3>
+<p><strong>Option 1: Posit Cloud (RStudio in the cloud)</strong></p>
+<ul>
+<li>Create a free account at <a href="https://posit.cloud" class="uri">https://posit.cloud</a></li>
+<li>Open the Posit Cloud project link: <a href="https://posit.cloud/spaces/679626/content/10865885" class="uri">https://posit.cloud/spaces/679626/content/10865885</a></li>
+<li>To save a copy of the project to your workspace, click “Save a permanent copy”</li>
+</ul>
+<p><strong>Option 2: GitHub Codespaces (VS Code in the browser)</strong></p>
+<ul>
+<li>Requires a free account at <a href="https://github.com/" class="uri">https://github.com/</a></li>
+<li>Go to the GitHub repo: <a href="https://github.com/posit-dev/quarto-brand-codespaces" class="uri">https://github.com/posit-dev/quarto-brand-codespaces</a></li>
+<li>Click “Use this template” then “Open in a codespace”
+<ul>
+<li>Please note that loading the codespace will take a few minutes.</li>
+<li>If you are asked to install an extension called markdownlit, say “yes” and trust the publisher.</li>
+</ul></li>
+<li>You will need to following the “Install the Necessary Packages” instructions below.
+<ul>
+<li>Create your virtual environment by selecting Python: Create Environment in the Command Palette</li>
+<li>Select your environment type (recommend Venv)</li>
+<li>Choose an interpreter path</li>
+<li>Select requirements.txt check box to install dependencies</li>
+</ul></li>
+</ul>
+<p><strong>Option 3: Local Installation</strong></p>
+<p>Choose one editor and follow the steps:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Positron</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<ul>
+<li>Download and install Positron: <a href="https://positron.posit.co/download.html" class="uri">https://positron.posit.co/download.html</a></li>
+<li>Quarto comes pre-installed</li>
+</ul>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ul>
+<li>Download and install RStudio: <a href="https://posit.co/downloads/" class="uri">https://posit.co/downloads/</a>
+<ul>
+<li>Make sure RStudio is version 2022.07+</li>
+</ul></li>
+<li>Quarto comes pre-installed</li>
+</ul>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<ul>
+<li>Download and install VS Code: <a href="https://code.visualstudio.com/download" class="uri">https://code.visualstudio.com/download</a></li>
+<li>Download and install Quarto: <a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a></li>
+<li>Install the following extensions:
+<ul>
+<li>Quarto Extension: <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto" class="uri">https://marketplace.visualstudio.com/items?itemName=quarto.quarto</a></li>
+<li>Jupyter Extension: <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter" class="uri">https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="accessing-the-workshop-materials" class="level3">
+<h3 class="anchored" data-anchor-id="accessing-the-workshop-materials">Accessing the Workshop Materials</h3>
+<p>If you are using a cloud-based option, the files will be included in the project folder.</p>
+<p>If you are not using a cloud-based option:</p>
+<p><strong>If you use Git/GitHub:</strong></p>
+<ul>
+<li>Clone the repository with Git:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/posit-dev/quarto-brand-exercises.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>If you don’t use Git/GitHub:</strong></p>
+<ul>
+<li>Go to the GitHub repo: <a href="https://github.com/posit-dev/quarto-brand-exercises" class="uri">https://github.com/posit-dev/quarto-brand-exercises</a></li>
+<li>Click the green “Code” button → “Download ZIP”</li>
+<li>Unzip the folder and open it in your chosen editor</li>
+</ul>
+</section>
+<section id="install-the-necessary-packages" class="level3">
+<h3 class="anchored" data-anchor-id="install-the-necessary-packages">Install the Necessary Packages</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>If you are using Posit Cloud, the packages will be pre-installed. If you are using RStudio or Positron locally, install the packages by running:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"pak"</span>)) <span class="fu">install.packages</span>(<span class="st">"pak"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"quarto"</span>, <span class="st">"patchwork"</span>, <span class="st">"posit-dev/brand-yml/pkg-r"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<ul>
+<li>Create your virtual environment by selecting <code>Python: Create Environment</code> in the Command Palette</li>
+<li>Select your environment type (recommend <code>Venv</code>)</li>
+<li>Choose an interpreter path</li>
+<li>Select <code>requirements.txt</code> check box to install dependencies</li>
+</ul>
+</div>
+</div>
+</div>
 
 
 </section>
