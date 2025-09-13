@@ -18,6 +18,8 @@ website:
         text: Dashboards
       - href: materials/04-typst/index.qmd
         text: Typst
+      - href: materials/05-websites/index.qmd
+        text: Websites
 
 format:
   html:
