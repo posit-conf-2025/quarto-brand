@@ -1,6 +1,5 @@
 ---
 title: "Quarto\n\nDocuments"
-footer: "pos.it/quarto-brand-conf25"
 logo: ""
 format:
   revealjs:
@@ -18,7 +17,27 @@ filters:
 library(countdown)
 ```
 
-# Welcome
+## **Branded Websites, Presentations, Dashboards, and PDFs with Quarto**
+<br>
+**WiFi:** Posit Conf 2025 **Password:** conf2025
+
+<br>
+Find the materials at: [pos.it/quarto-brand-conf25](pos.it/quarto-brand-conf25)
+
+<br>
+**Make sure to:**
+
+1. Install [Quarto 1.8](https://quarto.org/docs/get-started/)
+2. Join the Discord channel: Log in to the [event portal](https://reg.conf.posit.co/flow/posit/positconf25/reg/login), click "Join the server", find our channel: #workshop-quarto-brand
+
+## Housekeeping {.smaller}
+
+* There are **gender neutral bathrooms** on **LL2** next to **Chicago A**.
+* There is a **meditation/prayer room** located on **LL2** next to **Chicago A**.
+* The **lactation room** is located on **LL2** next to **Chicago B**
+* Participants who do not wish to be photographed have red lanyards; please note everyone’s lanyard colors before taking a photo and respect their choices.
+* The Code of Conduct can be found at [https://posit.co/code-of-conduct](https://posit.co/code-of-conduct). You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information.
+
 
 ## About us
 
@@ -62,22 +81,6 @@ library(countdown)
 :::
 :::
 
-## About you
-
-::: task
-Please share
-
--   Name
--   Professional affiliation
--   What do you hope to get out of this workshop?
-:::
-
-```{r}
-#| echo: false
-
-countdown(minutes = 4)
-```
-
 ## Meeting you where you are
 
 ::: columns
@@ -101,7 +104,7 @@ We'll teach you
 
 - What Quarto is
 
-- How to create documents, websites, and presentations with Quarto
+- How to create documents, dashboards, websites, and presentations with Quarto
 
 - How to brand those Quarto outputs with brand.yml
 :::
@@ -111,23 +114,14 @@ We'll teach you
 ## Workshop structure
 
 ::: columns
-::: {.column .fragment width="33%"}
+::: {.column .fragment}
 **My turn**
 
 -   Lecture segments
 -   Feel free to just watch, take notes, browse docs, or tinker around with the code
 :::
 
-::: {.column .fragment width="33%"}
-::: demo
-**Our turn**
-
--   Lecture segments + live coding
--   Follow along with live coding
-:::
-:::
-
-::: {.column .fragment width="33%"}
+::: {.column .fragment}
 ::: task
 **Your turn**
 
@@ -139,9 +133,29 @@ We'll teach you
 
 ## Getting help
 
--   During **my turn** and **your turn** segments -- raise your hand
+* Stick your post-it note to your laptop
 
--   During **our turn** segments -- also feel free to raise your hand for questions but if your question seems specific to your setup, we might come around and help during the next your turn break
+🟥 “I’m stuck and need help!”
+
+🟦 “I finished the exercise”
+
+* Ask in the Discord channel: [#workshop-quarto-brand](https://discord.com/channels/1381993558437007490/1402378754084573299)
+
+* Talk to us during breaks or your-turns
+
+## Your turn - About you {background-color='{{< brand color light-blue >}}'}
+
+Introduce yourself to your neighbors:
+
+-   Name
+-   Professional affiliation
+-   What do you hope to get out of this workshop?
+
+```{r}
+#| echo: false
+
+countdown(minutes = 4)
+```
 
 # Introduction to Quarto
 
@@ -182,68 +196,6 @@ you can **weave** together **narrative** and **code** to produce elegantly forma
 -   Edit documents in your favorite editor
 -   Publish technical content in HTML, PDF, MS Word, and more
 -   Share technical content by publishing to Posit Connect, Confluence, or other publishing systems
-:::
-
-
-## "Literate programming"
-
-![](images/literate-programming.png)
-
-::: notes
-Quarto sits inside the big and broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!
-:::
-
-## Why Quarto?
-
-::: incremental
-- Multilingual and independent of computational systems
-- Quarto comes **"batteries included"** straight out of the box
-- Consistent expression for core features
-- Extension system
-- Enable “single-source publishing” — create Word, PDFs, HTML, etc. from one source
-- Use defaults that meet accessibility guidelines
-:::
-
-::: notes
-So, if there already exist literate programming tools out there, why create a new one? Like mentioned earlier, Quarto was built from the start to support multiple computational systems and ecosystems. You can create presentations, books, websites, and so on after installing Quarto, you do not have to install other tools to create different things. Consistent expression for core features means that regardless of whether you are making a presentation, book, or website, the syntax is written same way. And for things that aren't part of base Quarto, there are extensions that can add further functionality. Single-source publishing, you often need to create all sorts of output, like things that are printed, on the web, on the mobile. The idea is to being able to make publications from one source. And the Quarto team thinks deeply about accessibility and how to have Quarto default to meet accessibility guidelines.
-:::
-
-## Quarto formats {.smaller}
-
-| Feature | Quarto |
-|--------------------------|----------------------------------------------|
-| Basic Formats | [html](https://quarto.org/docs/output-formats/html-basics.html), [pdf](https://quarto.org/docs/output-formats/pdf-basics.html), [docx](https://quarto.org/docs/output-formats/ms-word.html), [typst](https://quarto.org/docs/output-formats/typst.html) |
-| Beamer | [beamer](https://quarto.org/docs/presentations/beamer.html) |
-| PowerPoint | [pptx](https://quarto.org/docs/presentations/powerpoint.html) |
-| HTML Slides | [revealjs](https://quarto.org/docs/presentations/revealjs/) |
-| Advanced Layout | [Quarto Article Layout](https://quarto.org/docs/authoring/article-layout.html) |
-| Cross References | [Quarto Crossrefs](https://quarto.org/docs/authoring/cross-references.html) |
-| Websites & Blogs | [Quarto Websites](https://quarto.org/docs/websites/), [Quarto Blogs](https://quarto.org/docs/websites/website-blog.html) |
-| Books | [Quarto Books](https://quarto.org/docs/books/) |
-| Interactivity | [Quarto Interactive Documents](https://quarto.org/docs/interactive/shiny/) |
-| Journal Articles | [Journal Articles](https://quarto.org/docs/journals/index.html) |
-| Dashboards | [Quarto Dashboards](https://quarto.org/docs/dashboards/) |
-
-: {tbl-colwidths="\[25,75\]"}
-
-## Quarto capabilities
-
-Built for technical documents:
-
-    Cross references
-    Advanced layout
-    Figure/layout panels
-    Callouts
-    Diagrams
-    Extensions
-    Interactivity
-    YAML intelligence
-    Publishing
-    Conditional content
-    Notebook filters
-
-::: notes
-Features are constantly being build into Quarto, like YAML intelligence, figure panels, layouts, which we'll cover later in the session.
 :::
 
 ## Display data and results {.smaller}
@@ -325,6 +277,48 @@ With Quarto, you can create reports or presentations that update automatically w
 And finally, Melissa van Bussel gave a talk on how the Statistics Canada team converted not just their documentation, but training resources, presentations, and more to Quarto to streamline efforts.
 :::
 
+
+## "Literate programming"
+
+![](images/literate-programming.png)
+
+::: notes
+Quarto sits inside the big and broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!
+:::
+
+## Why Quarto?
+
+::: incremental
+- Multilingual and independent of computational systems
+- Quarto comes **"batteries included"** straight out of the box
+- Consistent expression for core features
+- Extension system
+- Enable “single-source publishing” — create Word, PDFs, HTML, etc. from one source
+- Use defaults that meet accessibility guidelines
+:::
+
+::: notes
+So, if there already exist literate programming tools out there, why create a new one? Like mentioned earlier, Quarto was built from the start to support multiple computational systems and ecosystems. You can create presentations, books, websites, and so on after installing Quarto, you do not have to install other tools to create different things. Consistent expression for core features means that regardless of whether you are making a presentation, book, or website, the syntax is written same way. And for things that aren't part of base Quarto, there are extensions that can add further functionality. Single-source publishing, you often need to create all sorts of output, like things that are printed, on the web, on the mobile. The idea is to being able to make publications from one source. And the Quarto team thinks deeply about accessibility and how to have Quarto default to meet accessibility guidelines.
+:::
+
+## Quarto formats {.smaller}
+
+| Feature | Quarto |
+|--------------------------|----------------------------------------------|
+| Basic Formats | [html](https://quarto.org/docs/output-formats/html-basics.html), [pdf](https://quarto.org/docs/output-formats/pdf-basics.html), [docx](https://quarto.org/docs/output-formats/ms-word.html), [typst](https://quarto.org/docs/output-formats/typst.html) |
+| Beamer | [beamer](https://quarto.org/docs/presentations/beamer.html) |
+| PowerPoint | [pptx](https://quarto.org/docs/presentations/powerpoint.html) |
+| HTML Slides | [revealjs](https://quarto.org/docs/presentations/revealjs/) |
+| Advanced Layout | [Quarto Article Layout](https://quarto.org/docs/authoring/article-layout.html) |
+| Cross References | [Quarto Crossrefs](https://quarto.org/docs/authoring/cross-references.html) |
+| Websites & Blogs | [Quarto Websites](https://quarto.org/docs/websites/), [Quarto Blogs](https://quarto.org/docs/websites/website-blog.html) |
+| Books | [Quarto Books](https://quarto.org/docs/books/) |
+| Interactivity | [Quarto Interactive Documents](https://quarto.org/docs/interactive/shiny/) |
+| Journal Articles | [Journal Articles](https://quarto.org/docs/journals/index.html) |
+| Dashboards | [Quarto Dashboards](https://quarto.org/docs/dashboards/) |
+
+: {tbl-colwidths="\[25,75\]"}
+
 ## How it works {.smaller}
 
 Quarto is a command line interface (**CLI**) that renders plain text formats (`.qmd`, `.rmd`, `.md`) OR mixed formats (`.ipynb`/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more.
@@ -375,7 +369,7 @@ Quarto is a command line interface (**CLI**) that renders plain text formats (`.
 -   Quarto applies Lua filters + CSS/LaTeX which is then evaluated alongside the `.md` file by Pandoc and converted to a final output format
 :::
 
-## Our turn {background-color='{{< brand color dark-blue >}}'}
+## {background-color='{{< brand color dark-blue >}}'}
 
 Let's walk through your options for today.
 
@@ -398,7 +392,7 @@ Go to the workshop website and click on `Setup` in the sidebar.
 
 <br>
 
-<center>[https://posit-conf-2025.github.io/quarto-brand/](https://posit-conf-2025.github.io/quarto-brand/)</center>
+<center>[pos.it/quarto-brand-conf25](pos.it/quarto-brand-conf25)</center>
 
 <br>
 
@@ -411,7 +405,7 @@ Follow the setup instructions at the bottom.
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
 
-## Our turn: Quarto workflow {background-color='{{< brand color dark-blue >}}'}
+## Quarto workflow
 
 * Open a `.qmd` file.
 * Preview/render the document.
@@ -722,7 +716,7 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 +------------------------------------+---------------------------------+
 |     [Quarto](https://quarto.org)   | [Quarto](https://quarto.org)    |
 +------------------------------------+---------------------------------+
-|     ![](earth.jpg)                 | ![](images/earth.jpg)           |
+|     ![](earth.jpg)                 | ![](images/earth.jpg){width=300} |
 +------------------------------------+---------------------------------+
 
 ## Tables  {.small auto-animate="true"}
@@ -761,6 +755,8 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 
 : Table Column Widths {tbl-colwidths="\[10,30,30,30\]"}
 
+<!--
+
 ## Diagrams
 
 ```{mermaid}
@@ -788,6 +784,8 @@ $$E = mc^{2}$$
 ::: notes
 Math mode in LaTeX
 :::
+
+-->
 
 ## Divs and Spans
 
@@ -882,14 +880,6 @@ This is text that is [red]{style="color:red;"}.
 ```
 
 This is text that is [red]{style="color:red;"}.
-
-. . .
-
-```{.markdown filename="my-document.qmd"}
-![](earth.jpg){fig-alt="A photo of Earth from Space"}
-```
-
-![](images/earth.jpg){fig-alt="A photo of Earth from Space"}
 
 
 ::: notes
@@ -1168,6 +1158,11 @@ typography:
     decoration: none
 ```
 
+::: notes
+
+if this seems like a lot of details, don't worry! we will show you how to make your own file later. for now, it's enough to just have a general understanding of the different parts
+:::
+
 ## How to apply brand.yml automatically
 
 1. Define branding in a single` _brand.yml` file.
@@ -1177,14 +1172,14 @@ Quarto will detect the presence of `_brand.yml` and automatically apply the bran
 
 ## 
 
-If your brand file lives somewhere else, use the `brand` key to supply a file path.
+If your brand file has a different name or lives in a subdirectory, use the `brand` key.
 
-```{.yaml code-line-numbers="5" filename="_brand.yml"}
+```{.yaml code-line-numbers="5" filename="my-document.qmd"}
 ---
 title: "World Happiness Report"
 subtitle: "Happiness Trends and Contributing Factors (2011-2024)"
 format: html
-brand: ../brand-files/whr.yml
+brand: org_theme.yml
 ---
 ```
 
@@ -1196,7 +1191,7 @@ use this if you have a file named something other than brand.yml or it lives els
 
 To turn off brand.yml for a document, use `brand: false`.
 
-```{.yaml code-line-numbers="5" filename="_brand.yml"}
+```{.yaml code-line-numbers="5" filename="my-document.qmd"}
 ---
 title: "World Happiness Report"
 subtitle: "Happiness Trends and Contributing Factors (2011-2024)"
@@ -1215,24 +1210,6 @@ brand: false
 # 5 minutes, warning at 1 minute
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
-
-## Specify light and dark themes for documents
-
-You can also specify a light and dark brand for documents. 
-
-```{.yaml filename="_quarto.yml"}
-brand:
-  light: light-brand.yml
-  dark: dark-brand.yml
-```
-
-::: aside
-(Note: this is not available in reveal.js).
-:::
-
-::: notes
-create separate brand files
-:::
 
 ## What about plots?
 

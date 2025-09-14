@@ -32,21 +32,17 @@ color:
 
 typography:
   fonts:
-    - family: Gotham Book
-      source: file
-      files:
-        - path: fonts/Gotham-Book.ttf
-    - family: Gotham Bold
-      source: file
-      files:
-        - path: fonts/Gotham-Bold.otf
+    - family: Libre Franklin
+      source: google
+      weight: [400, 700]
 
   base:
-    family: Gotham Book
+    family: Libre Franklin
     weight: 400
 
   headings:
-    family: Gotham Bold
+    family: Libre Franklin
+    weight: 700
     color: dark-purple
 
   link:
