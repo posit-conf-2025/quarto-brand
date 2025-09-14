@@ -1,6 +1,5 @@
 ---
 title: "Quarto\n\nDocuments"
-footer: "pos.it/quarto-brand-conf25"
 logo: ""
 format:
   revealjs:
@@ -17,6 +16,20 @@ filters:
 
 library(countdown)
 ```
+
+## **Branded Websites, Presentations, Dashboards, and PDFs with Quarto**
+<br>
+**WiFi:** Posit Conf 2025 **Password:** conf2025
+
+<br>
+Find the materials at: [pos.it/quarto-brand-conf25](pos.it/quarto-brand-conf25)
+
+<br>
+**Make sure to:**
+
+1. Install [Quarto 1.8](https://quarto.org/docs/get-started/)
+2. Join the Discord channel: Log in to the [event portal](https://reg.conf.posit.co/flow/posit/positconf25/reg/login), click "Join the server", find our channel: #workshop-quarto-brand
+
 
 # Welcome
 
@@ -62,22 +75,6 @@ library(countdown)
 :::
 :::
 
-## About you
-
-::: task
-Please share
-
--   Name
--   Professional affiliation
--   What do you hope to get out of this workshop?
-:::
-
-```{r}
-#| echo: false
-
-countdown(minutes = 4)
-```
-
 ## Meeting you where you are
 
 ::: columns
@@ -101,7 +98,7 @@ We'll teach you
 
 - What Quarto is
 
-- How to create documents, websites, and presentations with Quarto
+- How to create documents, dashboards, websites, and presentations with Quarto
 
 - How to brand those Quarto outputs with brand.yml
 :::
@@ -139,9 +136,29 @@ We'll teach you
 
 ## Getting help
 
--   During **my turn** and **your turn** segments -- raise your hand
+* Stick your post-it note to your laptop
 
--   During **our turn** segments -- also feel free to raise your hand for questions but if your question seems specific to your setup, we might come around and help during the next your turn break
+🟥 “I’m stuck and need help!”
+
+🟦 “I finished the exercise”
+
+* Ask in the Discord channel: [#workshop-quarto-brand](https://discord.com/channels/1381993558437007490/1402378754084573299)
+
+* Talk to us during breaks or your-turns
+
+## Your turn - About you {background-color='{{< brand color light-blue >}}'}
+
+Introduce yourself to your neighbors:
+
+-   Name
+-   Professional affiliation
+-   What do you hope to get out of this workshop?
+
+```{r}
+#| echo: false
+
+countdown(minutes = 4)
+```
 
 # Introduction to Quarto
 
@@ -1171,6 +1188,11 @@ typography:
     color: primary
     decoration: none
 ```
+
+::: notes
+
+if this seems like a lot of details, don't worry! we will show you how to make your own file later. for now, it's enough to just have a general understanding of the different parts
+:::
 
 ## How to apply brand.yml automatically
 
