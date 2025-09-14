@@ -7,3 +7,5 @@
 
 **/*.quarto_ipynb
 /.luarc.json
+
+docs/
