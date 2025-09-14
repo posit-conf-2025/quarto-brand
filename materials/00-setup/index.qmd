@@ -12,7 +12,9 @@ While Quarto itself doesn't require a programming language, the exercises will i
 **Option 1: Posit Cloud (RStudio in the cloud)**
 
 * Create a free account at <https://posit.cloud>
-* Open the Posit Cloud project link: <https://posit.cloud/spaces/679626/content/10865885>
+* Open the Posit Cloud project link: <https://posit.cloud/spaces/679626/join?access_code=VwU0N2fEy5wwQ8qHayo8TrTZRKcT6sndAF13AHlx>
+* Click "Yes" to join the space.
+* Click Content and select `quarto-brand-exercises` or go to <https://posit.cloud/spaces/679626/content/10865885>.
 * To save a copy of the project to your workspace, click "Save a permanent copy"
 
 **Option 2: GitHub Codespaces (VS Code in the browser)**
