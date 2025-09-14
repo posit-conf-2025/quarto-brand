@@ -1,0 +1,238 @@
+---
+title: "Extra<br>customization"
+footer: ""
+logo: ""
+format:
+  revealjs:
+    title-slide-attributes: 
+      data-background-image: ../../images/title-slide-light.svg
+      data-background-color: "white"
+      style: "text-align: right; left: 10%" 
+---
+
+
+## Light/dark mode
+
+::: {.columns}
+
+::: {.column}
+
+``` {.yaml filename="_brand.yml"}
+color:
+  foreground:
+    light: "#111111" 
+    dark: "#fafafa" 
+  background:
+    light: "#FFFFFF" 
+    dark: "#222222"
+```
+:::
+
+::: {.column}
+
+![](images/light-dark-mode.mov)
+:::
+
+:::
+
+::: notes
+quarto will automatically add a light/dark toggle
+:::
+
+## Sass 
+
+If you want extra customizations. 
+
+Quarto will compile it for any format (with or without `_brand.yml`).
+
+## Sass variables
+
+There are a variety of Sass variables you can set within a `.scss` file for Quarto, including:
+
+::: incremental
+- Colors: `$body-bg`, `$body-color`, etc.
+- Fonts: `$toc-font-size`, `$font-family-sans-serif`, etc.
+- Code blocks: `$code-block-border-left`, `$code-block-bg`. 
+:::
+
+::: footer
+Learn more: [https://quarto.org/docs/output-formats/html-themes.html#sass-variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables)
+:::
+
+## Sass variables
+
+There are a variety of Sass variables you can set within a `.scss` file for Quarto, including:
+
+- Colors: `$body-bg`, `$body-color`, etc.
+- Fonts: `$toc-font-size`, `$font-family-sans-serif`, etc.
+- Code blocks: `$code-block-border-left`, `$code-block-bg`. 
+
+Many of these features can also be set in `_brand.yml`. 
+
+::: footer
+Learn more: [https://quarto.org/docs/output-formats/html-themes.html#sass-variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables)
+:::
+
+## `.scss` file
+
+``` {.scss filename="styles.scss"}
+/*-- scss:functions --*/
+@function colorToRGB ($color) {
+  @return "rgb(" + red($color) + ", " + green($color) + ", " + blue($color)+ ")";
+}
+
+/*-- scss:defaults --*/
+$h2-font-size:          1.6rem !default;
+$headings-font-weight:  500 !default;
+
+/*-- scss:rules --*/
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+}
+```
+
+::: notes
+you can define sass variables and write css in scss files
+:::
+
+::: footer
+Learn more: [https://quarto.org/docs/output-formats/html-themes-more.html](https://quarto.org/docs/output-formats/html-themes-more.html)
+:::
+
+## Specify the `.scss` file in the `theme` field
+
+``` {.yaml filename="my-document.qmd"}
+---
+title: "My document"
+format: 
+    html:
+        theme: styles.scss
+---
+```
+
+## Sass and brand.yml
+
+If you're already using `_brand.yml`, you can use a `.scss` file to further customize your theme, beyond brand.yml's limits, or to override elements of your brand file. For example:
+
+::: incremental
+- Add a drop-shadow to cards
+- Specify the color of blockquotes
+- Further style the navbar
+:::
+
+## Sass and brand.yml
+
+If you're already using `_brand.yml`, you can use a `.scss` file to further customize your theme, beyond brand.yml's limits, or to override elements of your brand file. For example:
+
+::: incremental
+- Add a drop-shadow to cards
+- Specify the color of blockquotes
+- Set different header levels to different colors
+- Further style the navbar
+:::
+
+## Sass and brand.yml
+
+The colors defined in the brand.yml `palette` are available as Sass with the format `$brand-COLOR_NAME`. 
+
+``` {.scss filename="styles.scss"}
+/*-- scss:rules --*/
+
+h1 {
+  color: $brand-blue;
+}
+
+h2 {
+  color: $brand-green
+}
+```
+
+## Sass and brand.yml
+
+The colors defined in the brand.yml `palette` are available as Sass with the format `brand-COLOR_NAME`. 
+
+``` {.scss filename="styles.scss"}
+/*-- scss:rules --*/
+
+h1 {
+  color: $brand-blue;
+}
+
+h2 {
+  color: $brand-green
+}
+```
+
+
+## Priority
+
+``` {.yaml filename="my-document.qmd"}
+---
+title: "My document"
+format: 
+    html:
+        theme: styles.scss
+---
+```
+
+`styles.scss` has priority *over* `_brand.yml`
+
+## Priority
+
+``` {.yaml filename="my-document.qmd"}
+---
+title: "My document"
+format: 
+    html:
+        theme: [cosmo, brand, styles.scss]
+---
+```
+
+`styles.scss` > `_brand.yml` > `cosmo`
+
+## Defaults
+
+You can also set Bootstrap Sass variables under `defaults` in brand.yml.
+
+
+``` {.yaml filename="_brand.yml" code-line-numbers="|8-11"}
+color:
+  palette:
+    blue: "#447099"
+    burgundy: "#9A4665"
+  primary: burgundy
+  foreground: blue
+
+defaults:
+  bootstrap:
+    defaults:
+      navbar-bg: $brand-blue
+
+```
+
+::: footer
+Learn more: [https://posit-dev.github.io/brand-yml/brand/defaults.html](https://posit-dev.github.io/brand-yml/brand/defaults.html)
+:::
+
+## Learn more
+
+::: incremental
+- [Quarto website](https://quarto.org/)
+- [brand.yml website](https://posit-dev.github.io/brand-yml/)
+- [Quarto-specific brand.yml docs](https://quarto.org/docs/authoring/brand.html)
+
+:::
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+Continue working on your own Quarto project and `_brand.yml`! 
+
+## Survey
+
+<!-- to do: link to posit conf survey -->
+
+## 
+
+::: r-fit-text
+Thank you!
+:::
