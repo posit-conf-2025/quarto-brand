@@ -755,38 +755,6 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 
 : Table Column Widths {tbl-colwidths="\[10,30,30,30\]"}
 
-<!--
-
-## Diagrams
-
-```{mermaid}
-%%| fig-width: 6
-%%| echo: fenced
-flowchart LR
-  A[1] --> B(2)
-  B --> C{3}
-  C --> D[4]
-  C --> E[5]
-```
-
-::: notes
-There is also native support for diagrams, where the syntax is similar as R or Python where the execution is being run by Quarto. This is a Mermaid diagram, which is a newer project supported on GitHub where you can use it in their documents as well, so it's a pretty handy tool to get to know.
-:::
-
-## Equations
-
-``` {{markdown}}
-$$E = mc^{2}$$
-```
-
-$$E = mc^{2}$$
-
-::: notes
-Math mode in LaTeX
-:::
-
--->
-
 ## Divs and Spans
 
 **Divs**
