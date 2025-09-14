@@ -39,6 +39,10 @@ cd ~/Documents
 quarto use template skaltman/whr-website-template
 ```
 
+::: aside
+You can also `git clone` or download from GitHub: [github.com/skaltman/whr-website-template](github.com/skaltman/whr-website-template)
+:::
+
 ## Get the template
 
 3.  Follow the prompts:
@@ -495,3 +499,15 @@ Learn more: https://quarto.org/docs/publishing/quarto-pub.html
 #| echo: false
 countdown::countdown(minutes = 7)
 ```
+
+## Making a website from scratch
+
+[Quick start guide](https://quarto.org/docs/websites/#quick-start)
+
+``` {.bash filename="Terminal"}
+quarto create project website mysite
+```
+
+::: footer
+Learn more: https://quarto.org/docs/websites/
+:::
