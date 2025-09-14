@@ -1181,14 +1181,14 @@ Quarto will detect the presence of `_brand.yml` and automatically apply the bran
 
 ## 
 
-If your brand file lives somewhere else, use the `brand` key to supply a file path.
+If your brand file has a different name or lives in a subdirectory, use the `brand` key.
 
-```{.yaml code-line-numbers="5" filename="_brand.yml"}
+```{.yaml code-line-numbers="5" filename="my-document.qmd"}
 ---
 title: "World Happiness Report"
 subtitle: "Happiness Trends and Contributing Factors (2011-2024)"
 format: html
-brand: ../brand-files/whr.yml
+brand: org_theme.yml
 ---
 ```
 
@@ -1200,7 +1200,7 @@ use this if you have a file named something other than brand.yml or it lives els
 
 To turn off brand.yml for a document, use `brand: false`.
 
-```{.yaml code-line-numbers="5" filename="_brand.yml"}
+```{.yaml code-line-numbers="5" filename="my-document.qmd"}
 ---
 title: "World Happiness Report"
 subtitle: "Happiness Trends and Contributing Factors (2011-2024)"
@@ -1219,24 +1219,6 @@ brand: false
 # 5 minutes, warning at 1 minute
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
-
-## Specify light and dark themes for documents
-
-You can also specify a light and dark brand for documents. 
-
-```{.yaml filename="_quarto.yml"}
-brand:
-  light: light-brand.yml
-  dark: dark-brand.yml
-```
-
-::: aside
-(Note: this is not available in reveal.js).
-:::
-
-::: notes
-create separate brand files
-:::
 
 ## What about plots?
 

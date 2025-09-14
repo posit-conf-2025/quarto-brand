@@ -7,7 +7,7 @@
 
 ### Python
 
-1. In the first code chunk of `01-exercise-python.qmd`, add `theme_brand_plotnine()` right before `theme_minimal()`. You will need to supply a brand file path (`"_brand.yml"`). 
+1. In the first code chunk of `01-exercise-python.qmd`, add `theme_brand_plotnine()` right __after__ `theme_minimal()`. You will need to supply a brand file path (`"_brand.yml"`). 
 
 1. Re-render. Does anything change? What if you change `foreground` in `_brand.yml` to `hot-pink`? Re-render with and without `theme_brand_plotnine()`.
 
