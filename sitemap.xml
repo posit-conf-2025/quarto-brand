@@ -2,130 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/index.html</loc>
-    <lastmod>2025-09-13T18:54:16.709Z</lastmod>
+    <lastmod>2025-09-11T20:47:27.378Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/02-presentations/exercise-02.html</loc>
-    <lastmod>2025-09-10T18:46:20.246Z</lastmod>
+    <lastmod>2025-09-11T20:31:38.314Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/02-presentations/index.html</loc>
-    <lastmod>2025-09-10T18:46:20.260Z</lastmod>
+    <lastmod>2025-09-11T20:31:38.322Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/01-intro/exercise-01.html</loc>
-    <lastmod>2025-09-10T16:10:29.879Z</lastmod>
+    <lastmod>2025-09-11T20:31:38.249Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/01-intro/exercise-03.html</loc>
-    <lastmod>2025-09-10T16:10:29.880Z</lastmod>
+    <lastmod>2025-09-11T20:31:38.249Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/01-intro/exercise-04.html</loc>
-    <lastmod>2025-09-10T16:10:29.881Z</lastmod>
+    <lastmod>2025-09-11T20:31:38.249Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/01-intro/index.html</loc>
-    <lastmod>2025-09-10T16:10:30.027Z</lastmod>
+    <lastmod>2025-09-11T20:31:38.309Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/05-websites/exercise-01.html</loc>
-    <lastmod>2025-09-13T18:58:14.078Z</lastmod>
+    <lastmod>2025-09-14T14:09:16.344Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/05-websites/exercise-03.html</loc>
-    <lastmod>2025-09-13T18:58:14.079Z</lastmod>
+    <lastmod>2025-09-14T14:09:16.344Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/05-websites/slides.html</loc>
-    <lastmod>2025-09-13T18:58:14.104Z</lastmod>
+    <lastmod>2025-09-14T14:09:16.364Z</lastmod>
   </url>
   <url>
-    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/04-typst/exercise-02.html</loc>
-    <lastmod>2025-09-11T21:03:07.731Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/04-typst/slides.html</loc>
-    <lastmod>2025-09-13T18:54:16.710Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/exercise-01.html</loc>
-    <lastmod>2025-09-11T19:02:08.198Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/exercise-03.html</loc>
-    <lastmod>2025-09-11T19:02:08.198Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/mpg-demo.html</loc>
-    <lastmod>2025-09-11T19:02:08.251Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/slides.html</loc>
-    <lastmod>2025-09-13T18:54:16.710Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2025.github.io/quarto-brand/LICENSE.html</loc>
-    <lastmod>2025-07-24T23:20:25.021Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/index.html</loc>
-    <lastmod>2025-09-11T19:02:08.251Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/exercise-04.html</loc>
-    <lastmod>2025-09-11T21:03:07.731Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/exercise-02.html</loc>
-    <lastmod>2025-09-11T19:02:08.198Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/00-setup/index.html</loc>
-    <lastmod>2025-09-13T18:54:16.709Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/04-typst/index.html</loc>
-    <lastmod>2025-09-11T21:03:07.755Z</lastmod>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/06-byob/index.html</loc>
+    <lastmod>2025-09-14T14:14:49.544Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/04-typst/exercise-01.html</loc>
-    <lastmod>2025-09-11T21:03:07.731Z</lastmod>
+    <lastmod>2025-09-11T20:31:38.347Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/04-typst/index.html</loc>
+    <lastmod>2025-09-11T20:31:38.363Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/00-setup/index.html</loc>
+    <lastmod>2025-09-11T21:04:52.213Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/exercise-02.html</loc>
+    <lastmod>2025-09-11T20:31:38.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/exercise-04.html</loc>
+    <lastmod>2025-09-11T20:31:38.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/index.html</loc>
+    <lastmod>2025-09-11T20:31:38.347Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/LICENSE.html</loc>
+    <lastmod>2025-09-11T20:31:38.057Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/slides.html</loc>
+    <lastmod>2025-09-11T21:00:41.418Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/mpg-demo.html</loc>
+    <lastmod>2025-09-11T20:31:38.347Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/exercise-03.html</loc>
+    <lastmod>2025-09-11T20:31:38.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/03-dashboards/exercise-01.html</loc>
+    <lastmod>2025-09-11T20:31:38.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/04-typst/slides.html</loc>
+    <lastmod>2025-09-14T14:16:18.432Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/04-typst/exercise-02.html</loc>
+    <lastmod>2025-09-11T20:31:38.347Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/06-byob/slides.html</loc>
+    <lastmod>2025-09-14T14:15:26.279Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2025.github.io/quarto-brand/materials/06-byob/exercise-01.html</loc>
+    <lastmod>2025-09-14T14:09:56.956Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/05-websites/index.html</loc>
-    <lastmod>2025-09-13T18:58:14.104Z</lastmod>
+    <lastmod>2025-09-14T14:09:16.363Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/05-websites/exercise-02.html</loc>
-    <lastmod>2025-09-13T18:58:14.079Z</lastmod>
+    <lastmod>2025-09-14T14:09:16.344Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/01-intro/01-intro.html</loc>
-    <lastmod>2025-09-13T18:54:16.709Z</lastmod>
+    <lastmod>2025-09-11T21:00:24.321Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/01-intro/exercise-05.html</loc>
-    <lastmod>2025-09-10T16:10:29.882Z</lastmod>
+    <lastmod>2025-09-11T20:31:38.249Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/01-intro/exercise-06.html</loc>
-    <lastmod>2025-09-11T19:02:08.192Z</lastmod>
+    <lastmod>2025-09-11T20:31:38.249Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/01-intro/exercise-02.html</loc>
-    <lastmod>2025-09-10T16:10:29.880Z</lastmod>
+    <lastmod>2025-09-11T20:31:38.249Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/02-presentations/slides.html</loc>
-    <lastmod>2025-09-13T18:54:16.710Z</lastmod>
+    <lastmod>2025-09-14T14:16:40.175Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/02-presentations/exercise-03.html</loc>
-    <lastmod>2025-09-10T18:46:20.246Z</lastmod>
+    <lastmod>2025-09-11T20:31:38.314Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2025.github.io/quarto-brand/materials/02-presentations/exercise-01.html</loc>
-    <lastmod>2025-09-10T18:46:20.246Z</lastmod>
+    <lastmod>2025-09-11T20:31:38.314Z</lastmod>
   </url>
 </urlset>
