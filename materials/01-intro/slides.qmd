@@ -28,7 +28,7 @@ Find the materials at: [pos.it/quarto-brand-conf25](pos.it/quarto-brand-conf25)
 **Make sure to:**
 
 1. Install [Quarto 1.8](https://quarto.org/docs/get-started/)
-2. Join the Discord channel: Log in to the [event portal](https://reg.conf.posit.co/flow/posit/positconf25/reg/login), click "Join the server", find our channel: #workshop-quarto-brand
+2. Join Discord: From the [event portal](https://reg.conf.posit.co/flow/posit/positconf25/reg/login), click "Join the server", find our channel: #workshop-quarto-brand
 
 ## Housekeeping {.smaller}
 
