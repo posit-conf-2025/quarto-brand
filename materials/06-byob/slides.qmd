@@ -1,0 +1,80 @@
+---
+title: "Creating and sharing your brand"
+format:
+  revealjs:
+    title-slide-attributes: 
+      data-background-image: ../../images/title-slide-light.svg
+      data-background-color: "white"
+      style: "text-align: right; left: 10%"
+footer: "pos.it/quarto-brand-conf25"
+---
+
+## Creating a `_brand.yml` file
+
+`_brand.yml` is a text file; create a new one by opening
+
+* File > New File > Text File in RStudio
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> New Untitled Text File in VS Code or Positron
+
+## Creating a `_brand.yml` file with an LLM
+
+[![](images/brand-llm.png){width=40% fig-align="center"}](https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt/){preview-link="true"}
+
+::: footer
+Learn more: [Creating a brand.yml with an LLM](https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt/)
+:::
+
+## Sharing a `_brand.yml` file
+
+- Shared repository (Google Drive, OneDrive, etc.)
+- GitHub repo allows you to share with version control
+
+## Brand Extensions
+
+New in Quarto 1.8, you can create a Quarto extension that provides a **brand.yml** file and assets.
+
+Get started by running the below:
+
+```{.bash filename="Terminal"}
+$ quarto create extension brand
+ ? Extension Name › my-brand
+```
+
+. . .
+
+::: callout-important
+Brand Extensions must be used with a `_quarto.yml` project.
+:::
+
+::: footer
+Learn more: [Brand Extensions](https://prerelease.quarto.org/docs/extensions/brand.html)
+:::
+
+## Contents of Brand Extensions {.smaller}
+
+```{.markdown filename="_extensions/my-brand/_extension.yml"}
+title: My-brand
+author: Gordon Woodhull
+version: 1.0.0
+quarto-required: ">=99.9.0"
+contributes:
+  metadata:
+    project:
+      brand: brand.yml
+```
+
+<br>
+
+```{.markdown filename="_extensions/my-brand/_extension.yml"}
+color:
+  background:
+    light: "#fff"
+    dark: "#000"
+  foreground:
+    light: "#000"
+    dark: "#fff"
+```
+
+## Your turn {background-color='{{< brand color light-blue >}}'}
+
+{{< include exercise-01.qmd >}}
