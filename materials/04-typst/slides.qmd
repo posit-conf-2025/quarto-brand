@@ -194,7 +194,7 @@ Learn more: [Typst Brand YAML](https://quarto.org/docs/advanced/typst/brand-yaml
 
 [^1]: While being styled as headings, title and subtitle have a separate implementation.
 
-## Your turn {background-color='{{< brand color primary >}}'}
+## Your turn {background-color='{{< brand color light-blue >}}'}
 
 {{< include exercise-01.qmd >}}
 
@@ -614,6 +614,6 @@ Set rules:
 
 ::::
 
-## Your turn {background-color='{{< brand color primary >}}'}
+## Your turn {background-color='{{< brand color light-blue >}}'}
 
 {{< include exercise-02.qmd >}}

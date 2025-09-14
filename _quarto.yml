@@ -17,9 +17,11 @@ website:
       - href: materials/03-dashboards/index.qmd
         text: Dashboards
       - href: materials/04-typst/index.qmd
-        text: Typst
+        text: PDFs
       - href: materials/05-websites/index.qmd
         text: Websites
+      - href: materials/06-byob/index.qmd
+        text: Creating and Sharing
 
 format:
   html:

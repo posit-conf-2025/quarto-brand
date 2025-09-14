@@ -11,7 +11,7 @@ footer: "pos.it/quarto-brand-conf25"
 
 ## Creating a `_brand.yml` file
 
-`_brand.yml` is a text file; create a new one by opening
+`_brand.yml` is a text file; create a new one by running
 
 * File > New File > Text File in RStudio
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> New Untitled Text File in VS Code or Positron

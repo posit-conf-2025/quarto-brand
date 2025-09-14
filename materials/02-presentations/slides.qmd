@@ -206,7 +206,7 @@ format: revealjs
 
 ::::
 
-## Your turn {background-color='{{< brand color primary >}}'}
+## Your turn {background-color='{{< brand color light-blue >}}'}
 
 {{< include exercise-01.qmd >}}
 
@@ -546,7 +546,7 @@ shinyApp(ui = ui, server = server)
 Learn more: [Observable](https://quarto.org/docs/interactive/ojs/), [Shiny](https://quarto.org/docs/interactive/shiny/), [Component Layout](https://quarto.org/docs/interactive/layout.html)
 :::
 
-## Your turn {background-color='{{< brand color primary >}}'}
+## Your turn {background-color='{{< brand color light-blue >}}'}
 
 {{< include exercise-02.qmd >}}
 
