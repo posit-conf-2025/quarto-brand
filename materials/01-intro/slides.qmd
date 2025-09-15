@@ -28,7 +28,7 @@ Find the materials at: [pos.it/quarto-brand-conf25](pos.it/quarto-brand-conf25)
 **Make sure to:**
 
 1. Install [Quarto 1.8](https://quarto.org/docs/get-started/)
-2. Join the Discord channel: Log in to the [event portal](https://reg.conf.posit.co/flow/posit/positconf25/reg/login), click "Join the server", find our channel: #workshop-quarto-brand
+2. Join Discord: From the [event portal](https://reg.conf.posit.co/flow/posit/positconf25/reg/login), click "Join the server", find our channel: #workshop-quarto-brand
 
 ## Housekeeping {.smaller}
 
@@ -157,7 +157,7 @@ Introduce yourself to your neighbors:
 countdown(minutes = 4)
 ```
 
-# Introduction to Quarto
+# Introduction to Quarto {background-color='{{< brand color dark-blue >}}'}
 
 ## {auto-animate="true"}
 
@@ -411,15 +411,31 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 * Preview/render the document.
 * Make a change and preview/render again.
 
-::::: columns
-:::: {.column width="40%"}
+::: {.fragment}
+
+:::: columns
+::: {.column width="40%"}
 ![](images/rstudio-preview.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+
+::: {.column width="40%"}
+![](images/positron-preview.png){ style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
 ::::
 
-:::: {.column width="40%"}
-![](images/positron-preview.png){ style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
-::::
-:::::
+:::
+
+::: {.fragment}
+``` {.bash filename="Terminal"}
+quarto preview
+```
+:::
+
+<br>
+
+::: {.fragment}
+**Cmd/Ctrl + Shift + K**
+:::
 
 ## Your turn {background-color='{{< brand color light-blue >}}'}
 
@@ -432,17 +448,7 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
 
-# Quarto documents
-
-## 
-
-::: incremental
-
-- Anatomy of a Quarto document
-- Authoring Quarto
-- Changing formats
-
-:::
+# Quarto documents {background-color='{{< brand color dark-blue >}}'}
 
 ## Anatomy of a Quarto document
 
@@ -705,7 +711,7 @@ Other options: <https://quarto.org/docs/computations/execution-options.html>
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
 
-# Authoring Quarto
+# Authoring Quarto {background-color='{{< brand color dark-blue >}}'}
 
 ## Images and links
 
@@ -755,54 +761,35 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 
 : Table Column Widths {tbl-colwidths="\[10,30,30,30\]"}
 
-<!--
-
-## Diagrams
-
-```{mermaid}
-%%| fig-width: 6
-%%| echo: fenced
-flowchart LR
-  A[1] --> B(2)
-  B --> C{3}
-  C --> D[4]
-  C --> E[5]
-```
-
-::: notes
-There is also native support for diagrams, where the syntax is similar as R or Python where the execution is being run by Quarto. This is a Mermaid diagram, which is a newer project supported on GitHub where you can use it in their documents as well, so it's a pretty handy tool to get to know.
-:::
-
-## Equations
-
-``` {{markdown}}
-$$E = mc^{2}$$
-```
-
-$$E = mc^{2}$$
-
-::: notes
-Math mode in LaTeX
-:::
-
--->
-
 ## Divs and Spans
+
+For further customization, you can add classes, attributes, and other identifiers to content using divs and spans.
+
+. . .
+
+* Div syntax: `:::`
+* Span syntax: `{ }`
+
+
+. . .
 
 **Divs**
 
     ::: {.border}
-    This content can be styled with a border
+    This adds the "border" class to some content. 
     :::
     
 **Spans**
 
-    [This is *some text*]{.class key="val"}
+    [This is some text]{.class key="val"}
 
-[This is *some text*]{.class key="val"}
 
 ::: notes
 For furture customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well.
+:::
+
+::: footer
+Learn more: <https://quarto.org/docs/authoring/markdown-basics.html#sec-divs-and-spans>
 :::
 
 ## Divs
@@ -822,6 +809,14 @@ Note that there are five types of callouts, including:
 
 ::: callout-tip
 Note that there are five types of callouts, including: `note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+::: footer
+Learn more: <https://quarto.org/docs/authoring/markdown-basics.html#callout-blocks>
+:::
+
+::: notes
+use callout blocks to draw attention to some information. callouts use the div syntax
 :::
 
 ## Divs
@@ -897,8 +892,6 @@ format: html
 
 ## Changing formats
 
-:::: columns
-::: {.column}
 
 ````{.markdown code-line-numbers=3 filename="my-document.qmd"}
 ---
@@ -906,30 +899,14 @@ title: "World Happiness Report"
 format: revealjs
 ---
 ````
+
+. . . 
+
+![](images/revealjs.png){fig-align="left"}
+
+::: notes
+You will see many examples of this throughout the workshop!
 :::
-
-::: {.column .fragment}
-![](images/revealjs.png)
-:::
-::::
-
-## Changing formats
-
-:::: columns
-::: {.column}
-
-````{.markdown code-line-numbers=3 filename="my-document.qmd"}
----
-title: "World Happiness Report"
-format: pdf
----
-````
-:::
-
-::: {.column .fragment}
-![](images/pdf.png)
-:::
-::::
 
 ## Your turn  {background-color='{{< brand color light-blue >}}' .smaller}
   
@@ -942,7 +919,7 @@ format: pdf
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
 
-# Theme with brand.yml
+# Theme with brand.yml {background-color='{{< brand color dark-blue >}}'}
 
 ## HTML Theming {.scrollable}
 
@@ -998,17 +975,41 @@ theme:
 to match your organization's or your own personal branding. and you often want to use that same theme over and over, for different kinds of outputs
 :::
 
-## Introducing brand.yml
+## 
 
 ![](images/brand-yml.png){fig-align="center" width="50%"}
 
+[Unified branding with a simple YAML file]{style="font-size: 1.2em;"} 
+
+. . .
+
+<br>
+
 Create reports, apps, dashboards, plots and more that match your company’s brand guidelines with a single `_brand.yml` file.
 
-::: aside
-[brand.yml documentation](https://posit-dev.github.io/brand-yml/), [Quarto documentation](https://quarto.org/docs/authoring/brand.html)
-:::
 ::: notes
 brand.yml is a simple, portable YAML file that codifies your company’s brand guidelines into a format that can be used by Quarto, Python and R tooling to create branded outputs. Our goal is to support unified, branded theming for all of Posit’s open source tools—from web applications to printed reports to dashboards and presentations—with a consistent look and feel.
+:::
+
+::: footer
+Learn more: <https://posit-dev.github.io/brand-yml/>
+:::
+
+## 
+
+::: {.fragment}
+[1. Define branding in a single `_brand.yml` file.]{style="font-size: 1.5em;"}
+
+[2. Apply that branding across almost all Quarto formats.]{style="font-size: 1.5em;"} 
+
+:::
+
+<br>
+
+::: {.fragment}
+
+`brand.yml` also works with Shiny!
+
 :::
 
 ## 
@@ -1091,7 +1092,9 @@ flowchart LR
 }
 </style>
 
-<small>[https://posit-dev.github.io/brand-yml/](https://posit-dev.github.io/brand-yml/)</small>
+::: footer
+Learn more: <https://posit-dev.github.io/brand-yml/>
+:::
 
 ::: notes
 brand.yml works with a variety of open source projects, including all the Quarto outputs we'll talk about today. as well as Shiny for R and Shiny for Python. This means you can define your organization's branding in a brand.yml file once, and then apply it all over relatively effortlessly. 
@@ -1101,11 +1104,13 @@ over the course of this workshop, we'll use the same brand file to apply to all 
 
 ## brand.yml elements
 
+::: incremental
 * `meta`: Identifying information, name of the company, URLs, etc.
 * `logo`: Files or links to the brand’s logos.
 * `color`: Colors in the brand's color palette. 
 * `typography`: Fonts for different elements. 
 * `defaults`: Additional context-specific settings.
+:::
 
 ## `_brand.yml` structure
 
@@ -1163,9 +1168,9 @@ typography:
 if this seems like a lot of details, don't worry! we will show you how to make your own file later. for now, it's enough to just have a general understanding of the different parts
 :::
 
-## How to apply brand.yml automatically
+## How to apply brand.yml to Quarto
 
-1. Define branding in a single` _brand.yml` file.
+1. Define branding in ` _brand.yml`.
 2. Save in the root directory of your Quarto project.
 
 Quarto will detect the presence of `_brand.yml` and automatically apply the brand to all documents of the supported formats in the project.
@@ -1199,6 +1204,22 @@ format: html
 brand: false
 ---
 ```
+
+## Shortcode - `{{< brand >}}`
+
+Access some brand.yml values with a shortcode. 
+
+``` {.markdown filename="my_document.qmd"}
+{{< brand color primary >}}
+```
+
+::: footer
+Learn more: <https://quarto.org/docs/authoring/brand.html#using-brand-values>
+:::
+
+::: notes
+you'll see an example of this during the presentations section
+:::
 
 ## Your turn {background-color='{{< brand color light-blue >}}'}
 
@@ -1274,6 +1295,36 @@ The R function applies theme_minimal().
 
 ## brand.yml packages
 
+Access and apply specific brand elements. 
+
+::: {.panel-tabset}
+### R
+
+```{r}
+#| eval: false
+#| echo: true
+library(brand.yml)
+
+brand <- read_brand_yml("_brand.yml")
+
+brand$color$primary
+```
+
+### Python
+
+```{python}
+#| eval: false
+#| echo: true
+from brand_yml import Brand
+
+brand = Brand.from_yaml("_brand.yml")
+
+brand.color.primary
+```
+:::
+
+## brand.yml packages
+
 Use the R or Python brand.yml package to create a brand file from a string. 
 
 ::: {.panel-tabset}
@@ -1315,36 +1366,6 @@ brand = Brand.from_yaml_str(
 ```
 :::
 
-## brand.yml packages
-
-Access and apply specific brand elements. 
-
-::: {.panel-tabset}
-### R
-
-```{r}
-#| eval: false
-#| echo: true
-library(brand.yml)
-
-brand <- read_brand_yml("_brand.yml")
-
-brand$color$primary
-```
-
-### Python
-
-```{python}
-#| eval: false
-#| echo: true
-from brand_yml import Brand
-
-brand = Brand.from_yaml("_brand.yml")
-
-brand.color.primary
-```
-:::
-
 ## Your turn {background-color='{{< brand color light-blue >}}'}
 
 {{< include exercise-06.qmd >}} 
@@ -1355,3 +1376,13 @@ brand.color.primary
 # 5 minutes, warning at 1 minute
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
+
+## Why brand.yml?
+
+::: incremental
+
+* Consistent branding with minimal effort.
+* Common syntax across different outputs. Reduces duplication. 
+* Easy collaboration.
+
+:::

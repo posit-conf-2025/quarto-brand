@@ -1,4 +1,4 @@
-* Open the `01-exercise-py.qmd` or `01-exercise-r.qmd` file.
+* Open `01-exercise-r.qmd` or `01-exercise-py.qmd`.
 * Preview/render the document.
   * **Posit Cloud**: You may be asked to allow pop-ups.
 * Edit the title and preview/render again.

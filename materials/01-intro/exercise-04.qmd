@@ -1,3 +1,3 @@
 1. In the workshop repo, there's a file named `04-exercise.yml`. Rename the file to `_brand.yml` and rerender your Quarto document. What changes?
 
-2. Change some of the variables in the `_brand.yml` file and rerender to see how your theme changes.
+2. Change some of the variables in the `_brand.yml` file and rerender to see how your theme changes. You can reset the file by copying and pasting it from [here](https://github.com/posit-dev/quarto-brand-exercises/blob/main/04-exercise.yml). 
