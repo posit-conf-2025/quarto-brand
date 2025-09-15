@@ -112,7 +112,7 @@ format:
 
 ## Sass and brand.yml
 
-If you're already using `_brand.yml`, you can use a `.scss` file to further customize your theme, beyond brand.yml's limits, or to override elements of your brand file. For example:
+If you're already using `_brand.yml`, you can use a `.scss` file to further customize your theme or to override elements of your brand file. For example:
 
 ::: incremental
 - Add a drop-shadow to cards
