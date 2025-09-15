@@ -315,16 +315,7 @@
 </section>
 <section id="sass-and-brand.yml" class="slide level2">
 <h2>Sass and brand.yml</h2>
-<p>If you’re already using <code>_brand.yml</code>, you can use a <code>.scss</code> file to further customize your theme, beyond brand.yml’s limits, or to override elements of your brand file. For example:</p>
-<ul>
-<li class="fragment">Add a drop-shadow to cards</li>
-<li class="fragment">Specify the color of blockquotes</li>
-<li class="fragment">Further style the navbar</li>
-</ul>
-</section>
-<section id="sass-and-brand.yml-1" class="slide level2">
-<h2>Sass and brand.yml</h2>
-<p>If you’re already using <code>_brand.yml</code>, you can use a <code>.scss</code> file to further customize your theme, beyond brand.yml’s limits, or to override elements of your brand file. For example:</p>
+<p>If you’re already using <code>_brand.yml</code>, you can use a <code>.scss</code> file to further customize your theme or to override elements of your brand file. For example:</p>
 <ul>
 <li class="fragment">Add a drop-shadow to cards</li>
 <li class="fragment">Specify the color of blockquotes</li>
@@ -332,7 +323,7 @@
 <li class="fragment">Further style the navbar</li>
 </ul>
 </section>
-<section id="sass-and-brand.yml-2" class="slide level2">
+<section id="sass-and-brand.yml-1" class="slide level2">
 <h2>Sass and brand.yml</h2>
 <p>The colors defined in the brand.yml <code>palette</code> are available as Sass with the format <code>$brand-COLOR_NAME</code>.</p>
 <div class="code-with-filename">
@@ -350,36 +341,18 @@
 <span id="cb4-9"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="sass-and-brand.yml-3" class="slide level2">
-<h2>Sass and brand.yml</h2>
-<p>The colors defined in the brand.yml <code>palette</code> are available as Sass with the format <code>brand-COLOR_NAME</code>.</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>styles.scss</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="styles.scss"><pre class="sourceCode numberSource scss number-lines code-with-copy"><code class="sourceCode scss"><span id="cb5-1"><a></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a>h1 {</span>
-<span id="cb5-4"><a></a>  <span class="kw">color</span>: <span class="va">$brand-blue</span><span class="op">;</span></span>
-<span id="cb5-5"><a></a>}</span>
-<span id="cb5-6"><a></a></span>
-<span id="cb5-7"><a></a>h2 {</span>
-<span id="cb5-8"><a></a>  <span class="kw">color</span>: <span class="va">$brand-green</span></span>
-<span id="cb5-9"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
 <section id="priority" class="slide level2">
 <h2>Priority</h2>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>my-document.qmd</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-filename="my-document.qmd"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a></a><span class="pp">---</span></span>
-<span id="cb6-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My document"</span></span>
-<span id="cb6-3"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb6-4"><a></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb6-5"><a></a><span class="at">        </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> styles.scss</span></span>
-<span id="cb6-6"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="my-document.qmd"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a></a><span class="pp">---</span></span>
+<span id="cb5-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My document"</span></span>
+<span id="cb5-3"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb5-4"><a></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb5-5"><a></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> styles.scss</span></span>
+<span id="cb5-6"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>styles.scss</code> has priority <em>over</em> <code>_brand.yml</code></p>
 </section>
@@ -389,12 +362,12 @@
 <div class="code-with-filename-file">
 <pre><strong>my-document.qmd</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="my-document.qmd"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a></a><span class="pp">---</span></span>
-<span id="cb7-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My document"</span></span>
-<span id="cb7-3"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb7-4"><a></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb7-5"><a></a><span class="at">        </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">cosmo</span><span class="kw">,</span><span class="at"> brand</span><span class="kw">,</span><span class="at"> styles.scss</span><span class="kw">]</span></span>
-<span id="cb7-6"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-filename="my-document.qmd"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a></a><span class="pp">---</span></span>
+<span id="cb6-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My document"</span></span>
+<span id="cb6-3"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb6-4"><a></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb6-5"><a></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">cosmo</span><span class="kw">,</span><span class="at"> brand</span><span class="kw">,</span><span class="at"> styles.scss</span><span class="kw">]</span></span>
+<span id="cb6-6"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>styles.scss</code> &gt; <code>_brand.yml</code> &gt; <code>cosmo</code></p>
 </section>
@@ -405,17 +378,17 @@
 <div class="code-with-filename-file">
 <pre><strong>_brand.yml</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" data-filename="_brand.yml" data-code-line-numbers="|8-11"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a></a><span class="fu">color</span><span class="kw">:</span></span>
-<span id="cb8-2"><a></a><span class="at">  </span><span class="fu">palette</span><span class="kw">:</span></span>
-<span id="cb8-3"><a></a><span class="at">    </span><span class="fu">blue</span><span class="kw">:</span><span class="at"> </span><span class="st">"#447099"</span></span>
-<span id="cb8-4"><a></a><span class="at">    </span><span class="fu">burgundy</span><span class="kw">:</span><span class="at"> </span><span class="st">"#9A4665"</span></span>
-<span id="cb8-5"><a></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at"> burgundy</span></span>
-<span id="cb8-6"><a></a><span class="at">  </span><span class="fu">foreground</span><span class="kw">:</span><span class="at"> blue</span></span>
-<span id="cb8-7"><a></a></span>
-<span id="cb8-8"><a></a><span class="fu">defaults</span><span class="kw">:</span></span>
-<span id="cb8-9"><a></a><span class="at">  </span><span class="fu">bootstrap</span><span class="kw">:</span></span>
-<span id="cb8-10"><a></a><span class="at">    </span><span class="fu">defaults</span><span class="kw">:</span></span>
-<span id="cb8-11"><a></a><span class="at">      </span><span class="fu">navbar-bg</span><span class="kw">:</span><span class="at"> $brand-blue</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="_brand.yml" data-code-line-numbers="|8-11"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a></a><span class="fu">color</span><span class="kw">:</span></span>
+<span id="cb7-2"><a></a><span class="at">  </span><span class="fu">palette</span><span class="kw">:</span></span>
+<span id="cb7-3"><a></a><span class="at">    </span><span class="fu">blue</span><span class="kw">:</span><span class="at"> </span><span class="st">"#447099"</span></span>
+<span id="cb7-4"><a></a><span class="at">    </span><span class="fu">burgundy</span><span class="kw">:</span><span class="at"> </span><span class="st">"#9A4665"</span></span>
+<span id="cb7-5"><a></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at"> burgundy</span></span>
+<span id="cb7-6"><a></a><span class="at">  </span><span class="fu">foreground</span><span class="kw">:</span><span class="at"> blue</span></span>
+<span id="cb7-7"><a></a></span>
+<span id="cb7-8"><a></a><span class="fu">defaults</span><span class="kw">:</span></span>
+<span id="cb7-9"><a></a><span class="at">  </span><span class="fu">bootstrap</span><span class="kw">:</span></span>
+<span id="cb7-10"><a></a><span class="at">    </span><span class="fu">defaults</span><span class="kw">:</span></span>
+<span id="cb7-11"><a></a><span class="at">      </span><span class="fu">navbar-bg</span><span class="kw">:</span><span class="at"> $brand-blue</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="footer">
 <p>Learn more: <a href="https://posit-dev.github.io/brand-yml/brand/defaults.html">https://posit-dev.github.io/brand-yml/brand/defaults.html</a></p>
