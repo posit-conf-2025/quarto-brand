@@ -145,7 +145,7 @@ h2 {
 title: "My document"
 format: 
     html:
-        theme: styles.scss
+      theme: styles.scss
 ---
 ```
 
@@ -158,7 +158,7 @@ format:
 title: "My document"
 format: 
     html:
-        theme: [cosmo, brand, styles.scss]
+      theme: [cosmo, brand, styles.scss]
 ---
 ```
 
