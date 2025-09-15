@@ -137,22 +137,6 @@ h2 {
 }
 ```
 
-## Sass and brand.yml
-
-The colors defined in the brand.yml `palette` are available as Sass with the format `brand-COLOR_NAME`. 
-
-``` {.scss filename="styles.scss"}
-/*-- scss:rules --*/
-
-h1 {
-  color: $brand-blue;
-}
-
-h2 {
-  color: $brand-green
-}
-```
-
 
 ## Priority
 
