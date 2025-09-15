@@ -196,6 +196,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Creating and Sharing</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/07-customization/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Customization</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -251,7 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exercise-1" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
 <ul>
-<li>Open the <code>01-exercise-py.qmd</code> or <code>01-exercise-r.qmd</code> file.</li>
+<li>Open <code>01-exercise-r.qmd</code> or <code>01-exercise-py.qmd</code>.</li>
 <li>Preview/render the document.
 <ul>
 <li><strong>Posit Cloud</strong>: You may be asked to allow pop-ups.</li>
@@ -288,34 +294,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exercise-3" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-3">Exercise 3</h3>
 <ul>
-<li>Add an <code>important</code> callout box to the introduction summarizing the report’s findings.</li>
+<li>Add an <code>important</code> <a href="https://quarto.org/docs/authoring/callouts.html">callout box</a> to the introduction summarizing the report’s findings.</li>
+<li>In the first paragraph, link to the World Happiness Report website (https://www.worldhappiness.report/) where it says “2025 World Happiness Report”.</li>
+<li>Change some text to the color <code>"#eb068c"</code>.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>_text here_</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Change the <code>format</code> to <code>revealjs</code>. Preview the document.</li>
-<li>Change the <code>format</code> to <code>pdf</code>. Preview the document.</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Removing <code>code-fold</code>, <code>code-summary</code>, and <code>embed-resources</code> is not required because these are <code>html</code> only features. However, I’d recommend removing them to keep your document tidy.</p>
-</div>
-</div>
 </section>
 <section id="exercise-4" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-4">Exercise 4</h3>
 <ol type="1">
 <li><p>In the workshop repo, there’s a file named <code>04-exercise.yml</code>. Rename the file to <code>_brand.yml</code> and rerender your Quarto document. What changes?</p></li>
-<li><p>Change some of the variables in the <code>_brand.yml</code> file and rerender to see how your theme changes.</p></li>
+<li><p>Change some of the variables in the <code>_brand.yml</code> file and rerender to see how your theme changes. You can reset the file by copying and pasting it from <a href="https://github.com/posit-dev/quarto-brand-exercises/blob/main/04-exercise.yml">here</a>.</p></li>
 </ol>
 </section>
 <section id="exercise-5" class="level3">
@@ -349,12 +337,12 @@ Note
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="at">color =</span> brand<span class="sc">$</span>color<span class="sc">$</span>palette[<span class="st">'teal'</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="at">color =</span> brand<span class="sc">$</span>color<span class="sc">$</span>palette[<span class="st">'teal'</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>geom_line(color <span class="op">=</span> brand.color.palette.teal)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>geom_line(color <span class="op">=</span> brand.color.palette.teal)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>

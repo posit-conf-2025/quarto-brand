@@ -81,42 +81,51 @@
     "href": "materials/07-customization/index.html",
     "title": "Websites",
     "section": "",
-    "text": "View slides in full screen"
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Customization"
+    ]
   },
   {
     "objectID": "materials/07-customization/index.html#slides",
     "href": "materials/07-customization/index.html#slides",
     "title": "Websites",
     "section": "",
-    "text": "View slides in full screen"
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Customization"
+    ]
   },
   {
     "objectID": "materials/07-customization/index.html#exercises",
     "href": "materials/07-customization/index.html#exercises",
     "title": "Websites",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1"
+    "text": "Exercises\n\nExercise 1",
+    "crumbs": [
+      "Customization"
+    ]
   },
   {
     "objectID": "materials/01-intro/exercise-01.html",
     "href": "materials/01-intro/exercise-01.html",
     "title": "",
     "section": "",
-    "text": "Open the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again."
+    "text": "Open 01-exercise-r.qmd or 01-exercise-py.qmd.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again."
   },
   {
     "objectID": "materials/01-intro/exercise-03.html",
     "href": "materials/01-intro/exercise-03.html",
     "title": "",
     "section": "",
-    "text": "Add an important callout box to the introduction summarizing the report’s findings.\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nNote\n\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy."
+    "text": "Add an important callout box to the introduction summarizing the report’s findings.\nIn the first paragraph, link to the World Happiness Report website (https://www.worldhappiness.report/) where it says “2025 World Happiness Report”.\nChange some text to the color \"#eb068c\"."
   },
   {
     "objectID": "materials/01-intro/exercise-04.html",
     "href": "materials/01-intro/exercise-04.html",
     "title": "",
     "section": "",
-    "text": "In the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes."
+    "text": "In the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes. You can reset the file by copying and pasting it from here."
   },
   {
     "objectID": "materials/01-intro/index.html",
@@ -143,7 +152,7 @@
     "href": "materials/01-intro/index.html#exercises",
     "title": "Quarto Documents",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\nExercise 2\n\nOpen 01-exercise-r.qmd and run the first three code chunks (in order).\nPreview the file.\nAdd a #| include: false chunk option to the second chunk (global-trends). Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of countries. You can use the following code to calculate the number of countries.\n\n\nRPython\n\n\n\nlength(unique(whr$country_name))\n\n\n\n\nwhr['country_name'].nunique()\n\n\n\n\n\n\nExercise 3\n\nAdd an important callout box to the introduction summarizing the report’s findings.\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nNote\n\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy.\n\n\n\n\nExercise 4\n\nIn the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes.\n\n\n\nExercise 5\n\nRPython\n\n\n\nIn the first code chunk of 01-exercise-r.qmd, replace theme_minimal() with theme_brand_ggplot2(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render and see what changes.\n\n\n\n\nIn the first code chunk of 01-exercise-python.qmd, add theme_brand_plotnine() right after theme_minimal(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render. Does anything change? What if you change foreground in _brand.yml to hot-pink? Re-render with and without theme_brand_plotnine().\n\n\n\n\n\n\nExercise 6\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette['teal'])\n\n\n\n\ngeom_line(color = brand.color.palette.teal)",
+    "text": "Exercises\n\nExercise 1\n\nOpen 01-exercise-r.qmd or 01-exercise-py.qmd.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\nExercise 2\n\nOpen 01-exercise-r.qmd and run the first three code chunks (in order).\nPreview the file.\nAdd a #| include: false chunk option to the second chunk (global-trends). Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of countries. You can use the following code to calculate the number of countries.\n\n\nRPython\n\n\n\nlength(unique(whr$country_name))\n\n\n\n\nwhr['country_name'].nunique()\n\n\n\n\n\n\nExercise 3\n\nAdd an important callout box to the introduction summarizing the report’s findings.\nIn the first paragraph, link to the World Happiness Report website (https://www.worldhappiness.report/) where it says “2025 World Happiness Report”.\nChange some text to the color \"#eb068c\".\n\n\n\nExercise 4\n\nIn the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes. You can reset the file by copying and pasting it from here.\n\n\n\nExercise 5\n\nRPython\n\n\n\nIn the first code chunk of 01-exercise-r.qmd, replace theme_minimal() with theme_brand_ggplot2(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render and see what changes.\n\n\n\n\nIn the first code chunk of 01-exercise-python.qmd, add theme_brand_plotnine() right after theme_minimal(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render. Does anything change? What if you change foreground in _brand.yml to hot-pink? Re-render with and without theme_brand_plotnine().\n\n\n\n\n\n\nExercise 6\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette['teal'])\n\n\n\n\ngeom_line(color = brand.color.palette.teal)",
     "crumbs": [
       "Intro to Quarto"
     ]
@@ -547,13 +556,6 @@
     "href": "materials/03-dashboards/slides.html#section-3",
     "title": "QuartoDashboards",
     "section": "",
-    "text": "dashboard for a model provides context into the model by adding narrative to the dashboard not just raw json dump"
-  },
-  {
-    "objectID": "materials/03-dashboards/slides.html#section-4",
-    "href": "materials/03-dashboards/slides.html#section-4",
-    "title": "QuartoDashboards",
-    "section": "",
     "text": "uses shiny for python select island and penguins and distributions will change can see all these dashboards and their code on the quarto website under gallery"
   },
   {
@@ -827,7 +829,7 @@
     "href": "materials/03-dashboards/slides.html#value-boxes",
     "title": "QuartoDashboards",
     "section": "Value boxes",
-    "text": "Value boxes\n\nmultiple ways to make value boxes\n\n\nValue boxes are a great way to prominently display simple values within a dashboard\nYou can create value boxes in executable cells or plain markdown in divs\nValue boxes use Bootstrap icons (https://icons.getbootstrap.com) and can be set to any color (e.g., with a HEX code) or color alias defined by the theme (we’ll get to themes later!)\n\n\n\nColor alias\nDefault theme color(s)\n\n\n\n\nprimary\nBlue\n\n\nsecondary\nGray\n\n\nsuccess\nGreen\n\n\ninfo\nBright Blue\n\n\nwarning\nYellow/Orange\n\n\ndanger\nRed\n\n\nlight\nLight Gray\n\n\ndark\nBlack"
+    "text": "Value boxes\n\nmultiple ways to make value boxes\n\n\nValue boxes are a great way to prominently display simple values within a dashboard\nYou can create value boxes in executable cells or plain markdown in divs\nValue boxes use Bootstrap icons (https://icons.getbootstrap.com) and can be set to any color (e.g., with a HEX code) or color alias defined by the theme.\n\n\n\nColor alias\nDefault theme color(s)\n\n\n\n\nprimary\nBlue\n\n\nsecondary\nGray\n\n\nsuccess\nGreen\n\n\ninfo\nBright Blue\n\n\nwarning\nYellow/Orange\n\n\ndanger\nRed\n\n\nlight\nLight Gray\n\n\ndark\nBlack"
   },
   {
     "objectID": "materials/03-dashboards/slides.html#value-boxes-1",
@@ -1130,7 +1132,7 @@
     "href": "materials/01-intro/slides.html#branded-websites-presentations-dashboards-and-pdfs-with-quarto",
     "title": "Quarto\nDocuments",
     "section": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
-    "text": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto\n WiFi: Posit Conf 2025 Password: conf2025\n Find the materials at: pos.it/quarto-brand-conf25\n Make sure to:\n\nInstall Quarto 1.8\nJoin the Discord channel: Log in to the event portal, click “Join the server”, find our channel: #workshop-quarto-brand"
+    "text": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto\n WiFi: Posit Conf 2025 Password: conf2025\n Find the materials at: pos.it/quarto-brand-conf25\n Make sure to:\n\nInstall Quarto 1.8\nJoin Discord: From the event portal, click “Join the server”, find our channel: #workshop-quarto-brand"
   },
   {
     "objectID": "materials/01-intro/slides.html#housekeeping",
@@ -1138,6 +1140,20 @@
     "title": "Quarto\nDocuments",
     "section": "Housekeeping",
     "text": "Housekeeping\n\nThere are gender neutral bathrooms on LL2 next to Chicago A.\nThere is a meditation/prayer room located on LL2 next to Chicago A.\nThe lactation room is located on LL2 next to Chicago B\nParticipants who do not wish to be photographed have red lanyards; please note everyone’s lanyard colors before taking a photo and respect their choices.\nThe Code of Conduct can be found at https://posit.co/code-of-conduct. You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information."
+  },
+  {
+    "objectID": "materials/01-intro/slides.html#schedule",
+    "href": "materials/01-intro/slides.html#schedule",
+    "title": "Quarto\nDocuments",
+    "section": "Schedule",
+    "text": "Schedule"
+  },
+  {
+    "objectID": "materials/01-intro/slides.html#schedule-1",
+    "href": "materials/01-intro/slides.html#schedule-1",
+    "title": "Quarto\nDocuments",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\n\nTime\nActivity\n\n\n\n\n9:00 - 10:30\nIntro to Quarto & brand.yml\n\n\n10:30 - 11:00\nCoffee break ☕️\n\n\n11:00 - 12:30\nPresentations & Dashboards\n\n\n12:30 - 1:30\nLunch break 🍽️\n\n\n1:30 - 3:00\nPDFs & Websites\n\n\n3:00 - 3:30\nCoffee break ☕️\n\n\n3:30 - 5:00\nCustomizing your brand"
   },
   {
     "objectID": "materials/01-intro/slides.html#about-us",
@@ -1151,7 +1167,7 @@
     "href": "materials/01-intro/slides.html#about-us-1",
     "title": "Quarto\nDocuments",
     "section": "About us",
-    "text": "About us\n\n\n\nSr. Product Marketing Manager\nDeveloper Relations, Posit\n\n\n\n\n\n\n\nIsabella Velásquez\n @ivelasq\n ivelasq.rbind.io"
+    "text": "About us\n\n\n\nSr. Product Marketing Manager\nDeveloper Relations, Posit\n\n\n\n\n\n\n\nIsabella Velásquez\n @ivelasq\n ivelasq.rbind.io\n\n\nIntroduce TAs"
   },
   {
     "objectID": "materials/01-intro/slides.html#meeting-you-where-you-are",
@@ -1273,11 +1289,11 @@
     "text": "Under the hood\n\n\njupyter or knitr evaluates Python, Julia, R, or Observable code and returns a .md file along with the evaluated code\nQuarto applies Lua filters + CSS/LaTeX which is then evaluated alongside the .md file by Pandoc and converted to a final output format"
   },
   {
-    "objectID": "materials/01-intro/slides.html#section-1",
-    "href": "materials/01-intro/slides.html#section-1",
+    "objectID": "materials/01-intro/slides.html#options",
+    "href": "materials/01-intro/slides.html#options",
     "title": "Quarto\nDocuments",
-    "section": "",
-    "text": "Let’s walk through your options for today.\n\nPosit Cloud\nGitHub Codespace\nLocal installation\n\n\nGitHub repository\nPackage installation\n\n\nPosit Cloud has R, RStudio, Quarto, packages, installed. You just need a free account. But I will delete in a few days. If you prefer Python, there is a GitHub Codespace. It takes many minutes to load so please open it up as soon as you can if you’d like to go this route. The packages will not come preinstalled, but the instructions are on the website. Finally, you can always install Positron, RStudio, or VS Code locally, but you will also need R or Python installed. You’ll also have to install the packages and download the repo materials. And for VS Code, you’ll need to install the Quarto extension. So, if you do not have these set up, I recommend going with Posit Cloud or GitHub Codespace for now, and coming back to the materials after the workshop."
+    "section": "Options",
+    "text": "Options\nLet’s walk through your options for today.\n\nPosit Cloud\nGitHub Codespace\nLocal installation\n\n\nGitHub repository\nPackage installation\n\n\nPosit Cloud has R, RStudio, Quarto, packages, installed. You just need a free account. But I will delete in a few days. If you prefer Python, there is a GitHub Codespace. It takes many minutes to load so please open it up as soon as you can if you’d like to go this route. The packages will not come preinstalled, but the instructions are on the website. Finally, you can always install Positron, RStudio, or VS Code locally, but you will also need R or Python installed. You’ll also have to install the packages and download the repo materials. And for VS Code, you’ll need to install the Quarto extension. So, if you do not have these set up, I recommend going with Posit Cloud or GitHub Codespace for now, and coming back to the materials after the workshop."
   },
   {
     "objectID": "materials/01-intro/slides.html#your-turn",
@@ -1291,21 +1307,14 @@
     "href": "materials/01-intro/slides.html#quarto-workflow",
     "title": "Quarto\nDocuments",
     "section": "Quarto workflow",
-    "text": "Quarto workflow\n\nOpen a .qmd file.\nPreview/render the document.\nMake a change and preview/render again."
+    "text": "Quarto workflow\n\nOpen a .qmd file.\nPreview/render the document.\nMake a change and preview/render again.\n\n\n\n\n\n\n\n\n\n\n\n\nTerminal\n\nquarto preview\n\n\n\n\nCmd/Ctrl + Shift + K"
   },
   {
     "objectID": "materials/01-intro/slides.html#your-turn-1",
     "href": "materials/01-intro/slides.html#your-turn-1",
     "title": "Quarto\nDocuments",
     "section": "Your turn",
-    "text": "Your turn\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\n\n−+\n05:00"
-  },
-  {
-    "objectID": "materials/01-intro/slides.html#section-2",
-    "href": "materials/01-intro/slides.html#section-2",
-    "title": "Quarto\nDocuments",
-    "section": "",
-    "text": "Anatomy of a Quarto document\nAuthoring Quarto\nChanging formats"
+    "text": "Your turn\n\nOpen 01-exercise-r.qmd or 01-exercise-py.qmd.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/01-intro/slides.html#anatomy-of-a-quarto-document",
@@ -1410,28 +1419,21 @@
     "href": "materials/01-intro/slides.html#tables-1",
     "title": "Quarto\nDocuments",
     "section": "Tables",
-    "text": "Tables\n```{markdown}\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|    12 | 12   | 12      |   12   |\n|   123 | 123  | 123     |  123   |\n|     1 | 1    | 1       |   1    |\n\n: Table Column Widths {tbl-colwidths=\"[10,30,30,30]\"}\n```\n\nTable Column Widths\n\n\n\n\n\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\nB(2) B –&gt; C{3} C –&gt; D[4] C –&gt; E[5]\n\n\n\n\n\nflowchart LR\n  A[1] --&gt; B(2)\n  B --&gt; C{3}\n  C --&gt; D[4]\n  C --&gt; E[5]\n\n\n\n\n\n::::::\n\nThere is also native support for diagrams, where the syntax is similar as R or Python where the execution is being run by Quarto. This is a Mermaid diagram, which is a newer project supported on GitHub where you can use it in their documents as well, so it’s a pretty handy tool to get to know."
-  },
-  {
-    "objectID": "materials/01-intro/slides.html#equations",
-    "href": "materials/01-intro/slides.html#equations",
-    "title": "Quarto\nDocuments",
-    "section": "Equations",
-    "text": "Equations\n```{markdown}\n$$E = mc^{2}$$\n```\n\\[E = mc^{2}\\]\n\nMath mode in LaTeX\n\n–&gt;"
+    "text": "Tables\n```{markdown}\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|    12 | 12   | 12      |   12   |\n|   123 | 123  | 123     |  123   |\n|     1 | 1    | 1       |   1    |\n\n: Table Column Widths {tbl-colwidths=\"[10,30,30,30]\"}\n```\n\nTable Column Widths\n\n\n\n\n\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1"
   },
   {
     "objectID": "materials/01-intro/slides.html#divs-and-spans",
     "href": "materials/01-intro/slides.html#divs-and-spans",
     "title": "Quarto\nDocuments",
     "section": "Divs and Spans",
-    "text": "Divs and Spans\nDivs\n::: {.border}\nThis content can be styled with a border\n:::\nSpans\n[This is *some text*]{.class key=\"val\"}\nThis is some text\n\nFor furture customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well."
+    "text": "Divs and Spans\nFor further customization, you can add classes, attributes, and other identifiers to content using divs and spans.\n\n\nDiv syntax: :::\nSpan syntax: { }\n\n\n\nDivs\n::: {.border}\nThis adds the \"border\" class to some content. \n:::\nSpans\n[This is some text]{.class key=\"val\"}\n\nFor future customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well.\n\n\nLearn more: https://quarto.org/docs/authoring/markdown-basics.html#sec-divs-and-spans"
   },
   {
     "objectID": "materials/01-intro/slides.html#divs",
     "href": "materials/01-intro/slides.html#divs",
     "title": "Quarto\nDocuments",
     "section": "Divs",
-    "text": "Divs\nCallout blocks\n\n\nmy-document.qmd\n\n:::{.callout-tip}\n\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n\n:::\n\n\n\n\n\n\n\n\nTip\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important."
+    "text": "Divs\nCallout blocks\n\n\nmy-document.qmd\n\n:::{.callout-tip}\n\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n\n:::\n\n\n\n\n\n\n\n\nTip\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\n\nLearn more: https://quarto.org/docs/authoring/markdown-basics.html#callout-blocks\n\n\nuse callout blocks to draw attention to some information. callouts use the div syntax"
   },
   {
     "objectID": "materials/01-intro/slides.html#divs-1",
@@ -1466,21 +1468,14 @@
     "href": "materials/01-intro/slides.html#changing-formats-1",
     "title": "Quarto\nDocuments",
     "section": "Changing formats",
-    "text": "Changing formats\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"World Happiness Report\"\nformat: revealjs\n---"
-  },
-  {
-    "objectID": "materials/01-intro/slides.html#changing-formats-2",
-    "href": "materials/01-intro/slides.html#changing-formats-2",
-    "title": "Quarto\nDocuments",
-    "section": "Changing formats",
-    "text": "Changing formats\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"World Happiness Report\"\nformat: pdf\n---"
+    "text": "Changing formats\n\n\nmy-document.qmd\n\n---\ntitle: \"World Happiness Report\"\nformat: revealjs\n---\n\n\n\n\n\n\n\n\nYou will see many examples of this throughout the workshop!"
   },
   {
     "objectID": "materials/01-intro/slides.html#your-turn-3",
     "href": "materials/01-intro/slides.html#your-turn-3",
     "title": "Quarto\nDocuments",
     "section": "Your turn",
-    "text": "Your turn\n\nAdd an important callout box to the introduction summarizing the report’s findings.\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nNote\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy.\n\n\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nAdd an important callout box to the introduction summarizing the report’s findings.\nIn the first paragraph, link to the World Happiness Report website (https://www.worldhappiness.report/) where it says “2025 World Happiness Report”.\nChange some text to the color \"#eb068c\".\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/01-intro/slides.html#html-theming",
@@ -1504,18 +1499,25 @@
     "text": "However, we often want a custom theme\n\n\n\n\n\n\n\nto match your organization’s or your own personal branding. and you often want to use that same theme over and over, for different kinds of outputs\n\n\nhttps://www.worldhappiness.report/"
   },
   {
-    "objectID": "materials/01-intro/slides.html#introducing-brand.yml",
-    "href": "materials/01-intro/slides.html#introducing-brand.yml",
+    "objectID": "materials/01-intro/slides.html#section-1",
+    "href": "materials/01-intro/slides.html#section-1",
     "title": "Quarto\nDocuments",
-    "section": "Introducing brand.yml",
-    "text": "Introducing brand.yml\n\n\n\n\n\nCreate reports, apps, dashboards, plots and more that match your company’s brand guidelines with a single _brand.yml file.\n\n\nbrand.yml is a simple, portable YAML file that codifies your company’s brand guidelines into a format that can be used by Quarto, Python and R tooling to create branded outputs. Our goal is to support unified, branded theming for all of Posit’s open source tools—from web applications to printed reports to dashboards and presentations—with a consistent look and feel.\n\n\nbrand.yml documentation, Quarto documentation"
+    "section": "",
+    "text": "Unified branding with a simple YAML file\n\n\nCreate reports, apps, dashboards, plots and more that match your company’s brand guidelines with a single _brand.yml file.\n\nbrand.yml is a simple, portable YAML file that codifies your company’s brand guidelines into a format that can be used by Quarto, Python and R tooling to create branded outputs. Our goal is to support unified, branded theming for all of Posit’s open source tools—from web applications to printed reports to dashboards and presentations—with a consistent look and feel.\n\n\nLearn more: https://posit-dev.github.io/brand-yml/"
+  },
+  {
+    "objectID": "materials/01-intro/slides.html#section-2",
+    "href": "materials/01-intro/slides.html#section-2",
+    "title": "Quarto\nDocuments",
+    "section": "",
+    "text": "1. Define branding in a single _brand.yml file.\n2. Apply that branding across almost all Quarto formats.\n\n\n\nbrand.yml also works with Shiny!"
   },
   {
     "objectID": "materials/01-intro/slides.html#section-3",
     "href": "materials/01-intro/slides.html#section-3",
     "title": "Quarto\nDocuments",
     "section": "",
-    "text": "---\nconfig:\n  look: handDrawn\n  theme: neutral\n---\nflowchart LR\n    by{brand.yml}\n    by--&gt;quarto[Quarto]\n    quarto--&gt;quarto-html\n    quarto--&gt;quarto-pdf\n    quarto-html--&gt;quarto-websites[Websites]\n    quarto-html--&gt;quarto-presentations[Presentations]\n    quarto-html--&gt;quarto-dashboards[Dashboards]\n    quarto-html--&gt;quarto-emails[Emails]\n    quarto-pdf--&gt;quarto-typst[Typst]\n\n    by--&gt;R\n    R--&gt;r-bslib[\"{bslib}\"]\n    r-bslib--&gt;r-thematic[\"{thematic}\"]\n    r-bslib--&gt;r-shiny[\"Shiny for R\"]\n    r-bslib--&gt;r-rmd[\"R Markdown\"]\n    r-bslib--&gt;r-pkgdown[\"pkgdown\"]\n    %% r-thematic--&gt;r-ggplot2[\"{ggplot2}\"]\n    %% r-thematic--&gt;r-plot[\"{plot}\"]\n\n    by--&gt;Python\n    Python--&gt;py-brand_yml[\"brand_yml\"]\n    py-brand_yml--&gt;py-shiny[Shiny for Python]\n    py-brand_yml--&gt;py-plots[seaborn, matplotlib, etc.]\n\n    classDef implemented fill:#8CE3A0,stroke:#0A2911,color:#0A2911;\n    classDef partial fill:#A8E5B9,stroke:#4B8A5D,color:#0A2911;\n    classDef in-progress fill:#B3D7FF,stroke:#00254D,color:#00254D;\n    classDef highlighted fill:#FFE8DB,stroke:#612200,color:#612200;\n\n    class quarto-websites,quarto-presentations,quarto-dashboards,quarto-typst,py-brand_yml,py-shiny,r-bslib,r-shiny,r-rmd,r-pkgdown implemented;\n    class r-thematic,py-plots partial;\n    class by highlighted;\n\n    click quarto href \"https://prerelease.quarto.org/docs/authoring/brand.html\"\n    click quarto-typst href \"https://quarto.org/docs/output-formats/typst.html\" \"Typst in Quarto\"\n    click quarto-presentations href \"https://quarto.org/docs/presentations/revealjs/\" \"Reveal.js in Quarto\"\n    click quarto-dashboards href \"https://quarto.org/docs/dashboards/\" \"Dashboards in Quarto\"\n    click r-shiny href \"https://shiny.posit.co/\"\n    click r-bslib href \"https://rstudio.github.io/bslib/\"\n    click r-thematic href \"https://rstudio.github.io/thematic/\"\n    click r-ggplot2 href \"https://ggplot2.tidyverse.org/\"\n    click r-rmd href \"https://rmarkdown.rstudio.com/\"\n    click py-shiny href \"https://shiny.posit.co/py/\"\n    click py-brand_yml href \"pkg/py/\"\n\n\n\n\n\n\n\n\nhttps://posit-dev.github.io/brand-yml/\n\nbrand.yml works with a variety of open source projects, including all the Quarto outputs we’ll talk about today. as well as Shiny for R and Shiny for Python. This means you can define your organization’s branding in a brand.yml file once, and then apply it all over relatively effortlessly.\nover the course of this workshop, we’ll use the same brand file to apply to all our outputs"
+    "text": "---\nconfig:\n  look: handDrawn\n  theme: neutral\n---\nflowchart LR\n    by{brand.yml}\n    by--&gt;quarto[Quarto]\n    quarto--&gt;quarto-html\n    quarto--&gt;quarto-pdf\n    quarto-html--&gt;quarto-websites[Websites]\n    quarto-html--&gt;quarto-presentations[Presentations]\n    quarto-html--&gt;quarto-dashboards[Dashboards]\n    quarto-html--&gt;quarto-emails[Emails]\n    quarto-pdf--&gt;quarto-typst[Typst]\n\n    by--&gt;R\n    R--&gt;r-bslib[\"{bslib}\"]\n    r-bslib--&gt;r-thematic[\"{thematic}\"]\n    r-bslib--&gt;r-shiny[\"Shiny for R\"]\n    r-bslib--&gt;r-rmd[\"R Markdown\"]\n    r-bslib--&gt;r-pkgdown[\"pkgdown\"]\n    %% r-thematic--&gt;r-ggplot2[\"{ggplot2}\"]\n    %% r-thematic--&gt;r-plot[\"{plot}\"]\n\n    by--&gt;Python\n    Python--&gt;py-brand_yml[\"brand_yml\"]\n    py-brand_yml--&gt;py-shiny[Shiny for Python]\n    py-brand_yml--&gt;py-plots[seaborn, matplotlib, etc.]\n\n    classDef implemented fill:#8CE3A0,stroke:#0A2911,color:#0A2911;\n    classDef partial fill:#A8E5B9,stroke:#4B8A5D,color:#0A2911;\n    classDef in-progress fill:#B3D7FF,stroke:#00254D,color:#00254D;\n    classDef highlighted fill:#FFE8DB,stroke:#612200,color:#612200;\n\n    class quarto-websites,quarto-presentations,quarto-dashboards,quarto-typst,py-brand_yml,py-shiny,r-bslib,r-shiny,r-rmd,r-pkgdown implemented;\n    class r-thematic,py-plots partial;\n    class by highlighted;\n\n    click quarto href \"https://prerelease.quarto.org/docs/authoring/brand.html\"\n    click quarto-typst href \"https://quarto.org/docs/output-formats/typst.html\" \"Typst in Quarto\"\n    click quarto-presentations href \"https://quarto.org/docs/presentations/revealjs/\" \"Reveal.js in Quarto\"\n    click quarto-dashboards href \"https://quarto.org/docs/dashboards/\" \"Dashboards in Quarto\"\n    click r-shiny href \"https://shiny.posit.co/\"\n    click r-bslib href \"https://rstudio.github.io/bslib/\"\n    click r-thematic href \"https://rstudio.github.io/thematic/\"\n    click r-ggplot2 href \"https://ggplot2.tidyverse.org/\"\n    click r-rmd href \"https://rmarkdown.rstudio.com/\"\n    click py-shiny href \"https://shiny.posit.co/py/\"\n    click py-brand_yml href \"pkg/py/\"\n\n\n\n\n\n\n\n\n\nLearn more: https://posit-dev.github.io/brand-yml/\n\n\nbrand.yml works with a variety of open source projects, including all the Quarto outputs we’ll talk about today. as well as Shiny for R and Shiny for Python. This means you can define your organization’s branding in a brand.yml file once, and then apply it all over relatively effortlessly.\nover the course of this workshop, we’ll use the same brand file to apply to all our outputs"
   },
   {
     "objectID": "materials/01-intro/slides.html#brand.yml-elements",
@@ -1532,11 +1534,11 @@
     "text": "_brand.yml structure\n\n\n_brand.yml\n\nmeta:\n  name: World Happiness Report\n  link:\n    home: https://www.worldhappiness.report/\n\nlogo:\n  images:\n    icon:\n      path: images/whr_logo.png\n      alt: World Happiness Report icon.\n  small: images/whr_logo.png\n\ncolor:\n  palette:\n    dark-purple: \"#93358c\"\n    light-purple: \"#f8f6fb\"\n    teal: \"#04afaf\"\n    dark-blue: \"#086992\"\n    hot-pink: \"#eb068c\"\n    light-blue: \"#1aade4\"\n\n  background: light-purple\n  foreground: black\n  primary: dark-purple\n  secondary: hot-pink\n  tertiary: light-blue\n  dark: black\n\ntypography:\n  fonts:\n    - family: Libre Franklin\n      source: google\n      weight: [400, 700]\n\n  base:\n    family: Libre Franklin\n    weight: 400\n\n  headings:\n    family: Libre Franklin\n    weight: 700\n    color: dark-purple\n\n  link:\n    color: primary\n    decoration: none\n\n\nif this seems like a lot of details, don’t worry! we will show you how to make your own file later. for now, it’s enough to just have a general understanding of the different parts"
   },
   {
-    "objectID": "materials/01-intro/slides.html#how-to-apply-brand.yml-automatically",
-    "href": "materials/01-intro/slides.html#how-to-apply-brand.yml-automatically",
+    "objectID": "materials/01-intro/slides.html#how-to-apply-brand.yml-to-quarto",
+    "href": "materials/01-intro/slides.html#how-to-apply-brand.yml-to-quarto",
     "title": "Quarto\nDocuments",
-    "section": "How to apply brand.yml automatically",
-    "text": "How to apply brand.yml automatically\n\nDefine branding in a single_brand.yml file.\nSave in the root directory of your Quarto project.\n\nQuarto will detect the presence of _brand.yml and automatically apply the brand to all documents of the supported formats in the project."
+    "section": "How to apply brand.yml to Quarto",
+    "text": "How to apply brand.yml to Quarto\n\nDefine branding in _brand.yml.\nSave in the root directory of your Quarto project.\n\nQuarto will detect the presence of _brand.yml and automatically apply the brand to all documents of the supported formats in the project."
   },
   {
     "objectID": "materials/01-intro/slides.html#section-4",
@@ -1553,11 +1555,18 @@
     "text": "Disable brand.yml\nTo turn off brand.yml for a document, use brand: false.\n\n\nmy-document.qmd\n\n---\ntitle: \"World Happiness Report\"\nsubtitle: \"Happiness Trends and Contributing Factors (2011-2024)\"\nformat: html\nbrand: false\n---"
   },
   {
+    "objectID": "materials/01-intro/slides.html#brand-shortcode",
+    "href": "materials/01-intro/slides.html#brand-shortcode",
+    "title": "Quarto\nDocuments",
+    "section": "brand shortcode",
+    "text": "brand shortcode\nAccess some brand.yml values with a shortcode.\n\n\nmy_document.qmd\n\n#f3c13d\n\n\nLearn more: https://quarto.org/docs/authoring/brand.html#using-brand-values\n\n\nyou’ll see an example of this during the presentations section"
+  },
+  {
     "objectID": "materials/01-intro/slides.html#your-turn-4",
     "href": "materials/01-intro/slides.html#your-turn-4",
     "title": "Quarto\nDocuments",
     "section": "Your turn",
-    "text": "Your turn\n\nIn the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes.\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nIn the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes. You can reset the file by copying and pasting it from here.\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/01-intro/slides.html#what-about-plots",
@@ -1585,14 +1594,14 @@
     "href": "materials/01-intro/slides.html#brand.yml-packages",
     "title": "Quarto\nDocuments",
     "section": "brand.yml packages",
-    "text": "brand.yml packages\nUse the R or Python brand.yml package to create a brand file from a string.\n\nRPython\n\n\n\nlibrary(brand.yml)\n\nas_brand_yml(\"\n  meta:\n    name: Example Brand\n\n  color:\n    primary: '#FF5733'\n    secondary: '#33FF57'\n\")\n\n\n\n\nfrom brand_yml import Brand\n\nbrand = Brand.from_yaml_str(\n  \"\"\"\n  meta:\n    name: Example Brand\n\n  color:\n    primary: '#FF5733'\n    secondary: '#33FF57'\n  \"\"\"\n)"
+    "text": "brand.yml packages\nAccess and apply specific brand elements.\n\nRPython\n\n\n\nlibrary(brand.yml)\n\nbrand &lt;- read_brand_yml(\"_brand.yml\")\n\nbrand$color$primary\n\n\n\n\nfrom brand_yml import Brand\n\nbrand = Brand.from_yaml(\"_brand.yml\")\n\nbrand.color.primary"
   },
   {
     "objectID": "materials/01-intro/slides.html#brand.yml-packages-1",
     "href": "materials/01-intro/slides.html#brand.yml-packages-1",
     "title": "Quarto\nDocuments",
     "section": "brand.yml packages",
-    "text": "brand.yml packages\nAccess and apply specific brand elements.\n\nRPython\n\n\n\nlibrary(brand.yml)\n\nbrand &lt;- read_brand_yml(\"_brand.yml\")\n\nbrand$color$primary\n\n\n\n\nfrom brand_yml import Brand\n\nbrand = Brand.from_yaml(\"_brand.yml\")\n\nbrand.color.primary"
+    "text": "brand.yml packages\nUse the R or Python brand.yml package to create a brand file from a string.\n\nRPython\n\n\n\nlibrary(brand.yml)\n\nas_brand_yml(\"\n  meta:\n    name: Example Brand\n\n  color:\n    primary: '#FF5733'\n    secondary: '#33FF57'\n\")\n\n\n\n\nfrom brand_yml import Brand\n\nbrand = Brand.from_yaml_str(\n  \"\"\"\n  meta:\n    name: Example Brand\n\n  color:\n    primary: '#FF5733'\n    secondary: '#33FF57'\n  \"\"\"\n)"
   },
   {
     "objectID": "materials/01-intro/slides.html#your-turn-6",
@@ -1600,6 +1609,13 @@
     "title": "Quarto\nDocuments",
     "section": "Your turn",
     "text": "Your turn\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette['teal'])\n\n\n\n\ngeom_line(color = brand.color.palette.teal)\n\n\n\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "materials/01-intro/slides.html#why-brand.yml",
+    "href": "materials/01-intro/slides.html#why-brand.yml",
+    "title": "Quarto\nDocuments",
+    "section": "Why brand.yml?",
+    "text": "Why brand.yml?\n\nConsistent branding with minimal effort.\nCommon syntax across different outputs. Reduces duplication.\nEasy collaboration."
   },
   {
     "objectID": "materials/01-intro/exercise-05.html",
