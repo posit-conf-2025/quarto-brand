@@ -1426,7 +1426,14 @@
     "href": "materials/01-intro/slides.html#divs-and-spans",
     "title": "Quarto\nDocuments",
     "section": "Divs and Spans",
-    "text": "Divs and Spans\nFor further customization, you can add classes, attributes, and other identifiers to content using divs and spans.\n\n\nDiv syntax: :::\nSpan syntax: { }\n\n\n\nDivs\n::: {.border}\nThis adds the \"border\" class to some content. \n:::\nSpans\n[This is some text]{.class key=\"val\"}\n\nFor future customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well.\n\n\nLearn more: https://quarto.org/docs/authoring/markdown-basics.html#sec-divs-and-spans"
+    "text": "Divs and Spans\nFor further customization, you can add classes, attributes, and other identifiers to content using divs and spans.\n\n\nDiv syntax: :::\nSpan syntax: { }\n\n\nFor future customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well."
+  },
+  {
+    "objectID": "materials/01-intro/slides.html#divs-and-spans-1",
+    "href": "materials/01-intro/slides.html#divs-and-spans-1",
+    "title": "Quarto\nDocuments",
+    "section": "Divs and Spans",
+    "text": "Divs and Spans\nDivs\n::: {.border}\nThis adds the \"border\" class to some content. \n:::\nSpans\n[This is some text]{.class key=\"val\"}"
   },
   {
     "objectID": "materials/01-intro/slides.html#divs",
@@ -1440,7 +1447,7 @@
     "href": "materials/01-intro/slides.html#divs-1",
     "title": "Quarto\nDocuments",
     "section": "Divs",
-    "text": "Divs\nMultiple columns\n\n\nmy-document.qmd\n\n::: {layout-ncol=2}\n\n![](earth.jpg)\n\nPhoto by &lt;a href=\"https://unsplash.com/@nypl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\"&gt;The New York Public Library&lt;/a&gt; on &lt;a href=\"https://unsplash.com/photos/planet-earth-close-up-photography-yEauzeZU6xo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\"&gt;Unsplash&lt;/a&gt;\n:::\n\n\n\n\n\n\n\n\nPhoto by The New York Public Library on Unsplash"
+    "text": "Divs\nMultiple columns\n\n\nmy-document.qmd\n\n::: {layout-ncol=2}\n\nColumn 1 information. This is all content that will go in column 1. \n\n*Column 2 information.*\n:::\n\n\n\n\n\nColumn 1 information. This is all content that will go in column 1.\n\n\nColumn 2 information."
   },
   {
     "objectID": "materials/01-intro/slides.html#divs-2",
