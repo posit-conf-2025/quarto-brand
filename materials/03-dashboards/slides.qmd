@@ -1,7 +1,5 @@
 ---
 title: "Quarto<br>Dashboards"
-footer: "pos.it/quarto-brand-conf25"
-logo: ""
 format:
   revealjs:
     title-slide-attributes: 
@@ -12,7 +10,7 @@ filters:
   - reveal-auto-agenda
 ---
 
-# Hello, Dashboards!
+# Hello, Dashboards! {background-color='{{< brand color dark-blue >}}'}
 
 ## Quarto ➝ many outputs {background-image="images/quarto-to-docs.png"}
 
@@ -45,16 +43,6 @@ sidebar
 ::: {.notes}
 interactive leaflet widget
 html widget
-:::
-
-## 
-
-![](images/dashboards/model-card.png){fig-align="center" width="100%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
-
-::: {.notes}
-dashboard for a model
-provides context into the model by adding narrative to the dashboard
-not just raw json dump
 :::
 
 ## 
@@ -99,7 +87,7 @@ Many components you can add
 all components offered in ipynb or plain text qmd
 :::
 
-# Dashboard basics
+# Dashboard basics {background-color='{{< brand color dark-blue >}}'}
 
 ## Cards {auto-animate="true" auto-animate-easing="ease-in-out"}
 
@@ -417,7 +405,7 @@ now have a dashboard
 countdown::countdown(minutes = 3, seconds = 0, play_sound = TRUE)
 ```
 
-# Layout
+# Layout {background-color='{{< brand color dark-blue >}}'}
 
 ## Rows {auto-animate="true"}
 
@@ -670,7 +658,7 @@ multiple ways to make value boxes
 
 -   You can create value boxes in executable cells or plain markdown in divs
 
--   Value boxes use Bootstrap icons (<https://icons.getbootstrap.com>) and can be set to any color (e.g., with a HEX code) or color alias defined by the theme (we'll get to themes later!)
+-   Value boxes use Bootstrap icons (<https://icons.getbootstrap.com>) and can be set to any color (e.g., with a HEX code) or color alias defined by the theme.
 
     | Color alias | Default theme color(s) |
     |-------------|------------------------|
