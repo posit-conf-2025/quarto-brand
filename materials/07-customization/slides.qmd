@@ -199,7 +199,7 @@ Learn more: [https://posit-dev.github.io/brand-yml/brand/defaults.html](https://
 
 ## Your turn {background-color='{{< brand color light-blue >}}'}
 
-Continue working on your own Quarto project and `_brand.yml`! 
+{{< include exercise-01.qmd >}}
 
 ## Survey
 
