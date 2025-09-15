@@ -1,14 +1,3 @@
-* Add an `important` callout box to the introduction summarizing the report's findings.
-
-```markdown
-::: {.callout-important}
-_text here_
-:::
-```
-
-* Change the `format` to `revealjs`. Preview the document.
-* Change the `format` to `pdf`. Preview the document.
-
-::: {.callout-note}
-Removing `code-fold`, `code-summary`, and `embed-resources` is not required because these are `html` only features. However, I'd recommend removing them to keep your document tidy.
-:::
+* Add an `important` [callout box](https://quarto.org/docs/authoring/callouts.html) to the introduction summarizing the report's findings. 
+* In the first paragraph, link to the World Happiness Report website (https://www.worldhappiness.report/) where it says "2025 World Happiness Report".
+* Change some text to the color `"#eb068c"`. 
