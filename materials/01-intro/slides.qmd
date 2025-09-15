@@ -38,6 +38,19 @@ Find the materials at: [pos.it/quarto-brand-conf25](pos.it/quarto-brand-conf25)
 * Participants who do not wish to be photographed have red lanyards; please note everyone’s lanyard colors before taking a photo and respect their choices.
 * The Code of Conduct can be found at [https://posit.co/code-of-conduct](https://posit.co/code-of-conduct). You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information.
 
+## Schedule
+
+## Schedule
+
+| [Time]{style="font-size: 1.2em;"} |    [Activity]{style="font-size: 1.2em;"}    |
+| :------------ | :--------------- |
+| 9:00 - 10:30 | Intro to Quarto  & brand.yml     |
+| 10:30 - 11:00 | *Coffee break*  ☕️ |
+| 11:00 - 12:30 | Presentations & Dashboards        |
+| 12:30 - 1:30 | *Lunch break*  🍽️  |
+| 1:30 - 3:00 | PDFs & Websites        |
+| 3:00 - 3:30 | *Coffee break*  ☕️ |
+| 3:30 - 5:00 | Customizing your brand        |
 
 ## About us
 
@@ -79,6 +92,10 @@ Find the materials at: [pos.it/quarto-brand-conf25](pos.it/quarto-brand-conf25)
 [{{< fa link >}} ivelasq.rbind.io](https://ivelasq.rbind.io)
 
 :::
+:::
+
+::: notes
+Introduce TAs
 :::
 
 ## Meeting you where you are
@@ -369,7 +386,7 @@ Quarto is a command line interface (**CLI**) that renders plain text formats (`.
 -   Quarto applies Lua filters + CSS/LaTeX which is then evaluated alongside the `.md` file by Pandoc and converted to a final output format
 :::
 
-## {background-color='{{< brand color dark-blue >}}'}
+## Options {background-color='{{< brand color dark-blue >}}'}
 
 Let's walk through your options for today.
 
@@ -759,7 +776,7 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 |   123 | 123  | 123     |  123   |
 |     1 | 1    | 1       |   1    |
 
-: Table Column Widths {tbl-colwidths="\[10,30,30,30\]"}
+: Table Column Widths {tbl-colwidths="[10,30,30,30]"}
 
 ## Divs and Spans
 
@@ -785,7 +802,7 @@ For further customization, you can add classes, attributes, and other identifier
 
 
 ::: notes
-For furture customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well.
+For future customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well.
 :::
 
 ::: footer
@@ -1205,7 +1222,7 @@ brand: false
 ---
 ```
 
-## Shortcode - `{{< brand >}}`
+## `brand` shortcode 
 
 Access some brand.yml values with a shortcode. 
 
@@ -1239,6 +1256,7 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 ::: notes
 The plots, at least for the R version, are unbranded. how can we apply brand.yml to plots too?
 :::
+
 
 ## Theme helpers
 
@@ -1277,6 +1295,8 @@ Python: [https://github.com/quarto-dev/quarto-python?tab=readme-ov-file#theme-he
 ::: notes
 There are other theme helpers for other plotting libraries
 :::
+
+
 
 ## Your turn {background-color='{{< brand color light-blue >}}'}
 
@@ -1386,3 +1406,5 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 * Easy collaboration.
 
 :::
+
+
