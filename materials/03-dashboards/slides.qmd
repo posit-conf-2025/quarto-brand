@@ -157,7 +157,7 @@ talk about this in the next slide deck
 
 Let's make a dashboard, step-by-step
 
-# First dashboard
+# First dashboard {background-color='{{< brand color dark-blue >}}'}
 
 ## Step 1: `format: dashboard` {auto-animate="true"}
 
