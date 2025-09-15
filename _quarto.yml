@@ -22,6 +22,8 @@ website:
         text: Websites
       - href: materials/06-byob/index.qmd
         text: Creating and Sharing
+      - href: materials/07-customization/index.qmd
+        text: Customization
 
 format:
   html:
