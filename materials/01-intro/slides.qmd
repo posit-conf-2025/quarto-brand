@@ -787,8 +787,12 @@ For further customization, you can add classes, attributes, and other identifier
 * Div syntax: `:::`
 * Span syntax: `{ }`
 
+::: notes
+For future customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well.
+:::
 
-. . .
+
+## Divs and Spans
 
 **Divs**
 
@@ -800,14 +804,6 @@ For further customization, you can add classes, attributes, and other identifier
 
     [This is some text]{.class key="val"}
 
-
-::: notes
-For future customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well.
-:::
-
-::: footer
-Learn more: <https://quarto.org/docs/authoring/markdown-basics.html#sec-divs-and-spans>
-:::
 
 ## Divs
 
@@ -843,19 +839,20 @@ use callout blocks to draw attention to some information. callouts use the div s
 ```{.markdown filename="my-document.qmd"}
 ::: {layout-ncol=2}
 
-![](earth.jpg)
+Column 1 information. This is all content that will go in column 1. 
 
-Photo by <a href="https://unsplash.com/@nypl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">The New York Public Library</a> on <a href="https://unsplash.com/photos/planet-earth-close-up-photography-yEauzeZU6xo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+*Column 2 information.*
 :::
 ```
 
 . . .
 
 
-::: {layout-ncol="2"}
-![](images/earth.jpg)
+::: {layout-ncol=2}
 
-Photo by <a href="https://unsplash.com/@nypl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">The New York Public Library</a> on <a href="https://unsplash.com/photos/planet-earth-close-up-photography-yEauzeZU6xo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+Column 1 information. This is all content that will go in column 1. 
+
+*Column 2 information.*
 :::
 
 
