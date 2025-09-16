@@ -17,7 +17,7 @@ filters:
 library(countdown)
 ```
 
-## **Branded Websites, Presentations, Dashboards, and PDFs with Quarto**
+## **Branded Websites, Presentations, Dashboards, and PDFs with Quarto** 
 <br>
 **WiFi:** Posit Conf 2025 **Password:** conf2025
 
@@ -25,10 +25,10 @@ library(countdown)
 Find the materials at: [pos.it/quarto-brand-conf25](pos.it/quarto-brand-conf25)
 
 <br>
-**Make sure to:**
+**Make sure you've:**
 
-1. Install [Quarto 1.8](https://quarto.org/docs/get-started/)
-2. Join Discord: From the [event portal](https://reg.conf.posit.co/flow/posit/positconf25/reg/login), click "Join the server", find our channel: #workshop-quarto-brand
+1. Installed [Quarto 1.8](https://quarto.org/docs/get-started/)
+2. Joined Discord: [event portal](https://reg.conf.posit.co/flow/posit/positconf25/reg/login) > "Join the server" > #workshop-quarto-brand
 
 ::: notes
 Intro: 30 min your turn
@@ -110,6 +110,37 @@ From the [event portal](https://reg.conf.posit.co/flow/posit/positconf25/reg/log
 
 :::
 :::
+
+## About us
+
+:::: columns
+::: {.column width="50%"}
+
+![](images/gordon.png){fig-alt="Isabella's headshot" fig-align="center" width=250px style="border-radius: 50%;"}
+
+<center>
+**Gordon Woodhull**
+
+Software Engineer, Quarto
+
+</center>
+
+:::
+
+::: {.column width="50%"}
+
+![](images/christophe.jpg){fig-alt="Isabella's headshot" fig-align="center" width=250px style="border-radius: 50%;"}
+
+<center>
+**Christophe Dervieux**
+
+Software Engineer,<br>R Markdown and Quarto
+
+</center>
+
+:::
+
+::::
 
 ::: notes
 Introduce TAs
@@ -372,6 +403,47 @@ So, if there already exist literate programming tools out there, why create a ne
 
 : {tbl-colwidths="\[25,75\]"}
 
+## How it works {.smaller}
+
+Quarto is a command line interface (**CLI**) that renders plain text formats (`.qmd`, `.rmd`, `.md`) OR mixed formats (`.ipynb`/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more.
+
+. . .
+
+```{bash}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "|1|2|10|15|16"
+
+  Usage:   quarto 
+  Version: 1.8.24
+
+  Description:
+
+    Quarto CLI
+
+  Options:
+
+    -h, --help     - Show this help.                            
+    -V, --version  - Show the version number for this program.  
+
+  Commands:
+
+    render          [input] [args...]     - Render files or projects to various document types.
+    preview         [file] [args...]      - Render and preview a document or website project.  
+    serve           [input]               - Serve a Shiny interactive document.                
+    create          [type] [commands...]  - Create a Quarto project or extension               
+    create-project  [dir]                 - Create a project for rendering multiple documents  
+    convert         <input>               - Convert documents to alternate representations.    
+    pandoc          [args...]             - Run the version of Pandoc embedded within Quarto.  
+    typst           [args...]             - Run the version of Typst embedded within Quarto.   
+    run             [script] [args...]    - Run a TypeScript, R, Python, or Lua script.        
+    add             <extension>           - Add an extension to this folder or project         
+    install         [target...]           - Installs an extension or global dependency.        
+    publish         [provider] [path]     - Publish a document or project to a provider.       
+    check           [target]              - Verify correct functioning of Quarto installation. 
+    help            [command]             - Show this help or the help of a sub-command.
+```
+
 ## Under the hood
 
 ![](images/quarto-how-it-works.png){fig-align="center"}
@@ -388,7 +460,6 @@ Illustration by Allison Horst
 Let's walk through your options for today.
 
 ::: incremental
-
 1. Posit Cloud - RStudio
 2. GitHub Codespace - VS Code
 3. Local installation 
@@ -422,6 +493,8 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 * Open a `.qmd` file.
 * Preview/render the document.
 * Make a change and preview/render again.
+
+## Render/preview
 
 ::: {.fragment}
 
