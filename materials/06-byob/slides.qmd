@@ -9,14 +9,34 @@ format:
 footer: "pos.it/quarto-brand-conf25"
 ---
 
+# Creating a `_brand.yml` file {background-color='{{< brand color dark-blue >}}'}
+
 ## Creating a `_brand.yml` file
 
-`_brand.yml` is a text file; create a new one by running
+* In RStudio, go to File > New File > Text File.
+* In VS Code or Positron, use the Command Palette (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> on Windows/Linux or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> on Mac) and select New Untitled Text File.
 
-* File > New File > Text File in RStudio
-* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> New Untitled Text File in VS Code or Positron
+Save the file as `_brand.yml`.
 
-## Creating a `_brand.yml` file with an LLM
+::: notes
+You can create this file in any text editor. If you're using RStudio, you'll find the option under the "File" menu. For those of you using VS Code or Positron, the command palette is the fastest way to get started. Once you've created the file, make sure to save it as _brand.yml in the root directory of your project.
+:::
+
+## **brand.yml** Inspiration
+
+The **brand.yml** docs site has a great Inspiration page with many references!
+
+[![](images/brand-inspiration.png){width=40% fig-align="center"}](https://posit-dev.github.io/brand-yml/inspiration/){preview-link="true"}
+
+::: footer
+Learn more: [Inspiration](https://posit-dev.github.io/brand-yml/inspiration/)
+:::
+
+::: notes
+When you're ready to start building your brand file, you don't have to start from scratch. The brand.yml documentation site has an entire page dedicated to inspiration. The inspiration page is full of examples from real-world projects, which can give you a great starting point for your own branding. I highly recommend checking it out for ideas on colors, fonts, and layouts.
+:::
+
+## Get a little help from a Large Language Model (LLM)
 
 [![](images/brand-llm.png){width=40% fig-align="center"}](https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt/){preview-link="true"}
 
@@ -24,12 +44,26 @@ footer: "pos.it/quarto-brand-conf25"
 Learn more: [Creating a brand.yml with an LLM](https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt/)
 :::
 
-## Sharing a `_brand.yml` file
+::: notes
+For those of you who want to jumpstart the process even more, you can use a Large Language Model, or LLM, to help you. The brand.yml docs site has a fantastic guide with prompts you can use to generate a starter brand.yml file. You can ask an LLM like ChatGPT or Claude to create a brand.yml file for you, describing the look and feel you want. This can save a lot of time and help you get a solid foundation very quickly.
+:::
+
+# Sharing your brand {background-color='{{< brand color dark-blue >}}'}
+
+::: notes
+So you've created your _brand.yml file, and you love it. Now, how do you share it with your team or use it across multiple projects?
+:::
+
+## Using a shared drive
 
 - Shared repository (Google Drive, OneDrive, etc.)
 - GitHub repo allows you to share with version control
 
-## Brand Extensions
+::: notes
+The simplest way is to share the file directly. You can use a shared repository like Google Drive or OneDrive. However, a more robust solution, especially if you're working with a team, is to use a GitHub repo. By storing your _brand.yml file in a GitHub repo, you get all the benefits of version control. This means you can track changes, revert to previous versions if needed.
+:::
+
+## Creating a Brand Extension
 
 New in Quarto 1.8, you can create a Quarto extension that provides a **brand.yml** file and assets.
 
@@ -40,7 +74,7 @@ $ quarto create extension brand
  ? Extension Name › my-brand
 ```
 
-. . .
+<br>
 
 ::: callout-important
 Brand Extensions must be used with a `_quarto.yml` project.
@@ -50,7 +84,33 @@ Brand Extensions must be used with a `_quarto.yml` project.
 Learn more: [Brand Extensions](https://prerelease.quarto.org/docs/extensions/brand.html)
 :::
 
-## Contents of Brand Extensions {.smaller}
+::: notes
+Now, here's where it gets really powerful. As of Quarto 1.8, you can package your _brand.yml file and all its assets, like images and CSS, into a Quarto extension. The command line code shown on the slide walks you through the first step of creating a brand extension from the terminal. It's important to note that Brand Extensions must be used within a Quarto project that has its own _quarto.yml file.
+:::
+
+## Contents of a Brand Extension
+
+```bash
+? Extension Name › my-brand
+Creating extension at /{...}/my-brand:
+  - Created _quarto.yml
+  - Created README.md
+  - Created _extensions/my-brand/brand.yml
+  - Created _extensions/my-brand/_extension.yml
+  - Created .gitignore
+  - Created example.qmd
+? Open With
+❯ positron
+  vscode
+  rstudio
+  (don't open)
+```
+
+::: notes
+When you create a brand extension, Quarto generates a directory with some key files.
+:::
+
+## Contents of a Brand Extension
 
 ```{.markdown filename="_extensions/my-brand/_extension.yml"}
 title: My-brand
@@ -63,9 +123,13 @@ contributes:
       brand: brand.yml
 ```
 
-<br>
+::: notes
+One important one is the _extension.yml file, which acts as the manifest for your extension. The code on the slide shows a simple _extension.yml file. The contributes section is what makes this a brand extension. It tells Quarto that this extension provides a brand.yml file.
+:::
 
-```{.markdown filename="_extensions/my-brand/_extension.yml"}
+## Contents of a Brand Extension
+
+```{.markdown filename="_extensions/mybrand/brand.yml"}
 color:
   background:
     light: "#fff"
@@ -75,6 +139,38 @@ color:
     dark: "#fff"
 ```
 
-## Your turn {background-color='{{< brand color light-blue >}}'}
+::: notes
+Within the created _brand.yml file, you can start building your brand. It provides just the most basic code to enable light and dark mode.
+:::
+
+## Sharing the Brand Extension
+
+Publish your Brand Extension to a GitHub repository. Once it's on GitHub, anyone can add it to their Quarto project.
+
+Run the following command in the Quarto project to use the extension:
+
+```{.bash filename="Terminal"}
+quarto add <github-organization>/<your-brand-name>
+```
+
+## Updating the Brand Extension
+
+If you make changes to your Brand Extension on GitHub, users can update the extension in their projects by running this command:
+
+```{.bash filename="Terminal"}
+quarto update <github-organization>/<your-brand-name>
+```
+
+## Your turn {background-color='{{< brand color light-blue >}}' .smaller}
 
 {{< include exercise-01.qmd >}}
+
+```{r}
+#| echo: false
+
+countdown::countdown(minutes = 10)
+```
+
+::: notes
+And with that, it's time for you to give it a try! We're going to take a few minutes to walk through creating your own _brand.yml file.
+:::
