@@ -154,7 +154,7 @@ We'll teach you
 
 🟥 “I’m stuck and need help!”
 
-🟦 “I finished the exercise”
+🟩 “I finished the exercise”
 
 * Ask in the Discord channel: [#workshop-quarto-brand](https://discord.com/channels/1381993558437007490/1402378754084573299)
 
