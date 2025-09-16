@@ -11,24 +11,24 @@ While Quarto itself doesn't require a programming language, the exercises will i
 
 **Option 1: Posit Cloud (RStudio in the cloud)**
 
-* Create a free account at <https://posit.cloud>
-* Open the Posit Cloud project link: <https://posit.cloud/spaces/679626/join?access_code=VwU0N2fEy5wwQ8qHayo8TrTZRKcT6sndAF13AHlx>
+* Create a free account at <https://posit.cloud/>
+* Open the Posit Cloud project link: <https://posit.cloud/spaces/679626/join?access_code=VwU0N2fEy5wwQ8qHayo8TrTZRKcT6sndAF13AHlx/>
 * Click "Yes" to join the space.
-* Click Content and select `quarto-brand-exercises` or go to <https://posit.cloud/spaces/679626/content/10865885>.
-* To save a copy of the project to your workspace, click "Save a permanent copy"
+* Click Content and select `quarto-brand-exercises` or go to <https://posit.cloud/spaces/679626/content/10865885/>
+* To save a copy of the project to your workspace, click "Save a permanent copy".
 
 **Option 2: GitHub Codespaces (VS Code in the browser)**
 
-* Requires a free account at <https://github.com/>
-* Go to the GitHub repo: <https://github.com/posit-dev/quarto-brand-codespaces>
-* Click "Use this template" then "Open in a codespace"
-  * Please note that loading the codespace will take a few minutes.
+* Create a free account at <https://github.com/>
+* Go to the GitHub repo: <https://github.com/posit-dev/quarto-brand-codespaces/>
+* Click "Use this template" then "Open in a codespace".
+  * Please note that loading the codespace will take several minutes.
   * If you are asked to install an extension called markdownlit, say "yes" and trust the publisher.
 * You will need to following the "Install the Necessary Packages" instructions below.
-  * Create your virtual environment by selecting Python: Create Environment in the Command Palette
-  * Select your environment type (recommend Venv)
-  * Choose an interpreter path
-  * Select requirements.txt check box to install dependencies
+  * Create your virtual environment by selecting Python: Create Environment in the Command Palette.
+  * Select your environment type (recommend `Venv`).
+  * Choose an interpreter path.
+  * Select `requirements.txt` check box to install dependencies.
 
 **Option 3: Local Installation**
 
@@ -38,22 +38,24 @@ Choose one editor and follow the steps:
 
 #### Positron
 
-* Download and install Positron: <https://positron.posit.co/download.html>
-* Quarto comes pre-installed
-
+* Download and install Positron: <https://positron.posit.co/download.html/>
+* Quarto comes pre-installed.
+  * Make sure Quarto is version 1.8+.
+  
 #### RStudio
 
 * Download and install RStudio: <https://posit.co/downloads/>
-  * Make sure RStudio is version 2022.07+
-* Quarto comes pre-installed
+  * Make sure RStudio is version 2022.07+.
+* Quarto comes pre-installed.
+  * Make sure Quarto is version 1.8+.
   
 #### VS Code
 
-* Download and install VS Code: <https://code.visualstudio.com/download>
+* Download and install VS Code: <https://code.visualstudio.com/download/>
 * Download and install Quarto: <https://quarto.org/docs/get-started/>
 * Install the following extensions:
-  * Quarto Extension: <https://marketplace.visualstudio.com/items?itemName=quarto.quarto>
-  * Jupyter Extension: <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter> 
+  * Quarto Extension: <https://marketplace.visualstudio.com/items?itemName=quarto.quarto/>
+  * Jupyter Extension: <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter/> 
 :::
 
 ### Accessing the Workshop Materials
@@ -72,9 +74,9 @@ git clone https://github.com/posit-dev/quarto-brand-exercises.git
 
 **If you don’t use Git/GitHub:**
 
-* Go to the GitHub repo: <https://github.com/posit-dev/quarto-brand-exercises>
-* Click the green "Code" button → "Download ZIP"
-* Unzip the folder and open it in your chosen editor
+* Go to the GitHub repo: <https://github.com/posit-dev/quarto-brand-exercises/>
+* Click the green "Code" button → "Download ZIP".
+* Unzip the folder and open it in your chosen editor.
 
 ### Install the Necessary Packages
 
@@ -91,8 +93,8 @@ pak::pak(c("tidyverse", "quarto", "patchwork", "posit-dev/brand-yml/pkg-r"))
 
 ### Python
 
-- Create your virtual environment by selecting `Python: Create Environment` in the Command Palette
-- Select your environment type (recommend `Venv`)
-- Choose an interpreter path
-- Select `requirements.txt` check box to install dependencies
+- Create your virtual environment by selecting `Python: Create Environment` in the Command Palette.
+- Select your environment type (recommend `Venv`).
+- Choose an interpreter path.
+- Select `requirements.txt` check box to install dependencies.
 :::
