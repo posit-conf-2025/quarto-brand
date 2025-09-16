@@ -1,4 +1,4 @@
-1.  Get the starter template. If you're using Posit Cloud, skip this step and instead open the `whr-website` project.
+1.  Get the starter template. If you're using Posit Cloud, skip this step and instead open the `whr-website` project. If you're using Codespaces, follow the instructions [here](https://posit-conf-2025.github.io/quarto-brand/materials/00-setup/#recommended-setup-options), but go to [this repo](https://github.com/posit-dev/quarto-brand-website-codespaces) instead.
 
 2.  Open `index.qmd` and click Render/Preview.
 
