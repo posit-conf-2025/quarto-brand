@@ -187,6 +187,8 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../../site_libs/countdown-0.4.0/countdown.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -199,16 +201,59 @@
 </div>
 
 </section>
-<section id="creating-a-_brand.yml-file" class="slide level2">
-<h2>Creating a <code>_brand.yml</code> file</h2>
-<p><code>_brand.yml</code> is a text file; create a new one by running</p>
-<ul>
-<li>File &gt; New File &gt; Text File in RStudio</li>
-<li><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> New Untitled Text File in VS Code or Positron</li>
-</ul>
+<section>
+<section id="creating-a-_brand.yml-file" class="title-slide slide level1 center" data-background-color="#223e50">
+<h1>Creating a <code>_brand.yml</code> file</h1>
+
 </section>
-<section id="creating-a-_brand.yml-file-with-an-llm" class="slide level2">
-<h2>Creating a <code>_brand.yml</code> file with an LLM</h2>
+<section id="creating-a-_brand.yml-file-1" class="slide level2">
+<h2>Creating a <code>_brand.yml</code> file</h2>
+<ul>
+<li>In RStudio, go to File &gt; New File &gt; Text File.</li>
+<li>In VS Code or Positron, use the Command Palette (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> on Windows/Linux or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> on Mac) and select New Untitled Text File.</li>
+</ul>
+<p>Save the file as <code>_brand.yml</code>.</p>
+<aside class="notes">
+<p>You can create this file in any text editor. If you’re using RStudio, you’ll find the option under the “File” menu. For those of you using VS Code or Positron, the command palette is the fastest way to get started. Once you’ve created the file, make sure to save it as _brand.yml in the root directory of your project.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="brand.yml-inspiration" class="slide level2">
+<h2><strong>brand.yml</strong> Inspiration</h2>
+<p>The <strong>brand.yml</strong> docs site has a great Inspiration page with many references!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://posit-dev.github.io/brand-yml/inspiration/" data-preview-link="true"><img data-src="images/brand-inspiration.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></a></p>
+</figure>
+</div>
+<div class="footer">
+<p>Learn more: <a href="https://posit-dev.github.io/brand-yml/inspiration/">Inspiration</a></p>
+</div>
+<aside class="notes">
+<p>When you’re ready to start building your brand file, you don’t have to start from scratch. The brand.yml documentation site has an entire page dedicated to inspiration. The inspiration page is full of examples from real-world projects, which can give you a great starting point for your own branding. I highly recommend checking it out for ideas on colors, fonts, and layouts.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="get-a-little-help-from-a-large-language-model-llm" class="slide level2">
+<h2>Get a little help from a Large Language Model (LLM)</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><a href="https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt/" data-preview-link="true"><img data-src="images/brand-llm.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></a></p>
@@ -217,16 +262,59 @@
 <div class="footer">
 <p>Learn more: <a href="https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt/">Creating a brand.yml with an LLM</a></p>
 </div>
+<aside class="notes">
+<p>For those of you who want to jumpstart the process even more, you can use a Large Language Model, or LLM, to help you. The brand.yml docs site has a fantastic guide with prompts you can use to generate a starter brand.yml file. You can ask an LLM like ChatGPT or Claude to create a brand.yml file for you, describing the look and feel you want. This can save a lot of time and help you get a solid foundation very quickly.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="sharing-your-brand" class="title-slide slide level1 center" data-background-color="#223e50">
+<h1>Sharing your brand</h1>
+<aside class="notes">
+<p>So you’ve created your _brand.yml file, and you love it. Now, how do you share it with your team or use it across multiple projects?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="sharing-a-_brand.yml-file" class="slide level2">
-<h2>Sharing a <code>_brand.yml</code> file</h2>
+<section id="using-a-shared-drive" class="slide level2">
+<h2>Using a shared drive</h2>
 <ul>
 <li>Shared repository (Google Drive, OneDrive, etc.)</li>
 <li>GitHub repo allows you to share with version control</li>
 </ul>
+<aside class="notes">
+<p>The simplest way is to share the file directly. You can use a shared repository like Google Drive or OneDrive. However, a more robust solution, especially if you’re working with a team, is to use a GitHub repo. By storing your _brand.yml file in a GitHub repo, you get all the benefits of version control. This means you can track changes, revert to previous versions if needed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="brand-extensions" class="slide level2">
-<h2>Brand Extensions</h2>
+<section id="creating-a-brand-extension" class="slide level2">
+<h2>Creating a Brand Extension</h2>
 <p>New in Quarto 1.8, you can create a Quarto extension that provides a <strong>brand.yml</strong> file and assets.</p>
 <p>Get started by running the below:</p>
 <div class="code-with-filename">
@@ -236,7 +324,7 @@
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">$</span> quarto create extension brand</span>
 <span id="cb1-2"><a></a> <span class="ex">?</span> Extension Name › my-brand</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="fragment">
+<p><br></p>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -253,47 +341,167 @@
 <div class="footer">
 <p>Learn more: <a href="https://prerelease.quarto.org/docs/extensions/brand.html">Brand Extensions</a></p>
 </div>
-</div>
+<aside class="notes">
+<p>Now, here’s where it gets really powerful. As of Quarto 1.8, you can package your _brand.yml file and all its assets, like images and CSS, into a Quarto extension. The command line code shown on the slide walks you through the first step of creating a brand extension from the terminal. It’s important to note that Brand Extensions must be used within a Quarto project that has its own _quarto.yml file.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="contents-of-brand-extensions" class="slide level2 smaller">
-<h2>Contents of Brand Extensions</h2>
+<section id="contents-of-a-brand-extension" class="slide level2">
+<h2>Contents of a Brand Extension</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">?</span> Extension Name › my-brand</span>
+<span id="cb2-2"><a></a><span class="ex">Creating</span> extension at /{...}/my-brand:</span>
+<span id="cb2-3"><a></a>  <span class="ex">-</span> Created _quarto.yml</span>
+<span id="cb2-4"><a></a>  <span class="ex">-</span> Created README.md</span>
+<span id="cb2-5"><a></a>  <span class="ex">-</span> Created _extensions/my-brand/brand.yml</span>
+<span id="cb2-6"><a></a>  <span class="ex">-</span> Created _extensions/my-brand/_extension.yml</span>
+<span id="cb2-7"><a></a>  <span class="ex">-</span> Created .gitignore</span>
+<span id="cb2-8"><a></a>  <span class="ex">-</span> Created example.qmd</span>
+<span id="cb2-9"><a></a><span class="ex">?</span> Open With</span>
+<span id="cb2-10"><a></a><span class="ex">❯</span> positron</span>
+<span id="cb2-11"><a></a>  <span class="ex">vscode</span></span>
+<span id="cb2-12"><a></a>  <span class="ex">rstudio</span></span>
+<span id="cb2-13"><a></a>  <span class="kw">(</span><span class="ex">don</span><span class="st">'t open)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>When you create a brand extension, Quarto generates a directory with some key files.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="contents-of-a-brand-extension-1" class="slide level2">
+<h2>Contents of a Brand Extension</h2>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>_extensions/my-brand/_extension.yml</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="_extensions/my-brand/_extension.yml"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a></a><span class="an">title:</span><span class="co"> My-brand</span></span>
-<span id="cb2-2"><a></a><span class="an">author:</span><span class="co"> Gordon Woodhull</span></span>
-<span id="cb2-3"><a></a><span class="an">version:</span><span class="co"> 1.0.0</span></span>
-<span id="cb2-4"><a></a><span class="an">quarto-required:</span><span class="co"> "&gt;=99.9.0"</span></span>
-<span id="cb2-5"><a></a><span class="an">contributes:</span></span>
-<span id="cb2-6"><a></a>  metadata:</span>
-<span id="cb2-7"><a></a>    project:</span>
-<span id="cb2-8"><a></a>      brand: brand.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="_extensions/my-brand/_extension.yml"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a><span class="an">title:</span><span class="co"> My-brand</span></span>
+<span id="cb3-2"><a></a><span class="an">author:</span><span class="co"> Gordon Woodhull</span></span>
+<span id="cb3-3"><a></a><span class="an">version:</span><span class="co"> 1.0.0</span></span>
+<span id="cb3-4"><a></a><span class="an">quarto-required:</span><span class="co"> "&gt;=99.9.0"</span></span>
+<span id="cb3-5"><a></a><span class="an">contributes:</span></span>
+<span id="cb3-6"><a></a>  metadata:</span>
+<span id="cb3-7"><a></a>    project:</span>
+<span id="cb3-8"><a></a>      brand: brand.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><br></p>
+<aside class="notes">
+<p>One important one is the _extension.yml file, which acts as the manifest for your extension. The code on the slide shows a simple _extension.yml file. The contributes section is what makes this a brand extension. It tells Quarto that this extension provides a brand.yml file.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="contents-of-a-brand-extension-2" class="slide level2">
+<h2>Contents of a Brand Extension</h2>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>_extensions/my-brand/_extension.yml</strong></pre>
+<pre><strong>_extensions/mybrand/brand.yml</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="_extensions/my-brand/_extension.yml"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a><span class="an">color:</span></span>
-<span id="cb3-2"><a></a>  background:</span>
-<span id="cb3-3"><a></a>    light: "#fff"</span>
-<span id="cb3-4"><a></a>    dark: "#000"</span>
-<span id="cb3-5"><a></a>  foreground:</span>
-<span id="cb3-6"><a></a>    light: "#000"</span>
-<span id="cb3-7"><a></a>    dark: "#fff"</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-filename="_extensions/mybrand/brand.yml"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a><span class="an">color:</span></span>
+<span id="cb4-2"><a></a>  background:</span>
+<span id="cb4-3"><a></a>    light: "#fff"</span>
+<span id="cb4-4"><a></a>    dark: "#000"</span>
+<span id="cb4-5"><a></a>  foreground:</span>
+<span id="cb4-6"><a></a>    light: "#000"</span>
+<span id="cb4-7"><a></a>    dark: "#fff"</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<aside class="notes">
+<p>Within the created _brand.yml file, you can start building your brand. It provides just the most basic code to enable light and dark mode.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sharing-the-brand-extension" class="slide level2">
+<h2>Sharing the Brand Extension</h2>
+<p>Publish your Brand Extension to a GitHub repository. Once it’s on GitHub, anyone can add it to their Quarto project.</p>
+<p>Run the following command in the Quarto project to use the extension:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="ex">quarto</span> add <span class="op">&lt;</span>github-organization<span class="op">&gt;</span>/<span class="op">&lt;</span>your-brand-name<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="your-turn" class="slide level2" data-background-color="#a9c7c9">
+<section id="updating-the-brand-extension" class="slide level2">
+<h2>Updating the Brand Extension</h2>
+<p>If you make changes to your Brand Extension on GitHub, users can update the extension in their projects by running this command:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="ex">quarto</span> update <span class="op">&lt;</span>github-organization<span class="op">&gt;</span>/<span class="op">&lt;</span>your-brand-name<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="your-turn" class="slide level2 smaller" data-background-color="#a9c7c9">
 <h2>Your turn</h2>
+<p>Create a brand file for your organization using the Brand Extension.</p>
 <ul>
-<li>Use the Brand Extension in GitHub to create a <code>_brand.yml</code> file for your organization.</li>
-<li>Apply the <code>_brand.yml</code> file to an existing project Try to use a document that you might use for work, like a report, a presentation, or a project brief.</li>
-<li>Use any remaining time to apply your new branding to something you may need for your job, like a PDF, a dashboard, or an internal memo.</li>
+<li>Open your Terminal and run: <code>quarto create extension brand</code></li>
+<li>Read about how to prompt a large language model (LLM) to create a _brand.yml file: <a href="https://posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt">posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt</a></li>
+<li>Customize the default <code>_extensions/mybrand/brand.yml</code> file. Take note of how well the output incorporates your brand and what, if any, elements are missing or need to be adjusted.
+<ul>
+<li>Preview by running <code>quarto preview example.qmd</code> in the Terminal.</li>
+</ul></li>
 </ul>
+<p>We’d love for you to add your new <strong>brand.yml</strong> file to the Inspiration page! You can see examples and contribute your own by visiting the following links:</p>
+<ul>
+<li>Inspiration page: <a href="https://posit-dev.github.io/brand-yml/inspiration/">posit-dev.github.io/brand-yml/inspiration</a></li>
+<li>Submit a PR: <a href="https://github.com/posit-dev/brand-yml/issues">github.com/posit-dev/brand-yml/issues</a></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_21ae0075" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>And with that, it’s time for you to give it a try! We’re going to take a few minutes to walk through creating your own _brand.yml file.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../../images/logo.png" class="slide-logo"></p>
@@ -510,6 +718,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

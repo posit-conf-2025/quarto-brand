@@ -162,7 +162,7 @@
     "href": "materials/05-websites/exercise-01.html",
     "title": "",
     "section": "",
-    "text": "Get the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project. If you’re using Codespaces, follow the instructions here, but go to this repo instead.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview."
+    "text": "Get the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview."
   },
   {
     "objectID": "materials/05-websites/exercise-03.html",
@@ -218,7 +218,7 @@
     "href": "materials/05-websites/slides.html#your-turn",
     "title": "QuartoWebsites",
     "section": "Your turn",
-    "text": "Your turn\n\nGet the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project. If you’re using Codespaces, follow the instructions here, but go to this repo instead.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview.\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nGet the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview.\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/05-websites/slides.html#page-structure",
@@ -413,7 +413,7 @@
     "href": "materials/06-byob/index.html#exercises",
     "title": "Creating and sharing your brand",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\n\nUse the Brand Extension in GitHub to create a _brand.yml file for your organization.\nApply the _brand.yml file to an existing project Try to use a document that you might use for work, like a report, a presentation, or a project brief.\nUse any remaining time to apply your new branding to something you may need for your job, like a PDF, a dashboard, or an internal memo.",
+    "text": "Exercises\n\nExercise 1\nCreate a brand file for your organization using the Brand Extension.\n\nOpen your Terminal and run: quarto create extension brand\nRead about how to prompt a large language model (LLM) to create a _brand.yml file: posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt\nCustomize the default _extensions/mybrand/brand.yml file. Take note of how well the output incorporates your brand and what, if any, elements are missing or need to be adjusted.\n\nPreview by running quarto preview example.qmd in the Terminal.\n\n\nWe’d love for you to add your new brand.yml file to the Inspiration page! You can see examples and contribute your own by visiting the following links:\n\nInspiration page: posit-dev.github.io/brand-yml/inspiration\nSubmit a PR: github.com/posit-dev/brand-yml/issues",
     "crumbs": [
       "Creating and Sharing"
     ]
@@ -1042,53 +1042,88 @@
     "text": "Install the whr-typst-template:\n\n\nTerminal\n\nquarto use template ivelasq/whr-typst-template\n\nOpen the _extensions/whr/typst-show.typ and _extensions/whr/typst-template.typ files to examine their contents."
   },
   {
-    "objectID": "materials/06-byob/slides.html#creating-a-_brand.yml-file",
-    "href": "materials/06-byob/slides.html#creating-a-_brand.yml-file",
+    "objectID": "materials/06-byob/slides.html#creating-a-_brand.yml-file-1",
+    "href": "materials/06-byob/slides.html#creating-a-_brand.yml-file-1",
     "title": "Creating and sharing your brand",
     "section": "Creating a _brand.yml file",
-    "text": "Creating a _brand.yml file\n_brand.yml is a text file; create a new one by running\n\nFile &gt; New File &gt; Text File in RStudio\nCtrl+Shift+P New Untitled Text File in VS Code or Positron"
+    "text": "Creating a _brand.yml file\n\nIn RStudio, go to File &gt; New File &gt; Text File.\nIn VS Code or Positron, use the Command Palette (Ctrl+Shift+P on Windows/Linux or Cmd+Shift+P on Mac) and select New Untitled Text File.\n\nSave the file as _brand.yml.\n\nYou can create this file in any text editor. If you’re using RStudio, you’ll find the option under the “File” menu. For those of you using VS Code or Positron, the command palette is the fastest way to get started. Once you’ve created the file, make sure to save it as _brand.yml in the root directory of your project."
   },
   {
-    "objectID": "materials/06-byob/slides.html#creating-a-_brand.yml-file-with-an-llm",
-    "href": "materials/06-byob/slides.html#creating-a-_brand.yml-file-with-an-llm",
+    "objectID": "materials/06-byob/slides.html#brand.yml-inspiration",
+    "href": "materials/06-byob/slides.html#brand.yml-inspiration",
     "title": "Creating and sharing your brand",
-    "section": "Creating a _brand.yml file with an LLM",
-    "text": "Creating a _brand.yml file with an LLM\n\n\n\n\n\n\nLearn more: Creating a brand.yml with an LLM"
+    "section": "brand.yml Inspiration",
+    "text": "brand.yml Inspiration\nThe brand.yml docs site has a great Inspiration page with many references!\n\n\n\n\n\n\nLearn more: Inspiration\n\n\nWhen you’re ready to start building your brand file, you don’t have to start from scratch. The brand.yml documentation site has an entire page dedicated to inspiration. The inspiration page is full of examples from real-world projects, which can give you a great starting point for your own branding. I highly recommend checking it out for ideas on colors, fonts, and layouts."
   },
   {
-    "objectID": "materials/06-byob/slides.html#sharing-a-_brand.yml-file",
-    "href": "materials/06-byob/slides.html#sharing-a-_brand.yml-file",
+    "objectID": "materials/06-byob/slides.html#get-a-little-help-from-a-large-language-model-llm",
+    "href": "materials/06-byob/slides.html#get-a-little-help-from-a-large-language-model-llm",
     "title": "Creating and sharing your brand",
-    "section": "Sharing a _brand.yml file",
-    "text": "Sharing a _brand.yml file\n\nShared repository (Google Drive, OneDrive, etc.)\nGitHub repo allows you to share with version control"
+    "section": "Get a little help from a Large Language Model (LLM)",
+    "text": "Get a little help from a Large Language Model (LLM)\n\n\n\n\n\n\nLearn more: Creating a brand.yml with an LLM\n\n\nFor those of you who want to jumpstart the process even more, you can use a Large Language Model, or LLM, to help you. The brand.yml docs site has a fantastic guide with prompts you can use to generate a starter brand.yml file. You can ask an LLM like ChatGPT or Claude to create a brand.yml file for you, describing the look and feel you want. This can save a lot of time and help you get a solid foundation very quickly."
   },
   {
-    "objectID": "materials/06-byob/slides.html#brand-extensions",
-    "href": "materials/06-byob/slides.html#brand-extensions",
+    "objectID": "materials/06-byob/slides.html#using-a-shared-drive",
+    "href": "materials/06-byob/slides.html#using-a-shared-drive",
     "title": "Creating and sharing your brand",
-    "section": "Brand Extensions",
-    "text": "Brand Extensions\nNew in Quarto 1.8, you can create a Quarto extension that provides a brand.yml file and assets.\nGet started by running the below:\n\n\nTerminal\n\n$ quarto create extension brand\n ? Extension Name › my-brand\n\n\n\n\n\n\n\n\nImportant\n\n\nBrand Extensions must be used with a _quarto.yml project.\n\n\n\n\nLearn more: Brand Extensions"
+    "section": "Using a shared drive",
+    "text": "Using a shared drive\n\nShared repository (Google Drive, OneDrive, etc.)\nGitHub repo allows you to share with version control\n\n\nThe simplest way is to share the file directly. You can use a shared repository like Google Drive or OneDrive. However, a more robust solution, especially if you’re working with a team, is to use a GitHub repo. By storing your _brand.yml file in a GitHub repo, you get all the benefits of version control. This means you can track changes, revert to previous versions if needed."
   },
   {
-    "objectID": "materials/06-byob/slides.html#contents-of-brand-extensions",
-    "href": "materials/06-byob/slides.html#contents-of-brand-extensions",
+    "objectID": "materials/06-byob/slides.html#creating-a-brand-extension",
+    "href": "materials/06-byob/slides.html#creating-a-brand-extension",
     "title": "Creating and sharing your brand",
-    "section": "Contents of Brand Extensions",
-    "text": "Contents of Brand Extensions\n\n\n_extensions/my-brand/_extension.yml\n\ntitle: My-brand\nauthor: Gordon Woodhull\nversion: 1.0.0\nquarto-required: \"&gt;=99.9.0\"\ncontributes:\n  metadata:\n    project:\n      brand: brand.yml\n\n\n\n\n_extensions/my-brand/_extension.yml\n\ncolor:\n  background:\n    light: \"#fff\"\n    dark: \"#000\"\n  foreground:\n    light: \"#000\"\n    dark: \"#fff\""
+    "section": "Creating a Brand Extension",
+    "text": "Creating a Brand Extension\nNew in Quarto 1.8, you can create a Quarto extension that provides a brand.yml file and assets.\nGet started by running the below:\n\n\nTerminal\n\n$ quarto create extension brand\n ? Extension Name › my-brand\n\n\n\n\n\n\n\n\nImportant\n\n\nBrand Extensions must be used with a _quarto.yml project.\n\n\n\n\nLearn more: Brand Extensions\n\n\nNow, here’s where it gets really powerful. As of Quarto 1.8, you can package your _brand.yml file and all its assets, like images and CSS, into a Quarto extension. The command line code shown on the slide walks you through the first step of creating a brand extension from the terminal. It’s important to note that Brand Extensions must be used within a Quarto project that has its own _quarto.yml file."
+  },
+  {
+    "objectID": "materials/06-byob/slides.html#contents-of-a-brand-extension",
+    "href": "materials/06-byob/slides.html#contents-of-a-brand-extension",
+    "title": "Creating and sharing your brand",
+    "section": "Contents of a Brand Extension",
+    "text": "Contents of a Brand Extension\n? Extension Name › my-brand\nCreating extension at /{...}/my-brand:\n  - Created _quarto.yml\n  - Created README.md\n  - Created _extensions/my-brand/brand.yml\n  - Created _extensions/my-brand/_extension.yml\n  - Created .gitignore\n  - Created example.qmd\n? Open With\n❯ positron\n  vscode\n  rstudio\n  (don't open)\n\nWhen you create a brand extension, Quarto generates a directory with some key files."
+  },
+  {
+    "objectID": "materials/06-byob/slides.html#contents-of-a-brand-extension-1",
+    "href": "materials/06-byob/slides.html#contents-of-a-brand-extension-1",
+    "title": "Creating and sharing your brand",
+    "section": "Contents of a Brand Extension",
+    "text": "Contents of a Brand Extension\n\n\n_extensions/my-brand/_extension.yml\n\ntitle: My-brand\nauthor: Gordon Woodhull\nversion: 1.0.0\nquarto-required: \"&gt;=99.9.0\"\ncontributes:\n  metadata:\n    project:\n      brand: brand.yml\n\n\nOne important one is the _extension.yml file, which acts as the manifest for your extension. The code on the slide shows a simple _extension.yml file. The contributes section is what makes this a brand extension. It tells Quarto that this extension provides a brand.yml file."
+  },
+  {
+    "objectID": "materials/06-byob/slides.html#contents-of-a-brand-extension-2",
+    "href": "materials/06-byob/slides.html#contents-of-a-brand-extension-2",
+    "title": "Creating and sharing your brand",
+    "section": "Contents of a Brand Extension",
+    "text": "Contents of a Brand Extension\n\n\n_extensions/mybrand/brand.yml\n\ncolor:\n  background:\n    light: \"#fff\"\n    dark: \"#000\"\n  foreground:\n    light: \"#000\"\n    dark: \"#fff\"\n\n\nWithin the created _brand.yml file, you can start building your brand. It provides just the most basic code to enable light and dark mode."
+  },
+  {
+    "objectID": "materials/06-byob/slides.html#sharing-the-brand-extension",
+    "href": "materials/06-byob/slides.html#sharing-the-brand-extension",
+    "title": "Creating and sharing your brand",
+    "section": "Sharing the Brand Extension",
+    "text": "Sharing the Brand Extension\nPublish your Brand Extension to a GitHub repository. Once it’s on GitHub, anyone can add it to their Quarto project.\nRun the following command in the Quarto project to use the extension:\n\n\nTerminal\n\nquarto add &lt;github-organization&gt;/&lt;your-brand-name&gt;"
+  },
+  {
+    "objectID": "materials/06-byob/slides.html#updating-the-brand-extension",
+    "href": "materials/06-byob/slides.html#updating-the-brand-extension",
+    "title": "Creating and sharing your brand",
+    "section": "Updating the Brand Extension",
+    "text": "Updating the Brand Extension\nIf you make changes to your Brand Extension on GitHub, users can update the extension in their projects by running this command:\n\n\nTerminal\n\nquarto update &lt;github-organization&gt;/&lt;your-brand-name&gt;"
   },
   {
     "objectID": "materials/06-byob/slides.html#your-turn",
     "href": "materials/06-byob/slides.html#your-turn",
     "title": "Creating and sharing your brand",
     "section": "Your turn",
-    "text": "Your turn\n\nUse the Brand Extension in GitHub to create a _brand.yml file for your organization.\nApply the _brand.yml file to an existing project Try to use a document that you might use for work, like a report, a presentation, or a project brief.\nUse any remaining time to apply your new branding to something you may need for your job, like a PDF, a dashboard, or an internal memo."
+    "text": "Your turn\nCreate a brand file for your organization using the Brand Extension.\n\nOpen your Terminal and run: quarto create extension brand\nRead about how to prompt a large language model (LLM) to create a _brand.yml file: posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt\nCustomize the default _extensions/mybrand/brand.yml file. Take note of how well the output incorporates your brand and what, if any, elements are missing or need to be adjusted.\n\nPreview by running quarto preview example.qmd in the Terminal.\n\n\nWe’d love for you to add your new brand.yml file to the Inspiration page! You can see examples and contribute your own by visiting the following links:\n\nInspiration page: posit-dev.github.io/brand-yml/inspiration\nSubmit a PR: github.com/posit-dev/brand-yml/issues\n\n\n\n\n−+\n10:00\n\n\n\n\nAnd with that, it’s time for you to give it a try! We’re going to take a few minutes to walk through creating your own _brand.yml file."
   },
   {
     "objectID": "materials/06-byob/exercise-01.html",
     "href": "materials/06-byob/exercise-01.html",
     "title": "",
     "section": "",
-    "text": "Use the Brand Extension in GitHub to create a _brand.yml file for your organization.\nApply the _brand.yml file to an existing project Try to use a document that you might use for work, like a report, a presentation, or a project brief.\nUse any remaining time to apply your new branding to something you may need for your job, like a PDF, a dashboard, or an internal memo."
+    "text": "Create a brand file for your organization using the Brand Extension.\n\nOpen your Terminal and run: quarto create extension brand\nRead about how to prompt a large language model (LLM) to create a _brand.yml file: posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt\nCustomize the default _extensions/mybrand/brand.yml file. Take note of how well the output incorporates your brand and what, if any, elements are missing or need to be adjusted.\n\nPreview by running quarto preview example.qmd in the Terminal.\n\n\nWe’d love for you to add your new brand.yml file to the Inspiration page! You can see examples and contribute your own by visiting the following links:\n\nInspiration page: posit-dev.github.io/brand-yml/inspiration\nSubmit a PR: github.com/posit-dev/brand-yml/issues"
   },
   {
     "objectID": "materials/05-websites/index.html",
@@ -1115,7 +1150,7 @@
     "href": "materials/05-websites/index.html#exercises",
     "title": "Websites",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\n\nGet the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project. If you’re using Codespaces, follow the instructions here, but go to this repo instead.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview.\n\n\n\nExercise 2\n\nAdd some information to about.qmd.\nEdit _quarto.yml so that the navbar includes the about page.\nHow do you think you change the position of the links in the navbar? Change them to appear on the right.\n\n\n\nExercise 3\nPublish your website to Quarto Pub.\n\nFrom the Terminal, run quarto publish, then select Quarto Pub.\nFollow the prompts to set up an account and publish.\n\nIf you have time, publish to Connect Cloud. Note: if you’re using R, you will need an renv.lock file (learn how here) if publishing from Positron or VS Code, or a manifest.json file (learn how here) if publishing from GitHub.",
+    "text": "Exercises\n\nExercise 1\n\nGet the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview.\n\n\n\nExercise 2\n\nAdd some information to about.qmd.\nEdit _quarto.yml so that the navbar includes the about page.\nHow do you think you change the position of the links in the navbar? Change them to appear on the right.\n\n\n\nExercise 3\nPublish your website to Quarto Pub.\n\nFrom the Terminal, run quarto publish, then select Quarto Pub.\nFollow the prompts to set up an account and publish.\n\nIf you have time, publish to Connect Cloud. Note: if you’re using R, you will need an renv.lock file (learn how here) if publishing from Positron or VS Code, or a manifest.json file (learn how here) if publishing from GitHub.",
     "crumbs": [
       "Websites"
     ]
@@ -1188,7 +1223,7 @@
     "href": "materials/01-intro/slides.html#getting-help",
     "title": "Quarto\nDocuments",
     "section": "Getting help",
-    "text": "Getting help\n\nStick your post-it note to your laptop\n\n🟥 “I’m stuck and need help!”\n🟩 “I finished the exercise”\n\nAsk in the Discord channel: #workshop-quarto-brand\nTalk to us during breaks or your-turns"
+    "text": "Getting help\n\nStick your post-it note to your laptop\n\n🟥 “I’m stuck and need help!”\n🟦 “I finished the exercise”\n\nAsk in the Discord channel: #workshop-quarto-brand\nTalk to us during breaks or your-turns"
   },
   {
     "objectID": "materials/01-intro/slides.html#your-turn---about-you",
@@ -1314,7 +1349,7 @@
     "href": "materials/01-intro/slides.html#your-turn-1",
     "title": "Quarto\nDocuments",
     "section": "Your turn",
-    "text": "Your turn\n\nOpen 01-exercise-r.qmd or 01-exercise-py.qmd.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\n\n−+\n05:00\n\n\n\n\nshow how to add a code chunk\nPositron/vs code insert code cell, cmd shift i RStudio green button, cmd option i"
+    "text": "Your turn\n\nOpen 01-exercise-r.qmd or 01-exercise-py.qmd.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/01-intro/slides.html#anatomy-of-a-quarto-document",
