@@ -492,6 +492,8 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 * Preview/render the document.
 * Make a change and preview/render again.
 
+## Render/preview
+
 ::: {.fragment}
 
 :::: columns
