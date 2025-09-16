@@ -85,11 +85,17 @@ git clone https://github.com/posit-dev/quarto-brand-exercises.git
 
 ### R
 
-If you are using Posit Cloud, the packages will be pre-installed. If you are using RStudio or Positron locally, install the packages by running:
+If you are using Posit Cloud, the packages will be pre-installed. If you are using RStudio or Positron locally, install the packages on a Mac by running:
 
 ```r
 if (!require("pak")) install.packages("pak")
 pak::pak(c("tidyverse", "quarto", "patchwork", "posit-dev/brand-yml/pkg-r"))
+```
+
+If you are using Windows, please run the below for the brand.yml package:
+
+```r
+install.packages('brand.yml', repos = c('https://posit-dev.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
 ### Python
