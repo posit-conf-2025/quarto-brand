@@ -9,16 +9,16 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <meta name="shinylive:serviceworker_dir" content="../..">
-<script src="../../site_libs/quarto-contrib/shinylive-0.5.0/shinylive/load-shinylive-sw.js" type="module"></script>
-<script src="../../site_libs/quarto-contrib/shinylive-0.5.0/shinylive/run-python-blocks.js" type="module"></script>
-<link href="../../site_libs/quarto-contrib/shinylive-0.5.0/shinylive/shinylive.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/load-shinylive-sw.js" type="module"></script>
+<script src="../../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/run-python-blocks.js" type="module"></script>
+<link href="../../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/shinylive.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet">
 <script src="../../site_libs/quarto-contrib/kbd/kbd.js"></script>
 <link href="../../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.23">
 
-  <title>Quarto Presentations</title>
+  <title>Presentations with reveal.js</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -107,6 +107,8 @@
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -195,6 +197,8 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../../site_libs/countdown-0.4.0/countdown.js"></script>
   <link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
   <script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -204,15 +208,14 @@
   <script src="../../site_libs/proj4-2.6.2/proj4.min.js"></script>
   <script src="../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
   <link href="../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-  <script src="../../site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+  <script src="../../site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" data-background-color="white" data-background-image="../../images/title-slide-light.svg" style="text-align: right; left: 10%" class="quarto-title-block center">
-  <h1 class="title">Quarto<br>
-Presentations</h1>
+  <h1 class="title">Presentations with reveal.js</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -374,14 +377,35 @@ Presentations</h1>
 <iframe src="./_example-04.html" width="100%" height="500"></iframe>
 </div></div>
 </section>
-<section id="your-turn" class="slide level2" data-background-color="#a9c7c9">
+<section id="your-turn" class="slide level2 smaller" data-background-color="#a9c7c9">
 <h2>Your turn</h2>
 <ul>
-<li>Change the format: In your document’s YAML header, change <code>format: html</code> to <code>format: revealjs</code>.</li>
-<li>Add slides: Use first-level headings (<code>#</code>) to create a new slide. Use other Markdown headings and text for content on each slide.</li>
-<li>Render: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.</li>
+<li>In your document’s YAML header, change <code>format: html</code> to <code>format: revealjs</code>.</li>
+<li>Use first-level headings (<code>#</code>) to create a new slide. Use other Markdown headings and text for content on each slide.</li>
+<li>Save and render your document.</li>
 </ul>
-<p>Note: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.</p>
+<p>Quarto will create an HTML file that is a fully functional slide deck.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>You can remove <code>code-fold</code> and <code>code-summary</code> from the YAML header, as these are for HTML documents and do not apply to presentations.</p>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_3df55abc" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="building-slides" class="title-slide slide level1 agenda-slide center">
@@ -405,7 +429,7 @@ Presentations</h1>
 </section>
 <section id="editing-slides" class="slide level2">
 <h2>Editing slides</h2>
-<p>The quarto-revealjs-editable extension allows the repositioning and resizing of images and text divs directly in the previewed slides.</p>
+<p>The <code>quarto-revealjs-editable</code> extension allows for the repositioning and resizing of images and text divs directly in previewed slides.</p>
 
 <img data-src="images/demo-text.gif" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
 <p>Learn more: <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-editable">quarto-revealjs-editable</a></p>
@@ -417,17 +441,46 @@ Presentations</h1>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="fu">## Slide Title {.smaller}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Use the .scrollable class to make off-slide content available by scrolling. For example:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="fu">## Slide Title {.scrollable}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+<pre><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nullam sagittis ex eget bibendum vulputate.
+
+Vestibulum lobortis mauris sed lorem auctor, in commodo ex semper.
+Vestibulum congue nisl eget blandit suscipit.
+Curabitur sit amet diam elementum, dictum massa quis, vulputate est.
+Sed dignissim lacus et lorem pellentesque interdum.
+Ut efficitur eros id leo condimentum, vel sodales velit lacinia.
+
+Vivamus cursus massa accumsan tellus imperdiet aliquet id et odio.
+Duis tincidunt nunc vitae erat sollicitudin, non condimentum enim eleifend.
+Phasellus ac ligula aliquam, aliquet nunc quis, tempor libero.
+Vivamus ultricies enim a metus ultrices, a pretium velit tristique.
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nullam sagittis ex eget bibendum vulputate.
+
+Vestibulum lobortis mauris sed lorem auctor, in commodo ex semper.
+Vestibulum congue nisl eget blandit suscipit.
+Curabitur sit amet diam elementum, dictum massa quis, vulputate est.
+Sed dignissim lacus et lorem pellentesque interdum.
+Ut efficitur eros id leo condimentum, vel sodales velit lacinia.
+
+Vivamus cursus massa accumsan tellus imperdiet aliquet id et odio.
+Duis tincidunt nunc vitae erat sollicitudin, non condimentum enim eleifend.
+Phasellus ac ligula aliquam, aliquet nunc quis, tempor libero.
+Vivamus ultricies enim a metus ultrices, a pretium velit tristique.</code></pre>
 </section>
 <section id="slide-transitions" class="slide level2">
 <h2>Slide transitions</h2>
 <p>Edit the YAML to change the slide transitions:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a><span class="co">---</span></span>
-<span id="cb8-2"><a></a><span class="an">title:</span><span class="co"> "Presentation"</span></span>
-<span id="cb8-3"><a></a><span class="an">format:</span></span>
-<span id="cb8-4"><a></a><span class="co">  revealjs:</span></span>
-<span id="cb8-5"><a></a><span class="co">    transition: slide</span></span>
-<span id="cb8-6"><a></a><span class="co">    transition-speed: fast</span></span>
-<span id="cb8-7"><a></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a></a><span class="co">---</span></span>
+<span id="cb9-2"><a></a><span class="an">title:</span><span class="co"> "Presentation"</span></span>
+<span id="cb9-3"><a></a><span class="an">format:</span></span>
+<span id="cb9-4"><a></a><span class="co">  revealjs:</span></span>
+<span id="cb9-5"><a></a><span class="co">    transition: slide</span></span>
+<span id="cb9-6"><a></a><span class="co">    transition-speed: fast</span></span>
+<span id="cb9-7"><a></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions">Slide Transitions</a></p>
 </div>
@@ -484,7 +537,7 @@ Presentations</h1>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1071,16 +1124,16 @@ Presentations</h1>
 <li>Highlight specific lines for emphasis</li>
 <li>Incrementally highlight additional lines</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-code-line-numbers="4-5|7|10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb9-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb9-3"><a></a></span>
-<span id="cb9-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb9-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb9-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
-<span id="cb9-7"><a></a>ax.plot(theta, r)</span>
-<span id="cb9-8"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb9-9"><a></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb9-10"><a></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-code-line-numbers="4-5|7|10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-3"><a></a></span>
+<span id="cb10-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb10-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb10-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
+<span id="cb10-7"><a></a>ax.plot(theta, r)</span>
+<span id="cb10-8"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb10-9"><a></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb10-10"><a></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#line-highlighting">Line Highlighting</a></p>
 </div>
@@ -1088,13 +1141,13 @@ Presentations</h1>
 <section id="executable-code" class="slide level2">
 <h2>Executable code</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb10-2"><a></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(hp, mpg, <span class="at">color =</span> am)) <span class="sc">+</span></span>
-<span id="cb10-3"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb10-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"loess"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb11-2"><a></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(hp, mpg, <span class="at">color =</span> am)) <span class="sc">+</span></span>
+<span id="cb11-3"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb11-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"loess"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"><div class="footer">
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"><div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#executable-code">Executable Code</a></p>
 </div>
 </section>
@@ -1103,17 +1156,17 @@ Presentations</h1>
 <p><a href="https://www.mathjax.org/">MathJax</a> rendering of equations to HTML</p>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb11-1"><a></a><span class="kw">\begin</span>{<span class="ex">gather*</span>}</span>
-<span id="cb11-2"><a></a><span class="ss">a_1=b_1+c_1</span><span class="sc">\\</span></span>
-<span id="cb11-3"><a></a><span class="ss">a_2=b_2+c_2-d_2+e_2</span></span>
-<span id="cb11-4"><a></a><span class="kw">\end</span>{<span class="ex">gather*</span>}</span>
-<span id="cb11-5"><a></a></span>
-<span id="cb11-6"><a></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
-<span id="cb11-7"><a></a><span class="ss">a_{11}&amp; =b_{11}&amp;</span></span>
-<span id="cb11-8"><a></a><span class="ss">  a_{12}&amp; =b_{12}</span><span class="sc">\\</span></span>
-<span id="cb11-9"><a></a><span class="ss">a_{21}&amp; =b_{21}&amp;</span></span>
-<span id="cb11-10"><a></a><span class="ss">  a_{22}&amp; =b_{22}+c_{22}</span></span>
-<span id="cb11-11"><a></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb12-1"><a></a><span class="kw">\begin</span>{<span class="ex">gather*</span>}</span>
+<span id="cb12-2"><a></a><span class="ss">a_1=b_1+c_1</span><span class="sc">\\</span></span>
+<span id="cb12-3"><a></a><span class="ss">a_2=b_2+c_2-d_2+e_2</span></span>
+<span id="cb12-4"><a></a><span class="kw">\end</span>{<span class="ex">gather*</span>}</span>
+<span id="cb12-5"><a></a></span>
+<span id="cb12-6"><a></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
+<span id="cb12-7"><a></a><span class="ss">a_{11}&amp; =b_{11}&amp;</span></span>
+<span id="cb12-8"><a></a><span class="ss">  a_{12}&amp; =b_{12}</span><span class="sc">\\</span></span>
+<span id="cb12-9"><a></a><span class="ss">a_{21}&amp; =b_{21}&amp;</span></span>
+<span id="cb12-10"><a></a><span class="ss">  a_{22}&amp; =b_{22}+c_{22}</span></span>
+<span id="cb12-11"><a></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:60%;">
 <span class="math display">\[\begin{gather*}
 a_1=b_1+c_1\\
@@ -1188,8 +1241,8 @@ a_{21}&amp; =b_{21}&amp;
 <p>Include Jupyter widgets and htmlwidgets in your presentations</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-919b850665c7e2b0590e" style="width:960px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-919b850665c7e2b0590e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-91e363b840bb2d09ee73" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-91e363b840bb2d09ee73">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="footer">
@@ -1198,76 +1251,84 @@ a_{21}&amp; =b_{21}&amp;
 </section>
 <section id="interactive-slides-1" class="slide level2 smaller" data-transition="slide">
 <h2>Interactive slides</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-engine="r"><pre class="sourceCode numberSource shinylive-r number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>#| '!! shinylive warning !!': |</span>
-<span id="cb12-2"><a></a>#|   shinylive does not work in self-contained HTML documents.</span>
-<span id="cb12-3"><a></a>#|   Please set `embed-resources: false` in your metadata.</span>
-<span id="cb12-4"><a></a>#| standalone: true</span>
-<span id="cb12-5"><a></a>#| viewerHeight: 500</span>
-<span id="cb12-6"><a></a></span>
-<span id="cb12-7"><a></a>library(shiny)</span>
-<span id="cb12-8"><a></a>library(bslib)</span>
-<span id="cb12-9"><a></a></span>
-<span id="cb12-10"><a></a># Define UI for app that draws a histogram ----</span>
-<span id="cb12-11"><a></a>ui &lt;- page_sidebar(</span>
-<span id="cb12-12"><a></a>  sidebar = sidebar(open = "open",</span>
-<span id="cb12-13"><a></a>    numericInput("n", "Sample count", 100),</span>
-<span id="cb12-14"><a></a>    checkboxInput("pause", "Pause", FALSE),</span>
-<span id="cb12-15"><a></a>  ),</span>
-<span id="cb12-16"><a></a>  plotOutput("plot", width=1100)</span>
-<span id="cb12-17"><a></a>)</span>
-<span id="cb12-18"><a></a></span>
-<span id="cb12-19"><a></a>server &lt;- function(input, output, session) {</span>
-<span id="cb12-20"><a></a>  data &lt;- reactive({</span>
-<span id="cb12-21"><a></a>    input$resample</span>
-<span id="cb12-22"><a></a>    if (!isTRUE(input$pause)) {</span>
-<span id="cb12-23"><a></a>      invalidateLater(1000)</span>
-<span id="cb12-24"><a></a>    }</span>
-<span id="cb12-25"><a></a>    rnorm(input$n)</span>
-<span id="cb12-26"><a></a>  })</span>
-<span id="cb12-27"><a></a>  </span>
-<span id="cb12-28"><a></a>  output$plot &lt;- renderPlot({</span>
-<span id="cb12-29"><a></a>    hist(data(),</span>
-<span id="cb12-30"><a></a>      breaks = 40,</span>
-<span id="cb12-31"><a></a>      xlim = c(-2, 2),</span>
-<span id="cb12-32"><a></a>      ylim = c(0, 1),</span>
-<span id="cb12-33"><a></a>      lty = "blank",</span>
-<span id="cb12-34"><a></a>      xlab = "value",</span>
-<span id="cb12-35"><a></a>      freq = FALSE,</span>
-<span id="cb12-36"><a></a>      main = ""</span>
-<span id="cb12-37"><a></a>    )</span>
-<span id="cb12-38"><a></a>    </span>
-<span id="cb12-39"><a></a>    x &lt;- seq(from = -2, to = 2, length.out = 500)</span>
-<span id="cb12-40"><a></a>    y &lt;- dnorm(x)</span>
-<span id="cb12-41"><a></a>    lines(x, y, lwd=1.5)</span>
-<span id="cb12-42"><a></a>    </span>
-<span id="cb12-43"><a></a>    lwd &lt;- 5</span>
-<span id="cb12-44"><a></a>    abline(v=0, col="red", lwd=lwd, lty=2)</span>
-<span id="cb12-45"><a></a>    abline(v=mean(data()), col="blue", lwd=lwd, lty=1)</span>
-<span id="cb12-46"><a></a></span>
-<span id="cb12-47"><a></a>    legend(legend = c("Normal", "Mean", "Sample mean"),</span>
-<span id="cb12-48"><a></a>      col = c("black", "red", "blue"),</span>
-<span id="cb12-49"><a></a>      lty = c(1, 2, 1),</span>
-<span id="cb12-50"><a></a>      lwd = c(1, lwd, lwd),</span>
-<span id="cb12-51"><a></a>      x = 1,</span>
-<span id="cb12-52"><a></a>      y = 0.9</span>
-<span id="cb12-53"><a></a>    )</span>
-<span id="cb12-54"><a></a>  }, res=140)</span>
-<span id="cb12-55"><a></a>}</span>
-<span id="cb12-56"><a></a></span>
-<span id="cb12-57"><a></a># Create Shiny app ----</span>
-<span id="cb12-58"><a></a>shinyApp(ui = ui, server = server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-engine="r"><pre class="sourceCode numberSource shinylive-r number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a></a>#| '!! shinylive warning !!': |</span>
+<span id="cb13-2"><a></a>#|   shinylive does not work in self-contained HTML documents.</span>
+<span id="cb13-3"><a></a>#|   Please set `embed-resources: false` in your metadata.</span>
+<span id="cb13-4"><a></a>#| standalone: true</span>
+<span id="cb13-5"><a></a>#| viewerHeight: 500</span>
+<span id="cb13-6"><a></a></span>
+<span id="cb13-7"><a></a>library(shiny)</span>
+<span id="cb13-8"><a></a>library(bslib)</span>
+<span id="cb13-9"><a></a></span>
+<span id="cb13-10"><a></a># Define UI for app that draws a histogram ----</span>
+<span id="cb13-11"><a></a>ui &lt;- page_sidebar(</span>
+<span id="cb13-12"><a></a>  sidebar = sidebar(open = "open",</span>
+<span id="cb13-13"><a></a>    numericInput("n", "Sample count", 100),</span>
+<span id="cb13-14"><a></a>    checkboxInput("pause", "Pause", FALSE),</span>
+<span id="cb13-15"><a></a>  ),</span>
+<span id="cb13-16"><a></a>  plotOutput("plot", width=1100)</span>
+<span id="cb13-17"><a></a>)</span>
+<span id="cb13-18"><a></a></span>
+<span id="cb13-19"><a></a>server &lt;- function(input, output, session) {</span>
+<span id="cb13-20"><a></a>  data &lt;- reactive({</span>
+<span id="cb13-21"><a></a>    input$resample</span>
+<span id="cb13-22"><a></a>    if (!isTRUE(input$pause)) {</span>
+<span id="cb13-23"><a></a>      invalidateLater(1000)</span>
+<span id="cb13-24"><a></a>    }</span>
+<span id="cb13-25"><a></a>    rnorm(input$n)</span>
+<span id="cb13-26"><a></a>  })</span>
+<span id="cb13-27"><a></a>  </span>
+<span id="cb13-28"><a></a>  output$plot &lt;- renderPlot({</span>
+<span id="cb13-29"><a></a>    hist(data(),</span>
+<span id="cb13-30"><a></a>      breaks = 40,</span>
+<span id="cb13-31"><a></a>      xlim = c(-2, 2),</span>
+<span id="cb13-32"><a></a>      ylim = c(0, 1),</span>
+<span id="cb13-33"><a></a>      lty = "blank",</span>
+<span id="cb13-34"><a></a>      xlab = "value",</span>
+<span id="cb13-35"><a></a>      freq = FALSE,</span>
+<span id="cb13-36"><a></a>      main = ""</span>
+<span id="cb13-37"><a></a>    )</span>
+<span id="cb13-38"><a></a>    </span>
+<span id="cb13-39"><a></a>    x &lt;- seq(from = -2, to = 2, length.out = 500)</span>
+<span id="cb13-40"><a></a>    y &lt;- dnorm(x)</span>
+<span id="cb13-41"><a></a>    lines(x, y, lwd=1.5)</span>
+<span id="cb13-42"><a></a>    </span>
+<span id="cb13-43"><a></a>    lwd &lt;- 5</span>
+<span id="cb13-44"><a></a>    abline(v=0, col="red", lwd=lwd, lty=2)</span>
+<span id="cb13-45"><a></a>    abline(v=mean(data()), col="blue", lwd=lwd, lty=1)</span>
+<span id="cb13-46"><a></a></span>
+<span id="cb13-47"><a></a>    legend(legend = c("Normal", "Mean", "Sample mean"),</span>
+<span id="cb13-48"><a></a>      col = c("black", "red", "blue"),</span>
+<span id="cb13-49"><a></a>      lty = c(1, 2, 1),</span>
+<span id="cb13-50"><a></a>      lwd = c(1, lwd, lwd),</span>
+<span id="cb13-51"><a></a>      x = 1,</span>
+<span id="cb13-52"><a></a>      y = 0.9</span>
+<span id="cb13-53"><a></a>    )</span>
+<span id="cb13-54"><a></a>  }, res=140)</span>
+<span id="cb13-55"><a></a>}</span>
+<span id="cb13-56"><a></a></span>
+<span id="cb13-57"><a></a># Create Shiny app ----</span>
+<span id="cb13-58"><a></a>shinyApp(ui = ui, server = server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/interactive/ojs/">Observable</a>, <a href="https://quarto.org/docs/interactive/shiny/">Shiny</a>, <a href="https://quarto.org/docs/interactive/layout.html">Component Layout</a></p>
 </div>
 </section>
-<section id="your-turn-1" class="slide level2" data-background-color="#a9c7c9">
+<section id="your-turn-1" class="slide level2 smaller" data-background-color="#a9c7c9">
 <h2>Your turn</h2>
 <ul>
-<li>Shrink the heading: Add <code>{.smaller}</code> to your heading to decrease its font size, like this: <code>## Global Happiness Trends {.smaller}</code>.</li>
-<li>Create two columns: Place your plot and table side-by-side. Adjust the percentages as needed.</li>
-<li>Add tabsets: Use :<code>:: panel-tabset</code> on the “Country-Level Analysis” slide to organize your content.</li>
-<li>Add a transition: To improve the flow, add <code>slide-transition: slide</code> to your YAML header. Other options include <code>fade</code>, <code>convex</code>, <code>concave</code>, or <code>zoom.</code></li>
+<li>Add <code>{.smaller}</code> to your heading to decrease its font size, like this: <code>## Global Happiness Trends {.smaller}</code>.</li>
+<li>Place your plot and table side-by-side. Adjust the percentages as needed.</li>
+<li>Use :<code>:: panel-tabset</code> on the “Country-Level Analysis” slide to organize your content.</li>
+<li>To improve the flow, add <code>slide-transition: slide</code> to your YAML header. Other options include <code>fade</code>, <code>convex</code>, <code>concave</code>, or <code>zoom.</code></li>
 </ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_28654243" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="presenting-slides" class="title-slide slide level1 agenda-slide center">
@@ -1305,15 +1366,15 @@ a_{21}&amp; =b_{21}&amp;
 </div>
 </div>
 <p>You can also press <kbd title="m" aria-hidden="true">m</kbd><span class="visually-hidden">m</span> to toggle the menu open and closed.</p>
-<p>You can also press <kbd title="g" aria-hidden="true">g</kbd><span class="visually-hidden">g</span> to toggle ‘Jump To Slide’ modal box to quickly go to one of your slide using its number or id.</p>
 <div class="footer">
-<p>Learn more: <a href="../../docs/presentations/revealjs/presenting.qmd#navigation-menu">Navigation</a> / <a href="../../docs/presentations/revealjs/presenting.qmd#jump-to-slide">Jump To Slide</a></p>
+<p>Learn more: <a href="../../docs/presentations/revealjs/presenting.qmd#navigation-menu">Navigation</a></p>
 </div>
 </section>
 <section id="jump-to-slide" class="slide level2">
 <h2>Jump to slide</h2>
-<div style="margin-bottom: 0.9em;">
-<p>Quickly jump to other parts of your presentation</p>
+<p>You can also press <kbd title="g" aria-hidden="true">g</kbd><span class="visually-hidden">g</span> to toggle ‘Jump To Slide’ modal box to quickly go to one of your slide using its number or id.</p>
+<div class="footer">
+<p>Learn more: <a href="../../docs/presentations/revealjs/presenting.qmd#jump-to-slide">Jump To Slide</a></p>
 </div>
 </section>
 <section id="chalkboard" class="slide level2" data-chalkboard-buttons="true">
@@ -1369,13 +1430,13 @@ a_{21}&amp; =b_{21}&amp;
 <section id="speaker-view" class="slide level2">
 <h2>Speaker view</h2>
 <p>press <kbd title="s" aria-hidden="true">s</kbd><span class="visually-hidden">s</span> (or use the tools in presentation menu <img data-src="images/navigation-menu-icon.png" style="padding-bottom: 1px; margin: 0;width:0.5em;height:0.5em">) to open speaker view</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a></a><span class="fu">## Slide with speaker notes</span></span>
-<span id="cb13-2"><a></a></span>
-<span id="cb13-3"><a></a>Slide content</span>
-<span id="cb13-4"><a></a></span>
-<span id="cb13-5"><a></a>::: {.notes}</span>
-<span id="cb13-6"><a></a>Speaker notes go here.</span>
-<span id="cb13-7"><a></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a></a><span class="fu">## Slide with speaker notes</span></span>
+<span id="cb14-2"><a></a></span>
+<span id="cb14-3"><a></a>Slide content</span>
+<span id="cb14-4"><a></a></span>
+<span id="cb14-5"><a></a>::: {.notes}</span>
+<span id="cb14-6"><a></a>Speaker notes go here.</span>
+<span id="cb14-7"><a></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
 <p>Speaker notes go here.</p>
 <style type="text/css">
@@ -1415,7 +1476,7 @@ a_{21}&amp; =b_{21}&amp;
 </section>
 <section id="themes" class="slide level2">
 <h2>Themes</h2>
-<p>10 Built-in themes</p>
+<p>10 built-in themes also apply to reveal.js:</p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -1432,20 +1493,18 @@ a_{21}&amp; =b_{21}&amp;
 </section>
 <section id="reveal.js-with-brand.yml" class="slide level2">
 <h2>reveal.js with brand.yml</h2>
-<p>The <code>_brand.yml</code> file in the root directory of your project (with or without a <code>_quarto.yml</code> file) will automatically apply the brand to your <code>revealjs</code> documents.</p>
-<ul>
-<li>The <code>revealjs</code> format does not support switching between light and dark modes.</li>
-</ul>
-</section>
+<p>The <code>_brand.yml</code> file in the root directory of your project will automatically apply the brand to your <code>revealjs</code> documents.</p>
+
+<img data-src="images/brand-example.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="title-slide-background" class="slide level2">
 <h2>Title slide background</h2>
 <p>Add a custom background to the title slide using the <code>title-slide-attributes</code> key:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a></a><span class="co">---</span></span>
-<span id="cb14-2"><a></a><span class="an">format:</span><span class="co"> revealjs</span></span>
-<span id="cb14-3"><a></a><span class="an">title-slide-attributes:</span></span>
-<span id="cb14-4"><a></a><span class="co">    data-background-image: images/milky-way.jpeg</span></span>
-<span id="cb14-5"><a></a><span class="co">    data-background-size: cover</span></span>
-<span id="cb14-6"><a></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a></a><span class="co">---</span></span>
+<span id="cb15-2"><a></a><span class="an">format:</span><span class="co"> revealjs</span></span>
+<span id="cb15-3"><a></a><span class="an">title-slide-attributes:</span></span>
+<span id="cb15-4"><a></a><span class="co">    data-background-image: images/milky-way.jpeg</span></span>
+<span id="cb15-5"><a></a><span class="co">    data-background-size: cover</span></span>
+<span id="cb15-6"><a></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#custom-background">Custom Background</a></p>
 </div>
@@ -1454,11 +1513,11 @@ a_{21}&amp; =b_{21}&amp;
 <h2>Slide backgrounds</h2>
 <p>Set the <code>background</code> attribute on a slide to change the background color (all CSS color formats are supported).</p>
 <p>Use <code>{{&lt; brand color COLOR_NAME BRAND_MODE &gt;}}</code> to return the brand color named <code>COLOR_NAME</code> as a string.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a></a><span class="co">---</span></span>
-<span id="cb15-2"><a></a><span class="an">format:</span><span class="co"> revealjs</span></span>
-<span id="cb15-3"><a></a><span class="co">---</span></span>
-<span id="cb15-4"><a></a></span>
-<span id="cb15-5"><a></a><span class="fu">## Slide Title {background-color='{{&lt; brand color primary &gt;}}'}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a></a><span class="co">---</span></span>
+<span id="cb16-2"><a></a><span class="an">format:</span><span class="co"> revealjs</span></span>
+<span id="cb16-3"><a></a><span class="co">---</span></span>
+<span id="cb16-4"><a></a></span>
+<span id="cb16-5"><a></a><span class="fu">## Slide Title {background-color='{{&lt; brand color primary &gt;}}'}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#color-backgrounds">Slide Backgrounds</a></p>
 </div>
@@ -1487,17 +1546,25 @@ a_{21}&amp; =b_{21}&amp;
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/">Quarto Presentations</a></p>
 </div>
 </section>
-<section id="your-turn-2" class="slide level2" data-background-color="#f3c13d">
+<section id="your-turn-2" class="slide level2 smaller" data-background-color="#a9c7c9">
 <h2>Your turn</h2>
 <ul>
 <li>Change the title slide background.
 <ul>
 <li>Find an image on Unsplash and get the direct URL to the image file.</li>
 <li>Add <code>title-slide-attributes</code> to your YAML header and specify the <code>data-background-image</code> attribute with the image’s URL.</li>
-<li>If it’s a dark photo, you may want to change <code>data-background-color</code> to a dark color so that it uses a light font color.</li>
+<li>If it’s a dark photo, you may want to change <code>data-background-color</code> to a dark color so that the slide uses a light font color.</li>
 </ul></li>
 <li>Edit Conclusion slide background color: Use the <strong>brand.yml</strong> shortcodes to change the color to <code>primary</code>.</li>
 </ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_c7ea8185" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 
 
 </section></section>
@@ -1516,6 +1583,7 @@ a_{21}&amp; =b_{21}&amp;
   <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1537,7 +1605,8 @@ a_{21}&amp; =b_{21}&amp;
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1708,7 +1777,7 @@ a_{21}&amp; =b_{21}&amp;
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
