@@ -10,9 +10,9 @@ meta:
 logo:
   images:
     icon:
-      path: ../images/whr_logo.png
+      path: images/whr_logo.png
       alt: World Happiness Report icon.
-  small: ../images/whr_logo.png
+  small: images/whr_logo.png
 
 color:
   palette:

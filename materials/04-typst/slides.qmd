@@ -16,7 +16,7 @@ footer: "pos.it/quarto-brand-conf25"
 ![](images/typst-workflow.png){fig-align="center" width="70%"}
 
 ::: notes
-Typst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.
+Typst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use. Typst is built to simplify the process of creating beautiful, professional PDFs. It uses a markup-based system, which means you write plain text and code to define your document's structure and style, just like you would with Quarto or Markdown. 
 :::
 
 ::: footer
@@ -51,7 +51,11 @@ format: typst
 Learn more: [Typst in Quarto](https://quarto.org/docs/output-formats/typst.html)
 :::
 
-# Building PDFs
+::: notes
+How do you use Typst with Quarto? You just need to specify it as your output format in the YAML header of your Quarto document. This is the default page layout you'll get: a clean, single-column PDF.
+:::
+
+# Building PDFs {background-color='{{< brand color dark-blue >}}'}
 
 ## Page layout
 
@@ -88,6 +92,10 @@ format:
 Learn more: [Page Layout](https://quarto.org/docs/output-formats/typst.html#page-layout)
 :::
 
+::: notes
+One of the great things about Typst is how easily you can customize your PDF's appearance. You can control the page size, margins, and even the number of columns directly from your YAML. For example, to create a two-column, A5-sized document with one-centimeter margins, you can use this code.
+:::
+
 ## Margins
 
 Edit the margin's horizontal direction (`x`) and vertical direction (`y`):
@@ -109,6 +117,9 @@ margin:
 Learn more: [Margins](https://quarto.org/docs/output-formats/typst.html#margins)
 :::
 
+::: notes
+If you want more granular control, you can define your margins for the horizontal and vertical directions separately. You can use standard units like inches or centimeters, as shown here.
+:::
 
 ## Paper Size
 
@@ -116,10 +127,14 @@ Learn more: [Margins](https://quarto.org/docs/output-formats/typst.html#margins)
 papersize: us-letter
 ```
 
-![](images/papersizes.png){.border width="40%" fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+![](images/papersizes.png){.border width="35%" fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
 
 ::: footer
 Learn more: [Supported page sizes](https://typst.app/docs/reference/layout/page/#parameters-paper)
+:::
+
+::: notes
+Typst supports a wide range of paper sizes. Instead of just us-letter or a4, you have a lot of options. Typst's documentation has a full list of all the supported sizes. It's a very comprehensive set of options.
 :::
 
 ## More options
@@ -149,6 +164,10 @@ number-depth: 3
 Learn more: [Section Numbering](https://quarto.org/docs/output-formats/typst.html#section-numbering), [Table of Contents](https://quarto.org/docs/output-formats/typst.html#table-of-contents)
 :::
 
+::: notes
+There are also a ton of other options you can set in your YAML. For example, you can easily add a table of contents and control its depth. Or you can add section numbering to automatically number your headings. You can even specify the depth of the numbering.
+:::
+
 ## Typst blocks
 
 Add a `.block` class to change appearance of blocks:
@@ -161,38 +180,13 @@ This is a block with gray background and slightly rounded corners.
 :::
 ```
 
-# Branding Typst with brand.yml
-
-## Color
-
-Use colors from the `_brand.yml` file in Typst using `brand-color`:
-
-```markdown
-::: {.block fill="brand-color.primary" inset="8pt" radius="4pt"}
-
-This is a block with the primary color and slightly rounded corners.
-
-:::
-```
-
 ::: footer
-Learn more: [Typst Brand YAML](https://quarto.org/docs/advanced/typst/brand-yaml.html)
+Learn more: [Typst Blocks](https://quarto.org/docs/output-formats/typst.html#typst-blocks)
 :::
 
-## Typography {.smaller}
-
-|                  | base | headings | title[^1] | subtitle | monospace-inline | monospace-block | link  |
-|------------------|------|----------|-----------|----------|------------------|-----------------|-------|
-| family           |   ✓  |    ✓     |     ✓     |    ✓     |        ✓         |        ✓        |   NA  |
-| size             |   ✓  |    NA    |     NA    |    NA    |        ✓         |        ✓        |   NA  |
-| weight           |   ✓  |    ✓     |     ✓     |    ✓     |        ✓         |        ✓        |   ✓   |
-| style            |  NA  |    ✓     |     ✓     |    ✓     |        NA        |        NA       |   NA  |
-| color            |   ✓  |    ✓     |     ✓     |    ✓     |        ✓         |        ✓        |   ✓   |
-| background-color |  NA  |    NA    |     NA    |    NA    |        ✓         |        ✓        |   ✓   |
-| decoration       |  NA  |    NA    |     NA    |    NA    |        NA        |        NA       |   ✓   |
-| line-height      |   ✓  |    ✓     |     ✓     |    ✓     |        NA        |        ✓        |   NA  |
-
-[^1]: While being styled as headings, title and subtitle have a separate implementation.
+::: notes
+Typst also lets you create custom blocks to highlight specific content. You can add a .block class to your markdown and change its appearance with a few simple attributes, like fill, inset, and radius.
+:::
 
 ## Typst and fonts
 
@@ -212,11 +206,139 @@ format:
 ---
 ```
 
+::: footer
+Learn more: [Font Support](https://quarto.org/docs/output-formats/typst.html#fonts-support)
+:::
+
+::: notes
+With Typst, you can use any font available on your system. To see what fonts are installed, just run this command in your terminal. If you have custom fonts, you can tell Typst where to find them by setting the font-paths option in your YAML.
+:::
+
+# Branding Typst with brand.yml {background-color='{{< brand color dark-blue >}}'}
+
+::: notes
+One of the most powerful features of Quarto is the ability to use a _brand.yml file to manage your brand identity across multiple projects.
+:::
+
+## Color
+
+Use colors from the `_brand.yml` file in Typst using `brand-color`:
+
+```markdown
+::: {.block fill="brand-color.primary" inset="8pt" radius="4pt"}
+
+This is a block with the primary color and slightly rounded corners.
+
+:::
+```
+
+::: footer
+Learn more: [Typst Brand YAML](https://quarto.org/docs/advanced/typst/brand-yaml.html)
+:::
+
+::: notes
+This includes colors. You can reference colors defined in your _brand.yml file directly in your Typst documents. Here, we're using a block with a fill color from our brand's primary color palette.
+:::
+
+## Fonts
+
+Quarto will download fonts from Google Fonts and put them in the Typst fonts path if they are specified in the `typography.fonts` section of `_brand.yml` using `source: google`.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{.markdown filename="_brand.yml"}
+typography:
+  fonts:
+    - family: Libre Franklin
+      source: google
+      weight: [400, 700]
+
+  base:
+    family: Libre Franklin
+    weight: 400
+
+  headings:
+    family: Libre Franklin
+    weight: 700
+    color: dark-purple
+```
+
+:::
+
+::: {.column width="50%"}
+
+![](images/google-typst.png){width=80% fig-align="center"}
+:::
+
+::::
+
+::: notes
+Quarto can even handle fonts for you. If you specify a font from Google Fonts in your _brand.yml file, Quarto will automatically download it and make it available to Typst. This is an example of what that looks like in your _brand.yml:
+:::
+
+## Fonts {.smaller}
+
+|                  | base | headings | title[^1] | subtitle | monospace-inline | monospace-block | link  |
+|------------------|------|----------|-----------|----------|------------------|-----------------|-------|
+| family           |   ✓  |    ✓     |     ✓     |    ✓     |        ✓         |        ✓        |   NA  |
+| size             |   ✓  |    NA    |     NA    |    NA    |        ✓         |        ✓        |   NA  |
+| weight           |   ✓  |    ✓     |     ✓     |    ✓     |        ✓         |        ✓        |   ✓   |
+| style            |  NA  |    ✓     |     ✓     |    ✓     |        NA        |        NA       |   NA  |
+| color            |   ✓  |    ✓     |     ✓     |    ✓     |        ✓         |        ✓        |   ✓   |
+| background-color |  NA  |    NA    |     NA    |    NA    |        ✓         |        ✓        |   ✓   |
+| decoration       |  NA  |    NA    |     NA    |    NA    |        NA        |        NA       |   ✓   |
+| line-height      |   ✓  |    ✓     |     ✓     |    ✓     |        NA        |        ✓        |   NA  |
+
+[^1]: While being styled as headings, title and subtitle have a separate implementation.
+
+::: footer
+Learn more: [Typst Brand YAML](https://quarto.org/docs/advanced/typst/brand-yaml.html#typography)
+:::
+
+::: notes
+This table shows the various font properties you can control within your _brand.yml file. You have fine-grained control over things like font family, size, weight, and color for different elements of your document, from the base text to headings and titles.
+:::
+
+## Logo
+
+The Typst implementation allows customization of the logo position at the document level:
+
+```{.markdown}
+---
+format:
+  typst:
+    logo:
+      width: 1in
+      location: right-top
+      padding-right: 0.5in
+      padding-top: 0.25in
+      alt: Alternate alternate text
+---
+```
+
+::: footer
+Learn more: [Logo Customization](https://quarto.org/docs/authoring/brand.html#document-logo-customization)
+:::
+
+::: notes
+The Typst implementation also allows you to customize your document's logo. You can set its width, location on the page, and padding, giving you complete control over how your branding is displayed.
+:::
+
 ## Your turn {background-color='{{< brand color light-blue >}}'}
 
 {{< include exercise-01.qmd >}}
 
-# Customizing templates
+```{r}
+countdown::countdown(minutes = 5L)
+```
+
+# Customizing templates {background-color='{{< brand color dark-blue >}}'}
+
+::: notes
+For even more advanced customization, Typst allows you to define your own custom templates. This lets you create highly specific document types, from academic papers to posters and letters.
+:::
 
 ## Custom Typst formats
 
@@ -238,6 +360,10 @@ Typst allows you to define your own templates to produce highly customized docum
 Learn more: [Custom Typst Formats](https://quarto.org/docs/output-formats/typst-custom.html)
 :::
 
+::: notes
+You can find a bunch of ready-made templates on Quarto's GitHub page. You can easily use them with the quarto use template command.
+:::
+
 ## Custom Typst formats {.smaller}
 
 | Format                                                                         | Usage                                                      |
@@ -251,6 +377,10 @@ Learn more: [Custom Typst Formats](https://quarto.org/docs/output-formats/typst-
 
 ::: footer
 Learn more: [Custom Typst Formats](https://quarto.org/docs/output-formats/typst-custom.html)
+:::
+
+::: notes
+Here's a list of some of the custom formats available and how to use them with Quarto. These templates can save you a lot of time by providing a pre-defined structure and style for common document types.
 :::
 
 ## Creating a new Typst format
@@ -267,6 +397,10 @@ Choose `typst` as the base format and provide a name for the extension.
 Learn more: [Create a Format](https://quarto.org/docs/output-formats/typst-custom.html#create-a-format)
 :::
 
+::: notes
+If you can't find a template that fits your needs, you can create your own. The quarto create extension format command gives you a starter pack of files to begin with.
+:::
+
 ## Creating a new Typst format {.smaller}
 
 | File                 | Description                                                                                                                                           |
@@ -281,9 +415,13 @@ Learn more: [Create a Format](https://quarto.org/docs/output-formats/typst-custo
 Learn more: [Making a template](https://typst.app/docs/tutorial/making-a-template/), [Awesome Typst](https://github.com/qjcg/awesome-typst#templates--libraries)
 :::
 
+::: notes
+When you create a new format, you get a few key files. The most important ones for our purposes are typst-show.typ and typst-template.typ. typst-show.typ: This file acts as a bridge. It takes the metadata from your Quarto document's YAML and passes it as arguments to your Typst template function. typst-template.typ: This is the core of your format. It defines the layout and styling of your document.
+:::
+
 ## typst-show.typ
 
-```{.markdown filename="./_extensions/article/typst-show.typ"}
+```{.markdown filename="./_extensions/article/typst-show.typ" code-line-numbers="|15-17|18-20|24-28"}
 // Typst custom formats typically consist of a 'typst-template.typ' (which is
 // the source code for a typst template) and a 'typst-show.typ' which calls the
 // template's function (forwarding Pandoc metadata values as required)
@@ -380,9 +518,13 @@ $endif$
 )
 ```
 
+::: notes
+This is what a typical typst-show.typ file looks like. It's a simple script that grabs values from your Quarto YAML (like title, subtitle, and authors) and then calls the article function defined in our template file, passing those values along.
+:::
+
 ## typst-template.typ
 
-```{.markdown filename="./_extensions/article/typst-template.typ"}
+```{.markdown filename="./_extensions/article/typst-template.typ" code-line-numbers="|13-41|53-70"}
 // This is an example typst template (based on the default template that ships
 // with Quarto). It defines a typst function named 'article' which provides
 // various customization options. This function is called from the 
@@ -513,7 +655,11 @@ $endif$
 
 ```
 
-# Recreating the World Happiness Report
+::: notes
+The typst-template.typ file defines the actual appearance of the document. Here, we define the article function that receives the metadata from typst-show.typ. This function sets the page layout, fonts, and other stylistic elements. For example, the highlighted code shows how the function sets the page's paper size, margins, and number of columns based on the values it receives. This is where you can get really creative with your designs.
+:::
+
+# Recreating the World Happiness Report  {background-color='{{< brand color dark-blue >}}'}
 
 ## World Happiness Report example
 
@@ -544,9 +690,17 @@ $endif$
 Link to [World Happiness Report](https://files.worldhappiness.report/WHR25.pdf)
 :::
 
+::: notes
+Let's look at a more complex example. We'll try to recreate the styling of the World Happiness Report PDF. This report has a very specific style: a unique cover page, a two-column layout, and custom fonts and colors. We'll explore how to achieve this with Typst.
+:::
+
 ## Example report with **brand.yml**
 
 ![](images/whr-brand-yml.png){fig-align="center" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::: notes
+Using just the _brand.yml file, we can get a good start. We can handle things like the table of contents, basic heading styles, and logo placement. However, some elements, like the title page and more advanced heading styles, require a bit more work.
+:::
 
 ## Advanced styling
 
@@ -556,17 +710,14 @@ With **brand.yml**:
 
 ✅ Simple heading styling
 
-✅ Logo in top left
+✅ Logo placement customization
 
 ✅ Fonts
-
 
 
 ❌ Cover page
 
 ❌ Advanced headings 
-
-❌ Exact customization
 
 ::: footer
 Learn more: [Advanced Styling](https://typst.app/docs/tutorial/advanced-styling/)
@@ -580,7 +731,7 @@ Learn more: [Advanced Styling](https://typst.app/docs/tutorial/advanced-styling/
 
 Set rules:
 
-```{.markdown filename="typst-template.typ"}
+```{.markdown filename="typst-template.typ" code-line-numbers="|"}
 #let title_page(title)={
     page(margin: 0in,
         background: image("cover.jpg", height: 100%, fit: "cover"))[
@@ -614,6 +765,14 @@ Set rules:
 
 ::::
 
+::: notes
+To create a custom title page, we can define a function in our typst-template.typ file. This function can set specific page properties, like a background image, and then overlay text and other elements. In this example, we're using a background image, setting the text color to white, and then placing the title and logo at specific positions. The result is a highly customized title page that perfectly matches the original report's design.
+:::
+
 ## Your turn {background-color='{{< brand color light-blue >}}'}
 
 {{< include exercise-02.qmd >}}
+
+```{r}
+countdown::countdown(minutes = 5)
+```
