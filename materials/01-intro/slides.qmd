@@ -120,6 +120,7 @@ From the [event portal](https://reg.conf.posit.co/flow/posit/positconf25/reg/log
 
 <center>
 **Gordon Woodhull**
+
 Software Engineer, Quarto
 
 </center>
@@ -132,6 +133,7 @@ Software Engineer, Quarto
 
 <center>
 **Christophe Dervieux**
+
 Software Engineer,<br>R Markdown and Quarto
 
 </center>
