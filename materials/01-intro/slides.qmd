@@ -759,14 +759,6 @@ countdown::countdown(minutes = 5)
 
 For further customization, you can add classes, attributes, and other identifiers to content using divs and spans.
 
-. . .
-
-* Div syntax: `:::`
-* Span syntax: `{ }`
-
-
-. . .
-
 **Divs**
 
     ::: {.border}
