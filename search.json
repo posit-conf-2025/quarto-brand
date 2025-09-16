@@ -1178,7 +1178,7 @@
     "href": "materials/01-intro/slides.html#branded-websites-presentations-dashboards-and-pdfs-with-quarto",
     "title": "Quarto\nDocuments",
     "section": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
-    "text": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto\n WiFi: Posit Conf 2025 Password: conf2025\n Find the materials at: pos.it/quarto-brand-conf25\n Make sure to:\n\nInstall Quarto 1.8\nJoin Discord: From the event portal, click “Join the server”, find our channel: #workshop-quarto-brand\n\n\nIntro: 30 min your turn 15 minute live coding 45 min talking\nwelcome to I have the wifi I recommend opening the website on your own computer so you can follow along"
+    "text": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto\n WiFi: Posit Conf 2025 Password: conf2025\n Find the materials at: pos.it/quarto-brand-conf25\n Make sure you’ve:\n\nInstalled Quarto 1.8\nJoined Discord: event portal &gt; “Join the server” &gt; #workshop-quarto-brand\n\n\nIntro: 30 min your turn 15 minute live coding 45 min talking\nwelcome to I have the wifi I recommend opening the website on your own computer so you can follow along"
   },
   {
     "objectID": "materials/01-intro/slides.html#housekeeping",
@@ -1213,7 +1213,14 @@
     "href": "materials/01-intro/slides.html#about-us-1",
     "title": "Quarto\nDocuments",
     "section": "About us",
-    "text": "About us\n\n\n\nSr. Product Marketing Manager\nDeveloper Relations, Posit\n\n\n\n\n\n\n\nIsabella Velásquez\n @ivelasq\n ivelasq.rbind.io\n\n\nIntroduce TAs"
+    "text": "About us\n\n\n\nSr. Product Marketing Manager\nDeveloper Relations, Posit\n\n\n\n\n\n\n\nIsabella Velásquez\n @ivelasq\n ivelasq.rbind.io"
+  },
+  {
+    "objectID": "materials/01-intro/slides.html#about-us-2",
+    "href": "materials/01-intro/slides.html#about-us-2",
+    "title": "Quarto\nDocuments",
+    "section": "About us",
+    "text": "About us\n\n\n\n\n\n\n\n\nGordon Woodhull Software Engineer, Quarto\n\n\n\n\n\n\n\n\nChristophe Dervieux Software Engineer,R Markdown and Quarto\n\n\n\nIntroduce TAs"
   },
   {
     "objectID": "materials/01-intro/slides.html#meeting-you-where-you-are",
@@ -1321,6 +1328,13 @@
     "text": "Quarto formats\n\n\n\n\n\n\n\nFeature\nQuarto\n\n\n\n\nBasic Formats\nhtml, pdf, docx, typst\n\n\nBeamer\nbeamer\n\n\nPowerPoint\npptx\n\n\nHTML Slides\nrevealjs\n\n\nAdvanced Layout\nQuarto Article Layout\n\n\nCross References\nQuarto Crossrefs\n\n\nWebsites & Blogs\nQuarto Websites, Quarto Blogs\n\n\nBooks\nQuarto Books\n\n\nInteractivity\nQuarto Interactive Documents\n\n\nJournal Articles\nJournal Articles\n\n\nDashboards\nQuarto Dashboards"
   },
   {
+    "objectID": "materials/01-intro/slides.html#how-it-works",
+    "href": "materials/01-intro/slides.html#how-it-works",
+    "title": "Quarto\nDocuments",
+    "section": "How it works",
+    "text": "How it works\nQuarto is a command line interface (CLI) that renders plain text formats (.qmd, .rmd, .md) OR mixed formats (.ipynb/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more.\n\n\n  Usage:   quarto \n  Version: 1.8.24\n\n  Description:\n\n    Quarto CLI\n\n  Options:\n\n    -h, --help     - Show this help.                            \n    -V, --version  - Show the version number for this program.  \n\n  Commands:\n\n    render          [input] [args...]     - Render files or projects to various document types.\n    preview         [file] [args...]      - Render and preview a document or website project.  \n    serve           [input]               - Serve a Shiny interactive document.                \n    create          [type] [commands...]  - Create a Quarto project or extension               \n    create-project  [dir]                 - Create a project for rendering multiple documents  \n    convert         &lt;input&gt;               - Convert documents to alternate representations.    \n    pandoc          [args...]             - Run the version of Pandoc embedded within Quarto.  \n    typst           [args...]             - Run the version of Typst embedded within Quarto.   \n    run             [script] [args...]    - Run a TypeScript, R, Python, or Lua script.        \n    add             &lt;extension&gt;           - Add an extension to this folder or project         \n    install         [target...]           - Installs an extension or global dependency.        \n    publish         [provider] [path]     - Publish a document or project to a provider.       \n    check           [target]              - Verify correct functioning of Quarto installation. \n    help            [command]             - Show this help or the help of a sub-command."
+  },
+  {
     "objectID": "materials/01-intro/slides.html#under-the-hood",
     "href": "materials/01-intro/slides.html#under-the-hood",
     "title": "Quarto\nDocuments",
@@ -1346,7 +1360,14 @@
     "href": "materials/01-intro/slides.html#quarto-workflow",
     "title": "Quarto\nDocuments",
     "section": "Quarto workflow",
-    "text": "Quarto workflow\n\nOpen a .qmd file.\nPreview/render the document.\nMake a change and preview/render again.\n\n\n\n\n\n\n\n\n\n\n\n\nTerminal\n\nquarto preview\n\n\n\n\nCmd/Ctrl + Shift + K"
+    "text": "Quarto workflow\n\nOpen a .qmd file.\nPreview/render the document.\nMake a change and preview/render again."
+  },
+  {
+    "objectID": "materials/01-intro/slides.html#renderpreview",
+    "href": "materials/01-intro/slides.html#renderpreview",
+    "title": "Quarto\nDocuments",
+    "section": "Render/preview",
+    "text": "Render/preview\n\n\n\n\n\n\n\n\n\n\n\nTerminal\n\nquarto preview\n\n\n\n\nCmd/Ctrl + Shift + K"
   },
   {
     "objectID": "materials/01-intro/slides.html#your-turn-1",
