@@ -17,14 +17,13 @@ filters:
 library(countdown)
 ```
 
-## **Branded Websites, Presentations, Dashboards, and PDFs with Quarto**
+## **Branded Websites, Presentations, Dashboards, and PDFs with Quarto** 
 <br>
 **WiFi:** Posit Conf 2025 **Password:** conf2025
 
 <br>
 Find the materials at: [pos.it/quarto-brand-conf25](pos.it/quarto-brand-conf25)
 
-## **Branded Websites, Presentations, Dashboards, and PDFs with Quarto**
 <br>
 **Make sure to:**
 
