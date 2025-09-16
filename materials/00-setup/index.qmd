@@ -66,6 +66,7 @@ If you are not using a cloud-based option:
 
 **If you use Git/GitHub:**
 
+* Exercises are available at: <https://github.com/posit-dev/quarto-brand-exercises/>
 * Clone the repository with Git:
 
 ```bash
