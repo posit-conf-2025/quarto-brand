@@ -194,6 +194,24 @@ Learn more: [Typst Brand YAML](https://quarto.org/docs/advanced/typst/brand-yaml
 
 [^1]: While being styled as headings, title and subtitle have a separate implementation.
 
+## Typst and fonts
+
+Check what fonts are available on your system with:
+
+```{.bash filename="Terminal"}
+quarto typst fonts
+```
+
+Set additional paths using `font-paths`:
+
+```markdown
+---
+format: 
+  typst:
+    font-paths: myfonts
+---
+```
+
 ## Your turn {background-color='{{< brand color light-blue >}}'}
 
 {{< include exercise-01.qmd >}}
@@ -493,24 +511,6 @@ $endif$
   stroke: none
 )
 
-```
-
-## Quick note about fonts
-
-Check what fonts are available on your system with:
-
-```{.bash filename="Terminal"}
-quarto typst fonts
-```
-
-Set additional paths using `font-paths`:
-
-```markdown
----
-format: 
-  typst:
-    font-paths: myfonts
----
 ```
 
 # Recreating the World Happiness Report
