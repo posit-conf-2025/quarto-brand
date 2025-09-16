@@ -3,7 +3,7 @@ title: "Presentations\nwith reveal.js"
 footer: "pos.it/quarto-brand-conf25"
 logo: ""
 format:
-  revealjs:
+  live-revealjs:
     chalkboard: true
     title-slide-attributes: 
       data-background-image: ../../images/title-slide-light.svg
@@ -12,7 +12,12 @@ format:
 filters:
   - shinylive
   - reveal-auto-agenda
+revealjs-plugins:
+  - drop
+engine: knitr
 ---
+
+{{< include ../../_extensions/r-wasm/live/_knitr.qmd >}}
 
 ## File formats
 
@@ -26,6 +31,10 @@ Quarto supports a variety of formats for creating presentations, including:
 
 brand.yml is currently supported only in `revealjs`.
 
+::: notes
+Quarto supports several popular presentation formats, as you can see here. We have reveal.js, which is what we'll be focusing on today, but also pptx for Microsoft PowerPoint and beamer for LaTeX. While all of these are great, reveal.js offers a unique level of customization and interactivity, especially when it comes to web-based content. And for those of you who work with branding, it's the only one that currently supports the brand.yml file, which we'll discuss later.
+:::
+
 ## reveal.js
 
 reveal.js presentations allow you to create stunning presentations on the web.
@@ -37,6 +46,10 @@ reveal.js presentations allow you to create stunning presentations on the web.
 * Activate scroll view
 
 …and much more
+
+::: notes
+What makes reveal.js so cool? It's all about creating stunning, modern presentations that live on the web. It's fantastic for technical presentations because it handles code and LaTeX equations beautifully. You can even include live computations and interactive content directly in your slides. It also supports fancy transitions, animations, and a unique scroll view for long-form content, allowing you to create engaging and dynamic presentations for any topic. 
+:::
 
 # reveal.js basics {background-color='{{< brand color foreground >}}'}
 
@@ -50,6 +63,10 @@ format: revealjs
 
 ::: footer
 Learn more: [Revealjs](https://quarto.org/docs/presentations/revealjs/)
+:::
+
+::: notes
+To convert your Quarto document, all you need to do is change one line in the YAML header. Change the format from html or pdf to revealjs. Quarto handles all the heavy lifting for you.
 :::
 
 ## Example {auto-animate=true}
@@ -87,6 +104,10 @@ format: html
 
 ::::
 
+::: notes
+On the left, we have a basic Quarto document with two sections. On the right, you can see how it's rendered as a simple HTML document. This is what you'd get by default if you set the format to html.
+:::
+
 ## Example {auto-animate=true}
 
 :::: {.columns}
@@ -122,6 +143,10 @@ format: revealjs
 :::
 
 ::::
+
+::: notes
+Now, let's change the format to revealjs in the YAML header. See the difference on the right? The same content is now formatted as a slide deck, with each top-level heading (##) becoming a new slide. This demonstrates the core principle of Quarto presentations: you write your content, and Quarto formats it for you.
+:::
 
 ## Example with sections {auto-animate=true}
 
@@ -173,6 +198,10 @@ format: revealjs
 
 ::::
 
+::: notes
+You can also create a multi-level slide structure. By using a top-level heading (#), you create a new vertical section. Any sub-headings (##) below it will become a vertical sequence of slides. This is a great way to organize your presentation and create logical sections, just like you would with a regular document.
+:::
+
 ## Example with sections {auto-animate=true}
 
 :::: {.columns}
@@ -207,6 +236,10 @@ format: revealjs
 
 ::::
 
+::: notes
+Here's another way to create a new slide. The horizontal rule (---) acts as a slide break. This is useful for splitting up content on a single page, like a list, into multiple slides.
+:::
+
 ## Your turn {background-color='{{< brand color light-blue >}}' .smaller  }
 
 {{< include exercise-01.qmd >}}
@@ -215,8 +248,15 @@ format: revealjs
 countdown::countdown(minutes = 5L)
 ```
 
+::: notes
+Alright, your turn to try! Take five minutes to practice what we've just covered. The exercise is on your screen. The goal is just to get your hands dirty with the basic syntax.
+:::
 
 # Building slides
+
+::: notes
+Now that we have the basics down, let's explore some more powerful features for building slides.
+:::
 
 ## Editing slides
 
@@ -226,6 +266,10 @@ The `quarto-revealjs-editable` extension allows for the repositioning and resizi
 
 ::: footer
 Learn more: [quarto-revealjs-editable](https://github.com/EmilHvitfeldt/quarto-revealjs-editable)
+:::
+
+::: notes
+A great tool for fine-tuning your presentation is the quarto-revealjs-editable extension by Emil Hvitfeldt. It allows you to drag and drop text and images right on the slide preview to reposition and resize them. This saves a lot of time by eliminating the need to manually adjust positions in your source code.
 :::
 
 ## Content overflow {.smaller}
@@ -273,7 +317,9 @@ Use the .scrollable class to make off-slide content available by scrolling. For 
     Phasellus ac ligula aliquam, aliquet nunc quis, tempor libero.
     Vivamus ultricies enim a metus ultrices, a pretium velit tristique.
 
-
+::: notes
+What do you do when you have too much content for a single slide? Quarto offers two easy solutions. You can use the .smaller class to shrink the font size and fit more text on the slide, or you can use the .scrollable class to make the content scrollable. You can add these classes to any heading.
+:::
 
 ## Slide transitions
 
@@ -293,6 +339,10 @@ format:
 Learn more: [Slide Transitions](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions)
 :::
 
+::: notes
+You can control the slide transitions directly from the YAML header. 
+:::
+
 ## Slide transitions {.smaller}
 
 The next few slides will transition using the `slide` transition
@@ -305,6 +355,10 @@ The next few slides will transition using the `slide` transition
 | `convex`   | Slide at a convex angle                                                |
 | `concave`  | Slide at a concave angle                                               |
 | `zoom`     | Scale the incoming slide so it grows in from the center of the screen. |
+
+::: notes
+Here's a list of the available transitions. As you can see, the default is none, which is an instant switch, but you can also use fade, slide, convex, concave, or zoom. We'll use the slide transition for the next few slides so you can see it in action.
+:::
 
 ## Tabsets {.smaller .scrollable transition="slide"}
 
@@ -323,6 +377,32 @@ ggplot(mtcars, aes(hp, mpg, color = am)) +
 ```{r}
 knitr::kable(mtcars)
 ```
+
+### Tabset Code
+
+````.markdown
+::: panel-tabset
+### Plot
+
+```{{r}}
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg, color = am)) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, method = "loess")
+```
+
+### Data
+
+```{{r}}
+knitr::kable(mtcars)
+```
+:::
+````
+
+:::
+
+::: notes
+Tabsets are a fantastic way to organize multiple types of content on a single slide without cluttering it. You can switch between different tabs to view a plot, a table, or any other content you want. This is especially useful for showing data and the code that generated it.
 :::
 
 ::: footer
@@ -354,10 +434,43 @@ knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
 Learn more: [Multiple Columns](https://quarto.org/docs/presentations/revealjs/#multiple-columns)
 :::
 
+::: notes
+Quarto also offers a flexible column layout. You can create columns of varying widths to present your content in a more visually appealing way. Here, we've used columns to show a description on the left and a data table on the right. This is much better than trying to squeeze everything into a single-column layout.
+:::
+
+## Column layout
+
+Arrange content into columns of varying widths:
+
+````{.markdown code-line-numbers=|1,16|2-6|8-9|11-15  }
+::: columns
+::: {.column width="35%"}
+#### Motor Trend Car Road Tests
+
+The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="62%"}
+```{{r}}
+knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
+```
+:::
+:::
+
+````
+
 ## Line highlighting
 
 -   Highlight specific lines for emphasis
 -   Incrementally highlight additional lines
+
+````
+``` {.python code-line-numbers="4-5|7|10"}
+```
+````
 
 ``` {.python code-line-numbers="4-5|7|10"}
 import numpy as np
@@ -376,6 +489,10 @@ plt.show()
 Learn more: [Line Highlighting](https://quarto.org/docs/presentations/revealjs/#line-highlighting)
 :::
 
+::: notes
+For those of you presenting code, this feature is a game-changer. You can highlight specific lines of code to draw attention to them, or even incrementally highlight additional lines. This helps your audience follow along and focus on the parts of the code you're talking about.
+:::
+
 ## Executable code
 
 ```{r}
@@ -390,6 +507,10 @@ ggplot(mtcars, aes(hp, mpg, color = am)) +
 
 ::: footer
 Learn more: [Executable Code](https://quarto.org/docs/presentations/revealjs/#executable-code)
+:::
+
+::: notes
+One of the most powerful features of Quarto is the ability to include executable code directly in your presentation. The code is run, and the output—whether it's a plot, a table, or just text—is displayed on the slide. This is great for live demonstrations or for ensuring your examples are always up-to-date.
 :::
 
 ## LaTeX equations
@@ -435,6 +556,10 @@ a_{21}& =b_{21}&
 Learn more: [LaTeX Equations](https://quarto.org/docs/authoring/markdown-basics.html#equations)
 :::
 
+::: notes
+If your work involves math or science, you'll be happy to know that Quarto has excellent support for LaTeX equations.
+:::
+
 ## Incremental lists
 
 Lists can optionally be displayed incrementally:
@@ -452,6 +577,27 @@ Lists can optionally be displayed incrementally:
 ::: footer
 Learn more: [Incremental Lists](https://quarto.org/docs/presentations/revealjs/#incremental-lists)
 :::
+
+::: notes
+To avoid overwhelming your audience with too much information at once, you can display lists incrementally. Items will appear one by one as you advance the slide, keeping your audience's attention focused on the current point. You can also use a simple ... to insert pauses between content.
+:::
+
+
+## Incremental lists
+
+Lists can optionally be displayed incrementally:
+
+```markdown
+::: incremental
+-   First item
+-   Second item
+-   Third item
+:::
+
+. . .
+
+<br/> Insert pauses to make other types of content display incrementally.
+```
 
 ## Fragments
 
@@ -489,6 +635,40 @@ Highlight red
 Learn more: [Fragments](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments)
 :::
 
+::: notes
+Fragments are a more advanced form of incremental display. They allow you to apply different animation effects to your content. You can make things fade in, slide up, or even highlight in different colors. This gives you a lot of control over how your information is revealed.
+:::
+
+## Fragments
+
+```markdown
+::: {.fragment .fade-in}
+Fade in
+:::
+
+::: {.fragment .fade-up}
+Slide up while fading in
+:::
+
+::: {.fragment .fade-left}
+Slide left while fading in
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Fade in then semi out
+:::
+
+. . .
+
+::: {.fragment .strike}
+Strike
+:::
+
+::: {.fragment .highlight-red}
+Highlight red
+:::
+```
+
 ## Absolute position
 
 Position images or other elements at precise locations
@@ -503,12 +683,26 @@ Position images or other elements at precise locations
 Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position)
 :::
 
+::: notes
+For precise placement of elements, you can use absolute positioning. You can place images or text at a specific distance from the top, bottom, left, or right of the slide. This is great for creating unique layouts and collages.
+:::
+
+## Absolute position
+
+```markdown
+![](images/kitten-400-350.jpeg){.absolute top="170" left="30" width="400" height="400"}
+
+![](images/kitten-450-250.jpeg){.absolute .fragment top="150" right="80" width="450"}
+
+![](images/kitten-300-200.jpeg){.absolute .fragment bottom="110" right="130" width="300"}
+```
+
 ## Interactive slides {.smaller transition="slide"}
 
 Include Jupyter widgets and htmlwidgets in your presentations
 
 ```{r}
-#| echo: false
+#| echo: fenced
 #| fig-height: 5
 library(leaflet)
 leaflet() %>%
@@ -520,7 +714,27 @@ leaflet() %>%
 Learn more: [Jupyter widgets](https://quarto.org/docs/interactive/widgets/jupyter.html), [htmlwidgets](https://quarto.org/docs/interactive/widgets/htmlwidgets.html)
 :::
 
+::: notes
+Quarto makes it easy to include interactive content in your presentations. For example, you can embed Jupyter widgets or htmlwidgets, like this interactive Leaflet map. This makes your presentations more engaging and allows your audience to explore data on their own.
+:::
+
+## Interactive slides
+
+Add executable R or Python chunks into your slides:
+
+```{webr}
+fit = lm(mpg ~ am, data = mtcars)
+summary(fit)
+plot(fit)
+```
+
+::: footer
+Learn more: [Quartolive](https://github.com/r-wasm/quarto-live)
+:::
+
 ## Interactive slides {.smaller transition="slide"}
+
+Add Shinylive applications into your slides:
 
 ```{shinylive-r}
 #| standalone: true
@@ -582,7 +796,7 @@ shinyApp(ui = ui, server = server)
 
 
 ::: footer
-Learn more: [Observable](https://quarto.org/docs/interactive/ojs/), [Shiny](https://quarto.org/docs/interactive/shiny/), [Component Layout](https://quarto.org/docs/interactive/layout.html)
+Learn more: [Shinylive](https://github.com/posit-dev/shinylive/)
 :::
 
 ## Your turn {background-color='{{< brand color light-blue >}}' .smaller}
@@ -622,13 +836,17 @@ You can also press {{< kbd g >}} to toggle 'Jump To Slide' modal box to quickly 
 Learn more: [Jump To Slide](/docs/presentations/revealjs/presenting.qmd#jump-to-slide)
 :::
 
+## Chalkboard {chalkboard-buttons="true" .smaller}
 
+Enable by adding:
 
-## Chalkboard {chalkboard-buttons="true"}
+```yaml
+format:
+  revealjs:
+    chalkboard: true
+```
 
-::: {style="margin-bottom: 0.9em;"}
-Free form drawing and slide annotations
-:::
+<br>
 
 ::: {layout="[1, 20]"}
 ![](images/presentation-chalkboard.png){width="41"}
