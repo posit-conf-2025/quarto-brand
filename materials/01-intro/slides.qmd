@@ -140,7 +140,7 @@ We'll teach you
 :::
 
 ::: {.column .fragment}
-::: your-turn
+::: task
 **Your turn**
 
 -   Practice exercises for you
