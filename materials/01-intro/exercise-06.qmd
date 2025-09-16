@@ -8,7 +8,7 @@
 ```{r}
 #| eval: false
 #| echo: true
-geom_line(color = brand$color$palette['blue'])
+geom_line(color = brand$color$palette$blue)
 ```
 
 ### Python
