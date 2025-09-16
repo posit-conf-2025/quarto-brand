@@ -1,5 +1,5 @@
 * Change the title slide background.
   * Find an image on Unsplash and get the direct URL to the image file.
   * Add `title-slide-attributes` to your YAML header and specify the `data-background-image` attribute with the image's URL.
-  * If it's a dark photo, you may want to change `data-background-color` to a dark color so that it uses a light font color.
+  * If it's a dark photo, you may want to change `data-background-color` to a dark color so that the slide uses a light font color.
 * Edit Conclusion slide background color: Use the **brand.yml** shortcodes to change the color to `primary`.

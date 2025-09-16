@@ -1,9 +1,10 @@
 ---
-title: "Quarto\n\nPresentations"
+title: "Presentations\nwith reveal.js"
 footer: "pos.it/quarto-brand-conf25"
 logo: ""
 format:
   revealjs:
+    chalkboard: true
     title-slide-attributes: 
       data-background-image: ../../images/title-slide-light.svg
       data-background-color: "white"
@@ -206,15 +207,20 @@ format: revealjs
 
 ::::
 
-## Your turn {background-color='{{< brand color light-blue >}}'}
+## Your turn {background-color='{{< brand color light-blue >}}' .smaller  }
 
 {{< include exercise-01.qmd >}}
+
+```{r}
+countdown::countdown(minutes = 5L)
+```
+
 
 # Building slides
 
 ## Editing slides
 
-The quarto-revealjs-editable extension allows the repositioning and resizing of images and text divs directly in the previewed slides.
+The `quarto-revealjs-editable` extension allows for the repositioning and resizing of images and text divs directly in previewed slides.
 
 ![](images/demo-text.gif){fig-align="center"}
 
@@ -235,6 +241,39 @@ Use the .scrollable class to make off-slide content available by scrolling. For 
 ```markdown
 ## Slide Title {.scrollable}
 ```
+
+<br>
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nullam sagittis ex eget bibendum vulputate.
+
+    Vestibulum lobortis mauris sed lorem auctor, in commodo ex semper.
+    Vestibulum congue nisl eget blandit suscipit.
+    Curabitur sit amet diam elementum, dictum massa quis, vulputate est.
+    Sed dignissim lacus et lorem pellentesque interdum.
+    Ut efficitur eros id leo condimentum, vel sodales velit lacinia.
+
+    Vivamus cursus massa accumsan tellus imperdiet aliquet id et odio.
+    Duis tincidunt nunc vitae erat sollicitudin, non condimentum enim eleifend.
+    Phasellus ac ligula aliquam, aliquet nunc quis, tempor libero.
+    Vivamus ultricies enim a metus ultrices, a pretium velit tristique.
+    
+    
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nullam sagittis ex eget bibendum vulputate.
+
+    Vestibulum lobortis mauris sed lorem auctor, in commodo ex semper.
+    Vestibulum congue nisl eget blandit suscipit.
+    Curabitur sit amet diam elementum, dictum massa quis, vulputate est.
+    Sed dignissim lacus et lorem pellentesque interdum.
+    Ut efficitur eros id leo condimentum, vel sodales velit lacinia.
+
+    Vivamus cursus massa accumsan tellus imperdiet aliquet id et odio.
+    Duis tincidunt nunc vitae erat sollicitudin, non condimentum enim eleifend.
+    Phasellus ac ligula aliquam, aliquet nunc quis, tempor libero.
+    Vivamus ultricies enim a metus ultrices, a pretium velit tristique.
+
+
 
 ## Slide transitions
 
@@ -546,9 +585,14 @@ shinyApp(ui = ui, server = server)
 Learn more: [Observable](https://quarto.org/docs/interactive/ojs/), [Shiny](https://quarto.org/docs/interactive/shiny/), [Component Layout](https://quarto.org/docs/interactive/layout.html)
 :::
 
-## Your turn {background-color='{{< brand color light-blue >}}'}
+## Your turn {background-color='{{< brand color light-blue >}}' .smaller}
 
 {{< include exercise-02.qmd >}}
+
+```{r}
+countdown::countdown(minutes = 5L)
+```
+
 
 # Presenting slides
 
@@ -566,17 +610,19 @@ Toggle the slide menu with the menu button (bottom left of slide) to go to other
 
 You can also press {{< kbd m >}} to toggle the menu open and closed.
 
-You can also press {{< kbd g >}} to toggle 'Jump To Slide' modal box to quickly go to one of your slide using its number or id.
-
 ::: footer
-Learn more: [Navigation](/docs/presentations/revealjs/presenting.qmd#navigation-menu) / [Jump To Slide](/docs/presentations/revealjs/presenting.qmd#jump-to-slide)
+Learn more: [Navigation](/docs/presentations/revealjs/presenting.qmd#navigation-menu)
 :::
 
 ## Jump to slide
 
-::: {style="margin-bottom: 0.9em;"}
-Quickly jump to other parts of your presentation
+You can also press {{< kbd g >}} to toggle 'Jump To Slide' modal box to quickly go to one of your slide using its number or id.
+
+::: footer
+Learn more: [Jump To Slide](/docs/presentations/revealjs/presenting.qmd#jump-to-slide)
 :::
+
+
 
 ## Chalkboard {chalkboard-buttons="true"}
 
@@ -655,7 +701,7 @@ Learn more: [Speaker View](https://quarto.org/docs/presentations/revealjs/presen
 
 ## Themes
 
-10 Built-in themes 
+10 built-in themes also apply to reveal.js:
 
 ::: {layout-ncol="2"}
 ![](images/moon.png)
@@ -669,9 +715,9 @@ Learn more: [Themes](https://quarto.org/docs/presentations/revealjs/themes.html)
 
 ## reveal.js with brand.yml
 
-The `_brand.yml` file in the root directory of your project (with or without a `_quarto.yml` file) will automatically apply the brand to your `revealjs` documents.
+The `_brand.yml` file in the root directory of your project will automatically apply the brand to your `revealjs` documents.
 
-* The `revealjs` format does not support switching between light and dark modes.
+![](images/brand-example.png){fig-align="center"}
 
 ## Title slide background
 
@@ -733,6 +779,10 @@ You can also use the following as a slide background:
 Learn more: [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/)
 :::
 
-## Your turn {background-color='{{< brand color primary >}}'}
+## Your turn {background-color='{{< brand color light-blue >}}' .smaller}
 
 {{< include exercise-03.qmd >}}
+
+```{r}
+countdown::countdown(minutes = 10L)
+```
