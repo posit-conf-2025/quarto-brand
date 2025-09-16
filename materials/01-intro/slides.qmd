@@ -95,6 +95,35 @@ Find the materials at: [pos.it/quarto-brand-conf25](pos.it/quarto-brand-conf25)
 :::
 :::
 
+## About us
+
+:::: columns
+::: {.column width="50%"}
+
+![](images/gordon.png){fig-alt="Isabella's headshot" fig-align="center" width=250px style="border-radius: 50%;"}
+
+<center>
+**Gordon Woodhull**
+Software Engineer, Quarto
+
+</center>
+
+:::
+
+::: {.column width="50%"}
+
+![](images/christophe.jpg){fig-alt="Isabella's headshot" fig-align="center" width=250px style="border-radius: 50%;"}
+
+<center>
+**Christophe Dervieux**
+Software Engineer,<br>R Markdown and Quarto
+
+</center>
+
+:::
+
+::::
+
 ::: notes
 Introduce TAs
 :::
