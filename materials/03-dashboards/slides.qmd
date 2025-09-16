@@ -803,7 +803,7 @@ Learn more: <https://quarto.org/docs/dashboards/data-display.html#value-boxes>
 ```{r}
 #| label: clock-4
 #| echo: false
-countdown::countdown(minutes = 5)
+countdown::countdown(minutes = 5, right = "10%", bottom = "-10%")
 ```
 
 ## ...and much more!
