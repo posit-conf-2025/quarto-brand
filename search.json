@@ -162,7 +162,7 @@
     "href": "materials/05-websites/exercise-01.html",
     "title": "",
     "section": "",
-    "text": "Get the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview."
+    "text": "Get the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project. If you’re using Codespaces, follow the instructions here, but go to this repo instead.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview."
   },
   {
     "objectID": "materials/05-websites/exercise-03.html",
@@ -218,7 +218,7 @@
     "href": "materials/05-websites/slides.html#your-turn",
     "title": "QuartoWebsites",
     "section": "Your turn",
-    "text": "Your turn\n\nGet the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview.\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nGet the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project. If you’re using Codespaces, follow the instructions here, but go to this repo instead.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview.\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/05-websites/slides.html#page-structure",
@@ -1115,7 +1115,7 @@
     "href": "materials/05-websites/index.html#exercises",
     "title": "Websites",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\n\nGet the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview.\n\n\n\nExercise 2\n\nAdd some information to about.qmd.\nEdit _quarto.yml so that the navbar includes the about page.\nHow do you think you change the position of the links in the navbar? Change them to appear on the right.\n\n\n\nExercise 3\nPublish your website to Quarto Pub.\n\nFrom the Terminal, run quarto publish, then select Quarto Pub.\nFollow the prompts to set up an account and publish.\n\nIf you have time, publish to Connect Cloud. Note: if you’re using R, you will need an renv.lock file (learn how here) if publishing from Positron or VS Code, or a manifest.json file (learn how here) if publishing from GitHub.",
+    "text": "Exercises\n\nExercise 1\n\nGet the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project. If you’re using Codespaces, follow the instructions here, but go to this repo instead.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview.\n\n\n\nExercise 2\n\nAdd some information to about.qmd.\nEdit _quarto.yml so that the navbar includes the about page.\nHow do you think you change the position of the links in the navbar? Change them to appear on the right.\n\n\n\nExercise 3\nPublish your website to Quarto Pub.\n\nFrom the Terminal, run quarto publish, then select Quarto Pub.\nFollow the prompts to set up an account and publish.\n\nIf you have time, publish to Connect Cloud. Note: if you’re using R, you will need an renv.lock file (learn how here) if publishing from Positron or VS Code, or a manifest.json file (learn how here) if publishing from GitHub.",
     "crumbs": [
       "Websites"
     ]
@@ -1188,7 +1188,7 @@
     "href": "materials/01-intro/slides.html#getting-help",
     "title": "Quarto\nDocuments",
     "section": "Getting help",
-    "text": "Getting help\n\nStick your post-it note to your laptop\n\n🟥 “I’m stuck and need help!”\n🟦 “I finished the exercise”\n\nAsk in the Discord channel: #workshop-quarto-brand\nTalk to us during breaks or your-turns"
+    "text": "Getting help\n\nStick your post-it note to your laptop\n\n🟥 “I’m stuck and need help!”\n🟩 “I finished the exercise”\n\nAsk in the Discord channel: #workshop-quarto-brand\nTalk to us during breaks or your-turns"
   },
   {
     "objectID": "materials/01-intro/slides.html#your-turn---about-you",
@@ -1314,7 +1314,7 @@
     "href": "materials/01-intro/slides.html#your-turn-1",
     "title": "Quarto\nDocuments",
     "section": "Your turn",
-    "text": "Your turn\n\nOpen 01-exercise-r.qmd or 01-exercise-py.qmd.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nOpen 01-exercise-r.qmd or 01-exercise-py.qmd.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\n\n−+\n05:00\n\n\n\n\nshow how to add a code chunk\nPositron/vs code insert code cell, cmd shift i RStudio green button, cmd option i"
   },
   {
     "objectID": "materials/01-intro/slides.html#anatomy-of-a-quarto-document",
@@ -1426,14 +1426,7 @@
     "href": "materials/01-intro/slides.html#divs-and-spans",
     "title": "Quarto\nDocuments",
     "section": "Divs and Spans",
-    "text": "Divs and Spans\nFor further customization, you can add classes, attributes, and other identifiers to content using divs and spans.\n\n\nDiv syntax: :::\nSpan syntax: { }\n\n\nFor future customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well."
-  },
-  {
-    "objectID": "materials/01-intro/slides.html#divs-and-spans-1",
-    "href": "materials/01-intro/slides.html#divs-and-spans-1",
-    "title": "Quarto\nDocuments",
-    "section": "Divs and Spans",
-    "text": "Divs and Spans\nDivs\n::: {.border}\nThis adds the \"border\" class to some content. \n:::\nSpans\n[This is some text]{.class key=\"val\"}"
+    "text": "Divs and Spans\nFor further customization, you can add classes, attributes, and other identifiers to content using divs and spans.\n\n\nDiv syntax: :::\nSpan syntax: { }\n\n\n\nDivs\n::: {.border}\nThis adds the \"border\" class to some content. \n:::\nSpans\n[This is some text]{.class key=\"val\"}\n\nFor future customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well.\n\n\nLearn more: https://quarto.org/docs/authoring/markdown-basics.html#sec-divs-and-spans"
   },
   {
     "objectID": "materials/01-intro/slides.html#divs",
@@ -1447,7 +1440,7 @@
     "href": "materials/01-intro/slides.html#divs-1",
     "title": "Quarto\nDocuments",
     "section": "Divs",
-    "text": "Divs\nMultiple columns\n\n\nmy-document.qmd\n\n::: {layout-ncol=2}\n\nColumn 1 information. This is all content that will go in column 1. \n\n*Column 2 information.*\n:::\n\n\n\n\n\nColumn 1 information. This is all content that will go in column 1.\n\n\nColumn 2 information."
+    "text": "Divs\nMultiple columns\n\n\nmy-document.qmd\n\n::: {layout-ncol=2}\n\n![](earth.jpg)\n\nPhoto by &lt;a href=\"https://unsplash.com/@nypl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\"&gt;The New York Public Library&lt;/a&gt; on &lt;a href=\"https://unsplash.com/photos/planet-earth-close-up-photography-yEauzeZU6xo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\"&gt;Unsplash&lt;/a&gt;\n:::\n\n\n\n\n\n\n\n\nPhoto by The New York Public Library on Unsplash"
   },
   {
     "objectID": "materials/01-intro/slides.html#divs-2",
@@ -1692,28 +1685,42 @@
     "href": "materials/07-customization/slides.html#sass-and-brand.yml",
     "title": "Extracustomization",
     "section": "Sass and brand.yml",
-    "text": "Sass and brand.yml\nIf you’re already using _brand.yml, you can use a .scss file to further customize your theme or to override elements of your brand file. For example:\n\nAdd a drop-shadow to cards\nSpecify the color of blockquotes\nSet different header levels to different colors\nFurther style the navbar"
+    "text": "Sass and brand.yml\nIf you’re already using _brand.yml, you can use a .scss file to further customize your theme, beyond brand.yml’s limits, or to override elements of your brand file. For example:\n\nAdd a drop-shadow to cards\nSpecify the color of blockquotes\nFurther style the navbar"
   },
   {
     "objectID": "materials/07-customization/slides.html#sass-and-brand.yml-1",
     "href": "materials/07-customization/slides.html#sass-and-brand.yml-1",
     "title": "Extracustomization",
     "section": "Sass and brand.yml",
+    "text": "Sass and brand.yml\nIf you’re already using _brand.yml, you can use a .scss file to further customize your theme, beyond brand.yml’s limits, or to override elements of your brand file. For example:\n\nAdd a drop-shadow to cards\nSpecify the color of blockquotes\nSet different header levels to different colors\nFurther style the navbar"
+  },
+  {
+    "objectID": "materials/07-customization/slides.html#sass-and-brand.yml-2",
+    "href": "materials/07-customization/slides.html#sass-and-brand.yml-2",
+    "title": "Extracustomization",
+    "section": "Sass and brand.yml",
     "text": "Sass and brand.yml\nThe colors defined in the brand.yml palette are available as Sass with the format $brand-COLOR_NAME.\n\n\nstyles.scss\n\n/*-- scss:rules --*/\n\nh1 {\n  color: $brand-blue;\n}\n\nh2 {\n  color: $brand-green\n}"
+  },
+  {
+    "objectID": "materials/07-customization/slides.html#sass-and-brand.yml-3",
+    "href": "materials/07-customization/slides.html#sass-and-brand.yml-3",
+    "title": "Extracustomization",
+    "section": "Sass and brand.yml",
+    "text": "Sass and brand.yml\nThe colors defined in the brand.yml palette are available as Sass with the format brand-COLOR_NAME.\n\n\nstyles.scss\n\n/*-- scss:rules --*/\n\nh1 {\n  color: $brand-blue;\n}\n\nh2 {\n  color: $brand-green\n}"
   },
   {
     "objectID": "materials/07-customization/slides.html#priority",
     "href": "materials/07-customization/slides.html#priority",
     "title": "Extracustomization",
     "section": "Priority",
-    "text": "Priority\n\n\nmy-document.qmd\n\n---\ntitle: \"My document\"\nformat: \n    html:\n      theme: styles.scss\n---\n\nstyles.scss has priority over _brand.yml"
+    "text": "Priority\n\n\nmy-document.qmd\n\n---\ntitle: \"My document\"\nformat: \n    html:\n        theme: styles.scss\n---\n\nstyles.scss has priority over _brand.yml"
   },
   {
     "objectID": "materials/07-customization/slides.html#priority-1",
     "href": "materials/07-customization/slides.html#priority-1",
     "title": "Extracustomization",
     "section": "Priority",
-    "text": "Priority\n\n\nmy-document.qmd\n\n---\ntitle: \"My document\"\nformat: \n    html:\n      theme: [cosmo, brand, styles.scss]\n---\n\nstyles.scss &gt; _brand.yml &gt; cosmo"
+    "text": "Priority\n\n\nmy-document.qmd\n\n---\ntitle: \"My document\"\nformat: \n    html:\n        theme: [cosmo, brand, styles.scss]\n---\n\nstyles.scss &gt; _brand.yml &gt; cosmo"
   },
   {
     "objectID": "materials/07-customization/slides.html#defaults",
