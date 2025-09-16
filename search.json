@@ -44,7 +44,7 @@
     "href": "materials/02-presentations/exercise-02.html",
     "title": "",
     "section": "",
-    "text": "Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nPlace your plot and table side-by-side. Adjust the percentages as needed.\nUse ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nTo improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom."
+    "text": "Shrink the heading: Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nCreate two columns: Place your plot and table side-by-side. Adjust the percentages as needed.\nAdd tabsets: Use ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nAdd a transition: To improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom."
   },
   {
     "objectID": "materials/02-presentations/index.html",
@@ -71,7 +71,7 @@
     "href": "materials/02-presentations/index.html#exercises",
     "title": "Presentations",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\n\nIn your document’s YAML header, change format: html to format: revealjs.\nUse first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nSave and render your document.\n\nQuarto will create an HTML file that is a fully functional slide deck.\n\n\n\n\n\n\nNote\n\n\n\nYou can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.\n\n\n\n\nExercise 2\n\nAdd {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nPlace your plot and table side-by-side. Adjust the percentages as needed.\nUse ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nTo improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom.\n\n\n\nExercise 3\n\nChange the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that the slide uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary.",
+    "text": "Exercises\n\nExercise 1\n\nChange the format: In your document’s YAML header, change format: html to format: revealjs.\nAdd slides: Use first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nRender: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.\n\nNote: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.\n\n\nExercise 2\n\nShrink the heading: Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nCreate two columns: Place your plot and table side-by-side. Adjust the percentages as needed.\nAdd tabsets: Use ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nAdd a transition: To improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom.\n\n\n\nExercise 3\n\nChange the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that it uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary.",
     "crumbs": [
       "Presentations"
     ]
@@ -92,16 +92,6 @@
     "title": "Websites",
     "section": "",
     "text": "View slides in full screen",
-    "crumbs": [
-      "Customization"
-    ]
-  },
-  {
-    "objectID": "materials/07-customization/index.html#exercises",
-    "href": "materials/07-customization/index.html#exercises",
-    "title": "Websites",
-    "section": "Exercises",
-    "text": "Exercises\n\nExercise 1",
     "crumbs": [
       "Customization"
     ]
@@ -152,7 +142,7 @@
     "href": "materials/01-intro/index.html#exercises",
     "title": "Quarto Documents",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\n\nOpen 01-exercise-r.qmd or 01-exercise-py.qmd.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\nExercise 2\n\nOpen 01-exercise-r.qmd and run the first three code chunks (in order).\nPreview the file.\nAdd a #| include: false chunk option to the second chunk (global-trends). Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of countries. You can use the following code to calculate the number of countries.\n\n\nRPython\n\n\n\nlength(unique(whr$country_name))\n\n\n\n\nwhr['country_name'].nunique()\n\n\n\n\n\n\nExercise 3\n\nAdd an important callout box to the introduction summarizing the report’s findings.\nIn the first paragraph, link to the World Happiness Report website (https://www.worldhappiness.report/) where it says “2025 World Happiness Report”.\nChange some text to the color \"#eb068c\".\n\n\n\nExercise 4\n\nIn the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes. You can reset the file by copying and pasting it from here.\n\n\n\nExercise 5\n\nRPython\n\n\n\nIn the first code chunk of 01-exercise-r.qmd, replace theme_minimal() with theme_brand_ggplot2(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render and see what changes.\n\n\n\n\nIn the first code chunk of 01-exercise-python.qmd, add theme_brand_plotnine() right after theme_minimal(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render. Does anything change? What if you change foreground in _brand.yml to hot-pink? Re-render with and without theme_brand_plotnine().\n\n\n\n\n\n\nExercise 6\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette['teal'])\n\n\n\n\ngeom_line(color = brand.color.palette.teal)",
+    "text": "Exercises\n\nExercise 1\n\nOpen 01-exercise-r.qmd or 01-exercise-py.qmd.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\nExercise 2\n\nOpen 01-exercise-r.qmd and run the first three code chunks (in order).\nPreview the file.\nAdd a #| include: false chunk option to the second chunk (global-trends). Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of countries. You can use the following code to calculate the number of countries.\n\n\nRPython\n\n\n\nlength(unique(whr$country_name))\n\n\n\n\nwhr['country_name'].nunique()\n\n\n\n\n\n\nExercise 3\n\nAdd an important callout box to the introduction summarizing the report’s findings.\nIn the first paragraph, link to the World Happiness Report website (https://www.worldhappiness.report/) where it says “2025 World Happiness Report”.\nChange some text to the color \"#eb068c\".\n\n\n\nExercise 4\n\nIn the workshop repo, there’s a file named 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document. What changes?\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes. You can reset the file by copying and pasting it from here.\n\n\n\nExercise 5\n\nRPython\n\n\n\nIn the first code chunk of 01-exercise-r.qmd, replace theme_minimal() with theme_brand_ggplot2(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render and see what changes.\n\n\n\n\nIn the first code chunk of 01-exercise-python.qmd, add theme_brand_plotnine() right after theme_minimal(). You will need to supply a brand file path (\"_brand.yml\").\nRe-render. Does anything change? What if you change foreground in _brand.yml to hot-pink? Re-render with and without theme_brand_plotnine().\n\n\n\n\n\n\nExercise 6\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following.\n\n(Make sure to first remove #| include: false from the chunk, if it’s still there).\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette$blue)\n\n\n\n\ngeom_line(color = brand.color.palette.blue)",
     "crumbs": [
       "Intro to Quarto"
     ]
@@ -162,7 +152,7 @@
     "href": "materials/05-websites/exercise-01.html",
     "title": "",
     "section": "",
-    "text": "Get the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview."
+    "text": "Get the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project. If you’re using Codespaces, follow the instructions here, but go to this repo instead.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview."
   },
   {
     "objectID": "materials/05-websites/exercise-03.html",
@@ -211,14 +201,14 @@
     "href": "materials/05-websites/slides.html#preview",
     "title": "QuartoWebsites",
     "section": "Preview",
-    "text": "Preview\n\nRStudioVS CodeTerminal\n\n\n\n\nCurrent page\n\nCmd/Ctrl + Shift + K\n\nWhole site\nBuild &gt; Render Website\n\n\n\n\n\n\nCurrent page\n\nCmd/Ctrl + Shift + K\n\nWhole site\nNo command, use Terminal:\n\n\nTerminal\n\nquarto preview \n\n\nRequires Quarto Extension\n\n\n\n\nCurrent page\n\n\nTerminal\n\nquarto preview index.qmd\n\n\nWhole site\n\n\nTerminal\n\nquarto preview"
+    "text": "Preview\n\nRStudioVS Code/PositronTerminal\n\n\n\n\nCurrent page\n\nCmd/Ctrl + Shift + K\n\nWhole site\nBuild &gt; Render Website\n\n\n\n\n\n\nCurrent page\n\nCmd/Ctrl + Shift + K\n\nWhole site\nUse Terminal:\n\n\nTerminal\n\nquarto preview \n\n\nRequires Quarto Extension\n\n\n\n\nCurrent page\n\n\nTerminal\n\nquarto preview index.qmd\n\n\nWhole site\n\n\nTerminal\n\nquarto preview"
   },
   {
     "objectID": "materials/05-websites/slides.html#your-turn",
     "href": "materials/05-websites/slides.html#your-turn",
     "title": "QuartoWebsites",
     "section": "Your turn",
-    "text": "Your turn\n\nGet the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview.\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nGet the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project. If you’re using Codespaces, follow the instructions here, but go to this repo instead.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview.\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/05-websites/slides.html#page-structure",
@@ -413,7 +403,7 @@
     "href": "materials/06-byob/index.html#exercises",
     "title": "Creating and sharing your brand",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\nCreate a brand file for your organization using the Brand Extension.\n\nOpen your Terminal and run: quarto create extension brand\nRead about how to prompt a large language model (LLM) to create a _brand.yml file: posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt\nCustomize the default _extensions/mybrand/brand.yml file. Take note of how well the output incorporates your brand and what, if any, elements are missing or need to be adjusted.\n\nPreview by running quarto preview example.qmd in the Terminal.\n\n\nWe’d love for you to add your new brand.yml file to the Inspiration page! You can see examples and contribute your own by visiting the following links:\n\nInspiration page: posit-dev.github.io/brand-yml/inspiration\nSubmit a PR: github.com/posit-dev/brand-yml/issues",
+    "text": "Exercises\n\nExercise 1\n\nUse the Brand Extension in GitHub to create a _brand.yml file for your organization.\nApply the _brand.yml file to an existing project Try to use a document that you might use for work, like a report, a presentation, or a project brief.\nUse any remaining time to apply your new branding to something you may need for your job, like a PDF, a dashboard, or an internal memo.",
     "crumbs": [
       "Creating and Sharing"
     ]
@@ -460,7 +450,7 @@
     "href": "materials/00-setup/index.html",
     "title": "Setup",
     "section": "",
-    "text": "To follow along with the workshop exercises, you’ll need Quarto version 1.8+ and access to a code editor that supports R or Python.\nWhile Quarto itself doesn’t require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, we recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python).\n\nRecommended Setup Options\nOption 1: Posit Cloud (RStudio in the cloud)\n\nCreate a free account at https://posit.cloud/\nOpen the Posit Cloud project link: https://posit.cloud/spaces/679626/join?access_code=VwU0N2fEy5wwQ8qHayo8TrTZRKcT6sndAF13AHlx/\nClick “Yes” to join the space.\nClick Content and select quarto-brand-exercises or go to https://posit.cloud/spaces/679626/content/10865885/\nTo save a copy of the project to your workspace, click “Save a permanent copy”.\n\nOption 2: GitHub Codespaces (VS Code in the browser)\n\nCreate a free account at https://github.com/\nGo to the GitHub repo: https://github.com/posit-dev/quarto-brand-codespaces/\nClick “Use this template” then “Open in a codespace”.\n\nPlease note that loading the codespace will take several minutes.\nIf you are asked to install an extension called markdownlit, say “yes” and trust the publisher.\n\nYou will need to following the “Install the Necessary Packages” instructions below.\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette.\nSelect your environment type (recommend Venv).\nChoose an interpreter path.\nSelect requirements.txt check box to install dependencies.\n\n\nOption 3: Local Installation\nChoose one editor and follow the steps:\n\nPositronRStudioVS Code\n\n\n\nDownload and install Positron: https://positron.posit.co/download.html/\nQuarto comes pre-installed.\n\nMake sure Quarto is version 1.8+.\n\n\n\n\n\nDownload and install RStudio: https://posit.co/downloads/\n\nMake sure RStudio is version 2022.07+.\n\nQuarto comes pre-installed.\n\nMake sure Quarto is version 1.8+.\n\n\n\n\n\nDownload and install VS Code: https://code.visualstudio.com/download/\nDownload and install Quarto: https://quarto.org/docs/get-started/\nInstall the following extensions:\n\nQuarto Extension: https://marketplace.visualstudio.com/items?itemName=quarto.quarto/\nJupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter/\n\n\n\n\n\n\n\nAccessing the Workshop Materials\nIf you are using a cloud-based option, the files will be included in the project folder.\nIf you are not using a cloud-based option:\nIf you use Git/GitHub:\n\nClone the repository with Git:\n\ngit clone https://github.com/posit-dev/quarto-brand-exercises.git\nIf you don’t use Git/GitHub:\n\nGo to the GitHub repo: https://github.com/posit-dev/quarto-brand-exercises/\nClick the green “Code” button → “Download ZIP”.\nUnzip the folder and open it in your chosen editor.\n\n\n\nInstall the Necessary Packages\n\nRPython\n\n\nIf you are using Posit Cloud, the packages will be pre-installed. If you are using RStudio or Positron locally, install the packages by running:\nif (!require(\"pak\")) install.packages(\"pak\")\npak::pak(c(\"tidyverse\", \"quarto\", \"patchwork\", \"posit-dev/brand-yml/pkg-r\"))\n\n\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette.\nSelect your environment type (recommend Venv).\nChoose an interpreter path.\nSelect requirements.txt check box to install dependencies.",
+    "text": "To follow along with the workshop exercises, you’ll need Quarto version 1.8+ and access to a code editor that supports R or Python.\nWhile Quarto itself doesn’t require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, we recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python).\n\nRecommended Setup Options\nOption 1: Posit Cloud (RStudio in the cloud)\n\nCreate a free account at https://posit.cloud\nOpen the Posit Cloud project link: https://posit.cloud/spaces/679626/join?access_code=VwU0N2fEy5wwQ8qHayo8TrTZRKcT6sndAF13AHlx\nClick “Yes” to join the space.\nClick Content and select quarto-brand-exercises or go to https://posit.cloud/spaces/679626/content/10865885.\nTo save a copy of the project to your workspace, click “Save a permanent copy”\n\nOption 2: GitHub Codespaces (VS Code in the browser)\n\nRequires a free account at https://github.com/\nGo to the GitHub repo: https://github.com/posit-dev/quarto-brand-codespaces\nClick “Use this template” then “Open in a codespace”\n\nPlease note that loading the codespace will take a few minutes.\nIf you are asked to install an extension called markdownlit, say “yes” and trust the publisher.\n\nYou will need to following the “Install the Necessary Packages” instructions below.\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette\nSelect your environment type (recommend Venv)\nChoose an interpreter path\nSelect requirements.txt check box to install dependencies\n\n\nOption 3: Local Installation\nChoose one editor and follow the steps:\n\nPositronRStudioVS Code\n\n\n\nDownload and install Positron: https://positron.posit.co/download.html\nQuarto comes pre-installed\n\n\n\n\nDownload and install RStudio: https://posit.co/downloads/\n\nMake sure RStudio is version 2022.07+\n\nQuarto comes pre-installed\n\n\n\n\nDownload and install VS Code: https://code.visualstudio.com/download\nDownload and install Quarto: https://quarto.org/docs/get-started/\nInstall the following extensions:\n\nQuarto Extension: https://marketplace.visualstudio.com/items?itemName=quarto.quarto\nJupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter\n\n\n\n\n\n\n\nAccessing the Workshop Materials\nIf you are using a cloud-based option, the files will be included in the project folder.\nIf you are not using a cloud-based option:\nIf you use Git/GitHub:\n\nClone the repository with Git:\n\ngit clone https://github.com/posit-dev/quarto-brand-exercises.git\nIf you don’t use Git/GitHub:\n\nGo to the GitHub repo: https://github.com/posit-dev/quarto-brand-exercises\nClick the green “Code” button → “Download ZIP”\nUnzip the folder and open it in your chosen editor\n\n\n\nInstall the Necessary Packages\n\nRPython\n\n\nIf you are using Posit Cloud, the packages will be pre-installed. If you are using RStudio or Positron locally, install the packages by running:\nif (!require(\"pak\")) install.packages(\"pak\")\npak::pak(c(\"tidyverse\", \"quarto\", \"patchwork\", \"posit-dev/brand-yml/pkg-r\"))\n\n\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette\nSelect your environment type (recommend Venv)\nChoose an interpreter path\nSelect requirements.txt check box to install dependencies",
     "crumbs": [
       "Setup"
     ]
@@ -521,7 +511,7 @@
     "href": "materials/03-dashboards/slides.html#quarto-many-outputs",
     "title": "QuartoDashboards",
     "section": "Quarto ➝ many outputs",
-    "text": "Quarto ➝ many outputs\nWith Quarto you can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books, and more…"
+    "text": "Quarto ➝ many outputs\nWith Quarto you can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books, and more…\n\nexercises: 20 min lecture: 20 min"
   },
   {
     "objectID": "materials/03-dashboards/slides.html#quarto-dashboards",
@@ -612,7 +602,7 @@
     "href": "materials/03-dashboards/slides.html#step-2-add-a-card",
     "title": "QuartoDashboards",
     "section": "Step 2: Add a card",
-    "text": "Step 2: Add a card\n\n\n\ndashboard.qmd\n\n---\ntitle: \"My first Quarto dashboard\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point\nfrom plotnine.data import mpg\n```\n\n```{python}\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n\n\nnow, add a card creating a plot this is plotnine code see what it looks like"
+    "text": "Step 2: Add a card\n\n\n\ndashboard.qmd\n\n---\ntitle: \"My first Quarto dashboard\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point\nfrom plotnine.data import mpg\n```\n\n```{python}\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n\n\ncards are the fundamental unit now, add a card creating a plot this is plotnine code see what it looks like"
   },
   {
     "objectID": "materials/03-dashboards/slides.html#step-2-add-a-card-1",
@@ -675,7 +665,7 @@
     "href": "materials/03-dashboards/slides.html#rows",
     "title": "QuartoDashboards",
     "section": "Rows",
-    "text": "Rows\nBy default, cards are laid out in rows:\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Rows\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n## Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+    "text": "Rows\nBy default, cards are laid out in rows:\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Rows\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n## Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```\n\n\n\nheading text isn’t required - the ## define a row just to help you get organized"
   },
   {
     "objectID": "materials/03-dashboards/slides.html#rows-1",
@@ -773,7 +763,7 @@
     "href": "materials/03-dashboards/slides.html#your-turn-2",
     "title": "QuartoDashboards",
     "section": "Your turn",
-    "text": "Your turn\n\nTake a look at the Tabsets documentation on the Quarto website.\nMove the plots showing the countries that increased and decreased in happiness into a tabset. Your dashboard should then look like this:"
+    "text": "Your turn\n\nTake a look at the Tabsets documentation on the Quarto website.\nMove the plots showing the countries that increased and decreased in happiness into a tabset. Your dashboard should then look like this:\n\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/03-dashboards/slides.html#tabsets",
@@ -822,28 +812,35 @@
     "href": "materials/03-dashboards/slides.html#navigation-buttons-1",
     "title": "QuartoDashboards",
     "section": "Navigation buttons",
-    "text": "Navigation buttons\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Navigation buttons\"\nformat: \n  dashboard:\n    nav-buttons:\n      - icon: github\n        href: https://github.com/quarto-dev/quarto-cli\n        aria-label: GitHub\n      - icon: linkedin\n        href: https://www.linkedin.com/company/posit-software/\n        aria-label: LinkedIn\n      - icon: youtube\n        href: https://youtube.com/\n        aria-label: YouTube\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n# Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n# Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+    "text": "Navigation buttons\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Navigation buttons\"\nformat: \n  dashboard:\n    nav-buttons:\n      - icon: github\n        href: https://github.com/quarto-dev/quarto-cli\n        aria-label: GitHub\n      - icon: linkedin\n        href: https://www.linkedin.com/company/posit-software/\n        aria-label: LinkedIn\n      - icon: youtube\n        href: https://youtube.com/\n        aria-label: YouTube\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n# Scatter\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n# Bar\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```\n\n\n\n\n\n\nin R, use list instead of dict()"
   },
   {
     "objectID": "materials/03-dashboards/slides.html#value-boxes",
     "href": "materials/03-dashboards/slides.html#value-boxes",
     "title": "QuartoDashboards",
     "section": "Value boxes",
-    "text": "Value boxes\n\nmultiple ways to make value boxes\n\n\nValue boxes are a great way to prominently display simple values within a dashboard\nYou can create value boxes in executable cells or plain markdown in divs\nValue boxes use Bootstrap icons (https://icons.getbootstrap.com) and can be set to any color (e.g., with a HEX code) or color alias defined by the theme.\n\n\n\nColor alias\nDefault theme color(s)\n\n\n\n\nprimary\nBlue\n\n\nsecondary\nGray\n\n\nsuccess\nGreen\n\n\ninfo\nBright Blue\n\n\nwarning\nYellow/Orange\n\n\ndanger\nRed\n\n\nlight\nLight Gray\n\n\ndark\nBlack"
+    "text": "Value boxes\n\nmultiple ways to make value boxes\n\n\nValue boxes are a great way to prominently display simple values within a dashboard\nYou can create value boxes in executable cells or plain markdown in divs\nValue boxes use Bootstrap icons (https://icons.getbootstrap.com) and can be set to any color (e.g., with a HEX code) or color alias defined by the theme.\n\n\n\nColor alias\nDefault theme color(s)\n\n\n\n\nprimary\nBlue\n\n\nsecondary\nGray\n\n\nsuccess\nGreen\n\n\ninfo\nBright Blue\n\n\nwarning\nYellow/Orange\n\n\ndanger\nRed\n\n\nlight\nLight Gray\n\n\ndark\nBlack\n\n\n\n\n\nLearn more: https://quarto.org/docs/dashboards/data-display.html#value-boxes"
   },
   {
     "objectID": "materials/03-dashboards/slides.html#value-boxes-1",
     "href": "materials/03-dashboards/slides.html#value-boxes-1",
     "title": "QuartoDashboards",
     "section": "Value boxes",
-    "text": "Value boxes\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Valueboxes\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Value boxes {height=\"25%\"}\n\n```{python}\n#| label: calculate-values\nlowest_mileage_index = mpg['cty'].idxmin()\nlowest_mileage_car = mpg.iloc[lowest_mileage_index]\nlowest_mileage_cty = mpg.loc[lowest_mileage_index, 'cty']\n\nhighest_mileage_index = mpg['cty'].idxmax()\nhighest_mileage_car = mpg.iloc[highest_mileage_index]\nhighest_mileage_cty = mpg.loc[highest_mileage_index, 'cty']\n\nmean_city_mileage = mpg['cty'].mean()\nrounded_mean_city_mileage = round(mean_city_mileage, 2)\n```\n\n```{python}\n#| content: valuebox\n#| title: \"Least efficient\"\n#| icon: fuel-pump-fill\n#| color: danger\ndict(\n  value = str(f\"{lowest_mileage_cty} mpg\")\n)\n```\n\n```{python}\n#| content: valuebox\n#| title: \"Most efficient\"\ndict(\n  icon = \"fuel-pump\",\n  color = \"success\",\n  value = str(f\"{highest_mileage_cty} mpg\")\n)\n```\n\n::: {.valuebox icon=\"fuel-pump\" color=\"secondary\"}\nAverage city mileage\n\n`{python} str(rounded_mean_city_mileage)` mpg\n:::\n\n## Plots {height=\"75%\"}\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+    "text": "Value boxes\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Valueboxes\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Value boxes {height=\"25%\"}\n\n```{python}\n#| label: calculate-values\nlowest_mileage_index = mpg['cty'].idxmin()\nlowest_mileage_car = mpg.iloc[lowest_mileage_index]\nlowest_mileage_cty = mpg.loc[lowest_mileage_index, 'cty']\n\nhighest_mileage_index = mpg['cty'].idxmax()\nhighest_mileage_car = mpg.iloc[highest_mileage_index]\nhighest_mileage_cty = mpg.loc[highest_mileage_index, 'cty']\n\nmean_city_mileage = mpg['cty'].mean()\nrounded_mean_city_mileage = round(mean_city_mileage, 2)\n```\n\n```{python}\n#| content: valuebox\n#| title: \"Least efficient\"\n#| icon: fuel-pump-fill\n#| color: danger\ndict(\n  value = str(f\"{lowest_mileage_cty} mpg\")\n)\n```\n\n```{python}\n#| content: valuebox\n#| title: \"Most efficient\"\ndict(\n  icon = \"fuel-pump\",\n  color = \"success\",\n  value = str(f\"{highest_mileage_cty} mpg\")\n)\n```\n\n::: {.valuebox icon=\"fuel-pump\" color=\"secondary\"}\nAverage city mileage\n\n`{python} str(rounded_mean_city_mileage)` mpg\n:::\n\n## Plots {height=\"75%\"}\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```\n\n\n\nLearn more: https://quarto.org/docs/dashboards/data-display.html#value-boxes"
   },
   {
     "objectID": "materials/03-dashboards/slides.html#value-boxes-2",
     "href": "materials/03-dashboards/slides.html#value-boxes-2",
     "title": "QuartoDashboards",
     "section": "Value boxes",
-    "text": "Value boxes\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Valueboxes\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Value boxes {height=\"25%\"}\n\n```{python}\n#| label: calculate-values\nlowest_mileage_index = mpg['cty'].idxmin()\nlowest_mileage_car = mpg.iloc[lowest_mileage_index]\nlowest_mileage_cty = mpg.loc[lowest_mileage_index, 'cty']\n\nhighest_mileage_index = mpg['cty'].idxmax()\nhighest_mileage_car = mpg.iloc[highest_mileage_index]\nhighest_mileage_cty = mpg.loc[highest_mileage_index, 'cty']\n\nmean_city_mileage = mpg['cty'].mean()\nrounded_mean_city_mileage = round(mean_city_mileage, 2)\n```\n\n```{python}\n#| content: valuebox\n#| title: \"Least efficient\"\n#| icon: fuel-pump-fill\n#| color: danger\ndict(\n  value = str(f\"{lowest_mileage_cty} mpg\")\n)\n```\n\n```{python}\n#| content: valuebox\n#| title: \"Most efficient\"\ndict(\n  icon = \"fuel-pump\",\n  color = \"success\",\n  value = str(f\"{highest_mileage_cty} mpg\")\n)\n```\n\n::: {.valuebox icon=\"fuel-pump\" color=\"secondary\"}\nAverage city mileage\n\n`{python} str(rounded_mean_city_mileage)` mpg\n:::\n\n## Plots {height=\"75%\"}\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```"
+    "text": "Value boxes\n\n\n\n\n\ndashboard.qmd\n\n---\ntitle: \"Valueboxes\"\nformat: dashboard\n---\n\n```{python}\nfrom plotnine import ggplot, aes, geom_point, geom_bar\nfrom plotnine.data import mpg\n```\n\n## Value boxes {height=\"25%\"}\n\n```{python}\n#| label: calculate-values\nlowest_mileage_index = mpg['cty'].idxmin()\nlowest_mileage_car = mpg.iloc[lowest_mileage_index]\nlowest_mileage_cty = mpg.loc[lowest_mileage_index, 'cty']\n\nhighest_mileage_index = mpg['cty'].idxmax()\nhighest_mileage_car = mpg.iloc[highest_mileage_index]\nhighest_mileage_cty = mpg.loc[highest_mileage_index, 'cty']\n\nmean_city_mileage = mpg['cty'].mean()\nrounded_mean_city_mileage = round(mean_city_mileage, 2)\n```\n\n```{python}\n#| content: valuebox\n#| title: \"Least efficient\"\n#| icon: fuel-pump-fill\n#| color: danger\ndict(\n  value = str(f\"{lowest_mileage_cty} mpg\")\n)\n```\n\n```{python}\n#| content: valuebox\n#| title: \"Most efficient\"\ndict(\n  icon = \"fuel-pump\",\n  color = \"success\",\n  value = str(f\"{highest_mileage_cty} mpg\")\n)\n```\n\n::: {.valuebox icon=\"fuel-pump\" color=\"secondary\"}\nAverage city mileage\n\n`{python} str(rounded_mean_city_mileage)` mpg\n:::\n\n## Plots {height=\"75%\"}\n\n```{python}\n#| title: Highway vs. city mileage\n(\n    ggplot(mpg, aes(x = \"cty\", y = \"hwy\"))\n    + geom_point()\n)\n```\n\n```{python}\n#| title: Drive types\n(\n    ggplot(mpg, aes(x = \"drv\"))\n    + geom_bar()\n)\n```\n\n\n\n\n\n\nLearn more: https://quarto.org/docs/dashboards/data-display.html#value-boxes"
+  },
+  {
+    "objectID": "materials/03-dashboards/slides.html#value-boxes---r-syntax",
+    "href": "materials/03-dashboards/slides.html#value-boxes---r-syntax",
+    "title": "QuartoDashboards",
+    "section": "Value boxes - R syntax",
+    "text": "Value boxes - R syntax\n\n\ndashboard.qmd\n\n---\ntitle: \"Valueboxes\"\nformat: dashboard\n---\n\n```{r}\n#| content: valuebox\n#| title: \"Least efficient\"\n#| icon: fuel-pump-fill\n#| color: danger\nlist(\n  value = paste(lowest_mileage_cty, \"mpg\")\n)\n```\n\n```{r}\n#| content: valuebox\n#| title: \"Most efficient\"\nlist(\n  icon = \"fuel-pump\",\n  color = \"success\",\n  value = paste(highest_mileage_cty, \"mpg\")\n)\n```\n\n::: {.valuebox icon=\"fuel-pump\" color=\"secondary\"}\nAverage city mileage\n\n30 mpg\n:::\n\n\nLearn more: https://quarto.org/docs/dashboards/data-display.html#value-boxes"
   },
   {
     "objectID": "materials/03-dashboards/slides.html#markdown-text",
@@ -885,168 +882,154 @@
     "href": "materials/04-typst/slides.html#hello-typst",
     "title": "PDFs with Typst",
     "section": "Hello, Typst!",
-    "text": "Hello, Typst!\n\n\n\n\n\n\n\nTypst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use. Typst is built to simplify the process of creating beautiful, professional PDFs. It uses a markup-based system, which means you write plain text and code to define your document’s structure and style, just like you would with Quarto or Markdown.\n\n\nLearn more: Typst in Quarto"
+    "text": "Hello, Typst!\n\n\n\n\n\n\n\nTypst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.\n\n\nLearn more: Typst in Quarto"
   },
   {
     "objectID": "materials/04-typst/slides.html#hello-typst-1",
     "href": "materials/04-typst/slides.html#hello-typst-1",
     "title": "PDFs with Typst",
     "section": "Hello, Typst!",
-    "text": "Hello, Typst!\nTo use Typst with Quarto, set the format in the YAML of your Quarto document:\n\n\n---\nformat: typst\n---\n\n\n\n\n\n\n\n\nLearn more: Typst in Quarto\n\n\nHow do you use Typst with Quarto? You just need to specify it as your output format in the YAML header of your Quarto document. This is the default page layout you’ll get: a clean, single-column PDF."
+    "text": "Hello, Typst!\nTo use Typst with Quarto, set the format in the YAML of your Quarto document:\n\n\n---\nformat: typst\n---\n\n\n\n\n\n\n\n\nLearn more: Typst in Quarto"
   },
   {
     "objectID": "materials/04-typst/slides.html#page-layout",
     "href": "materials/04-typst/slides.html#page-layout",
     "title": "PDFs with Typst",
     "section": "Page layout",
-    "text": "Page layout\nControl the size of the page (papersize), the page margins (margin), and the number of columns used for page content (columns):\n\n\n---\ntitle: Page Layout\nformat:\n  typst:\n    papersize: a5\n    margin:\n      x: 1cm\n      y: 1cm\n    columns: 2\n---\n\n\n\n\n\n\n\n\nLearn more: Page Layout\n\n\nOne of the great things about Typst is how easily you can customize your PDF’s appearance. You can control the page size, margins, and even the number of columns directly from your YAML. For example, to create a two-column, A5-sized document with one-centimeter margins, you can use this code."
+    "text": "Page layout\nControl the size of the page (papersize), the page margins (margin), and the number of columns used for page content (columns):\n\n\n---\ntitle: Page Layout\nformat:\n  typst:\n    papersize: a5\n    margin:\n      x: 1cm\n      y: 1cm\n    columns: 2\n---\n\n\n\n\n\n\n\n\nLearn more: Page Layout"
   },
   {
     "objectID": "materials/04-typst/slides.html#margins",
     "href": "materials/04-typst/slides.html#margins",
     "title": "PDFs with Typst",
     "section": "Margins",
-    "text": "Margins\nEdit the margin’s horizontal direction (x) and vertical direction (y):\nmargin:\n  x: 1.25in\n  y: 1.25in\nCan also use relative length:\nmargin:\n  left: 10%\n\nLearn more: Margins\n\n\nIf you want more granular control, you can define your margins for the horizontal and vertical directions separately. You can use standard units like inches or centimeters, as shown here."
+    "text": "Margins\nEdit the margin’s horizontal direction (x) and vertical direction (y):\nmargin:\n  x: 1.25in\n  y: 1.25in\nCan also use relative length:\nmargin:\n  left: 10%\n\nLearn more: Margins"
   },
   {
     "objectID": "materials/04-typst/slides.html#paper-size",
     "href": "materials/04-typst/slides.html#paper-size",
     "title": "PDFs with Typst",
     "section": "Paper Size",
-    "text": "Paper Size\npapersize: us-letter\n\n\nLearn more: Supported page sizes\n\n\nTypst supports a wide range of paper sizes. Instead of just us-letter or a4, you have a lot of options. Typst’s documentation has a full list of all the supported sizes. It’s a very comprehensive set of options."
+    "text": "Paper Size\npapersize: us-letter\n\n\nLearn more: Supported page sizes"
   },
   {
     "objectID": "materials/04-typst/slides.html#more-options",
     "href": "materials/04-typst/slides.html#more-options",
     "title": "PDFs with Typst",
     "section": "More options",
-    "text": "More options\nTable of contents\ntoc: true\ntoc-depth: 2\n\nSection numbering\nnumber-sections: true\nUse number-depth:\nnumber-depth: 3\n\nLearn more: Section Numbering, Table of Contents\n\n\nThere are also a ton of other options you can set in your YAML. For example, you can easily add a table of contents and control its depth. Or you can add section numbering to automatically number your headings. You can even specify the depth of the numbering."
+    "text": "More options\nTable of contents\ntoc: true\ntoc-depth: 2\n\nSection numbering\nnumber-sections: true\nUse number-depth:\nnumber-depth: 3\n\nLearn more: Section Numbering, Table of Contents"
   },
   {
     "objectID": "materials/04-typst/slides.html#typst-blocks",
     "href": "materials/04-typst/slides.html#typst-blocks",
     "title": "PDFs with Typst",
     "section": "Typst blocks",
-    "text": "Typst blocks\nAdd a .block class to change appearance of blocks:\n::: {.block fill=\"luma(230)\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with gray background and slightly rounded corners.\n\n:::\n\nLearn more: Typst Blocks\n\n\nTypst also lets you create custom blocks to highlight specific content. You can add a .block class to your markdown and change its appearance with a few simple attributes, like fill, inset, and radius."
-  },
-  {
-    "objectID": "materials/04-typst/slides.html#typst-and-fonts",
-    "href": "materials/04-typst/slides.html#typst-and-fonts",
-    "title": "PDFs with Typst",
-    "section": "Typst and fonts",
-    "text": "Typst and fonts\nCheck what fonts are available on your system with:\n\n\nTerminal\n\nquarto typst fonts\n\nSet additional paths using font-paths:\n---\nformat: \n  typst:\n    font-paths: myfonts\n---\n\nLearn more: Font Support\n\n\nWith Typst, you can use any font available on your system. To see what fonts are installed, just run this command in your terminal. If you have custom fonts, you can tell Typst where to find them by setting the font-paths option in your YAML."
+    "text": "Typst blocks\nAdd a .block class to change appearance of blocks:\n::: {.block fill=\"luma(230)\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with gray background and slightly rounded corners.\n\n:::"
   },
   {
     "objectID": "materials/04-typst/slides.html#color",
     "href": "materials/04-typst/slides.html#color",
     "title": "PDFs with Typst",
     "section": "Color",
-    "text": "Color\nUse colors from the _brand.yml file in Typst using brand-color:\n::: {.block fill=\"brand-color.primary\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with the primary color and slightly rounded corners.\n\n:::\n\nLearn more: Typst Brand YAML\n\n\nThis includes colors. You can reference colors defined in your _brand.yml file directly in your Typst documents. Here, we’re using a block with a fill color from our brand’s primary color palette."
+    "text": "Color\nUse colors from the _brand.yml file in Typst using brand-color:\n::: {.block fill=\"brand-color.primary\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with the primary color and slightly rounded corners.\n\n:::\n\nLearn more: Typst Brand YAML"
   },
   {
-    "objectID": "materials/04-typst/slides.html#fonts",
-    "href": "materials/04-typst/slides.html#fonts",
+    "objectID": "materials/04-typst/slides.html#typography",
+    "href": "materials/04-typst/slides.html#typography",
     "title": "PDFs with Typst",
-    "section": "Fonts",
-    "text": "Fonts\nQuarto will download fonts from Google Fonts and put them in the Typst fonts path if they are specified in the typography.fonts section of _brand.yml using source: google.\n\n\n\n\n_brand.yml\n\ntypography:\n  fonts:\n    - family: Libre Franklin\n      source: google\n      weight: [400, 700]\n\n  base:\n    family: Libre Franklin\n    weight: 400\n\n  headings:\n    family: Libre Franklin\n    weight: 700\n    color: dark-purple\n\n\n\n\n\n\n\n\n\nQuarto can even handle fonts for you. If you specify a font from Google Fonts in your _brand.yml file, Quarto will automatically download it and make it available to Typst. This is an example of what that looks like in your _brand.yml:"
-  },
-  {
-    "objectID": "materials/04-typst/slides.html#fonts-1",
-    "href": "materials/04-typst/slides.html#fonts-1",
-    "title": "PDFs with Typst",
-    "section": "Fonts",
-    "text": "Fonts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbase\nheadings\ntitle1\nsubtitle\nmonospace-inline\nmonospace-block\nlink\n\n\n\n\nfamily\n✓\n✓\n✓\n✓\n✓\n✓\nNA\n\n\nsize\n✓\nNA\nNA\nNA\n✓\n✓\nNA\n\n\nweight\n✓\n✓\n✓\n✓\n✓\n✓\n✓\n\n\nstyle\nNA\n✓\n✓\n✓\nNA\nNA\nNA\n\n\ncolor\n✓\n✓\n✓\n✓\n✓\n✓\n✓\n\n\nbackground-color\nNA\nNA\nNA\nNA\n✓\n✓\n✓\n\n\ndecoration\nNA\nNA\nNA\nNA\nNA\nNA\n✓\n\n\nline-height\n✓\n✓\n✓\n✓\nNA\n✓\nNA\n\n\n\n\nLearn more: Typst Brand YAML\n\n\nThis table shows the various font properties you can control within your _brand.yml file. You have fine-grained control over things like font family, size, weight, and color for different elements of your document, from the base text to headings and titles.\n\nWhile being styled as headings, title and subtitle have a separate implementation."
-  },
-  {
-    "objectID": "materials/04-typst/slides.html#logo",
-    "href": "materials/04-typst/slides.html#logo",
-    "title": "PDFs with Typst",
-    "section": "Logo",
-    "text": "Logo\nThe Typst implementation allows customization of the logo position at the document level:\n---\nformat:\n  typst:\n    logo:\n      width: 1in\n      location: right-top\n      padding-right: 0.5in\n      padding-top: 0.25in\n      alt: Alternate alternate text\n---\n\nLearn more: Logo Customization\n\n\nThe Typst implementation also allows you to customize your document’s logo. You can set its width, location on the page, and padding, giving you complete control over how your branding is displayed."
+    "section": "Typography",
+    "text": "Typography\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbase\nheadings\ntitle1\nsubtitle\nmonospace-inline\nmonospace-block\nlink\n\n\n\n\nfamily\n✓\n✓\n✓\n✓\n✓\n✓\nNA\n\n\nsize\n✓\nNA\nNA\nNA\n✓\n✓\nNA\n\n\nweight\n✓\n✓\n✓\n✓\n✓\n✓\n✓\n\n\nstyle\nNA\n✓\n✓\n✓\nNA\nNA\nNA\n\n\ncolor\n✓\n✓\n✓\n✓\n✓\n✓\n✓\n\n\nbackground-color\nNA\nNA\nNA\nNA\n✓\n✓\n✓\n\n\ndecoration\nNA\nNA\nNA\nNA\nNA\nNA\n✓\n\n\nline-height\n✓\n✓\n✓\n✓\nNA\n✓\nNA\n\n\n\nWhile being styled as headings, title and subtitle have a separate implementation."
   },
   {
     "objectID": "materials/04-typst/slides.html#your-turn",
     "href": "materials/04-typst/slides.html#your-turn",
     "title": "PDFs with Typst",
     "section": "Your turn",
-    "text": "Your turn\n\nIn your document’s YAML header, change the format option from its current value (e.g., html) to typst.\nChange the number of columns used for the page content to 2 using columns.\nAdd a block to a section of the text and fill it with the tertiary color.\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nIn your document’s YAML header, change the format option from its current value (e.g., html) to typst.\nChange the number of columns used for the page content to 2 using columns.\nAdd a block to a section of the text and fill it with the tertiary color."
   },
   {
     "objectID": "materials/04-typst/slides.html#custom-typst-formats",
     "href": "materials/04-typst/slides.html#custom-typst-formats",
     "title": "PDFs with Typst",
     "section": "Custom Typst formats",
-    "text": "Custom Typst formats\nTypst allows you to define your own templates to produce highly customized documents.\n\n\n\n\n\n\nIEEE\n\n\n\n\n\n\n\nPoster\n\n\n\n\n\n\n\nLetter\n\n\n\n\n\n\n\nDept News\n\n\n\n\n\n\nLearn more: Custom Typst Formats\n\n\nYou can find a bunch of ready-made templates on Quarto’s GitHub page. You can easily use them with the quarto use template command."
+    "text": "Custom Typst formats\nTypst allows you to define your own templates to produce highly customized documents.\n\n\n\n\n\n\nIEEE\n\n\n\n\n\n\n\nPoster\n\n\n\n\n\n\n\nLetter\n\n\n\n\n\n\n\nDept News\n\n\n\n\n\n\nLearn more: Custom Typst Formats"
   },
   {
     "objectID": "materials/04-typst/slides.html#custom-typst-formats-1",
     "href": "materials/04-typst/slides.html#custom-typst-formats-1",
     "title": "PDFs with Typst",
     "section": "Custom Typst formats",
-    "text": "Custom Typst formats\n\n\n\nFormat\nUsage\n\n\n\n\nPoster\nquarto use template quarto-ext/typst-templates/poster\n\n\nIEEE\nquarto use template quarto-ext/typst-templates/ieee\n\n\nAMS\nquarto use template quarto-ext/typst-templates/ams\n\n\nLetter\nquarto use template quarto-ext/typst-templates/letter\n\n\nFiction\nquarto use template quarto-ext/typst-templates/fiction\n\n\nDept News\nquarto use template quarto-ext/typst-templates/dept-news\n\n\n\n\nLearn more: Custom Typst Formats\n\n\nHere’s a list of some of the custom formats available and how to use them with Quarto. These templates can save you a lot of time by providing a pre-defined structure and style for common document types."
+    "text": "Custom Typst formats\n\n\n\nFormat\nUsage\n\n\n\n\nPoster\nquarto use template quarto-ext/typst-templates/poster\n\n\nIEEE\nquarto use template quarto-ext/typst-templates/ieee\n\n\nAMS\nquarto use template quarto-ext/typst-templates/ams\n\n\nLetter\nquarto use template quarto-ext/typst-templates/letter\n\n\nFiction\nquarto use template quarto-ext/typst-templates/fiction\n\n\nDept News\nquarto use template quarto-ext/typst-templates/dept-news\n\n\n\n\nLearn more: Custom Typst Formats"
   },
   {
     "objectID": "materials/04-typst/slides.html#creating-a-new-typst-format",
     "href": "materials/04-typst/slides.html#creating-a-new-typst-format",
     "title": "PDFs with Typst",
     "section": "Creating a new Typst format",
-    "text": "Creating a new Typst format\nUse the quarto create command to get started:\n\n\nTerminal\n\n$ quarto create extension format\n\nChoose typst as the base format and provide a name for the extension.\n\nLearn more: Create a Format\n\n\nIf you can’t find a template that fits your needs, you can create your own. The quarto create extension format command gives you a starter pack of files to begin with."
+    "text": "Creating a new Typst format\nUse the quarto create command to get started:\n\n\nTerminal\n\n$ quarto create extension format\n\nChoose typst as the base format and provide a name for the extension.\n\nLearn more: Create a Format"
   },
   {
     "objectID": "materials/04-typst/slides.html#creating-a-new-typst-format-1",
     "href": "materials/04-typst/slides.html#creating-a-new-typst-format-1",
     "title": "PDFs with Typst",
     "section": "Creating a new Typst format",
-    "text": "Creating a new Typst format\n\n\n\nFile\nDescription\n\n\n\n\n_extension.yml\nBasic extension metadata (name, author, description, etc.) and format definition.\n\n\nREADME.md\nDocumentation on how to install and use the format.\n\n\ntemplate.qmd\nA starter document that demonstrates the basics of the format.\n\n\ntypst-template.typ\nThe core Typst template function (documentation on creating Typst templates can be found here: https://typst.app/docs/tutorial/making-a-template/).\n\n\ntypst-show.typ\nFile that calls the template’s function (mapping Pandoc metadata to function arguments).\n\n\n\n\nLearn more: Making a template, Awesome Typst\n\n\nWhen you create a new format, you get a few key files. The most important ones for our purposes are typst-show.typ and typst-template.typ. typst-show.typ: This file acts as a bridge. It takes the metadata from your Quarto document’s YAML and passes it as arguments to your Typst template function. typst-template.typ: This is the core of your format. It defines the layout and styling of your document."
+    "text": "Creating a new Typst format\n\n\n\nFile\nDescription\n\n\n\n\n_extension.yml\nBasic extension metadata (name, author, description, etc.) and format definition.\n\n\nREADME.md\nDocumentation on how to install and use the format.\n\n\ntemplate.qmd\nA starter document that demonstrates the basics of the format.\n\n\ntypst-template.typ\nThe core Typst template function (documentation on creating Typst templates can be found here: https://typst.app/docs/tutorial/making-a-template/).\n\n\ntypst-show.typ\nFile that calls the template’s function (mapping Pandoc metadata to function arguments).\n\n\n\n\nLearn more: Making a template, Awesome Typst"
   },
   {
     "objectID": "materials/04-typst/slides.html#typst-show.typ",
     "href": "materials/04-typst/slides.html#typst-show.typ",
     "title": "PDFs with Typst",
     "section": "typst-show.typ",
-    "text": "typst-show.typ\n\n\n./_extensions/article/typst-show.typ\n\n// Typst custom formats typically consist of a 'typst-template.typ' (which is\n// the source code for a typst template) and a 'typst-show.typ' which calls the\n// template's function (forwarding Pandoc metadata values as required)\n//\n// This is an example 'typst-show.typ' file (based on the default template  \n// that ships with Quarto). It calls the typst function named 'article' which \n// is defined in the 'typst-template.typ' file. \n//\n// If you are creating or packaging a custom typst template you will likely\n// want to replace this file and 'typst-template.typ' entirely. You can find\n// documentation on creating typst templates here and some examples here:\n//   - https://typst.app/docs/tutorial/making-a-template/\n//   - https://github.com/typst/templates\n#show: doc =&gt; article(\n$if(title)$\n  title: [$title$],\n$endif$\n$if(subtitle)$\n  subtitle: [$subtitle$],\n$endif$\n$if(by-author)$\n  authors: (\n$for(by-author)$\n$if(it.name.literal)$\n    ( name: [$it.name.literal$],\n      affiliation: [$for(it.affiliations)$$it.name$$sep$, $endfor$],\n      email: [$it.email$] ),\n$endif$\n$endfor$\n    ),\n$endif$\n$if(date)$\n  date: [$date$],\n$endif$\n$if(lang)$\n  lang: \"$lang$\",\n$endif$\n$if(region)$\n  region: \"$region$\",\n$endif$\n$if(abstract)$\n  abstract: [$abstract$],\n  abstract-title: \"$labels.abstract$\",\n$endif$\n$if(margin)$\n  margin: ($for(margin/pairs)$$margin.key$: $margin.value$,$endfor$),\n$endif$\n$if(papersize)$\n  paper: \"$papersize$\",\n$endif$\n$if(mainfont)$\n  font: (\"$mainfont$\",),\n$elseif(brand.typography.base.family)$\n  font: $brand.typography.base.family$,\n$endif$\n$if(fontsize)$\n  fontsize: $fontsize$,\n$elseif(brand.typography.base.size)$\n  fontsize: $brand.typography.base.size$,\n$endif$\n$if(title)$\n$if(brand.typography.headings.family)$\n  heading-family: $brand.typography.headings.family$,\n$endif$\n$if(brand.typography.headings.weight)$\n  heading-weight: $brand.typography.headings.weight$,\n$endif$\n$if(brand.typography.headings.style)$\n  heading-style: \"$brand.typography.headings.style$\",\n$endif$\n$if(brand.typography.headings.color)$\n  heading-color: $brand.typography.headings.color$,\n$endif$\n$if(brand.typography.headings.line-height)$\n  heading-line-height: $brand.typography.headings.line-height$,\n$endif$\n$endif$\n$if(section-numbering)$\n  sectionnumbering: \"$section-numbering$\",\n$endif$\n  pagenumbering: $if(page-numbering)$\"$page-numbering$\"$else$none$endif$,\n$if(toc)$\n  toc: $toc$,\n$endif$\n$if(toc-title)$\n  toc_title: [$toc-title$],\n$endif$\n$if(toc-indent)$\n  toc_indent: $toc-indent$,\n$endif$\n  toc_depth: $toc-depth$,\n  cols: $if(columns)$$columns$$else$1$endif$,\n  doc,\n)\n\n\nThis is what a typical typst-show.typ file looks like. It’s a simple script that grabs values from your Quarto YAML (like title, subtitle, and authors) and then calls the article function defined in our template file, passing those values along."
+    "text": "typst-show.typ\n\n\n./_extensions/article/typst-show.typ\n\n// Typst custom formats typically consist of a 'typst-template.typ' (which is\n// the source code for a typst template) and a 'typst-show.typ' which calls the\n// template's function (forwarding Pandoc metadata values as required)\n//\n// This is an example 'typst-show.typ' file (based on the default template  \n// that ships with Quarto). It calls the typst function named 'article' which \n// is defined in the 'typst-template.typ' file. \n//\n// If you are creating or packaging a custom typst template you will likely\n// want to replace this file and 'typst-template.typ' entirely. You can find\n// documentation on creating typst templates here and some examples here:\n//   - https://typst.app/docs/tutorial/making-a-template/\n//   - https://github.com/typst/templates\n#show: doc =&gt; article(\n$if(title)$\n  title: [$title$],\n$endif$\n$if(subtitle)$\n  subtitle: [$subtitle$],\n$endif$\n$if(by-author)$\n  authors: (\n$for(by-author)$\n$if(it.name.literal)$\n    ( name: [$it.name.literal$],\n      affiliation: [$for(it.affiliations)$$it.name$$sep$, $endfor$],\n      email: [$it.email$] ),\n$endif$\n$endfor$\n    ),\n$endif$\n$if(date)$\n  date: [$date$],\n$endif$\n$if(lang)$\n  lang: \"$lang$\",\n$endif$\n$if(region)$\n  region: \"$region$\",\n$endif$\n$if(abstract)$\n  abstract: [$abstract$],\n  abstract-title: \"$labels.abstract$\",\n$endif$\n$if(margin)$\n  margin: ($for(margin/pairs)$$margin.key$: $margin.value$,$endfor$),\n$endif$\n$if(papersize)$\n  paper: \"$papersize$\",\n$endif$\n$if(mainfont)$\n  font: (\"$mainfont$\",),\n$elseif(brand.typography.base.family)$\n  font: $brand.typography.base.family$,\n$endif$\n$if(fontsize)$\n  fontsize: $fontsize$,\n$elseif(brand.typography.base.size)$\n  fontsize: $brand.typography.base.size$,\n$endif$\n$if(title)$\n$if(brand.typography.headings.family)$\n  heading-family: $brand.typography.headings.family$,\n$endif$\n$if(brand.typography.headings.weight)$\n  heading-weight: $brand.typography.headings.weight$,\n$endif$\n$if(brand.typography.headings.style)$\n  heading-style: \"$brand.typography.headings.style$\",\n$endif$\n$if(brand.typography.headings.color)$\n  heading-color: $brand.typography.headings.color$,\n$endif$\n$if(brand.typography.headings.line-height)$\n  heading-line-height: $brand.typography.headings.line-height$,\n$endif$\n$endif$\n$if(section-numbering)$\n  sectionnumbering: \"$section-numbering$\",\n$endif$\n  pagenumbering: $if(page-numbering)$\"$page-numbering$\"$else$none$endif$,\n$if(toc)$\n  toc: $toc$,\n$endif$\n$if(toc-title)$\n  toc_title: [$toc-title$],\n$endif$\n$if(toc-indent)$\n  toc_indent: $toc-indent$,\n$endif$\n  toc_depth: $toc-depth$,\n  cols: $if(columns)$$columns$$else$1$endif$,\n  doc,\n)"
   },
   {
     "objectID": "materials/04-typst/slides.html#typst-template.typ",
     "href": "materials/04-typst/slides.html#typst-template.typ",
     "title": "PDFs with Typst",
     "section": "typst-template.typ",
-    "text": "typst-template.typ\n\n\n./_extensions/article/typst-template.typ\n\n// This is an example typst template (based on the default template that ships\n// with Quarto). It defines a typst function named 'article' which provides\n// various customization options. This function is called from the \n// 'typst-show.typ' file (which maps Pandoc metadata function arguments)\n//\n// If you are creating or packaging a custom typst template you will likely\n// want to replace this file and 'typst-show.typ' entirely. You can find \n// documentation on creating typst templates and some examples here: \n//   - https://typst.app/docs/tutorial/making-a-template/\n//   - https://github.com/typst/templates\n\n\n#let article(\n  title: none,\n  subtitle: none,\n  authors: none,\n  date: none,\n  abstract: none,\n  abstract-title: none,\n  cols: 1,\n  margin: (x: 1.25in, y: 1.25in),\n  paper: \"us-letter\",\n  lang: \"en\",\n  region: \"US\",\n  font: \"libertinus serif\",\n  fontsize: 11pt,\n  title-size: 1.5em,\n  subtitle-size: 1.25em,\n  heading-family: \"libertinus serif\",\n  heading-weight: \"bold\",\n  heading-style: \"normal\",\n  heading-color: black,\n  heading-line-height: 0.65em,\n  sectionnumbering: none,\n  pagenumbering: \"1\",\n  toc: false,\n  toc_title: none,\n  toc_depth: none,\n  toc_indent: 1.5em,\n  doc,\n) = {\n  set page(\n    paper: paper,\n    margin: margin,\n    numbering: pagenumbering,\n  )\n  set par(justify: true)\n  set text(lang: lang,\n           region: region,\n           font: font,\n           size: fontsize)\n  set heading(numbering: sectionnumbering)\n  if title != none {\n    align(center)[#block(inset: 2em)[\n      #set par(leading: heading-line-height)\n      #if (heading-family != none or heading-weight != \"bold\" or heading-style != \"normal\"\n           or heading-color != black) {\n        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)\n        text(size: title-size)[#title]\n        if subtitle != none {\n          parbreak()\n          text(size: subtitle-size)[#subtitle]\n        }\n      } else {\n        text(weight: \"bold\", size: title-size)[#title]\n        if subtitle != none {\n          parbreak()\n          text(weight: \"bold\", size: subtitle-size)[#subtitle]\n        }\n      }\n    ]]\n  }\n\n  if authors != none {\n    let count = authors.len()\n    let ncols = calc.min(count, 3)\n    grid(\n      columns: (1fr,) * ncols,\n      row-gutter: 1.5em,\n      ..authors.map(author =&gt;\n          align(center)[\n            #author.name \\\n            #author.affiliation \\\n            #author.email\n          ]\n      )\n    )\n  }\n\n  if date != none {\n    align(center)[#block(inset: 1em)[\n      #date\n    ]]\n  }\n\n  if abstract != none {\n    block(inset: 2em)[\n    #text(weight: \"semibold\")[#abstract-title] #h(1em) #abstract\n    ]\n  }\n\n  if toc {\n    let title = if toc_title == none {\n      auto\n    } else {\n      toc_title\n    }\n    block(above: 0em, below: 2em)[\n    #outline(\n      title: toc_title,\n      depth: toc_depth,\n      indent: toc_indent\n    );\n    ]\n  }\n\n  if cols == 1 {\n    doc\n  } else {\n    columns(cols, doc)\n  }\n}\n\n#set table(\n  inset: 6pt,\n  stroke: none\n)\n\n\nThe typst-template.typ file defines the actual appearance of the document. Here, we define the article function that receives the metadata from typst-show.typ. This function sets the page layout, fonts, and other stylistic elements. For example, the highlighted code shows how the function sets the page’s paper size, margins, and number of columns based on the values it receives. This is where you can get really creative with your designs."
+    "text": "typst-template.typ\n\n\n./_extensions/article/typst-template.typ\n\n// This is an example typst template (based on the default template that ships\n// with Quarto). It defines a typst function named 'article' which provides\n// various customization options. This function is called from the \n// 'typst-show.typ' file (which maps Pandoc metadata function arguments)\n//\n// If you are creating or packaging a custom typst template you will likely\n// want to replace this file and 'typst-show.typ' entirely. You can find \n// documentation on creating typst templates and some examples here: \n//   - https://typst.app/docs/tutorial/making-a-template/\n//   - https://github.com/typst/templates\n\n\n#let article(\n  title: none,\n  subtitle: none,\n  authors: none,\n  date: none,\n  abstract: none,\n  abstract-title: none,\n  cols: 1,\n  margin: (x: 1.25in, y: 1.25in),\n  paper: \"us-letter\",\n  lang: \"en\",\n  region: \"US\",\n  font: \"libertinus serif\",\n  fontsize: 11pt,\n  title-size: 1.5em,\n  subtitle-size: 1.25em,\n  heading-family: \"libertinus serif\",\n  heading-weight: \"bold\",\n  heading-style: \"normal\",\n  heading-color: black,\n  heading-line-height: 0.65em,\n  sectionnumbering: none,\n  pagenumbering: \"1\",\n  toc: false,\n  toc_title: none,\n  toc_depth: none,\n  toc_indent: 1.5em,\n  doc,\n) = {\n  set page(\n    paper: paper,\n    margin: margin,\n    numbering: pagenumbering,\n  )\n  set par(justify: true)\n  set text(lang: lang,\n           region: region,\n           font: font,\n           size: fontsize)\n  set heading(numbering: sectionnumbering)\n  if title != none {\n    align(center)[#block(inset: 2em)[\n      #set par(leading: heading-line-height)\n      #if (heading-family != none or heading-weight != \"bold\" or heading-style != \"normal\"\n           or heading-color != black) {\n        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)\n        text(size: title-size)[#title]\n        if subtitle != none {\n          parbreak()\n          text(size: subtitle-size)[#subtitle]\n        }\n      } else {\n        text(weight: \"bold\", size: title-size)[#title]\n        if subtitle != none {\n          parbreak()\n          text(weight: \"bold\", size: subtitle-size)[#subtitle]\n        }\n      }\n    ]]\n  }\n\n  if authors != none {\n    let count = authors.len()\n    let ncols = calc.min(count, 3)\n    grid(\n      columns: (1fr,) * ncols,\n      row-gutter: 1.5em,\n      ..authors.map(author =&gt;\n          align(center)[\n            #author.name \\\n            #author.affiliation \\\n            #author.email\n          ]\n      )\n    )\n  }\n\n  if date != none {\n    align(center)[#block(inset: 1em)[\n      #date\n    ]]\n  }\n\n  if abstract != none {\n    block(inset: 2em)[\n    #text(weight: \"semibold\")[#abstract-title] #h(1em) #abstract\n    ]\n  }\n\n  if toc {\n    let title = if toc_title == none {\n      auto\n    } else {\n      toc_title\n    }\n    block(above: 0em, below: 2em)[\n    #outline(\n      title: toc_title,\n      depth: toc_depth,\n      indent: toc_indent\n    );\n    ]\n  }\n\n  if cols == 1 {\n    doc\n  } else {\n    columns(cols, doc)\n  }\n}\n\n#set table(\n  inset: 6pt,\n  stroke: none\n)"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#quick-note-about-fonts",
+    "href": "materials/04-typst/slides.html#quick-note-about-fonts",
+    "title": "PDFs with Typst",
+    "section": "Quick note about fonts",
+    "text": "Quick note about fonts\nCheck what fonts are available on your system with:\n\n\nTerminal\n\nquarto typst fonts\n\nSet additional paths using font-paths:\n---\nformat: \n  typst:\n    font-paths: myfonts\n---"
   },
   {
     "objectID": "materials/04-typst/slides.html#world-happiness-report-example",
     "href": "materials/04-typst/slides.html#world-happiness-report-example",
     "title": "PDFs with Typst",
     "section": "World Happiness Report example",
-    "text": "World Happiness Report example\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLink to World Happiness Report\n\n\nLet’s look at a more complex example. We’ll try to recreate the styling of the World Happiness Report PDF. This report has a very specific style: a unique cover page, a two-column layout, and custom fonts and colors. We’ll explore how to achieve this with Typst."
+    "text": "World Happiness Report example\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLink to World Happiness Report"
   },
   {
     "objectID": "materials/04-typst/slides.html#example-report-with-brand.yml",
     "href": "materials/04-typst/slides.html#example-report-with-brand.yml",
     "title": "PDFs with Typst",
     "section": "Example report with brand.yml",
-    "text": "Example report with brand.yml\n\n\nUsing just the _brand.yml file, we can get a good start. We can handle things like the table of contents, basic heading styles, and logo placement. However, some elements, like the title page and more advanced heading styles, require a bit more work."
+    "text": "Example report with brand.yml"
   },
   {
     "objectID": "materials/04-typst/slides.html#advanced-styling",
     "href": "materials/04-typst/slides.html#advanced-styling",
     "title": "PDFs with Typst",
     "section": "Advanced styling",
-    "text": "Advanced styling\nWith brand.yml:\n✅ Table of contents\n✅ Simple heading styling\n✅ Logo placement customization\n✅ Fonts\n❌ Cover page\n❌ Advanced headings\n\nLearn more: Advanced Styling"
+    "text": "Advanced styling\nWith brand.yml:\n✅ Table of contents\n✅ Simple heading styling\n✅ Logo in top left\n✅ Fonts\n❌ Cover page\n❌ Advanced headings\n❌ Exact customization\n\nLearn more: Advanced Styling"
   },
   {
     "objectID": "materials/04-typst/slides.html#adding-a-title-page-with-image",
     "href": "materials/04-typst/slides.html#adding-a-title-page-with-image",
     "title": "PDFs with Typst",
     "section": "Adding a title page with image",
-    "text": "Adding a title page with image\n\n\nSet rules:\n\n\ntypst-template.typ\n\n#let title_page(title)={\n    page(margin: 0in,\n        background: image(\"cover.jpg\", height: 100%, fit: \"cover\"))[\n        #set text(fill: white)\n\n        #place(center + horizon, dy: -2.5in)[\n            #set align(center + horizon)\n            #block(width: 100%, fill: rgb(\"#983e91\"), outset: 5em)[\n                #text(weight: \"light\", size: 36pt, title)\n            ]\n        ]\n        #place(center + bottom, dy: -40pt)[\n          #block(height: 40pt)[\n            #image(\"whr_logo.png\")\n          ]\n        ]\n    ]\n}\n\n\n\n\n\n\n\n\n\n\n\nTo create a custom title page, we can define a function in our typst-template.typ file. This function can set specific page properties, like a background image, and then overlay text and other elements. In this example, we’re using a background image, setting the text color to white, and then placing the title and logo at specific positions. The result is a highly customized title page that perfectly matches the original report’s design."
+    "text": "Adding a title page with image\n\n\nSet rules:\n\n\ntypst-template.typ\n\n#let title_page(title)={\n    page(margin: 0in,\n        background: image(\"cover.jpg\", height: 100%, fit: \"cover\"))[\n        #set text(fill: white)\n\n        #place(center + horizon, dy: -2.5in)[\n            #set align(center + horizon)\n            #block(width: 100%, fill: rgb(\"#983e91\"), outset: 5em)[\n                #text(weight: \"light\", size: 36pt, title)\n            ]\n        ]\n        #place(center + bottom, dy: -40pt)[\n          #block(height: 40pt)[\n            #image(\"whr_logo.png\")\n          ]\n        ]\n    ]\n}"
   },
   {
     "objectID": "materials/04-typst/slides.html#your-turn-1",
     "href": "materials/04-typst/slides.html#your-turn-1",
     "title": "PDFs with Typst",
     "section": "Your turn",
-    "text": "Your turn\nInstall the whr-typst-template:\n\n\nTerminal\n\nquarto use template ivelasq/whr-typst-template\n\nOpen the _extensions/whr/typst-show.typ and _extensions/whr/typst-template.typ files to examine their contents.\n\n\n\n−+\n05:00"
+    "text": "Your turn\nInstall the whr-typst-template:\n\n\nTerminal\n\nquarto use template ivelasq/whr-typst-template\n\nOpen the _extensions/whr/typst-show.typ and _extensions/whr/typst-template.typ files to examine their contents."
   },
   {
     "objectID": "materials/04-typst/exercise-02.html",
@@ -1056,88 +1039,53 @@
     "text": "Install the whr-typst-template:\n\n\nTerminal\n\nquarto use template ivelasq/whr-typst-template\n\nOpen the _extensions/whr/typst-show.typ and _extensions/whr/typst-template.typ files to examine their contents."
   },
   {
-    "objectID": "materials/06-byob/slides.html#creating-a-_brand.yml-file-1",
-    "href": "materials/06-byob/slides.html#creating-a-_brand.yml-file-1",
+    "objectID": "materials/06-byob/slides.html#creating-a-_brand.yml-file",
+    "href": "materials/06-byob/slides.html#creating-a-_brand.yml-file",
     "title": "Creating and sharing your brand",
     "section": "Creating a _brand.yml file",
-    "text": "Creating a _brand.yml file\n\nIn RStudio, go to File &gt; New File &gt; Text File.\nIn VS Code or Positron, use the Command Palette (Ctrl+Shift+P on Windows/Linux or Cmd+Shift+P on Mac) and select New Untitled Text File.\n\nSave the file as _brand.yml.\n\nYou can create this file in any text editor. If you’re using RStudio, you’ll find the option under the “File” menu. For those of you using VS Code or Positron, the command palette is the fastest way to get started. Once you’ve created the file, make sure to save it as _brand.yml in the root directory of your project."
+    "text": "Creating a _brand.yml file\n_brand.yml is a text file; create a new one by running\n\nFile &gt; New File &gt; Text File in RStudio\nCtrl+Shift+P New Untitled Text File in VS Code or Positron"
   },
   {
-    "objectID": "materials/06-byob/slides.html#brand.yml-inspiration",
-    "href": "materials/06-byob/slides.html#brand.yml-inspiration",
+    "objectID": "materials/06-byob/slides.html#creating-a-_brand.yml-file-with-an-llm",
+    "href": "materials/06-byob/slides.html#creating-a-_brand.yml-file-with-an-llm",
     "title": "Creating and sharing your brand",
-    "section": "brand.yml Inspiration",
-    "text": "brand.yml Inspiration\nThe brand.yml docs site has a great Inspiration page with many references!\n\n\n\n\n\n\nLearn more: Inspiration\n\n\nWhen you’re ready to start building your brand file, you don’t have to start from scratch. The brand.yml documentation site has an entire page dedicated to inspiration. The inspiration page is full of examples from real-world projects, which can give you a great starting point for your own branding. I highly recommend checking it out for ideas on colors, fonts, and layouts."
+    "section": "Creating a _brand.yml file with an LLM",
+    "text": "Creating a _brand.yml file with an LLM\n\n\n\n\n\n\nLearn more: Creating a brand.yml with an LLM"
   },
   {
-    "objectID": "materials/06-byob/slides.html#get-a-little-help-from-a-large-language-model-llm",
-    "href": "materials/06-byob/slides.html#get-a-little-help-from-a-large-language-model-llm",
+    "objectID": "materials/06-byob/slides.html#sharing-a-_brand.yml-file",
+    "href": "materials/06-byob/slides.html#sharing-a-_brand.yml-file",
     "title": "Creating and sharing your brand",
-    "section": "Get a little help from a Large Language Model (LLM)",
-    "text": "Get a little help from a Large Language Model (LLM)\n\n\n\n\n\n\nLearn more: Creating a brand.yml with an LLM\n\n\nFor those of you who want to jumpstart the process even more, you can use a Large Language Model, or LLM, to help you. The brand.yml docs site has a fantastic guide with prompts you can use to generate a starter brand.yml file. You can ask an LLM like ChatGPT or Claude to create a brand.yml file for you, describing the look and feel you want. This can save a lot of time and help you get a solid foundation very quickly."
+    "section": "Sharing a _brand.yml file",
+    "text": "Sharing a _brand.yml file\n\nShared repository (Google Drive, OneDrive, etc.)\nGitHub repo allows you to share with version control"
   },
   {
-    "objectID": "materials/06-byob/slides.html#using-a-shared-drive",
-    "href": "materials/06-byob/slides.html#using-a-shared-drive",
+    "objectID": "materials/06-byob/slides.html#brand-extensions",
+    "href": "materials/06-byob/slides.html#brand-extensions",
     "title": "Creating and sharing your brand",
-    "section": "Using a shared drive",
-    "text": "Using a shared drive\n\nShared repository (Google Drive, OneDrive, etc.)\nGitHub repo allows you to share with version control\n\n\nThe simplest way is to share the file directly. You can use a shared repository like Google Drive or OneDrive. However, a more robust solution, especially if you’re working with a team, is to use a GitHub repo. By storing your _brand.yml file in a GitHub repo, you get all the benefits of version control. This means you can track changes, revert to previous versions if needed."
+    "section": "Brand Extensions",
+    "text": "Brand Extensions\nNew in Quarto 1.8, you can create a Quarto extension that provides a brand.yml file and assets.\nGet started by running the below:\n\n\nTerminal\n\n$ quarto create extension brand\n ? Extension Name › my-brand\n\n\n\n\n\n\n\n\nImportant\n\n\nBrand Extensions must be used with a _quarto.yml project.\n\n\n\n\nLearn more: Brand Extensions"
   },
   {
-    "objectID": "materials/06-byob/slides.html#creating-a-brand-extension",
-    "href": "materials/06-byob/slides.html#creating-a-brand-extension",
+    "objectID": "materials/06-byob/slides.html#contents-of-brand-extensions",
+    "href": "materials/06-byob/slides.html#contents-of-brand-extensions",
     "title": "Creating and sharing your brand",
-    "section": "Creating a Brand Extension",
-    "text": "Creating a Brand Extension\nNew in Quarto 1.8, you can create a Quarto extension that provides a brand.yml file and assets.\nGet started by running the below:\n\n\nTerminal\n\n$ quarto create extension brand\n ? Extension Name › my-brand\n\n\n\n\n\n\n\n\nImportant\n\n\nBrand Extensions must be used with a _quarto.yml project.\n\n\n\n\nLearn more: Brand Extensions\n\n\nNow, here’s where it gets really powerful. As of Quarto 1.8, you can package your _brand.yml file and all its assets, like images and CSS, into a Quarto extension. The command line code shown on the slide walks you through the first step of creating a brand extension from the terminal. It’s important to note that Brand Extensions must be used within a Quarto project that has its own _quarto.yml file."
-  },
-  {
-    "objectID": "materials/06-byob/slides.html#contents-of-a-brand-extension",
-    "href": "materials/06-byob/slides.html#contents-of-a-brand-extension",
-    "title": "Creating and sharing your brand",
-    "section": "Contents of a Brand Extension",
-    "text": "Contents of a Brand Extension\n? Extension Name › my-brand\nCreating extension at /{...}/my-brand:\n  - Created _quarto.yml\n  - Created README.md\n  - Created _extensions/my-brand/brand.yml\n  - Created _extensions/my-brand/_extension.yml\n  - Created .gitignore\n  - Created example.qmd\n? Open With\n❯ positron\n  vscode\n  rstudio\n  (don't open)\n\nWhen you create a brand extension, Quarto generates a directory with some key files."
-  },
-  {
-    "objectID": "materials/06-byob/slides.html#contents-of-a-brand-extension-1",
-    "href": "materials/06-byob/slides.html#contents-of-a-brand-extension-1",
-    "title": "Creating and sharing your brand",
-    "section": "Contents of a Brand Extension",
-    "text": "Contents of a Brand Extension\n\n\n_extensions/my-brand/_extension.yml\n\ntitle: My-brand\nauthor: Gordon Woodhull\nversion: 1.0.0\nquarto-required: \"&gt;=99.9.0\"\ncontributes:\n  metadata:\n    project:\n      brand: brand.yml\n\n\nOne important one is the _extension.yml file, which acts as the manifest for your extension. The code on the slide shows a simple _extension.yml file. The contributes section is what makes this a brand extension. It tells Quarto that this extension provides a brand.yml file."
-  },
-  {
-    "objectID": "materials/06-byob/slides.html#contents-of-a-brand-extension-2",
-    "href": "materials/06-byob/slides.html#contents-of-a-brand-extension-2",
-    "title": "Creating and sharing your brand",
-    "section": "Contents of a Brand Extension",
-    "text": "Contents of a Brand Extension\n\n\n_extensions/mybrand/brand.yml\n\ncolor:\n  background:\n    light: \"#fff\"\n    dark: \"#000\"\n  foreground:\n    light: \"#000\"\n    dark: \"#fff\"\n\n\nWithin the created _brand.yml file, you can start building your brand. It provides just the most basic code to enable light and dark mode."
-  },
-  {
-    "objectID": "materials/06-byob/slides.html#sharing-the-brand-extension",
-    "href": "materials/06-byob/slides.html#sharing-the-brand-extension",
-    "title": "Creating and sharing your brand",
-    "section": "Sharing the Brand Extension",
-    "text": "Sharing the Brand Extension\nPublish your Brand Extension to a GitHub repository. Once it’s on GitHub, anyone can add it to their Quarto project.\nRun the following command in the Quarto project to use the extension:\n\n\nTerminal\n\nquarto add &lt;github-organization&gt;/&lt;your-brand-name&gt;"
-  },
-  {
-    "objectID": "materials/06-byob/slides.html#updating-the-brand-extension",
-    "href": "materials/06-byob/slides.html#updating-the-brand-extension",
-    "title": "Creating and sharing your brand",
-    "section": "Updating the Brand Extension",
-    "text": "Updating the Brand Extension\nIf you make changes to your Brand Extension on GitHub, users can update the extension in their projects by running this command:\n\n\nTerminal\n\nquarto update &lt;github-organization&gt;/&lt;your-brand-name&gt;"
+    "section": "Contents of Brand Extensions",
+    "text": "Contents of Brand Extensions\n\n\n_extensions/my-brand/_extension.yml\n\ntitle: My-brand\nauthor: Gordon Woodhull\nversion: 1.0.0\nquarto-required: \"&gt;=99.9.0\"\ncontributes:\n  metadata:\n    project:\n      brand: brand.yml\n\n\n\n\n_extensions/my-brand/_extension.yml\n\ncolor:\n  background:\n    light: \"#fff\"\n    dark: \"#000\"\n  foreground:\n    light: \"#000\"\n    dark: \"#fff\""
   },
   {
     "objectID": "materials/06-byob/slides.html#your-turn",
     "href": "materials/06-byob/slides.html#your-turn",
     "title": "Creating and sharing your brand",
     "section": "Your turn",
-    "text": "Your turn\nCreate a brand file for your organization using the Brand Extension.\n\nOpen your Terminal and run: quarto create extension brand\nRead about how to prompt a large language model (LLM) to create a _brand.yml file: posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt\nCustomize the default _extensions/mybrand/brand.yml file. Take note of how well the output incorporates your brand and what, if any, elements are missing or need to be adjusted.\n\nPreview by running quarto preview example.qmd in the Terminal.\n\n\nWe’d love for you to add your new brand.yml file to the Inspiration page! You can see examples and contribute your own by visiting the following links:\n\nInspiration page: posit-dev.github.io/brand-yml/inspiration\nSubmit a PR: github.com/posit-dev/brand-yml/issues\n\n\n\n\n−+\n10:00\n\n\n\n\nAnd with that, it’s time for you to give it a try! We’re going to take a few minutes to walk through creating your own _brand.yml file."
+    "text": "Your turn\n\nUse the Brand Extension in GitHub to create a _brand.yml file for your organization.\nApply the _brand.yml file to an existing project Try to use a document that you might use for work, like a report, a presentation, or a project brief.\nUse any remaining time to apply your new branding to something you may need for your job, like a PDF, a dashboard, or an internal memo."
   },
   {
     "objectID": "materials/06-byob/exercise-01.html",
     "href": "materials/06-byob/exercise-01.html",
     "title": "",
     "section": "",
-    "text": "Create a brand file for your organization using the Brand Extension.\n\nOpen your Terminal and run: quarto create extension brand\nRead about how to prompt a large language model (LLM) to create a _brand.yml file: posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt\nCustomize the default _extensions/mybrand/brand.yml file. Take note of how well the output incorporates your brand and what, if any, elements are missing or need to be adjusted.\n\nPreview by running quarto preview example.qmd in the Terminal.\n\n\nWe’d love for you to add your new brand.yml file to the Inspiration page! You can see examples and contribute your own by visiting the following links:\n\nInspiration page: posit-dev.github.io/brand-yml/inspiration\nSubmit a PR: github.com/posit-dev/brand-yml/issues"
+    "text": "Use the Brand Extension in GitHub to create a _brand.yml file for your organization.\nApply the _brand.yml file to an existing project Try to use a document that you might use for work, like a report, a presentation, or a project brief.\nUse any remaining time to apply your new branding to something you may need for your job, like a PDF, a dashboard, or an internal memo."
   },
   {
     "objectID": "materials/05-websites/index.html",
@@ -1164,7 +1112,7 @@
     "href": "materials/05-websites/index.html#exercises",
     "title": "Websites",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\n\nGet the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview.\n\n\n\nExercise 2\n\nAdd some information to about.qmd.\nEdit _quarto.yml so that the navbar includes the about page.\nHow do you think you change the position of the links in the navbar? Change them to appear on the right.\n\n\n\nExercise 3\nPublish your website to Quarto Pub.\n\nFrom the Terminal, run quarto publish, then select Quarto Pub.\nFollow the prompts to set up an account and publish.\n\nIf you have time, publish to Connect Cloud. Note: if you’re using R, you will need an renv.lock file (learn how here) if publishing from Positron or VS Code, or a manifest.json file (learn how here) if publishing from GitHub.",
+    "text": "Exercises\n\nExercise 1\n\nGet the starter template. If you’re using Posit Cloud, skip this step and instead open the whr-website project. If you’re using Codespaces, follow the instructions here, but go to this repo instead.\nOpen index.qmd and click Render/Preview.\nEdit title index.qmd YAML to better reflect the site and add a subtitle. Preview.\nAdd some text to index.qmd explaining the plot. Preview.\n\n\n\nExercise 2\n\nAdd some information to about.qmd.\nEdit _quarto.yml so that the navbar includes the about page.\nHow do you think you change the position of the links in the navbar? Change them to appear on the right.\n\n\n\nExercise 3\nPublish your website to Quarto Pub.\n\nFrom the Terminal, run quarto publish, then select Quarto Pub.\nFollow the prompts to set up an account and publish.\n\nIf you have time, publish to Connect Cloud. Note: if you’re using R, you will need an renv.lock file (learn how here) if publishing from Positron or VS Code, or a manifest.json file (learn how here) if publishing from GitHub.",
     "crumbs": [
       "Websites"
     ]
@@ -1181,25 +1129,25 @@
     "href": "materials/01-intro/slides.html#branded-websites-presentations-dashboards-and-pdfs-with-quarto",
     "title": "Quarto\nDocuments",
     "section": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto",
-    "text": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto\n WiFi: Posit Conf 2025 Password: conf2025\n Find the materials at: pos.it/quarto-brand-conf25\n Make sure to:\n\nInstall Quarto 1.8\nJoin Discord: From the event portal, click “Join the server”, find our channel: #workshop-quarto-brand"
+    "text": "Branded Websites, Presentations, Dashboards, and PDFs with Quarto\n WiFi: Posit Conf 2025 Password: conf2025\n Find the materials at: pos.it/quarto-brand-conf25\n Make sure to:\n\nInstall Quarto 1.8\nJoin Discord: From the event portal, click “Join the server”, find our channel: #workshop-quarto-brand\n\n\nIntro: 30 min your turn 15 minute live coding 45 min talking\nwelcome to I have the wifi I recommend opening the website on your own computer so you can follow along"
   },
   {
     "objectID": "materials/01-intro/slides.html#housekeeping",
     "href": "materials/01-intro/slides.html#housekeeping",
     "title": "Quarto\nDocuments",
     "section": "Housekeeping",
-    "text": "Housekeeping\n\nThere are gender neutral bathrooms on LL2 next to Chicago A.\nThere is a meditation/prayer room located on LL2 next to Chicago A.\nThe lactation room is located on LL2 next to Chicago B\nParticipants who do not wish to be photographed have red lanyards; please note everyone’s lanyard colors before taking a photo and respect their choices.\nThe Code of Conduct can be found at https://posit.co/code-of-conduct. You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information."
+    "text": "Housekeeping\n\nThere are gender neutral bathrooms:\n\nOn LL1 (Under escalators, to the right of the Learning Center)\nOn LL2 (Next to Chicago A)\n\nThere is a meditation/prayer room located on LL2 next to Chicago A.\nThe lactation room is located on LL2 next to Chicago B.\nParticipants who do not wish to be photographed have red lanyards; please note everyone’s lanyard colors before taking a photo and respect their choices.\nThe Code of Conduct can be found at https://posit.co/code-of-conduct. You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information."
+  },
+  {
+    "objectID": "materials/01-intro/slides.html#discord",
+    "href": "materials/01-intro/slides.html#discord",
+    "title": "Quarto\nDocuments",
+    "section": "Discord",
+    "text": "Discord\nFrom the event portal, click “Join the server”, find our channel: #workshop-quarto-brand\n\nAsk questions\nShare code"
   },
   {
     "objectID": "materials/01-intro/slides.html#schedule",
     "href": "materials/01-intro/slides.html#schedule",
-    "title": "Quarto\nDocuments",
-    "section": "Schedule",
-    "text": "Schedule"
-  },
-  {
-    "objectID": "materials/01-intro/slides.html#schedule-1",
-    "href": "materials/01-intro/slides.html#schedule-1",
     "title": "Quarto\nDocuments",
     "section": "Schedule",
     "text": "Schedule\n\n\n\n\n\n\n\nTime\nActivity\n\n\n\n\n9:00 - 10:30\nIntro to Quarto & brand.yml\n\n\n10:30 - 11:00\nCoffee break ☕️\n\n\n11:00 - 12:30\nPresentations & Dashboards\n\n\n12:30 - 1:30\nLunch break 🍽️\n\n\n1:30 - 3:00\nPDFs & Websites\n\n\n3:00 - 3:30\nCoffee break ☕️\n\n\n3:30 - 5:00\nCustomizing your brand"
@@ -1223,7 +1171,7 @@
     "href": "materials/01-intro/slides.html#meeting-you-where-you-are",
     "title": "Quarto\nDocuments",
     "section": "Meeting you where you are",
-    "text": "Meeting you where you are\n\n\n\nThese materials are pitched at someone who:\n\nKnows some R or Python\nHas R or Python installed\nWants to create outputs that weave text and code\nRelatively new to Quarto\n\n\n\n\nWe’ll teach you\n\nWhat Quarto is\nHow to create documents, dashboards, websites, and presentations with Quarto\nHow to brand those Quarto outputs with brand.yml"
+    "text": "Meeting you where you are\n\n\n\nThese materials are pitched at someone who:\n\nKnows some R or Python\nWants to create outputs that weave text and code\nRelatively new to Quarto\nWants to learn about branded Quarto\n\n\n\n\nWe’ll teach you\n\nWhat Quarto is\nHow to create documents, dashboards, websites, and presentations with Quarto\nHow to brand those Quarto outputs with brand.yml\n\n\n\n\nwe designed this workshop for someone who\nnot assuming you know about Quarto"
   },
   {
     "objectID": "materials/01-intro/slides.html#workshop-structure",
@@ -1237,7 +1185,7 @@
     "href": "materials/01-intro/slides.html#getting-help",
     "title": "Quarto\nDocuments",
     "section": "Getting help",
-    "text": "Getting help\n\nStick your post-it note to your laptop\n\n🟥 “I’m stuck and need help!”\n🟦 “I finished the exercise”\n\nAsk in the Discord channel: #workshop-quarto-brand\nTalk to us during breaks or your-turns"
+    "text": "Getting help\n\nStick your post-it note to your laptop\n\n🟥 “I’m stuck and need help!”\n🟩 “I finished the exercise”\n\nAsk in the Discord channel: #workshop-quarto-brand"
   },
   {
     "objectID": "materials/01-intro/slides.html#your-turn---about-you",
@@ -1258,21 +1206,14 @@
     "href": "materials/01-intro/slides.html#with-quarto",
     "title": "Quarto\nDocuments",
     "section": "With Quarto …",
-    "text": "With Quarto …\nyou can weave together narrative and code to produce elegantly formatted output such as documents, web pages, blog posts, books, dashboards, and more, with…\n\nCreate dynamic content with Python, R, Julia, and Observable\nEdit documents in your favorite editor\nPublish technical content in HTML, PDF, MS Word, and more\nShare technical content by publishing to Posit Connect, Confluence, or other publishing systems"
+    "text": "With Quarto …\nyou can weave together narrative and code to produce elegantly formatted output such as documents, web pages, blog posts, books, dashboards, and more.\n\nCreate dynamic content with Python, R, Julia, and Observable\nEdit documents in your favorite editor\nPublish technical content in HTML, PDF, MS Word, and more\nShare technical content by publishing to Posit Connect, Confluence, or other publishing systems"
   },
   {
     "objectID": "materials/01-intro/slides.html#display-data-and-results",
     "href": "materials/01-intro/slides.html#display-data-and-results",
     "title": "Quarto\nDocuments",
     "section": "Display data and results",
-    "text": "Display data and results\nVote Idaho Election Page by Andrew Heiss (Department of Public Management and Policy, Georgia State University) and the Idaho Secretary of State\n\n\n\n\n\n\nLet’s see some examples of how people have used Quarto to tell their stories. Andrew Heiss, in conjunction with the Idaho Secretary of State’s office, created a Quarto website for Idaho’s primary election results."
-  },
-  {
-    "objectID": "materials/01-intro/slides.html#display-data-and-results-1",
-    "href": "materials/01-intro/slides.html#display-data-and-results-1",
-    "title": "Quarto\nDocuments",
-    "section": "Display data and results",
-    "text": "Display data and results\nHealth Trends in England by the Department of Health & Social Care\n\n\n\n\n\n\nThe Department of Health & Social Care in England created a Health Trends tool to open up public health data to a broader audience, and were shortlisted in the Analysis in Government award."
+    "text": "Display data and results\nVote Idaho Election Page by Andrew Heiss (Department of Public Management and Policy, Georgia State University) and the Idaho Secretary of State\n\n\n\n\n\n\nLet’s see some examples of how people have used Quarto. Andrew Heiss, in conjunction with the Idaho Secretary of State’s office, created a Quarto website for Idaho’s primary election results."
   },
   {
     "objectID": "materials/01-intro/slides.html#walk-through-a-story",
@@ -1293,7 +1234,7 @@
     "href": "materials/01-intro/slides.html#automate-and-reproduce-your-output",
     "title": "Quarto\nDocuments",
     "section": "Automate and reproduce your output",
-    "text": "Automate and reproduce your output\nDuplicating Quarto elements with code templates to reduce copy and paste errors by Althea A. Archer (United States Geological Survey)\n\n\nWith Quarto, you can create reports or presentations that update automatically when data changes or when you change inputs because you are creating your report with code. There’s a software engineering concept called the DRY Principle (“Don’t Repeat Yourself”) that is useful in data work that encourages writing code that can be reused with functions or loops instead of copy/paste. Use variables (parameters) to dynamically change parts of your analysis or report like to generate the same report for different regions, departments, or time periods, write reusable functions to avoid repeating code and keeps work cleaner, more consistent, and easier to maintain. The folks at United States Geological Survey have great blog posts on how they are implementing these ideas in Quarto."
+    "text": "Automate and reproduce your output\nDuplicating Quarto elements with code templates to reduce copy and paste errors by Althea A. Archer (United States Geological Survey)\n\n\nWith Quarto, you can create reports or presentations that update automatically when data changes or when you change inputs because you are creating your report with code. Use variables (parameters) to dynamically change parts of your analysis or report like to generate the same report for different regions, departments, or time periods, write reusable functions to avoid repeating code and keeps work cleaner, more consistent, and easier to maintain. The folks at United States Geological Survey have great blog posts on how they are implementing these ideas in Quarto."
   },
   {
     "objectID": "materials/01-intro/slides.html#get-your-team-on-the-same-page",
@@ -1303,11 +1244,18 @@
     "text": "Get your team on the same page\nWe Converted Our Documentation to Quarto by Melissa Van Bussel (Statistics Canada)\n\n\n\n\n\n\nWebsite for R/Python User Group\nTraining resources\nPresentations\n\n\n\nAnd finally, Melissa van Bussel gave a talk on how the Statistics Canada team converted not just their documentation, but training resources, presentations, and more to Quarto to streamline efforts."
   },
   {
+    "objectID": "materials/01-intro/slides.html#world-happiness-report",
+    "href": "materials/01-intro/slides.html#world-happiness-report",
+    "title": "Quarto\nDocuments",
+    "section": "World Happiness Report",
+    "text": "World Happiness Report\n\n\n\n\n\n\n\n\nThis is what you’ll work on today!\n\n\nhttps://www.worldhappiness.report/\n\n\nworld happiness report combines and analyzes wellbeing data for around 150 countries and writes an annual report. they investigate how happy countries are, how that happiness has changed over time, and what factors explain a country’s happiness or lack thereof.\ntoday, you’re going to make reports, dashboards, websites, and presentations with this data."
+  },
+  {
     "objectID": "materials/01-intro/slides.html#literate-programming",
     "href": "materials/01-intro/slides.html#literate-programming",
     "title": "Quarto\nDocuments",
     "section": "“Literate programming”",
-    "text": "“Literate programming”\n\n\nQuarto sits inside the big and broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!"
+    "text": "“Literate programming”\n\n\nall this is possible because Quarto sits inside the broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!"
   },
   {
     "objectID": "materials/01-intro/slides.html#why-quarto",
@@ -1324,25 +1272,18 @@
     "text": "Quarto formats\n\n\n\n\n\n\n\nFeature\nQuarto\n\n\n\n\nBasic Formats\nhtml, pdf, docx, typst\n\n\nBeamer\nbeamer\n\n\nPowerPoint\npptx\n\n\nHTML Slides\nrevealjs\n\n\nAdvanced Layout\nQuarto Article Layout\n\n\nCross References\nQuarto Crossrefs\n\n\nWebsites & Blogs\nQuarto Websites, Quarto Blogs\n\n\nBooks\nQuarto Books\n\n\nInteractivity\nQuarto Interactive Documents\n\n\nJournal Articles\nJournal Articles\n\n\nDashboards\nQuarto Dashboards"
   },
   {
-    "objectID": "materials/01-intro/slides.html#how-it-works",
-    "href": "materials/01-intro/slides.html#how-it-works",
-    "title": "Quarto\nDocuments",
-    "section": "How it works",
-    "text": "How it works\nQuarto is a command line interface (CLI) that renders plain text formats (.qmd, .rmd, .md) OR mixed formats (.ipynb/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more.\n\n\n  Usage:   quarto \n  Version: 1.5.57\n\n  Description:\n\n    Quarto CLI\n\n  Options:\n\n    -h, --help     - Show this help.                            \n    -V, --version  - Show the version number for this program.  \n\n  Commands:\n\n    render          [input] [args...]     - Render files or projects to various document types.\n    preview         [file] [args...]      - Render and preview a document or website project.  \n    serve           [input]               - Serve a Shiny interactive document.                \n    create          [type] [commands...]  - Create a Quarto project or extension               \n    create-project  [dir]                 - Create a project for rendering multiple documents  \n    convert         &lt;input&gt;               - Convert documents to alternate representations.    \n    pandoc          [args...]             - Run the version of Pandoc embedded within Quarto.  \n    typst           [args...]             - Run the version of Typst embedded within Quarto.   \n    run             [script] [args...]    - Run a TypeScript, R, Python, or Lua script.        \n    add             &lt;extension&gt;           - Add an extension to this folder or project         \n    install         [target...]           - Installs an extension or global dependency.        \n    publish         [provider] [path]     - Publish a document or project to a provider.       \n    check           [target]              - Verify correct functioning of Quarto installation. \n    help            [command]             - Show this help or the help of a sub-command."
-  },
-  {
     "objectID": "materials/01-intro/slides.html#under-the-hood",
     "href": "materials/01-intro/slides.html#under-the-hood",
     "title": "Quarto\nDocuments",
     "section": "Under the hood",
-    "text": "Under the hood\n\n\njupyter or knitr evaluates Python, Julia, R, or Observable code and returns a .md file along with the evaluated code\nQuarto applies Lua filters + CSS/LaTeX which is then evaluated alongside the .md file by Pandoc and converted to a final output format"
+    "text": "Under the hood\n\n\njupyter or knitr evaluates Python, Julia, R, or Observable code and returns a .md file along with the evaluated code\nQuarto applies Lua filters + CSS/LaTeX which is then evaluated alongside the .md file by Pandoc and converted to a final output format\n\n\nIllustration by Allison Horst"
   },
   {
-    "objectID": "materials/01-intro/slides.html#options",
-    "href": "materials/01-intro/slides.html#options",
+    "objectID": "materials/01-intro/slides.html#environment-options",
+    "href": "materials/01-intro/slides.html#environment-options",
     "title": "Quarto\nDocuments",
-    "section": "Options",
-    "text": "Options\nLet’s walk through your options for today.\n\nPosit Cloud\nGitHub Codespace\nLocal installation\n\n\nGitHub repository\nPackage installation\n\n\nPosit Cloud has R, RStudio, Quarto, packages, installed. You just need a free account. But I will delete in a few days. If you prefer Python, there is a GitHub Codespace. It takes many minutes to load so please open it up as soon as you can if you’d like to go this route. The packages will not come preinstalled, but the instructions are on the website. Finally, you can always install Positron, RStudio, or VS Code locally, but you will also need R or Python installed. You’ll also have to install the packages and download the repo materials. And for VS Code, you’ll need to install the Quarto extension. So, if you do not have these set up, I recommend going with Posit Cloud or GitHub Codespace for now, and coming back to the materials after the workshop."
+    "section": "Environment options",
+    "text": "Environment options\nLet’s walk through your options for today.\n\nPosit Cloud - RStudio\nGitHub Codespace - VS Code\nLocal installation\n\n\nPosit Cloud has R, RStudio, Quarto, packages, installed. You just need a free account. But I will delete in a few days. If you prefer Python, there is a GitHub Codespace. It takes many minutes to load so please open it up as soon as you can if you’d like to go this route. The packages will not come preinstalled, but the instructions are on the website. Finally, you can always install Positron, RStudio, or VS Code locally, but you will also need R or Python installed. You’ll also have to install the packages and download the repo materials. And for VS Code, you’ll need to install the Quarto extension. So, if you do not have these set up, I recommend going with Posit Cloud or GitHub Codespace for now, and coming back to the materials after the workshop."
   },
   {
     "objectID": "materials/01-intro/slides.html#your-turn",
@@ -1363,7 +1304,7 @@
     "href": "materials/01-intro/slides.html#your-turn-1",
     "title": "Quarto\nDocuments",
     "section": "Your turn",
-    "text": "Your turn\n\nOpen 01-exercise-r.qmd or 01-exercise-py.qmd.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nOpen 01-exercise-r.qmd or 01-exercise-py.qmd.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.\n\n\n\n\n−+\n05:00\n\n\n\n\nshow how to add a code chunk\nPositron/vs code insert code cell, cmd shift i RStudio green button, cmd option i"
   },
   {
     "objectID": "materials/01-intro/slides.html#anatomy-of-a-quarto-document",
@@ -1433,13 +1374,6 @@
     "href": "materials/01-intro/slides.html#anatomy-of-a-quarto-document-9",
     "title": "Quarto\nDocuments",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nCode can include optional chunk options, in YAML style, identified by #| at the beginning of the line\n---\ntitle: \"World Happiness Report\"\nformat: html\n---\n\nThis analysis uses data from the [**2025 World Happiness Report**](https://www.worldhappiness.report/). \n\n```{python}\n#| include: false\n#| fig.alt: \"A barplot with country on the x-axis and happiness score on the y-axis.\"\nfrom plotnine import ggplot, aes, geom_col\n\n(\n    ggplot(df, aes(x = \"country\", y = \"score\"))\n    + geom_col()\n)\n```"
-  },
-  {
-    "objectID": "materials/01-intro/slides.html#anatomy-of-a-quarto-document-10",
-    "href": "materials/01-intro/slides.html#anatomy-of-a-quarto-document-10",
-    "title": "Quarto\nDocuments",
-    "section": "Anatomy of a Quarto document",
     "text": "Anatomy of a Quarto document\nCode can include optional chunk options, in YAML style, identified by #| at the beginning of the line\n\n\n\n\n\n\n\nOption\nDescription\n\n\n\n\neval\nEvaluate the code chunk\n\n\necho\nInclude the source code\n\n\nwarning\nInclude warnings\n\n\ninclude\nInclude code and results\n\n\n\nOther options: https://quarto.org/docs/computations/execution-options.html"
   },
   {
@@ -1475,7 +1409,7 @@
     "href": "materials/01-intro/slides.html#divs-and-spans",
     "title": "Quarto\nDocuments",
     "section": "Divs and Spans",
-    "text": "Divs and Spans\nFor further customization, you can add classes, attributes, and other identifiers to content using divs and spans.\n\n\nDiv syntax: :::\nSpan syntax: { }\n\n\n\nDivs\n::: {.border}\nThis adds the \"border\" class to some content. \n:::\nSpans\n[This is some text]{.class key=\"val\"}\n\nFor future customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well.\n\n\nLearn more: https://quarto.org/docs/authoring/markdown-basics.html#sec-divs-and-spans"
+    "text": "Divs and Spans\nFor further customization, you can add classes, attributes, and other identifiers to content using divs and spans.\nDivs\n::: {.border}\nThis adds the \"border\" class to some content. \n:::\nSpans\n[This is some text]{.class key=\"val\"}\n\nFor future customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well.\n\n\nLearn more: https://quarto.org/docs/authoring/markdown-basics.html#sec-divs-and-spans"
   },
   {
     "objectID": "materials/01-intro/slides.html#divs",
@@ -1559,11 +1493,18 @@
     "href": "materials/01-intro/slides.html#section-2",
     "title": "Quarto\nDocuments",
     "section": "",
-    "text": "1. Define branding in a single _brand.yml file.\n2. Apply that branding across almost all Quarto formats.\n\n\n\nbrand.yml also works with Shiny!"
+    "text": "Branding can be frustrating\n\n\n\nBut brand.yml makes it easier"
   },
   {
     "objectID": "materials/01-intro/slides.html#section-3",
     "href": "materials/01-intro/slides.html#section-3",
+    "title": "Quarto\nDocuments",
+    "section": "",
+    "text": "1. Define branding in a single _brand.yml file.\n2. Apply that branding across almost all Quarto formats.\n\n\n\nbrand.yml also works with Shiny!"
+  },
+  {
+    "objectID": "materials/01-intro/slides.html#section-4",
+    "href": "materials/01-intro/slides.html#section-4",
     "title": "Quarto\nDocuments",
     "section": "",
     "text": "---\nconfig:\n  look: handDrawn\n  theme: neutral\n---\nflowchart LR\n    by{brand.yml}\n    by--&gt;quarto[Quarto]\n    quarto--&gt;quarto-html\n    quarto--&gt;quarto-pdf\n    quarto-html--&gt;quarto-websites[Websites]\n    quarto-html--&gt;quarto-presentations[Presentations]\n    quarto-html--&gt;quarto-dashboards[Dashboards]\n    quarto-html--&gt;quarto-emails[Emails]\n    quarto-pdf--&gt;quarto-typst[Typst]\n\n    by--&gt;R\n    R--&gt;r-bslib[\"{bslib}\"]\n    r-bslib--&gt;r-thematic[\"{thematic}\"]\n    r-bslib--&gt;r-shiny[\"Shiny for R\"]\n    r-bslib--&gt;r-rmd[\"R Markdown\"]\n    r-bslib--&gt;r-pkgdown[\"pkgdown\"]\n    %% r-thematic--&gt;r-ggplot2[\"{ggplot2}\"]\n    %% r-thematic--&gt;r-plot[\"{plot}\"]\n\n    by--&gt;Python\n    Python--&gt;py-brand_yml[\"brand_yml\"]\n    py-brand_yml--&gt;py-shiny[Shiny for Python]\n    py-brand_yml--&gt;py-plots[seaborn, matplotlib, etc.]\n\n    classDef implemented fill:#8CE3A0,stroke:#0A2911,color:#0A2911;\n    classDef partial fill:#A8E5B9,stroke:#4B8A5D,color:#0A2911;\n    classDef in-progress fill:#B3D7FF,stroke:#00254D,color:#00254D;\n    classDef highlighted fill:#FFE8DB,stroke:#612200,color:#612200;\n\n    class quarto-websites,quarto-presentations,quarto-dashboards,quarto-typst,py-brand_yml,py-shiny,r-bslib,r-shiny,r-rmd,r-pkgdown implemented;\n    class r-thematic,py-plots partial;\n    class by highlighted;\n\n    click quarto href \"https://prerelease.quarto.org/docs/authoring/brand.html\"\n    click quarto-typst href \"https://quarto.org/docs/output-formats/typst.html\" \"Typst in Quarto\"\n    click quarto-presentations href \"https://quarto.org/docs/presentations/revealjs/\" \"Reveal.js in Quarto\"\n    click quarto-dashboards href \"https://quarto.org/docs/dashboards/\" \"Dashboards in Quarto\"\n    click r-shiny href \"https://shiny.posit.co/\"\n    click r-bslib href \"https://rstudio.github.io/bslib/\"\n    click r-thematic href \"https://rstudio.github.io/thematic/\"\n    click r-ggplot2 href \"https://ggplot2.tidyverse.org/\"\n    click r-rmd href \"https://rmarkdown.rstudio.com/\"\n    click py-shiny href \"https://shiny.posit.co/py/\"\n    click py-brand_yml href \"pkg/py/\"\n\n\n\n\n\n\n\n\n\nLearn more: https://posit-dev.github.io/brand-yml/\n\n\nbrand.yml works with a variety of open source projects, including all the Quarto outputs we’ll talk about today. as well as Shiny for R and Shiny for Python. This means you can define your organization’s branding in a brand.yml file once, and then apply it all over relatively effortlessly.\nover the course of this workshop, we’ll use the same brand file to apply to all our outputs"
@@ -1580,7 +1521,7 @@
     "href": "materials/01-intro/slides.html#brand.yml-structure",
     "title": "Quarto\nDocuments",
     "section": "_brand.yml structure",
-    "text": "_brand.yml structure\n\n\n_brand.yml\n\nmeta:\n  name: World Happiness Report\n  link:\n    home: https://www.worldhappiness.report/\n\nlogo:\n  images:\n    icon:\n      path: images/whr_logo.png\n      alt: World Happiness Report icon.\n  small: images/whr_logo.png\n\ncolor:\n  palette:\n    dark-purple: \"#93358c\"\n    light-purple: \"#f8f6fb\"\n    teal: \"#04afaf\"\n    dark-blue: \"#086992\"\n    hot-pink: \"#eb068c\"\n    light-blue: \"#1aade4\"\n\n  background: light-purple\n  foreground: black\n  primary: dark-purple\n  secondary: hot-pink\n  tertiary: light-blue\n  dark: black\n\ntypography:\n  fonts:\n    - family: Libre Franklin\n      source: google\n      weight: [400, 700]\n\n  base:\n    family: Libre Franklin\n    weight: 400\n\n  headings:\n    family: Libre Franklin\n    weight: 700\n    color: dark-purple\n\n  link:\n    color: primary\n    decoration: none\n\n\nif this seems like a lot of details, don’t worry! we will show you how to make your own file later. for now, it’s enough to just have a general understanding of the different parts"
+    "text": "_brand.yml structure\n\n\n_brand.yml\n\nmeta:\n  name: World Happiness Report\n  link:\n    home: https://www.worldhappiness.report/\n\nlogo:\n  images:\n    icon:\n      path: images/whr_logo.png\n      alt: World Happiness Report icon.\n  small: images/whr_logo.png\n\ncolor:\n  palette:\n    dark-purple: \"#93358c\"\n    light-purple: \"#f8f6fb\"\n    teal: \"#04afaf\"\n    dark-blue: \"#086992\"\n    hot-pink: \"#eb068c\"\n    light-blue: \"#1aade4\"\n\n  background: light-purple\n  foreground: black\n  primary: dark-purple\n  secondary: hot-pink\n  tertiary: light-blue\n  dark: black\n\ntypography:\n  fonts:\n    - family: Libre Franklin\n      source: google\n      weight: [400, 700]\n\n  base:\n    family: Libre Franklin\n    weight: 400\n\n  headings:\n    family: Libre Franklin\n    weight: 700\n    color: dark-purple\n\n  link:\n    color: primary\n    decoration: none\n\n\ndefine your brand’s color palette and map your palette to the roles colors play. the semantic colors – primary, foreground, etc\nif this seems like a lot of details, don’t worry! we will show you how to make your own file later. for now, it’s enough to just have a general understanding of the different parts"
   },
   {
     "objectID": "materials/01-intro/slides.html#how-to-apply-brand.yml-to-quarto",
@@ -1590,8 +1531,8 @@
     "text": "How to apply brand.yml to Quarto\n\nDefine branding in _brand.yml.\nSave in the root directory of your Quarto project.\n\nQuarto will detect the presence of _brand.yml and automatically apply the brand to all documents of the supported formats in the project."
   },
   {
-    "objectID": "materials/01-intro/slides.html#section-4",
-    "href": "materials/01-intro/slides.html#section-4",
+    "objectID": "materials/01-intro/slides.html#section-5",
+    "href": "materials/01-intro/slides.html#section-5",
     "title": "Quarto\nDocuments",
     "section": "",
     "text": "If your brand file has a different name or lives in a subdirectory, use the brand key.\n\n\nmy-document.qmd\n\n---\ntitle: \"World Happiness Report\"\nsubtitle: \"Happiness Trends and Contributing Factors (2011-2024)\"\nformat: html\nbrand: org_theme.yml\n---\n\n\nuse this if you have a file named something other than brand.yml or it lives elsewhere."
@@ -1608,7 +1549,7 @@
     "href": "materials/01-intro/slides.html#brand-shortcode",
     "title": "Quarto\nDocuments",
     "section": "brand shortcode",
-    "text": "brand shortcode\nAccess some brand.yml values with a shortcode.\n\n\nmy_document.qmd\n\n#f3c13d\n\n\nLearn more: https://quarto.org/docs/authoring/brand.html#using-brand-values\n\n\nyou’ll see an example of this during the presentations section"
+    "text": "brand shortcode\nAccess some brand.yml values with a shortcode.\n\n\nmy_document.qmd\n\n{{&lt; brand color primary &gt;}}\n\n\nLearn more: https://quarto.org/docs/authoring/brand.html#using-brand-values\n\n\nyou’ll see an example of this during the presentations section"
   },
   {
     "objectID": "materials/01-intro/slides.html#your-turn-4",
@@ -1657,7 +1598,7 @@
     "href": "materials/01-intro/slides.html#your-turn-6",
     "title": "Quarto\nDocuments",
     "section": "Your turn",
-    "text": "Your turn\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette['teal'])\n\n\n\n\ngeom_line(color = brand.color.palette.teal)\n\n\n\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nRead in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following.\n\n(Make sure to first remove #| include: false from the chunk, if it’s still there).\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette$blue)\n\n\n\n\ngeom_line(color = brand.color.palette.blue)\n\n\n\n\n\n\n\n−+\n05:00\n\n\n\n\nif there’s time, go over this\nthe r function automatically applies theme_minimal()"
   },
   {
     "objectID": "materials/01-intro/slides.html#why-brand.yml",
@@ -1678,7 +1619,7 @@
     "href": "materials/01-intro/exercise-06.html",
     "title": "",
     "section": "",
-    "text": "Read in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following:\n\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette['teal'])\n\n\n\n\ngeom_line(color = brand.color.palette.teal)"
+    "text": "Read in _brand.yml with read_brand_yml() (R) or Brand.from_yaml() (Python) to a variable named brand.\nChange the color of the points and line in the global trends plot to the brand’s teal color. Use code like the following.\n\n(Make sure to first remove #| include: false from the chunk, if it’s still there).\n\nRPython\n\n\n\ngeom_line(color = brand$color$palette$blue)\n\n\n\n\ngeom_line(color = brand.color.palette.blue)"
   },
   {
     "objectID": "materials/01-intro/exercise-02.html",
@@ -1809,267 +1750,267 @@
   {
     "objectID": "materials/02-presentations/slides.html#file-formats",
     "href": "materials/02-presentations/slides.html#file-formats",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "File formats",
     "text": "File formats\nQuarto supports a variety of formats for creating presentations, including:\n\nrevealjs\npptx\nbeamer\n\n\nbrand.yml is currently supported only in revealjs."
   },
   {
     "objectID": "materials/02-presentations/slides.html#reveal.js",
     "href": "materials/02-presentations/slides.html#reveal.js",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "reveal.js",
     "text": "reveal.js\nreveal.js presentations allow you to create stunning presentations on the web.\n\nPresent code and LaTeX equations\nInclude computations in slide output\nAdd image, video, and iFrame backgrounds\nAdd fancy transitions and animations\nActivate scroll view\n\n…and much more"
   },
   {
     "objectID": "materials/02-presentations/slides.html#converting-to-reveal.js",
     "href": "materials/02-presentations/slides.html#converting-to-reveal.js",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Converting to reveal.js",
     "text": "Converting to reveal.js\nConvert your document to a reveal.js presentation by editing format in the YAML heading:\nformat: revealjs\n\nLearn more: Revealjs"
   },
   {
     "objectID": "materials/02-presentations/slides.html#example",
     "href": "materials/02-presentations/slides.html#example",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Example",
     "text": "Example\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: html\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
   },
   {
     "objectID": "materials/02-presentations/slides.html#example-1",
     "href": "materials/02-presentations/slides.html#example-1",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Example",
     "text": "Example\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
   },
   {
     "objectID": "materials/02-presentations/slides.html#example-with-sections",
     "href": "materials/02-presentations/slides.html#example-with-sections",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Example with sections",
     "text": "Example with sections\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n# In the morning\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Breakfast\n\n- Eat eggs\n- Drink coffee\n\n# In the evening\n\n## Dinner\n\n- Eat spaghetti\n- Drink wine\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
   },
   {
     "objectID": "materials/02-presentations/slides.html#example-with-sections-1",
     "href": "materials/02-presentations/slides.html#example-with-sections-1",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Example with sections",
     "text": "Example with sections\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n- Turn off alarm\n- Get out of bed\n\n---\n\n- Get in bed\n- Count sheep"
   },
   {
     "objectID": "materials/02-presentations/slides.html#your-turn",
     "href": "materials/02-presentations/slides.html#your-turn",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Your turn",
-    "text": "Your turn\n\nIn your document’s YAML header, change format: html to format: revealjs.\nUse first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nSave and render your document.\n\nQuarto will create an HTML file that is a fully functional slide deck.\n\n\n\n\n\n\nNote\n\n\nYou can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.\n\n\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nChange the format: In your document’s YAML header, change format: html to format: revealjs.\nAdd slides: Use first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nRender: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.\n\nNote: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations."
   },
   {
     "objectID": "materials/02-presentations/slides.html#editing-slides",
     "href": "materials/02-presentations/slides.html#editing-slides",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Editing slides",
-    "text": "Editing slides\nThe quarto-revealjs-editable extension allows for the repositioning and resizing of images and text divs directly in previewed slides.\n\n\nLearn more: quarto-revealjs-editable"
+    "text": "Editing slides\nThe quarto-revealjs-editable extension allows the repositioning and resizing of images and text divs directly in the previewed slides.\n\n\nLearn more: quarto-revealjs-editable"
   },
   {
     "objectID": "materials/02-presentations/slides.html#content-overflow",
     "href": "materials/02-presentations/slides.html#content-overflow",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Content overflow",
-    "text": "Content overflow\nUse the .smaller class to use a smaller typeface so that more text fits on the slide. For example:\n## Slide Title {.smaller}\nUse the .scrollable class to make off-slide content available by scrolling. For example:\n## Slide Title {.scrollable}\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\nNullam sagittis ex eget bibendum vulputate.\n\nVestibulum lobortis mauris sed lorem auctor, in commodo ex semper.\nVestibulum congue nisl eget blandit suscipit.\nCurabitur sit amet diam elementum, dictum massa quis, vulputate est.\nSed dignissim lacus et lorem pellentesque interdum.\nUt efficitur eros id leo condimentum, vel sodales velit lacinia.\n\nVivamus cursus massa accumsan tellus imperdiet aliquet id et odio.\nDuis tincidunt nunc vitae erat sollicitudin, non condimentum enim eleifend.\nPhasellus ac ligula aliquam, aliquet nunc quis, tempor libero.\nVivamus ultricies enim a metus ultrices, a pretium velit tristique.\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\nNullam sagittis ex eget bibendum vulputate.\n\nVestibulum lobortis mauris sed lorem auctor, in commodo ex semper.\nVestibulum congue nisl eget blandit suscipit.\nCurabitur sit amet diam elementum, dictum massa quis, vulputate est.\nSed dignissim lacus et lorem pellentesque interdum.\nUt efficitur eros id leo condimentum, vel sodales velit lacinia.\n\nVivamus cursus massa accumsan tellus imperdiet aliquet id et odio.\nDuis tincidunt nunc vitae erat sollicitudin, non condimentum enim eleifend.\nPhasellus ac ligula aliquam, aliquet nunc quis, tempor libero.\nVivamus ultricies enim a metus ultrices, a pretium velit tristique."
+    "text": "Content overflow\nUse the .smaller class to use a smaller typeface so that more text fits on the slide. For example:\n## Slide Title {.smaller}\nUse the .scrollable class to make off-slide content available by scrolling. For example:\n## Slide Title {.scrollable}"
   },
   {
     "objectID": "materials/02-presentations/slides.html#slide-transitions",
     "href": "materials/02-presentations/slides.html#slide-transitions",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Slide transitions",
     "text": "Slide transitions\nEdit the YAML to change the slide transitions:\n---\ntitle: \"Presentation\"\nformat:\n  revealjs:\n    transition: slide\n    transition-speed: fast\n---\n\nLearn more: Slide Transitions"
   },
   {
     "objectID": "materials/02-presentations/slides.html#slide-transitions-1",
     "href": "materials/02-presentations/slides.html#slide-transitions-1",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Slide transitions",
     "text": "Slide transitions\nThe next few slides will transition using the slide transition\n\n\n\n\n\n\n\nTransition\nDescription\n\n\n\n\nnone\nNo transition (default, switch instantly)\n\n\nfade\nCross fade\n\n\nslide\nSlide horizontally\n\n\nconvex\nSlide at a convex angle\n\n\nconcave\nSlide at a concave angle\n\n\nzoom\nScale the incoming slide so it grows in from the center of the screen."
   },
   {
     "objectID": "materials/02-presentations/slides.html#tabsets",
     "href": "materials/02-presentations/slides.html#tabsets",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Tabsets",
     "text": "Tabsets\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nMazda RX4\n21.0\n6\n160.0\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160.0\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nDatsun 710\n22.8\n4\n108.0\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nHornet 4 Drive\n21.4\n6\n258.0\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nHornet Sportabout\n18.7\n8\n360.0\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nValiant\n18.1\n6\n225.0\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\nDuster 360\n14.3\n8\n360.0\n245\n3.21\n3.570\n15.84\n0\n0\n3\n4\n\n\nMerc 240D\n24.4\n4\n146.7\n62\n3.69\n3.190\n20.00\n1\n0\n4\n2\n\n\nMerc 230\n22.8\n4\n140.8\n95\n3.92\n3.150\n22.90\n1\n0\n4\n2\n\n\nMerc 280\n19.2\n6\n167.6\n123\n3.92\n3.440\n18.30\n1\n0\n4\n4\n\n\nMerc 280C\n17.8\n6\n167.6\n123\n3.92\n3.440\n18.90\n1\n0\n4\n4\n\n\nMerc 450SE\n16.4\n8\n275.8\n180\n3.07\n4.070\n17.40\n0\n0\n3\n3\n\n\nMerc 450SL\n17.3\n8\n275.8\n180\n3.07\n3.730\n17.60\n0\n0\n3\n3\n\n\nMerc 450SLC\n15.2\n8\n275.8\n180\n3.07\n3.780\n18.00\n0\n0\n3\n3\n\n\nCadillac Fleetwood\n10.4\n8\n472.0\n205\n2.93\n5.250\n17.98\n0\n0\n3\n4\n\n\nLincoln Continental\n10.4\n8\n460.0\n215\n3.00\n5.424\n17.82\n0\n0\n3\n4\n\n\nChrysler Imperial\n14.7\n8\n440.0\n230\n3.23\n5.345\n17.42\n0\n0\n3\n4\n\n\nFiat 128\n32.4\n4\n78.7\n66\n4.08\n2.200\n19.47\n1\n1\n4\n1\n\n\nHonda Civic\n30.4\n4\n75.7\n52\n4.93\n1.615\n18.52\n1\n1\n4\n2\n\n\nToyota Corolla\n33.9\n4\n71.1\n65\n4.22\n1.835\n19.90\n1\n1\n4\n1\n\n\nToyota Corona\n21.5\n4\n120.1\n97\n3.70\n2.465\n20.01\n1\n0\n3\n1\n\n\nDodge Challenger\n15.5\n8\n318.0\n150\n2.76\n3.520\n16.87\n0\n0\n3\n2\n\n\nAMC Javelin\n15.2\n8\n304.0\n150\n3.15\n3.435\n17.30\n0\n0\n3\n2\n\n\nCamaro Z28\n13.3\n8\n350.0\n245\n3.73\n3.840\n15.41\n0\n0\n3\n4\n\n\nPontiac Firebird\n19.2\n8\n400.0\n175\n3.08\n3.845\n17.05\n0\n0\n3\n2\n\n\nFiat X1-9\n27.3\n4\n79.0\n66\n4.08\n1.935\n18.90\n1\n1\n4\n1\n\n\nPorsche 914-2\n26.0\n4\n120.3\n91\n4.43\n2.140\n16.70\n0\n1\n5\n2\n\n\nLotus Europa\n30.4\n4\n95.1\n113\n3.77\n1.513\n16.90\n1\n1\n5\n2\n\n\nFord Pantera L\n15.8\n8\n351.0\n264\n4.22\n3.170\n14.50\n0\n1\n5\n4\n\n\nFerrari Dino\n19.7\n6\n145.0\n175\n3.62\n2.770\n15.50\n0\n1\n5\n6\n\n\nMaserati Bora\n15.0\n8\n301.0\n335\n3.54\n3.570\n14.60\n0\n1\n5\n8\n\n\nVolvo 142E\n21.4\n4\n121.0\n109\n4.11\n2.780\n18.60\n1\n1\n4\n2\n\n\n\n\n\n\n\n\n\nLearn more: Tabsets"
   },
   {
     "objectID": "materials/02-presentations/slides.html#column-layout",
     "href": "materials/02-presentations/slides.html#column-layout",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Column layout",
     "text": "Column layout\nArrange content into columns of varying widths:\n\n\nMotor Trend Car Road Tests\nThe data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\nHornet 4 Drive\n21.4\n6\n258\n110\n3.215\n\n\nHornet Sportabout\n18.7\n8\n360\n175\n3.440\n\n\nValiant\n18.1\n6\n225\n105\n3.460\n\n\n\n\n\n\n\nLearn more: Multiple Columns"
   },
   {
     "objectID": "materials/02-presentations/slides.html#line-highlighting",
     "href": "materials/02-presentations/slides.html#line-highlighting",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Line highlighting",
     "text": "Line highlighting\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\nLearn more: Line Highlighting"
   },
   {
     "objectID": "materials/02-presentations/slides.html#executable-code",
     "href": "materials/02-presentations/slides.html#executable-code",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Executable code",
     "text": "Executable code\n\nlibrary(ggplot2)\nggplot(mtcars, aes(hp, mpg, color = am)) +\n  geom_point() +\n  geom_smooth(formula = y ~ x, method = \"loess\")\n\n\n\nLearn more: Executable Code"
   },
   {
     "objectID": "materials/02-presentations/slides.html#latex-equations",
     "href": "materials/02-presentations/slides.html#latex-equations",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "LaTeX equations",
     "text": "LaTeX equations\nMathJax rendering of equations to HTML\n\n\n\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\n\n\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\n\n\\[\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\\]\n\\[\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\\]\n\n\nLearn more: LaTeX Equations"
   },
   {
     "objectID": "materials/02-presentations/slides.html#incremental-lists",
     "href": "materials/02-presentations/slides.html#incremental-lists",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Incremental lists",
     "text": "Incremental lists\nLists can optionally be displayed incrementally:\n\nFirst item\nSecond item\nThird item\n\n\n Insert pauses to make other types of content display incrementally.\n\nLearn more: Incremental Lists"
   },
   {
     "objectID": "materials/02-presentations/slides.html#fragments",
     "href": "materials/02-presentations/slides.html#fragments",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Fragments",
     "text": "Fragments\nIncremental text display and animation with fragments:\n\n\nFade in\n\n\nSlide up while fading in\n\n\nSlide left while fading in\n\n\nFade in then semi out\n\n\n\nStrike\n\n\nHighlight red\n\n\nLearn more: Fragments"
   },
   {
     "objectID": "materials/02-presentations/slides.html#absolute-position",
     "href": "materials/02-presentations/slides.html#absolute-position",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Absolute position",
     "text": "Absolute position\nPosition images or other elements at precise locations\n\n\n\n\nLearn more: Absolute Position"
   },
   {
     "objectID": "materials/02-presentations/slides.html#interactive-slides",
     "href": "materials/02-presentations/slides.html#interactive-slides",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Interactive slides",
     "text": "Interactive slides\nInclude Jupyter widgets and htmlwidgets in your presentations\n\n\n\n\n\n\n\nLearn more: Jupyter widgets, htmlwidgets"
   },
   {
     "objectID": "materials/02-presentations/slides.html#interactive-slides-1",
     "href": "materials/02-presentations/slides.html#interactive-slides-1",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Interactive slides",
     "text": "Interactive slides\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\nlibrary(bslib)\n\n# Define UI for app that draws a histogram ----\nui &lt;- page_sidebar(\n  sidebar = sidebar(open = \"open\",\n    numericInput(\"n\", \"Sample count\", 100),\n    checkboxInput(\"pause\", \"Pause\", FALSE),\n  ),\n  plotOutput(\"plot\", width=1100)\n)\n\nserver &lt;- function(input, output, session) {\n  data &lt;- reactive({\n    input$resample\n    if (!isTRUE(input$pause)) {\n      invalidateLater(1000)\n    }\n    rnorm(input$n)\n  })\n  \n  output$plot &lt;- renderPlot({\n    hist(data(),\n      breaks = 40,\n      xlim = c(-2, 2),\n      ylim = c(0, 1),\n      lty = \"blank\",\n      xlab = \"value\",\n      freq = FALSE,\n      main = \"\"\n    )\n    \n    x &lt;- seq(from = -2, to = 2, length.out = 500)\n    y &lt;- dnorm(x)\n    lines(x, y, lwd=1.5)\n    \n    lwd &lt;- 5\n    abline(v=0, col=\"red\", lwd=lwd, lty=2)\n    abline(v=mean(data()), col=\"blue\", lwd=lwd, lty=1)\n\n    legend(legend = c(\"Normal\", \"Mean\", \"Sample mean\"),\n      col = c(\"black\", \"red\", \"blue\"),\n      lty = c(1, 2, 1),\n      lwd = c(1, lwd, lwd),\n      x = 1,\n      y = 0.9\n    )\n  }, res=140)\n}\n\n# Create Shiny app ----\nshinyApp(ui = ui, server = server)\n\nLearn more: Observable, Shiny, Component Layout"
   },
   {
     "objectID": "materials/02-presentations/slides.html#your-turn-1",
     "href": "materials/02-presentations/slides.html#your-turn-1",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Your turn",
-    "text": "Your turn\n\nAdd {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nPlace your plot and table side-by-side. Adjust the percentages as needed.\nUse ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nTo improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom.\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nShrink the heading: Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nCreate two columns: Place your plot and table side-by-side. Adjust the percentages as needed.\nAdd tabsets: Use ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nAdd a transition: To improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom."
   },
   {
     "objectID": "materials/02-presentations/slides.html#easy-navigation",
     "href": "materials/02-presentations/slides.html#easy-navigation",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Easy navigation",
-    "text": "Easy navigation\n\nQuickly jump to other parts of your presentation\n\n\n\n\n\n\n\nToggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.\n\n\n\nYou can also press mm to toggle the menu open and closed.\n\nLearn more: Navigation"
+    "text": "Easy navigation\n\nQuickly jump to other parts of your presentation\n\n\n\n\n\n\n\nToggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.\n\n\n\nYou can also press mm to toggle the menu open and closed.\nYou can also press gg to toggle ‘Jump To Slide’ modal box to quickly go to one of your slide using its number or id.\n\nLearn more: Navigation / Jump To Slide"
   },
   {
     "objectID": "materials/02-presentations/slides.html#jump-to-slide",
     "href": "materials/02-presentations/slides.html#jump-to-slide",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Jump to slide",
-    "text": "Jump to slide\nYou can also press gg to toggle ‘Jump To Slide’ modal box to quickly go to one of your slide using its number or id.\n\nLearn more: Jump To Slide"
+    "text": "Jump to slide\n\nQuickly jump to other parts of your presentation"
   },
   {
     "objectID": "materials/02-presentations/slides.html#chalkboard",
     "href": "materials/02-presentations/slides.html#chalkboard",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Chalkboard",
     "text": "Chalkboard\n\nFree form drawing and slide annotations\n\n\n\n\n\n\n\nUse the chalkboard button at the bottom left of the slide to toggle the chalkboard.\n\n\n\n\n\n\n\n\n\nUse the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.\n\n\n\nYou can also press bb to toggle the chalkboard or cc to toggle the notes canvas.\n\nLearn more: Chalkboard"
   },
   {
     "objectID": "materials/02-presentations/slides.html#point-of-view",
     "href": "materials/02-presentations/slides.html#point-of-view",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Point of view",
     "text": "Point of view\npress oo to toggle overview mode:\n\nHold down the AltAlt/OptionOption and click on any element to zoom towards it—try it now on this slide.\n\nLearn more: Overview Mode, Slide Zoom"
   },
   {
     "objectID": "materials/02-presentations/slides.html#preview-links",
     "href": "materials/02-presentations/slides.html#preview-links",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Preview links",
     "text": "Preview links\nNavigate to hyperlinks without disrupting the flow of your presentation.\nUse the preview-links option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:\n\nMatplotlib: Visualization with Python\n\n\nLearn more: Preview Links"
   },
   {
     "objectID": "materials/02-presentations/slides.html#speaker-view",
     "href": "materials/02-presentations/slides.html#speaker-view",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Speaker view",
     "text": "Speaker view\npress ss (or use the tools in presentation menu ) to open speaker view\n## Slide with speaker notes\n\nSlide content\n\n::: {.notes}\nSpeaker notes go here.\n:::\n\nSpeaker notes go here.\n\n\nLearn more: Speaker View"
   },
   {
     "objectID": "materials/02-presentations/slides.html#themes",
     "href": "materials/02-presentations/slides.html#themes",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Themes",
-    "text": "Themes\n10 built-in themes also apply to reveal.js:\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Themes"
+    "text": "Themes\n10 Built-in themes\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Themes"
   },
   {
     "objectID": "materials/02-presentations/slides.html#reveal.js-with-brand.yml",
     "href": "materials/02-presentations/slides.html#reveal.js-with-brand.yml",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "reveal.js with brand.yml",
-    "text": "reveal.js with brand.yml\nThe _brand.yml file in the root directory of your project will automatically apply the brand to your revealjs documents."
+    "text": "reveal.js with brand.yml\nThe _brand.yml file in the root directory of your project (with or without a _quarto.yml file) will automatically apply the brand to your revealjs documents.\n\nThe revealjs format does not support switching between light and dark modes."
   },
   {
     "objectID": "materials/02-presentations/slides.html#title-slide-background",
     "href": "materials/02-presentations/slides.html#title-slide-background",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Title slide background",
     "text": "Title slide background\nAdd a custom background to the title slide using the title-slide-attributes key:\n---\nformat: revealjs\ntitle-slide-attributes:\n    data-background-image: images/milky-way.jpeg\n    data-background-size: cover\n---\n\nLearn more: Custom Background"
   },
   {
     "objectID": "materials/02-presentations/slides.html#slide-backgrounds",
     "href": "materials/02-presentations/slides.html#slide-backgrounds",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Slide backgrounds",
     "text": "Slide backgrounds\nSet the background attribute on a slide to change the background color (all CSS color formats are supported).\nUse {{&lt; brand color COLOR_NAME BRAND_MODE &gt;}} to return the brand color named COLOR_NAME as a string.\n---\nformat: revealjs\n---\n\n## Slide Title {background-color='{{&lt; brand color primary &gt;}}'}\n\nLearn more: Slide Backgrounds"
   },
   {
     "objectID": "materials/02-presentations/slides.html#media-backgrounds",
     "href": "materials/02-presentations/slides.html#media-backgrounds",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Media backgrounds",
     "text": "Media backgrounds\nYou can also use the following as a slide background:\n\nAn image: background-image\nA video: background-video\nAn iframe: background-iframe"
   },
   {
     "objectID": "materials/02-presentations/slides.html#and-more",
     "href": "materials/02-presentations/slides.html#and-more",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "And more…",
     "text": "And more…\n\nTouch optimized (presentations look great on mobile, swipe to navigate slides)\nFooter & Logo (optionally specify custom footer per-slide or hide global footer)\nAuto-Slide (step through slides automatically, without any user input)\nMultiplex (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).\n\n\nLearn more: Quarto Presentations"
   },
   {
     "objectID": "materials/02-presentations/slides.html#your-turn-2",
     "href": "materials/02-presentations/slides.html#your-turn-2",
-    "title": "Presentations with reveal.js",
+    "title": "Quarto\nPresentations",
     "section": "Your turn",
-    "text": "Your turn\n\nChange the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that the slide uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary.\n\n\n\n\n−+\n10:00"
+    "text": "Your turn\n\nChange the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that it uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary."
   },
   {
     "objectID": "materials/02-presentations/exercise-03.html",
     "href": "materials/02-presentations/exercise-03.html",
     "title": "",
     "section": "",
-    "text": "Change the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that the slide uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary."
+    "text": "Change the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that it uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary."
   },
   {
     "objectID": "materials/02-presentations/exercise-01.html",
     "href": "materials/02-presentations/exercise-01.html",
     "title": "",
     "section": "",
-    "text": "In your document’s YAML header, change format: html to format: revealjs.\nUse first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nSave and render your document.\n\nQuarto will create an HTML file that is a fully functional slide deck.\n\n\n\n\n\n\nNote\n\n\n\nYou can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations."
+    "text": "Change the format: In your document’s YAML header, change format: html to format: revealjs.\nAdd slides: Use first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nRender: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.\n\nNote: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations."
   }
 ]

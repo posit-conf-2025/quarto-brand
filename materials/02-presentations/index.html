@@ -219,32 +219,19 @@ ul.task-list li input[type="checkbox"] {
 <section id="exercise-1" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
 <ul>
-<li>In your document’s YAML header, change <code>format: html</code> to <code>format: revealjs</code>.</li>
-<li>Use first-level headings (<code>#</code>) to create a new slide. Use other Markdown headings and text for content on each slide.</li>
-<li>Save and render your document.</li>
+<li>Change the format: In your document’s YAML header, change <code>format: html</code> to <code>format: revealjs</code>.</li>
+<li>Add slides: Use first-level headings (<code>#</code>) to create a new slide. Use other Markdown headings and text for content on each slide.</li>
+<li>Render: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.</li>
 </ul>
-<p>Quarto will create an HTML file that is a fully functional slide deck.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can remove <code>code-fold</code> and <code>code-summary</code> from the YAML header, as these are for HTML documents and do not apply to presentations.</p>
-</div>
-</div>
+<p>Note: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.</p>
 </section>
 <section id="exercise-2" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-2">Exercise 2</h3>
 <ul>
-<li>Add <code>{.smaller}</code> to your heading to decrease its font size, like this: <code>## Global Happiness Trends {.smaller}</code>.</li>
-<li>Place your plot and table side-by-side. Adjust the percentages as needed.</li>
-<li>Use :<code>:: panel-tabset</code> on the “Country-Level Analysis” slide to organize your content.</li>
-<li>To improve the flow, add <code>slide-transition: slide</code> to your YAML header. Other options include <code>fade</code>, <code>convex</code>, <code>concave</code>, or <code>zoom.</code></li>
+<li>Shrink the heading: Add <code>{.smaller}</code> to your heading to decrease its font size, like this: <code>## Global Happiness Trends {.smaller}</code>.</li>
+<li>Create two columns: Place your plot and table side-by-side. Adjust the percentages as needed.</li>
+<li>Add tabsets: Use :<code>:: panel-tabset</code> on the “Country-Level Analysis” slide to organize your content.</li>
+<li>Add a transition: To improve the flow, add <code>slide-transition: slide</code> to your YAML header. Other options include <code>fade</code>, <code>convex</code>, <code>concave</code>, or <code>zoom.</code></li>
 </ul>
 </section>
 <section id="exercise-3" class="level3">
@@ -254,7 +241,7 @@ Note
 <ul>
 <li>Find an image on Unsplash and get the direct URL to the image file.</li>
 <li>Add <code>title-slide-attributes</code> to your YAML header and specify the <code>data-background-image</code> attribute with the image’s URL.</li>
-<li>If it’s a dark photo, you may want to change <code>data-background-color</code> to a dark color so that the slide uses a light font color.</li>
+<li>If it’s a dark photo, you may want to change <code>data-background-color</code> to a dark color so that it uses a light font color.</li>
 </ul></li>
 <li>Edit Conclusion slide background color: Use the <strong>brand.yml</strong> shortcodes to change the color to <code>primary</code>.</li>
 </ul>
