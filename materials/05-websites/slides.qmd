@@ -93,7 +93,7 @@ Cmd/Ctrl + Shift + K
 :::
 :::::
 
-## VS Code
+## VS Code/Positron
 
 ::::: columns
 ::: column
@@ -107,7 +107,7 @@ Cmd/Ctrl + Shift + K
 ::: column
 ### Whole site
 
-No command, use Terminal:
+Use Terminal:
 
 ``` {.default filename="Terminal"}
 quarto preview 
