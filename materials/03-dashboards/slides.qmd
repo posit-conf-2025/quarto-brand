@@ -16,6 +16,11 @@ filters:
 
 With Quarto you can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books, and more...
 
+::: notes
+exercises: 20 min
+lecture: 20 min
+:::
+
 ## Quarto ➝ dashboards {background-image="images/quarto-to-dashboard.png"}
 
 ## 
@@ -198,6 +203,7 @@ from plotnine.data import mpg
 :::
 
 ::: {.notes}
+cards are the fundamental unit
 now, add a card creating a plot
 this is plotnine code
 see what it looks like
@@ -402,7 +408,7 @@ now have a dashboard
 ```{r}
 #| label: clock-1
 #| echo: false
-countdown::countdown(minutes = 3, seconds = 0, play_sound = TRUE)
+countdown::countdown(minutes = 3)
 ```
 
 # Layout {background-color='{{< brand color dark-blue >}}'}
@@ -415,6 +421,11 @@ By default, cards are laid out in rows:
 ```` {.yaml filename="dashboard.qmd" code-line-numbers="|11,21"}
 {{< include _rows.qmd >}}
 ````
+:::
+
+::: notes
+heading text isn't required - the ## define a row
+just to help you get organized
 :::
 
 ## Rows {.smaller auto-animate="true"}
@@ -557,6 +568,12 @@ The content of cards typically maps to *cells* in your notebook or source docume
 
 {{< include exercise-03.qmd >}}
 
+```{r}
+#| label: clock-3
+#| echo: false
+countdown::countdown(minutes = 5)
+```
+
 ## Tabsets {auto-animate="true"}
 
 ::: {data-id="code"}
@@ -647,6 +664,10 @@ Each card within a row/column or each row/column within another becomes a tab:
 :::
 :::
 
+::: notes
+in R, use list instead of dict()
+:::
+
 ## Value boxes {.smaller}
 
 ::: {.notes}
@@ -672,12 +693,21 @@ multiple ways to make value boxes
     | `dark`      | Black                  |
 :::
 
+::: footer
+Learn more: <https://quarto.org/docs/dashboards/data-display.html#value-boxes>
+:::
+
 ## Value boxes {auto-animate="true"}
 
 ::: {data-id="code"}
 ```` {.yaml filename="dashboard.qmd" code-line-numbers="|11|13-25|27-35|37-45|47-51|53"}
 {{< include _valueboxes-py.qmd >}}
 ````
+:::
+
+
+::: footer
+Learn more: <https://quarto.org/docs/dashboards/data-display.html#value-boxes>
 :::
 
 ## Value boxes {.smaller auto-animate="true"}
@@ -694,6 +724,50 @@ multiple ways to make value boxes
 ::: {.column width="60%"}
 ![](images/valueboxes-py.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
 :::
+:::
+
+::: footer
+Learn more: <https://quarto.org/docs/dashboards/data-display.html#value-boxes>
+:::
+
+## Value boxes - R syntax
+
+```` {.yaml filename="dashboard.qmd"}
+---
+title: "Valueboxes"
+format: dashboard
+---
+
+```{{r}}
+#| content: valuebox
+#| title: "Least efficient"
+#| icon: fuel-pump-fill
+#| color: danger
+list(
+  value = paste(lowest_mileage_cty, "mpg")
+)
+```
+
+```{{r}}
+#| content: valuebox
+#| title: "Most efficient"
+list(
+  icon = "fuel-pump",
+  color = "success",
+  value = paste(highest_mileage_cty, "mpg")
+)
+```
+
+::: {.valuebox icon="fuel-pump" color="secondary"}
+Average city mileage
+
+30 mpg
+:::
+
+````
+
+::: footer
+Learn more: <https://quarto.org/docs/dashboards/data-display.html#value-boxes>
 :::
 
 ## Markdown text {.smaller}
@@ -729,7 +803,7 @@ multiple ways to make value boxes
 ```{r}
 #| label: clock-4
 #| echo: false
-countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE)
+countdown::countdown(minutes = 5)
 ```
 
 ## ...and much more!
