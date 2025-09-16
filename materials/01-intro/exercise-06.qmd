@@ -1,5 +1,7 @@
 1. Read in `_brand.yml` with `read_brand_yml()` (R) or `Brand.from_yaml()` (Python) to a variable named `brand`.
-3. Change the color of the points and line in the global trends plot to the brand's `teal` color. Use code like the following:
+3. Change the color of the points and line in the global trends plot to the brand's `teal` color. Use code like the following.
+
+(Make sure to first remove `#| include: false` from the chunk, if it's still there).
 
 
 ::: {.panel-tabset}
