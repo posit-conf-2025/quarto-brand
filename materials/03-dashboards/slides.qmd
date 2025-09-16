@@ -536,7 +536,7 @@ Setting `orientation` to `columns` makes each `##` indicate a column instead of 
 #| label: clock-2
 #| echo: false
 # 5 minutes, warning at 1 minute
-countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+countdown::countdown(minutes = 5)
 ```
 
 # Dashboard components
