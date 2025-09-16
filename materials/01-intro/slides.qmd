@@ -24,6 +24,7 @@ library(countdown)
 <br>
 Find the materials at: [pos.it/quarto-brand-conf25](pos.it/quarto-brand-conf25)
 
+## **Branded Websites, Presentations, Dashboards, and PDFs with Quarto**
 <br>
 **Make sure to:**
 
@@ -139,7 +140,7 @@ We'll teach you
 :::
 
 ::: {.column .fragment}
-::: task
+::: your-turn
 **Your turn**
 
 -   Practice exercises for you
@@ -348,7 +349,7 @@ Quarto is a command line interface (**CLI**) that renders plain text formats (`.
 #| code-line-numbers: "|1|2|10|15|16"
 
   Usage:   quarto 
-  Version: 1.5.57
+  Version: 1.8.24
 
   Description:
 
@@ -395,8 +396,8 @@ Let's walk through your options for today.
 1. Posit Cloud
 2. GitHub Codespace
 3. Local installation
- - GitHub repository
- - Package installation
+  - GitHub repository
+  - Package installation
 :::
  
 ::: notes
@@ -1227,7 +1228,7 @@ brand: false
 Access some brand.yml values with a shortcode. 
 
 ``` {.markdown filename="my_document.qmd"}
-{{< brand color primary >}}
+{{{< brand color primary >}}}
 ```
 
 ::: footer
