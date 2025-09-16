@@ -44,7 +44,7 @@
     "href": "materials/02-presentations/exercise-02.html",
     "title": "",
     "section": "",
-    "text": "Shrink the heading: Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nCreate two columns: Place your plot and table side-by-side. Adjust the percentages as needed.\nAdd tabsets: Use ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nAdd a transition: To improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom."
+    "text": "Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nPlace your plot and table side-by-side. Adjust the percentages as needed.\nUse ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nTo improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom."
   },
   {
     "objectID": "materials/02-presentations/index.html",
@@ -71,7 +71,7 @@
     "href": "materials/02-presentations/index.html#exercises",
     "title": "Presentations",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\n\nChange the format: In your document’s YAML header, change format: html to format: revealjs.\nAdd slides: Use first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nRender: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.\n\nNote: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.\n\n\nExercise 2\n\nShrink the heading: Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nCreate two columns: Place your plot and table side-by-side. Adjust the percentages as needed.\nAdd tabsets: Use ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nAdd a transition: To improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom.\n\n\n\nExercise 3\n\nChange the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that it uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary.",
+    "text": "Exercises\n\nExercise 1\n\nIn your document’s YAML header, change format: html to format: revealjs.\nUse first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nSave and render your document.\n\nQuarto will create an HTML file that is a fully functional slide deck.\n\n\n\n\n\n\nNote\n\n\n\nYou can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.\n\n\n\n\nExercise 2\n\nAdd {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nPlace your plot and table side-by-side. Adjust the percentages as needed.\nUse ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nTo improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom.\n\n\n\nExercise 3\n\nChange the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that the slide uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary.",
     "crumbs": [
       "Presentations"
     ]
@@ -403,7 +403,7 @@
     "href": "materials/06-byob/index.html#exercises",
     "title": "Creating and sharing your brand",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\n\nUse the Brand Extension in GitHub to create a _brand.yml file for your organization.\nApply the _brand.yml file to an existing project Try to use a document that you might use for work, like a report, a presentation, or a project brief.\nUse any remaining time to apply your new branding to something you may need for your job, like a PDF, a dashboard, or an internal memo.",
+    "text": "Exercises\n\nExercise 1\nCreate a brand file for your organization using the Brand Extension.\n\nOpen your Terminal and run: quarto create extension brand\nRead about how to prompt a large language model (LLM) to create a _brand.yml file: posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt\nCustomize the default _extensions/mybrand/brand.yml file. Take note of how well the output incorporates your brand and what, if any, elements are missing or need to be adjusted.\n\nPreview by running quarto preview example.qmd in the Terminal.\n\n\nWe’d love for you to add your new brand.yml file to the Inspiration page! You can see examples and contribute your own by visiting the following links:\n\nInspiration page: posit-dev.github.io/brand-yml/inspiration\nSubmit a PR: github.com/posit-dev/brand-yml/issues",
     "crumbs": [
       "Creating and Sharing"
     ]
@@ -450,7 +450,7 @@
     "href": "materials/00-setup/index.html",
     "title": "Setup",
     "section": "",
-    "text": "To follow along with the workshop exercises, you’ll need Quarto version 1.8+ and access to a code editor that supports R or Python.\nWhile Quarto itself doesn’t require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, we recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python).\n\nRecommended Setup Options\nOption 1: Posit Cloud (RStudio in the cloud)\n\nCreate a free account at https://posit.cloud\nOpen the Posit Cloud project link: https://posit.cloud/spaces/679626/join?access_code=VwU0N2fEy5wwQ8qHayo8TrTZRKcT6sndAF13AHlx\nClick “Yes” to join the space.\nClick Content and select quarto-brand-exercises or go to https://posit.cloud/spaces/679626/content/10865885.\nTo save a copy of the project to your workspace, click “Save a permanent copy”\n\nOption 2: GitHub Codespaces (VS Code in the browser)\n\nRequires a free account at https://github.com/\nGo to the GitHub repo: https://github.com/posit-dev/quarto-brand-codespaces\nClick “Use this template” then “Open in a codespace”\n\nPlease note that loading the codespace will take a few minutes.\nIf you are asked to install an extension called markdownlit, say “yes” and trust the publisher.\n\nYou will need to following the “Install the Necessary Packages” instructions below.\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette\nSelect your environment type (recommend Venv)\nChoose an interpreter path\nSelect requirements.txt check box to install dependencies\n\n\nOption 3: Local Installation\nChoose one editor and follow the steps:\n\nPositronRStudioVS Code\n\n\n\nDownload and install Positron: https://positron.posit.co/download.html\nQuarto comes pre-installed\n\n\n\n\nDownload and install RStudio: https://posit.co/downloads/\n\nMake sure RStudio is version 2022.07+\n\nQuarto comes pre-installed\n\n\n\n\nDownload and install VS Code: https://code.visualstudio.com/download\nDownload and install Quarto: https://quarto.org/docs/get-started/\nInstall the following extensions:\n\nQuarto Extension: https://marketplace.visualstudio.com/items?itemName=quarto.quarto\nJupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter\n\n\n\n\n\n\n\nAccessing the Workshop Materials\nIf you are using a cloud-based option, the files will be included in the project folder.\nIf you are not using a cloud-based option:\nIf you use Git/GitHub:\n\nClone the repository with Git:\n\ngit clone https://github.com/posit-dev/quarto-brand-exercises.git\nIf you don’t use Git/GitHub:\n\nGo to the GitHub repo: https://github.com/posit-dev/quarto-brand-exercises\nClick the green “Code” button → “Download ZIP”\nUnzip the folder and open it in your chosen editor\n\n\n\nInstall the Necessary Packages\n\nRPython\n\n\nIf you are using Posit Cloud, the packages will be pre-installed. If you are using RStudio or Positron locally, install the packages by running:\nif (!require(\"pak\")) install.packages(\"pak\")\npak::pak(c(\"tidyverse\", \"quarto\", \"patchwork\", \"posit-dev/brand-yml/pkg-r\"))\n\n\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette\nSelect your environment type (recommend Venv)\nChoose an interpreter path\nSelect requirements.txt check box to install dependencies",
+    "text": "To follow along with the workshop exercises, you’ll need Quarto version 1.8+ and access to a code editor that supports R or Python.\nWhile Quarto itself doesn’t require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, we recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python).\n\nRecommended Setup Options\nOption 1: Posit Cloud (RStudio in the cloud)\n\nCreate a free account at https://posit.cloud/\nOpen the Posit Cloud project link: https://posit.cloud/spaces/679626/join?access_code=VwU0N2fEy5wwQ8qHayo8TrTZRKcT6sndAF13AHlx/\nClick “Yes” to join the space.\nClick Content and select quarto-brand-exercises or go to https://posit.cloud/spaces/679626/content/10865885/\nTo save a copy of the project to your workspace, click “Save a permanent copy”.\n\nOption 2: GitHub Codespaces (VS Code in the browser)\n\nCreate a free account at https://github.com/\nGo to the GitHub repo: https://github.com/posit-dev/quarto-brand-codespaces/\nClick “Use this template” then “Open in a codespace”.\n\nPlease note that loading the codespace will take several minutes.\nIf you are asked to install an extension called markdownlit, say “yes” and trust the publisher.\n\nYou will need to following the “Install the Necessary Packages” instructions below.\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette.\nSelect your environment type (recommend Venv).\nChoose an interpreter path.\nSelect requirements.txt check box to install dependencies.\n\n\nOption 3: Local Installation\nChoose one editor and follow the steps:\n\nPositronRStudioVS Code\n\n\n\nDownload and install Positron: https://positron.posit.co/download.html/\nQuarto comes pre-installed.\n\nMake sure Quarto is version 1.8+.\n\n\n\n\n\nDownload and install RStudio: https://posit.co/downloads/\n\nMake sure RStudio is version 2022.07+.\n\nQuarto comes pre-installed.\n\nMake sure Quarto is version 1.8+.\n\n\n\n\n\nDownload and install VS Code: https://code.visualstudio.com/download/\nDownload and install Quarto: https://quarto.org/docs/get-started/\nInstall the following extensions:\n\nQuarto Extension: https://marketplace.visualstudio.com/items?itemName=quarto.quarto/\nJupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter/\n\n\n\n\n\n\n\nAccessing the Workshop Materials\nIf you are using a cloud-based option, the files will be included in the project folder.\nIf you are not using a cloud-based option:\nIf you use Git/GitHub:\n\nClone the repository with Git:\n\ngit clone https://github.com/posit-dev/quarto-brand-exercises.git\nIf you don’t use Git/GitHub:\n\nGo to the GitHub repo: https://github.com/posit-dev/quarto-brand-exercises/\nClick the green “Code” button → “Download ZIP”.\nUnzip the folder and open it in your chosen editor.\n\n\n\nInstall the Necessary Packages\n\nRPython\n\n\nIf you are using Posit Cloud, the packages will be pre-installed. If you are using RStudio or Positron locally, install the packages by running:\nif (!require(\"pak\")) install.packages(\"pak\")\npak::pak(c(\"tidyverse\", \"quarto\", \"patchwork\", \"posit-dev/brand-yml/pkg-r\"))\n\n\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette.\nSelect your environment type (recommend Venv).\nChoose an interpreter path.\nSelect requirements.txt check box to install dependencies.",
     "crumbs": [
       "Setup"
     ]
@@ -882,154 +882,168 @@
     "href": "materials/04-typst/slides.html#hello-typst",
     "title": "PDFs with Typst",
     "section": "Hello, Typst!",
-    "text": "Hello, Typst!\n\n\n\n\n\n\n\nTypst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.\n\n\nLearn more: Typst in Quarto"
+    "text": "Hello, Typst!\n\n\n\n\n\n\n\nTypst is a new open-source markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use. Typst is built to simplify the process of creating beautiful, professional PDFs. It uses a markup-based system, which means you write plain text and code to define your document’s structure and style, just like you would with Quarto or Markdown.\n\n\nLearn more: Typst in Quarto"
   },
   {
     "objectID": "materials/04-typst/slides.html#hello-typst-1",
     "href": "materials/04-typst/slides.html#hello-typst-1",
     "title": "PDFs with Typst",
     "section": "Hello, Typst!",
-    "text": "Hello, Typst!\nTo use Typst with Quarto, set the format in the YAML of your Quarto document:\n\n\n---\nformat: typst\n---\n\n\n\n\n\n\n\n\nLearn more: Typst in Quarto"
+    "text": "Hello, Typst!\nTo use Typst with Quarto, set the format in the YAML of your Quarto document:\n\n\n---\nformat: typst\n---\n\n\n\n\n\n\n\n\nLearn more: Typst in Quarto\n\n\nHow do you use Typst with Quarto? You just need to specify it as your output format in the YAML header of your Quarto document. This is the default page layout you’ll get: a clean, single-column PDF."
   },
   {
     "objectID": "materials/04-typst/slides.html#page-layout",
     "href": "materials/04-typst/slides.html#page-layout",
     "title": "PDFs with Typst",
     "section": "Page layout",
-    "text": "Page layout\nControl the size of the page (papersize), the page margins (margin), and the number of columns used for page content (columns):\n\n\n---\ntitle: Page Layout\nformat:\n  typst:\n    papersize: a5\n    margin:\n      x: 1cm\n      y: 1cm\n    columns: 2\n---\n\n\n\n\n\n\n\n\nLearn more: Page Layout"
+    "text": "Page layout\nControl the size of the page (papersize), the page margins (margin), and the number of columns used for page content (columns):\n\n\n---\ntitle: Page Layout\nformat:\n  typst:\n    papersize: a5\n    margin:\n      x: 1cm\n      y: 1cm\n    columns: 2\n---\n\n\n\n\n\n\n\n\nLearn more: Page Layout\n\n\nOne of the great things about Typst is how easily you can customize your PDF’s appearance. You can control the page size, margins, and even the number of columns directly from your YAML. For example, to create a two-column, A5-sized document with one-centimeter margins, you can use this code."
   },
   {
     "objectID": "materials/04-typst/slides.html#margins",
     "href": "materials/04-typst/slides.html#margins",
     "title": "PDFs with Typst",
     "section": "Margins",
-    "text": "Margins\nEdit the margin’s horizontal direction (x) and vertical direction (y):\nmargin:\n  x: 1.25in\n  y: 1.25in\nCan also use relative length:\nmargin:\n  left: 10%\n\nLearn more: Margins"
+    "text": "Margins\nEdit the margin’s horizontal direction (x) and vertical direction (y):\nmargin:\n  x: 1.25in\n  y: 1.25in\nCan also use relative length:\nmargin:\n  left: 10%\n\nLearn more: Margins\n\n\nIf you want more granular control, you can define your margins for the horizontal and vertical directions separately. You can use standard units like inches or centimeters, as shown here."
   },
   {
     "objectID": "materials/04-typst/slides.html#paper-size",
     "href": "materials/04-typst/slides.html#paper-size",
     "title": "PDFs with Typst",
     "section": "Paper Size",
-    "text": "Paper Size\npapersize: us-letter\n\n\nLearn more: Supported page sizes"
+    "text": "Paper Size\npapersize: us-letter\n\n\nLearn more: Supported page sizes\n\n\nTypst supports a wide range of paper sizes. Instead of just us-letter or a4, you have a lot of options. Typst’s documentation has a full list of all the supported sizes. It’s a very comprehensive set of options."
   },
   {
     "objectID": "materials/04-typst/slides.html#more-options",
     "href": "materials/04-typst/slides.html#more-options",
     "title": "PDFs with Typst",
     "section": "More options",
-    "text": "More options\nTable of contents\ntoc: true\ntoc-depth: 2\n\nSection numbering\nnumber-sections: true\nUse number-depth:\nnumber-depth: 3\n\nLearn more: Section Numbering, Table of Contents"
+    "text": "More options\nTable of contents\ntoc: true\ntoc-depth: 2\n\nSection numbering\nnumber-sections: true\nUse number-depth:\nnumber-depth: 3\n\nLearn more: Section Numbering, Table of Contents\n\n\nThere are also a ton of other options you can set in your YAML. For example, you can easily add a table of contents and control its depth. Or you can add section numbering to automatically number your headings. You can even specify the depth of the numbering."
   },
   {
     "objectID": "materials/04-typst/slides.html#typst-blocks",
     "href": "materials/04-typst/slides.html#typst-blocks",
     "title": "PDFs with Typst",
     "section": "Typst blocks",
-    "text": "Typst blocks\nAdd a .block class to change appearance of blocks:\n::: {.block fill=\"luma(230)\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with gray background and slightly rounded corners.\n\n:::"
+    "text": "Typst blocks\nAdd a .block class to change appearance of blocks:\n::: {.block fill=\"luma(230)\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with gray background and slightly rounded corners.\n\n:::\n\nLearn more: Typst Blocks\n\n\nTypst also lets you create custom blocks to highlight specific content. You can add a .block class to your markdown and change its appearance with a few simple attributes, like fill, inset, and radius."
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#typst-and-fonts",
+    "href": "materials/04-typst/slides.html#typst-and-fonts",
+    "title": "PDFs with Typst",
+    "section": "Typst and fonts",
+    "text": "Typst and fonts\nCheck what fonts are available on your system with:\n\n\nTerminal\n\nquarto typst fonts\n\nSet additional paths using font-paths:\n---\nformat: \n  typst:\n    font-paths: myfonts\n---\n\nLearn more: Font Support\n\n\nWith Typst, you can use any font available on your system. To see what fonts are installed, just run this command in your terminal. If you have custom fonts, you can tell Typst where to find them by setting the font-paths option in your YAML."
   },
   {
     "objectID": "materials/04-typst/slides.html#color",
     "href": "materials/04-typst/slides.html#color",
     "title": "PDFs with Typst",
     "section": "Color",
-    "text": "Color\nUse colors from the _brand.yml file in Typst using brand-color:\n::: {.block fill=\"brand-color.primary\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with the primary color and slightly rounded corners.\n\n:::\n\nLearn more: Typst Brand YAML"
+    "text": "Color\nUse colors from the _brand.yml file in Typst using brand-color:\n::: {.block fill=\"brand-color.primary\" inset=\"8pt\" radius=\"4pt\"}\n\nThis is a block with the primary color and slightly rounded corners.\n\n:::\n\nLearn more: Typst Brand YAML\n\n\nThis includes colors. You can reference colors defined in your _brand.yml file directly in your Typst documents. Here, we’re using a block with a fill color from our brand’s primary color palette."
   },
   {
-    "objectID": "materials/04-typst/slides.html#typography",
-    "href": "materials/04-typst/slides.html#typography",
+    "objectID": "materials/04-typst/slides.html#fonts",
+    "href": "materials/04-typst/slides.html#fonts",
     "title": "PDFs with Typst",
-    "section": "Typography",
-    "text": "Typography\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbase\nheadings\ntitle1\nsubtitle\nmonospace-inline\nmonospace-block\nlink\n\n\n\n\nfamily\n✓\n✓\n✓\n✓\n✓\n✓\nNA\n\n\nsize\n✓\nNA\nNA\nNA\n✓\n✓\nNA\n\n\nweight\n✓\n✓\n✓\n✓\n✓\n✓\n✓\n\n\nstyle\nNA\n✓\n✓\n✓\nNA\nNA\nNA\n\n\ncolor\n✓\n✓\n✓\n✓\n✓\n✓\n✓\n\n\nbackground-color\nNA\nNA\nNA\nNA\n✓\n✓\n✓\n\n\ndecoration\nNA\nNA\nNA\nNA\nNA\nNA\n✓\n\n\nline-height\n✓\n✓\n✓\n✓\nNA\n✓\nNA\n\n\n\nWhile being styled as headings, title and subtitle have a separate implementation."
+    "section": "Fonts",
+    "text": "Fonts\nQuarto will download fonts from Google Fonts and put them in the Typst fonts path if they are specified in the typography.fonts section of _brand.yml using source: google.\n\n\n\n\n_brand.yml\n\ntypography:\n  fonts:\n    - family: Libre Franklin\n      source: google\n      weight: [400, 700]\n\n  base:\n    family: Libre Franklin\n    weight: 400\n\n  headings:\n    family: Libre Franklin\n    weight: 700\n    color: dark-purple\n\n\n\n\n\n\n\n\n\nQuarto can even handle fonts for you. If you specify a font from Google Fonts in your _brand.yml file, Quarto will automatically download it and make it available to Typst. This is an example of what that looks like in your _brand.yml:"
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#fonts-1",
+    "href": "materials/04-typst/slides.html#fonts-1",
+    "title": "PDFs with Typst",
+    "section": "Fonts",
+    "text": "Fonts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbase\nheadings\ntitle1\nsubtitle\nmonospace-inline\nmonospace-block\nlink\n\n\n\n\nfamily\n✓\n✓\n✓\n✓\n✓\n✓\nNA\n\n\nsize\n✓\nNA\nNA\nNA\n✓\n✓\nNA\n\n\nweight\n✓\n✓\n✓\n✓\n✓\n✓\n✓\n\n\nstyle\nNA\n✓\n✓\n✓\nNA\nNA\nNA\n\n\ncolor\n✓\n✓\n✓\n✓\n✓\n✓\n✓\n\n\nbackground-color\nNA\nNA\nNA\nNA\n✓\n✓\n✓\n\n\ndecoration\nNA\nNA\nNA\nNA\nNA\nNA\n✓\n\n\nline-height\n✓\n✓\n✓\n✓\nNA\n✓\nNA\n\n\n\n\nLearn more: Typst Brand YAML\n\n\nThis table shows the various font properties you can control within your _brand.yml file. You have fine-grained control over things like font family, size, weight, and color for different elements of your document, from the base text to headings and titles.\n\nWhile being styled as headings, title and subtitle have a separate implementation."
+  },
+  {
+    "objectID": "materials/04-typst/slides.html#logo",
+    "href": "materials/04-typst/slides.html#logo",
+    "title": "PDFs with Typst",
+    "section": "Logo",
+    "text": "Logo\nThe Typst implementation allows customization of the logo position at the document level:\n---\nformat:\n  typst:\n    logo:\n      width: 1in\n      location: right-top\n      padding-right: 0.5in\n      padding-top: 0.25in\n      alt: Alternate alternate text\n---\n\nLearn more: Logo Customization\n\n\nThe Typst implementation also allows you to customize your document’s logo. You can set its width, location on the page, and padding, giving you complete control over how your branding is displayed."
   },
   {
     "objectID": "materials/04-typst/slides.html#your-turn",
     "href": "materials/04-typst/slides.html#your-turn",
     "title": "PDFs with Typst",
     "section": "Your turn",
-    "text": "Your turn\n\nIn your document’s YAML header, change the format option from its current value (e.g., html) to typst.\nChange the number of columns used for the page content to 2 using columns.\nAdd a block to a section of the text and fill it with the tertiary color."
+    "text": "Your turn\n\nIn your document’s YAML header, change the format option from its current value (e.g., html) to typst.\nChange the number of columns used for the page content to 2 using columns.\nAdd a block to a section of the text and fill it with the tertiary color.\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/04-typst/slides.html#custom-typst-formats",
     "href": "materials/04-typst/slides.html#custom-typst-formats",
     "title": "PDFs with Typst",
     "section": "Custom Typst formats",
-    "text": "Custom Typst formats\nTypst allows you to define your own templates to produce highly customized documents.\n\n\n\n\n\n\nIEEE\n\n\n\n\n\n\n\nPoster\n\n\n\n\n\n\n\nLetter\n\n\n\n\n\n\n\nDept News\n\n\n\n\n\n\nLearn more: Custom Typst Formats"
+    "text": "Custom Typst formats\nTypst allows you to define your own templates to produce highly customized documents.\n\n\n\n\n\n\nIEEE\n\n\n\n\n\n\n\nPoster\n\n\n\n\n\n\n\nLetter\n\n\n\n\n\n\n\nDept News\n\n\n\n\n\n\nLearn more: Custom Typst Formats\n\n\nYou can find a bunch of ready-made templates on Quarto’s GitHub page. You can easily use them with the quarto use template command."
   },
   {
     "objectID": "materials/04-typst/slides.html#custom-typst-formats-1",
     "href": "materials/04-typst/slides.html#custom-typst-formats-1",
     "title": "PDFs with Typst",
     "section": "Custom Typst formats",
-    "text": "Custom Typst formats\n\n\n\nFormat\nUsage\n\n\n\n\nPoster\nquarto use template quarto-ext/typst-templates/poster\n\n\nIEEE\nquarto use template quarto-ext/typst-templates/ieee\n\n\nAMS\nquarto use template quarto-ext/typst-templates/ams\n\n\nLetter\nquarto use template quarto-ext/typst-templates/letter\n\n\nFiction\nquarto use template quarto-ext/typst-templates/fiction\n\n\nDept News\nquarto use template quarto-ext/typst-templates/dept-news\n\n\n\n\nLearn more: Custom Typst Formats"
+    "text": "Custom Typst formats\n\n\n\nFormat\nUsage\n\n\n\n\nPoster\nquarto use template quarto-ext/typst-templates/poster\n\n\nIEEE\nquarto use template quarto-ext/typst-templates/ieee\n\n\nAMS\nquarto use template quarto-ext/typst-templates/ams\n\n\nLetter\nquarto use template quarto-ext/typst-templates/letter\n\n\nFiction\nquarto use template quarto-ext/typst-templates/fiction\n\n\nDept News\nquarto use template quarto-ext/typst-templates/dept-news\n\n\n\n\nLearn more: Custom Typst Formats\n\n\nHere’s a list of some of the custom formats available and how to use them with Quarto. These templates can save you a lot of time by providing a pre-defined structure and style for common document types."
   },
   {
     "objectID": "materials/04-typst/slides.html#creating-a-new-typst-format",
     "href": "materials/04-typst/slides.html#creating-a-new-typst-format",
     "title": "PDFs with Typst",
     "section": "Creating a new Typst format",
-    "text": "Creating a new Typst format\nUse the quarto create command to get started:\n\n\nTerminal\n\n$ quarto create extension format\n\nChoose typst as the base format and provide a name for the extension.\n\nLearn more: Create a Format"
+    "text": "Creating a new Typst format\nUse the quarto create command to get started:\n\n\nTerminal\n\n$ quarto create extension format\n\nChoose typst as the base format and provide a name for the extension.\n\nLearn more: Create a Format\n\n\nIf you can’t find a template that fits your needs, you can create your own. The quarto create extension format command gives you a starter pack of files to begin with."
   },
   {
     "objectID": "materials/04-typst/slides.html#creating-a-new-typst-format-1",
     "href": "materials/04-typst/slides.html#creating-a-new-typst-format-1",
     "title": "PDFs with Typst",
     "section": "Creating a new Typst format",
-    "text": "Creating a new Typst format\n\n\n\nFile\nDescription\n\n\n\n\n_extension.yml\nBasic extension metadata (name, author, description, etc.) and format definition.\n\n\nREADME.md\nDocumentation on how to install and use the format.\n\n\ntemplate.qmd\nA starter document that demonstrates the basics of the format.\n\n\ntypst-template.typ\nThe core Typst template function (documentation on creating Typst templates can be found here: https://typst.app/docs/tutorial/making-a-template/).\n\n\ntypst-show.typ\nFile that calls the template’s function (mapping Pandoc metadata to function arguments).\n\n\n\n\nLearn more: Making a template, Awesome Typst"
+    "text": "Creating a new Typst format\n\n\n\nFile\nDescription\n\n\n\n\n_extension.yml\nBasic extension metadata (name, author, description, etc.) and format definition.\n\n\nREADME.md\nDocumentation on how to install and use the format.\n\n\ntemplate.qmd\nA starter document that demonstrates the basics of the format.\n\n\ntypst-template.typ\nThe core Typst template function (documentation on creating Typst templates can be found here: https://typst.app/docs/tutorial/making-a-template/).\n\n\ntypst-show.typ\nFile that calls the template’s function (mapping Pandoc metadata to function arguments).\n\n\n\n\nLearn more: Making a template, Awesome Typst\n\n\nWhen you create a new format, you get a few key files. The most important ones for our purposes are typst-show.typ and typst-template.typ. typst-show.typ: This file acts as a bridge. It takes the metadata from your Quarto document’s YAML and passes it as arguments to your Typst template function. typst-template.typ: This is the core of your format. It defines the layout and styling of your document."
   },
   {
     "objectID": "materials/04-typst/slides.html#typst-show.typ",
     "href": "materials/04-typst/slides.html#typst-show.typ",
     "title": "PDFs with Typst",
     "section": "typst-show.typ",
-    "text": "typst-show.typ\n\n\n./_extensions/article/typst-show.typ\n\n// Typst custom formats typically consist of a 'typst-template.typ' (which is\n// the source code for a typst template) and a 'typst-show.typ' which calls the\n// template's function (forwarding Pandoc metadata values as required)\n//\n// This is an example 'typst-show.typ' file (based on the default template  \n// that ships with Quarto). It calls the typst function named 'article' which \n// is defined in the 'typst-template.typ' file. \n//\n// If you are creating or packaging a custom typst template you will likely\n// want to replace this file and 'typst-template.typ' entirely. You can find\n// documentation on creating typst templates here and some examples here:\n//   - https://typst.app/docs/tutorial/making-a-template/\n//   - https://github.com/typst/templates\n#show: doc =&gt; article(\n$if(title)$\n  title: [$title$],\n$endif$\n$if(subtitle)$\n  subtitle: [$subtitle$],\n$endif$\n$if(by-author)$\n  authors: (\n$for(by-author)$\n$if(it.name.literal)$\n    ( name: [$it.name.literal$],\n      affiliation: [$for(it.affiliations)$$it.name$$sep$, $endfor$],\n      email: [$it.email$] ),\n$endif$\n$endfor$\n    ),\n$endif$\n$if(date)$\n  date: [$date$],\n$endif$\n$if(lang)$\n  lang: \"$lang$\",\n$endif$\n$if(region)$\n  region: \"$region$\",\n$endif$\n$if(abstract)$\n  abstract: [$abstract$],\n  abstract-title: \"$labels.abstract$\",\n$endif$\n$if(margin)$\n  margin: ($for(margin/pairs)$$margin.key$: $margin.value$,$endfor$),\n$endif$\n$if(papersize)$\n  paper: \"$papersize$\",\n$endif$\n$if(mainfont)$\n  font: (\"$mainfont$\",),\n$elseif(brand.typography.base.family)$\n  font: $brand.typography.base.family$,\n$endif$\n$if(fontsize)$\n  fontsize: $fontsize$,\n$elseif(brand.typography.base.size)$\n  fontsize: $brand.typography.base.size$,\n$endif$\n$if(title)$\n$if(brand.typography.headings.family)$\n  heading-family: $brand.typography.headings.family$,\n$endif$\n$if(brand.typography.headings.weight)$\n  heading-weight: $brand.typography.headings.weight$,\n$endif$\n$if(brand.typography.headings.style)$\n  heading-style: \"$brand.typography.headings.style$\",\n$endif$\n$if(brand.typography.headings.color)$\n  heading-color: $brand.typography.headings.color$,\n$endif$\n$if(brand.typography.headings.line-height)$\n  heading-line-height: $brand.typography.headings.line-height$,\n$endif$\n$endif$\n$if(section-numbering)$\n  sectionnumbering: \"$section-numbering$\",\n$endif$\n  pagenumbering: $if(page-numbering)$\"$page-numbering$\"$else$none$endif$,\n$if(toc)$\n  toc: $toc$,\n$endif$\n$if(toc-title)$\n  toc_title: [$toc-title$],\n$endif$\n$if(toc-indent)$\n  toc_indent: $toc-indent$,\n$endif$\n  toc_depth: $toc-depth$,\n  cols: $if(columns)$$columns$$else$1$endif$,\n  doc,\n)"
+    "text": "typst-show.typ\n\n\n./_extensions/article/typst-show.typ\n\n// Typst custom formats typically consist of a 'typst-template.typ' (which is\n// the source code for a typst template) and a 'typst-show.typ' which calls the\n// template's function (forwarding Pandoc metadata values as required)\n//\n// This is an example 'typst-show.typ' file (based on the default template  \n// that ships with Quarto). It calls the typst function named 'article' which \n// is defined in the 'typst-template.typ' file. \n//\n// If you are creating or packaging a custom typst template you will likely\n// want to replace this file and 'typst-template.typ' entirely. You can find\n// documentation on creating typst templates here and some examples here:\n//   - https://typst.app/docs/tutorial/making-a-template/\n//   - https://github.com/typst/templates\n#show: doc =&gt; article(\n$if(title)$\n  title: [$title$],\n$endif$\n$if(subtitle)$\n  subtitle: [$subtitle$],\n$endif$\n$if(by-author)$\n  authors: (\n$for(by-author)$\n$if(it.name.literal)$\n    ( name: [$it.name.literal$],\n      affiliation: [$for(it.affiliations)$$it.name$$sep$, $endfor$],\n      email: [$it.email$] ),\n$endif$\n$endfor$\n    ),\n$endif$\n$if(date)$\n  date: [$date$],\n$endif$\n$if(lang)$\n  lang: \"$lang$\",\n$endif$\n$if(region)$\n  region: \"$region$\",\n$endif$\n$if(abstract)$\n  abstract: [$abstract$],\n  abstract-title: \"$labels.abstract$\",\n$endif$\n$if(margin)$\n  margin: ($for(margin/pairs)$$margin.key$: $margin.value$,$endfor$),\n$endif$\n$if(papersize)$\n  paper: \"$papersize$\",\n$endif$\n$if(mainfont)$\n  font: (\"$mainfont$\",),\n$elseif(brand.typography.base.family)$\n  font: $brand.typography.base.family$,\n$endif$\n$if(fontsize)$\n  fontsize: $fontsize$,\n$elseif(brand.typography.base.size)$\n  fontsize: $brand.typography.base.size$,\n$endif$\n$if(title)$\n$if(brand.typography.headings.family)$\n  heading-family: $brand.typography.headings.family$,\n$endif$\n$if(brand.typography.headings.weight)$\n  heading-weight: $brand.typography.headings.weight$,\n$endif$\n$if(brand.typography.headings.style)$\n  heading-style: \"$brand.typography.headings.style$\",\n$endif$\n$if(brand.typography.headings.color)$\n  heading-color: $brand.typography.headings.color$,\n$endif$\n$if(brand.typography.headings.line-height)$\n  heading-line-height: $brand.typography.headings.line-height$,\n$endif$\n$endif$\n$if(section-numbering)$\n  sectionnumbering: \"$section-numbering$\",\n$endif$\n  pagenumbering: $if(page-numbering)$\"$page-numbering$\"$else$none$endif$,\n$if(toc)$\n  toc: $toc$,\n$endif$\n$if(toc-title)$\n  toc_title: [$toc-title$],\n$endif$\n$if(toc-indent)$\n  toc_indent: $toc-indent$,\n$endif$\n  toc_depth: $toc-depth$,\n  cols: $if(columns)$$columns$$else$1$endif$,\n  doc,\n)\n\n\nThis is what a typical typst-show.typ file looks like. It’s a simple script that grabs values from your Quarto YAML (like title, subtitle, and authors) and then calls the article function defined in our template file, passing those values along."
   },
   {
     "objectID": "materials/04-typst/slides.html#typst-template.typ",
     "href": "materials/04-typst/slides.html#typst-template.typ",
     "title": "PDFs with Typst",
     "section": "typst-template.typ",
-    "text": "typst-template.typ\n\n\n./_extensions/article/typst-template.typ\n\n// This is an example typst template (based on the default template that ships\n// with Quarto). It defines a typst function named 'article' which provides\n// various customization options. This function is called from the \n// 'typst-show.typ' file (which maps Pandoc metadata function arguments)\n//\n// If you are creating or packaging a custom typst template you will likely\n// want to replace this file and 'typst-show.typ' entirely. You can find \n// documentation on creating typst templates and some examples here: \n//   - https://typst.app/docs/tutorial/making-a-template/\n//   - https://github.com/typst/templates\n\n\n#let article(\n  title: none,\n  subtitle: none,\n  authors: none,\n  date: none,\n  abstract: none,\n  abstract-title: none,\n  cols: 1,\n  margin: (x: 1.25in, y: 1.25in),\n  paper: \"us-letter\",\n  lang: \"en\",\n  region: \"US\",\n  font: \"libertinus serif\",\n  fontsize: 11pt,\n  title-size: 1.5em,\n  subtitle-size: 1.25em,\n  heading-family: \"libertinus serif\",\n  heading-weight: \"bold\",\n  heading-style: \"normal\",\n  heading-color: black,\n  heading-line-height: 0.65em,\n  sectionnumbering: none,\n  pagenumbering: \"1\",\n  toc: false,\n  toc_title: none,\n  toc_depth: none,\n  toc_indent: 1.5em,\n  doc,\n) = {\n  set page(\n    paper: paper,\n    margin: margin,\n    numbering: pagenumbering,\n  )\n  set par(justify: true)\n  set text(lang: lang,\n           region: region,\n           font: font,\n           size: fontsize)\n  set heading(numbering: sectionnumbering)\n  if title != none {\n    align(center)[#block(inset: 2em)[\n      #set par(leading: heading-line-height)\n      #if (heading-family != none or heading-weight != \"bold\" or heading-style != \"normal\"\n           or heading-color != black) {\n        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)\n        text(size: title-size)[#title]\n        if subtitle != none {\n          parbreak()\n          text(size: subtitle-size)[#subtitle]\n        }\n      } else {\n        text(weight: \"bold\", size: title-size)[#title]\n        if subtitle != none {\n          parbreak()\n          text(weight: \"bold\", size: subtitle-size)[#subtitle]\n        }\n      }\n    ]]\n  }\n\n  if authors != none {\n    let count = authors.len()\n    let ncols = calc.min(count, 3)\n    grid(\n      columns: (1fr,) * ncols,\n      row-gutter: 1.5em,\n      ..authors.map(author =&gt;\n          align(center)[\n            #author.name \\\n            #author.affiliation \\\n            #author.email\n          ]\n      )\n    )\n  }\n\n  if date != none {\n    align(center)[#block(inset: 1em)[\n      #date\n    ]]\n  }\n\n  if abstract != none {\n    block(inset: 2em)[\n    #text(weight: \"semibold\")[#abstract-title] #h(1em) #abstract\n    ]\n  }\n\n  if toc {\n    let title = if toc_title == none {\n      auto\n    } else {\n      toc_title\n    }\n    block(above: 0em, below: 2em)[\n    #outline(\n      title: toc_title,\n      depth: toc_depth,\n      indent: toc_indent\n    );\n    ]\n  }\n\n  if cols == 1 {\n    doc\n  } else {\n    columns(cols, doc)\n  }\n}\n\n#set table(\n  inset: 6pt,\n  stroke: none\n)"
-  },
-  {
-    "objectID": "materials/04-typst/slides.html#quick-note-about-fonts",
-    "href": "materials/04-typst/slides.html#quick-note-about-fonts",
-    "title": "PDFs with Typst",
-    "section": "Quick note about fonts",
-    "text": "Quick note about fonts\nCheck what fonts are available on your system with:\n\n\nTerminal\n\nquarto typst fonts\n\nSet additional paths using font-paths:\n---\nformat: \n  typst:\n    font-paths: myfonts\n---"
+    "text": "typst-template.typ\n\n\n./_extensions/article/typst-template.typ\n\n// This is an example typst template (based on the default template that ships\n// with Quarto). It defines a typst function named 'article' which provides\n// various customization options. This function is called from the \n// 'typst-show.typ' file (which maps Pandoc metadata function arguments)\n//\n// If you are creating or packaging a custom typst template you will likely\n// want to replace this file and 'typst-show.typ' entirely. You can find \n// documentation on creating typst templates and some examples here: \n//   - https://typst.app/docs/tutorial/making-a-template/\n//   - https://github.com/typst/templates\n\n\n#let article(\n  title: none,\n  subtitle: none,\n  authors: none,\n  date: none,\n  abstract: none,\n  abstract-title: none,\n  cols: 1,\n  margin: (x: 1.25in, y: 1.25in),\n  paper: \"us-letter\",\n  lang: \"en\",\n  region: \"US\",\n  font: \"libertinus serif\",\n  fontsize: 11pt,\n  title-size: 1.5em,\n  subtitle-size: 1.25em,\n  heading-family: \"libertinus serif\",\n  heading-weight: \"bold\",\n  heading-style: \"normal\",\n  heading-color: black,\n  heading-line-height: 0.65em,\n  sectionnumbering: none,\n  pagenumbering: \"1\",\n  toc: false,\n  toc_title: none,\n  toc_depth: none,\n  toc_indent: 1.5em,\n  doc,\n) = {\n  set page(\n    paper: paper,\n    margin: margin,\n    numbering: pagenumbering,\n  )\n  set par(justify: true)\n  set text(lang: lang,\n           region: region,\n           font: font,\n           size: fontsize)\n  set heading(numbering: sectionnumbering)\n  if title != none {\n    align(center)[#block(inset: 2em)[\n      #set par(leading: heading-line-height)\n      #if (heading-family != none or heading-weight != \"bold\" or heading-style != \"normal\"\n           or heading-color != black) {\n        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)\n        text(size: title-size)[#title]\n        if subtitle != none {\n          parbreak()\n          text(size: subtitle-size)[#subtitle]\n        }\n      } else {\n        text(weight: \"bold\", size: title-size)[#title]\n        if subtitle != none {\n          parbreak()\n          text(weight: \"bold\", size: subtitle-size)[#subtitle]\n        }\n      }\n    ]]\n  }\n\n  if authors != none {\n    let count = authors.len()\n    let ncols = calc.min(count, 3)\n    grid(\n      columns: (1fr,) * ncols,\n      row-gutter: 1.5em,\n      ..authors.map(author =&gt;\n          align(center)[\n            #author.name \\\n            #author.affiliation \\\n            #author.email\n          ]\n      )\n    )\n  }\n\n  if date != none {\n    align(center)[#block(inset: 1em)[\n      #date\n    ]]\n  }\n\n  if abstract != none {\n    block(inset: 2em)[\n    #text(weight: \"semibold\")[#abstract-title] #h(1em) #abstract\n    ]\n  }\n\n  if toc {\n    let title = if toc_title == none {\n      auto\n    } else {\n      toc_title\n    }\n    block(above: 0em, below: 2em)[\n    #outline(\n      title: toc_title,\n      depth: toc_depth,\n      indent: toc_indent\n    );\n    ]\n  }\n\n  if cols == 1 {\n    doc\n  } else {\n    columns(cols, doc)\n  }\n}\n\n#set table(\n  inset: 6pt,\n  stroke: none\n)\n\n\nThe typst-template.typ file defines the actual appearance of the document. Here, we define the article function that receives the metadata from typst-show.typ. This function sets the page layout, fonts, and other stylistic elements. For example, the highlighted code shows how the function sets the page’s paper size, margins, and number of columns based on the values it receives. This is where you can get really creative with your designs."
   },
   {
     "objectID": "materials/04-typst/slides.html#world-happiness-report-example",
     "href": "materials/04-typst/slides.html#world-happiness-report-example",
     "title": "PDFs with Typst",
     "section": "World Happiness Report example",
-    "text": "World Happiness Report example\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLink to World Happiness Report"
+    "text": "World Happiness Report example\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLink to World Happiness Report\n\n\nLet’s look at a more complex example. We’ll try to recreate the styling of the World Happiness Report PDF. This report has a very specific style: a unique cover page, a two-column layout, and custom fonts and colors. We’ll explore how to achieve this with Typst."
   },
   {
     "objectID": "materials/04-typst/slides.html#example-report-with-brand.yml",
     "href": "materials/04-typst/slides.html#example-report-with-brand.yml",
     "title": "PDFs with Typst",
     "section": "Example report with brand.yml",
-    "text": "Example report with brand.yml"
+    "text": "Example report with brand.yml\n\n\nUsing just the _brand.yml file, we can get a good start. We can handle things like the table of contents, basic heading styles, and logo placement. However, some elements, like the title page and more advanced heading styles, require a bit more work."
   },
   {
     "objectID": "materials/04-typst/slides.html#advanced-styling",
     "href": "materials/04-typst/slides.html#advanced-styling",
     "title": "PDFs with Typst",
     "section": "Advanced styling",
-    "text": "Advanced styling\nWith brand.yml:\n✅ Table of contents\n✅ Simple heading styling\n✅ Logo in top left\n✅ Fonts\n❌ Cover page\n❌ Advanced headings\n❌ Exact customization\n\nLearn more: Advanced Styling"
+    "text": "Advanced styling\nWith brand.yml:\n✅ Table of contents\n✅ Simple heading styling\n✅ Logo placement customization\n✅ Fonts\n❌ Cover page\n❌ Advanced headings\n\nLearn more: Advanced Styling"
   },
   {
     "objectID": "materials/04-typst/slides.html#adding-a-title-page-with-image",
     "href": "materials/04-typst/slides.html#adding-a-title-page-with-image",
     "title": "PDFs with Typst",
     "section": "Adding a title page with image",
-    "text": "Adding a title page with image\n\n\nSet rules:\n\n\ntypst-template.typ\n\n#let title_page(title)={\n    page(margin: 0in,\n        background: image(\"cover.jpg\", height: 100%, fit: \"cover\"))[\n        #set text(fill: white)\n\n        #place(center + horizon, dy: -2.5in)[\n            #set align(center + horizon)\n            #block(width: 100%, fill: rgb(\"#983e91\"), outset: 5em)[\n                #text(weight: \"light\", size: 36pt, title)\n            ]\n        ]\n        #place(center + bottom, dy: -40pt)[\n          #block(height: 40pt)[\n            #image(\"whr_logo.png\")\n          ]\n        ]\n    ]\n}"
+    "text": "Adding a title page with image\n\n\nSet rules:\n\n\ntypst-template.typ\n\n#let title_page(title)={\n    page(margin: 0in,\n        background: image(\"cover.jpg\", height: 100%, fit: \"cover\"))[\n        #set text(fill: white)\n\n        #place(center + horizon, dy: -2.5in)[\n            #set align(center + horizon)\n            #block(width: 100%, fill: rgb(\"#983e91\"), outset: 5em)[\n                #text(weight: \"light\", size: 36pt, title)\n            ]\n        ]\n        #place(center + bottom, dy: -40pt)[\n          #block(height: 40pt)[\n            #image(\"whr_logo.png\")\n          ]\n        ]\n    ]\n}\n\n\n\n\n\n\n\n\n\n\n\nTo create a custom title page, we can define a function in our typst-template.typ file. This function can set specific page properties, like a background image, and then overlay text and other elements. In this example, we’re using a background image, setting the text color to white, and then placing the title and logo at specific positions. The result is a highly customized title page that perfectly matches the original report’s design."
   },
   {
     "objectID": "materials/04-typst/slides.html#your-turn-1",
     "href": "materials/04-typst/slides.html#your-turn-1",
     "title": "PDFs with Typst",
     "section": "Your turn",
-    "text": "Your turn\nInstall the whr-typst-template:\n\n\nTerminal\n\nquarto use template ivelasq/whr-typst-template\n\nOpen the _extensions/whr/typst-show.typ and _extensions/whr/typst-template.typ files to examine their contents."
+    "text": "Your turn\nInstall the whr-typst-template:\n\n\nTerminal\n\nquarto use template ivelasq/whr-typst-template\n\nOpen the _extensions/whr/typst-show.typ and _extensions/whr/typst-template.typ files to examine their contents.\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/04-typst/exercise-02.html",
@@ -1039,53 +1053,88 @@
     "text": "Install the whr-typst-template:\n\n\nTerminal\n\nquarto use template ivelasq/whr-typst-template\n\nOpen the _extensions/whr/typst-show.typ and _extensions/whr/typst-template.typ files to examine their contents."
   },
   {
-    "objectID": "materials/06-byob/slides.html#creating-a-_brand.yml-file",
-    "href": "materials/06-byob/slides.html#creating-a-_brand.yml-file",
+    "objectID": "materials/06-byob/slides.html#creating-a-_brand.yml-file-1",
+    "href": "materials/06-byob/slides.html#creating-a-_brand.yml-file-1",
     "title": "Creating and sharing your brand",
     "section": "Creating a _brand.yml file",
-    "text": "Creating a _brand.yml file\n_brand.yml is a text file; create a new one by running\n\nFile &gt; New File &gt; Text File in RStudio\nCtrl+Shift+P New Untitled Text File in VS Code or Positron"
+    "text": "Creating a _brand.yml file\n\nIn RStudio, go to File &gt; New File &gt; Text File.\nIn VS Code or Positron, use the Command Palette (Ctrl+Shift+P on Windows/Linux or Cmd+Shift+P on Mac) and select New Untitled Text File.\n\nSave the file as _brand.yml.\n\nYou can create this file in any text editor. If you’re using RStudio, you’ll find the option under the “File” menu. For those of you using VS Code or Positron, the command palette is the fastest way to get started. Once you’ve created the file, make sure to save it as _brand.yml in the root directory of your project."
   },
   {
-    "objectID": "materials/06-byob/slides.html#creating-a-_brand.yml-file-with-an-llm",
-    "href": "materials/06-byob/slides.html#creating-a-_brand.yml-file-with-an-llm",
+    "objectID": "materials/06-byob/slides.html#brand.yml-inspiration",
+    "href": "materials/06-byob/slides.html#brand.yml-inspiration",
     "title": "Creating and sharing your brand",
-    "section": "Creating a _brand.yml file with an LLM",
-    "text": "Creating a _brand.yml file with an LLM\n\n\n\n\n\n\nLearn more: Creating a brand.yml with an LLM"
+    "section": "brand.yml Inspiration",
+    "text": "brand.yml Inspiration\nThe brand.yml docs site has a great Inspiration page with many references!\n\n\n\n\n\n\nLearn more: Inspiration\n\n\nWhen you’re ready to start building your brand file, you don’t have to start from scratch. The brand.yml documentation site has an entire page dedicated to inspiration. The inspiration page is full of examples from real-world projects, which can give you a great starting point for your own branding. I highly recommend checking it out for ideas on colors, fonts, and layouts."
   },
   {
-    "objectID": "materials/06-byob/slides.html#sharing-a-_brand.yml-file",
-    "href": "materials/06-byob/slides.html#sharing-a-_brand.yml-file",
+    "objectID": "materials/06-byob/slides.html#get-a-little-help-from-a-large-language-model-llm",
+    "href": "materials/06-byob/slides.html#get-a-little-help-from-a-large-language-model-llm",
     "title": "Creating and sharing your brand",
-    "section": "Sharing a _brand.yml file",
-    "text": "Sharing a _brand.yml file\n\nShared repository (Google Drive, OneDrive, etc.)\nGitHub repo allows you to share with version control"
+    "section": "Get a little help from a Large Language Model (LLM)",
+    "text": "Get a little help from a Large Language Model (LLM)\n\n\n\n\n\n\nLearn more: Creating a brand.yml with an LLM\n\n\nFor those of you who want to jumpstart the process even more, you can use a Large Language Model, or LLM, to help you. The brand.yml docs site has a fantastic guide with prompts you can use to generate a starter brand.yml file. You can ask an LLM like ChatGPT or Claude to create a brand.yml file for you, describing the look and feel you want. This can save a lot of time and help you get a solid foundation very quickly."
   },
   {
-    "objectID": "materials/06-byob/slides.html#brand-extensions",
-    "href": "materials/06-byob/slides.html#brand-extensions",
+    "objectID": "materials/06-byob/slides.html#using-a-shared-drive",
+    "href": "materials/06-byob/slides.html#using-a-shared-drive",
     "title": "Creating and sharing your brand",
-    "section": "Brand Extensions",
-    "text": "Brand Extensions\nNew in Quarto 1.8, you can create a Quarto extension that provides a brand.yml file and assets.\nGet started by running the below:\n\n\nTerminal\n\n$ quarto create extension brand\n ? Extension Name › my-brand\n\n\n\n\n\n\n\n\nImportant\n\n\nBrand Extensions must be used with a _quarto.yml project.\n\n\n\n\nLearn more: Brand Extensions"
+    "section": "Using a shared drive",
+    "text": "Using a shared drive\n\nShared repository (Google Drive, OneDrive, etc.)\nGitHub repo allows you to share with version control\n\n\nThe simplest way is to share the file directly. You can use a shared repository like Google Drive or OneDrive. However, a more robust solution, especially if you’re working with a team, is to use a GitHub repo. By storing your _brand.yml file in a GitHub repo, you get all the benefits of version control. This means you can track changes, revert to previous versions if needed."
   },
   {
-    "objectID": "materials/06-byob/slides.html#contents-of-brand-extensions",
-    "href": "materials/06-byob/slides.html#contents-of-brand-extensions",
+    "objectID": "materials/06-byob/slides.html#creating-a-brand-extension",
+    "href": "materials/06-byob/slides.html#creating-a-brand-extension",
     "title": "Creating and sharing your brand",
-    "section": "Contents of Brand Extensions",
-    "text": "Contents of Brand Extensions\n\n\n_extensions/my-brand/_extension.yml\n\ntitle: My-brand\nauthor: Gordon Woodhull\nversion: 1.0.0\nquarto-required: \"&gt;=99.9.0\"\ncontributes:\n  metadata:\n    project:\n      brand: brand.yml\n\n\n\n\n_extensions/my-brand/_extension.yml\n\ncolor:\n  background:\n    light: \"#fff\"\n    dark: \"#000\"\n  foreground:\n    light: \"#000\"\n    dark: \"#fff\""
+    "section": "Creating a Brand Extension",
+    "text": "Creating a Brand Extension\nNew in Quarto 1.8, you can create a Quarto extension that provides a brand.yml file and assets.\nGet started by running the below:\n\n\nTerminal\n\n$ quarto create extension brand\n ? Extension Name › my-brand\n\n\n\n\n\n\n\n\nImportant\n\n\nBrand Extensions must be used with a _quarto.yml project.\n\n\n\n\nLearn more: Brand Extensions\n\n\nNow, here’s where it gets really powerful. As of Quarto 1.8, you can package your _brand.yml file and all its assets, like images and CSS, into a Quarto extension. The command line code shown on the slide walks you through the first step of creating a brand extension from the terminal. It’s important to note that Brand Extensions must be used within a Quarto project that has its own _quarto.yml file."
+  },
+  {
+    "objectID": "materials/06-byob/slides.html#contents-of-a-brand-extension",
+    "href": "materials/06-byob/slides.html#contents-of-a-brand-extension",
+    "title": "Creating and sharing your brand",
+    "section": "Contents of a Brand Extension",
+    "text": "Contents of a Brand Extension\n? Extension Name › my-brand\nCreating extension at /{...}/my-brand:\n  - Created _quarto.yml\n  - Created README.md\n  - Created _extensions/my-brand/brand.yml\n  - Created _extensions/my-brand/_extension.yml\n  - Created .gitignore\n  - Created example.qmd\n? Open With\n❯ positron\n  vscode\n  rstudio\n  (don't open)\n\nWhen you create a brand extension, Quarto generates a directory with some key files."
+  },
+  {
+    "objectID": "materials/06-byob/slides.html#contents-of-a-brand-extension-1",
+    "href": "materials/06-byob/slides.html#contents-of-a-brand-extension-1",
+    "title": "Creating and sharing your brand",
+    "section": "Contents of a Brand Extension",
+    "text": "Contents of a Brand Extension\n\n\n_extensions/my-brand/_extension.yml\n\ntitle: My-brand\nauthor: Gordon Woodhull\nversion: 1.0.0\nquarto-required: \"&gt;=99.9.0\"\ncontributes:\n  metadata:\n    project:\n      brand: brand.yml\n\n\nOne important one is the _extension.yml file, which acts as the manifest for your extension. The code on the slide shows a simple _extension.yml file. The contributes section is what makes this a brand extension. It tells Quarto that this extension provides a brand.yml file."
+  },
+  {
+    "objectID": "materials/06-byob/slides.html#contents-of-a-brand-extension-2",
+    "href": "materials/06-byob/slides.html#contents-of-a-brand-extension-2",
+    "title": "Creating and sharing your brand",
+    "section": "Contents of a Brand Extension",
+    "text": "Contents of a Brand Extension\n\n\n_extensions/mybrand/brand.yml\n\ncolor:\n  background:\n    light: \"#fff\"\n    dark: \"#000\"\n  foreground:\n    light: \"#000\"\n    dark: \"#fff\"\n\n\nWithin the created _brand.yml file, you can start building your brand. It provides just the most basic code to enable light and dark mode."
+  },
+  {
+    "objectID": "materials/06-byob/slides.html#sharing-the-brand-extension",
+    "href": "materials/06-byob/slides.html#sharing-the-brand-extension",
+    "title": "Creating and sharing your brand",
+    "section": "Sharing the Brand Extension",
+    "text": "Sharing the Brand Extension\nPublish your Brand Extension to a GitHub repository. Once it’s on GitHub, anyone can add it to their Quarto project.\nRun the following command in the Quarto project to use the extension:\n\n\nTerminal\n\nquarto add &lt;github-organization&gt;/&lt;your-brand-name&gt;"
+  },
+  {
+    "objectID": "materials/06-byob/slides.html#updating-the-brand-extension",
+    "href": "materials/06-byob/slides.html#updating-the-brand-extension",
+    "title": "Creating and sharing your brand",
+    "section": "Updating the Brand Extension",
+    "text": "Updating the Brand Extension\nIf you make changes to your Brand Extension on GitHub, users can update the extension in their projects by running this command:\n\n\nTerminal\n\nquarto update &lt;github-organization&gt;/&lt;your-brand-name&gt;"
   },
   {
     "objectID": "materials/06-byob/slides.html#your-turn",
     "href": "materials/06-byob/slides.html#your-turn",
     "title": "Creating and sharing your brand",
     "section": "Your turn",
-    "text": "Your turn\n\nUse the Brand Extension in GitHub to create a _brand.yml file for your organization.\nApply the _brand.yml file to an existing project Try to use a document that you might use for work, like a report, a presentation, or a project brief.\nUse any remaining time to apply your new branding to something you may need for your job, like a PDF, a dashboard, or an internal memo."
+    "text": "Your turn\nCreate a brand file for your organization using the Brand Extension.\n\nOpen your Terminal and run: quarto create extension brand\nRead about how to prompt a large language model (LLM) to create a _brand.yml file: posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt\nCustomize the default _extensions/mybrand/brand.yml file. Take note of how well the output incorporates your brand and what, if any, elements are missing or need to be adjusted.\n\nPreview by running quarto preview example.qmd in the Terminal.\n\n\nWe’d love for you to add your new brand.yml file to the Inspiration page! You can see examples and contribute your own by visiting the following links:\n\nInspiration page: posit-dev.github.io/brand-yml/inspiration\nSubmit a PR: github.com/posit-dev/brand-yml/issues\n\n\n\n\n−+\n10:00\n\n\n\n\nAnd with that, it’s time for you to give it a try! We’re going to take a few minutes to walk through creating your own _brand.yml file."
   },
   {
     "objectID": "materials/06-byob/exercise-01.html",
     "href": "materials/06-byob/exercise-01.html",
     "title": "",
     "section": "",
-    "text": "Use the Brand Extension in GitHub to create a _brand.yml file for your organization.\nApply the _brand.yml file to an existing project Try to use a document that you might use for work, like a report, a presentation, or a project brief.\nUse any remaining time to apply your new branding to something you may need for your job, like a PDF, a dashboard, or an internal memo."
+    "text": "Create a brand file for your organization using the Brand Extension.\n\nOpen your Terminal and run: quarto create extension brand\nRead about how to prompt a large language model (LLM) to create a _brand.yml file: posit-dev.github.io/brand-yml/articles/llm-brand-yml-prompt\nCustomize the default _extensions/mybrand/brand.yml file. Take note of how well the output incorporates your brand and what, if any, elements are missing or need to be adjusted.\n\nPreview by running quarto preview example.qmd in the Terminal.\n\n\nWe’d love for you to add your new brand.yml file to the Inspiration page! You can see examples and contribute your own by visiting the following links:\n\nInspiration page: posit-dev.github.io/brand-yml/inspiration\nSubmit a PR: github.com/posit-dev/brand-yml/issues"
   },
   {
     "objectID": "materials/05-websites/index.html",
@@ -1750,267 +1799,302 @@
   {
     "objectID": "materials/02-presentations/slides.html#file-formats",
     "href": "materials/02-presentations/slides.html#file-formats",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "File formats",
-    "text": "File formats\nQuarto supports a variety of formats for creating presentations, including:\n\nrevealjs\npptx\nbeamer\n\n\nbrand.yml is currently supported only in revealjs."
+    "text": "File formats\nQuarto supports a variety of formats for creating presentations, including:\n\nrevealjs\npptx\nbeamer\n\n\nbrand.yml is currently supported only in revealjs.\n\nQuarto supports several popular presentation formats, as you can see here. We have reveal.js, which is what we’ll be focusing on today, but also pptx for Microsoft PowerPoint and beamer for LaTeX. While all of these are great, reveal.js offers a unique level of customization and interactivity, especially when it comes to web-based content. And for those of you who work with branding, it’s the only one that currently supports the brand.yml file, which we’ll discuss later."
   },
   {
     "objectID": "materials/02-presentations/slides.html#reveal.js",
     "href": "materials/02-presentations/slides.html#reveal.js",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "reveal.js",
-    "text": "reveal.js\nreveal.js presentations allow you to create stunning presentations on the web.\n\nPresent code and LaTeX equations\nInclude computations in slide output\nAdd image, video, and iFrame backgrounds\nAdd fancy transitions and animations\nActivate scroll view\n\n…and much more"
+    "text": "reveal.js\nreveal.js presentations allow you to create stunning presentations on the web.\n\nPresent code and LaTeX equations\nInclude computations in slide output\nAdd image, video, and iFrame backgrounds\nAdd fancy transitions and animations\nActivate scroll view\n\n…and much more\n\nWhat makes reveal.js so cool? It’s all about creating stunning, modern presentations that live on the web. It’s fantastic for technical presentations because it handles code and LaTeX equations beautifully. You can even include live computations and interactive content directly in your slides. It also supports fancy transitions, animations, and a unique scroll view for long-form content, allowing you to create engaging and dynamic presentations for any topic."
   },
   {
     "objectID": "materials/02-presentations/slides.html#converting-to-reveal.js",
     "href": "materials/02-presentations/slides.html#converting-to-reveal.js",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Converting to reveal.js",
-    "text": "Converting to reveal.js\nConvert your document to a reveal.js presentation by editing format in the YAML heading:\nformat: revealjs\n\nLearn more: Revealjs"
+    "text": "Converting to reveal.js\nConvert your document to a reveal.js presentation by editing format in the YAML heading:\nformat: revealjs\n\nLearn more: Revealjs\n\n\nTo convert your Quarto document, all you need to do is change one line in the YAML header. Change the format from html or pdf to revealjs. Quarto handles all the heavy lifting for you."
   },
   {
     "objectID": "materials/02-presentations/slides.html#example",
     "href": "materials/02-presentations/slides.html#example",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Example",
-    "text": "Example\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: html\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+    "text": "Example\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: html\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep\n\n\n\n\nOn the left, we have a basic Quarto document with two sections. On the right, you can see how it’s rendered as a simple HTML document. This is what you’d get by default if you set the format to html."
   },
   {
     "objectID": "materials/02-presentations/slides.html#example-1",
     "href": "materials/02-presentations/slides.html#example-1",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Example",
-    "text": "Example\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+    "text": "Example\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Going to sleep\n\n- Get in bed\n- Count sheep\n\n\n\n\nNow, let’s change the format to revealjs in the YAML header. See the difference on the right? The same content is now formatted as a slide deck, with each top-level heading (##) becoming a new slide. This demonstrates the core principle of Quarto presentations: you write your content, and Quarto formats it for you."
   },
   {
     "objectID": "materials/02-presentations/slides.html#example-with-sections",
     "href": "materials/02-presentations/slides.html#example-with-sections",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Example with sections",
-    "text": "Example with sections\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n# In the morning\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Breakfast\n\n- Eat eggs\n- Drink coffee\n\n# In the evening\n\n## Dinner\n\n- Eat spaghetti\n- Drink wine\n\n## Going to sleep\n\n- Get in bed\n- Count sheep"
+    "text": "Example with sections\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n# In the morning\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n## Breakfast\n\n- Eat eggs\n- Drink coffee\n\n# In the evening\n\n## Dinner\n\n- Eat spaghetti\n- Drink wine\n\n## Going to sleep\n\n- Get in bed\n- Count sheep\n\n\n\n\nYou can also create a multi-level slide structure. By using a top-level heading (#), you create a new vertical section. Any sub-headings (##) below it will become a vertical sequence of slides. This is a great way to organize your presentation and create logical sections, just like you would with a regular document."
   },
   {
     "objectID": "materials/02-presentations/slides.html#example-with-sections-1",
     "href": "materials/02-presentations/slides.html#example-with-sections-1",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Example with sections",
-    "text": "Example with sections\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n- Turn off alarm\n- Get out of bed\n\n---\n\n- Get in bed\n- Count sheep"
+    "text": "Example with sections\n\n\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat: revealjs\n---\n\n- Turn off alarm\n- Get out of bed\n\n---\n\n- Get in bed\n- Count sheep\n\n\n\n\nHere’s another way to create a new slide. The horizontal rule (—) acts as a slide break. This is useful for splitting up content on a single page, like a list, into multiple slides."
   },
   {
     "objectID": "materials/02-presentations/slides.html#your-turn",
     "href": "materials/02-presentations/slides.html#your-turn",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Your turn",
-    "text": "Your turn\n\nChange the format: In your document’s YAML header, change format: html to format: revealjs.\nAdd slides: Use first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nRender: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.\n\nNote: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations."
+    "text": "Your turn\n\nIn your document’s YAML header, change format: html to format: revealjs.\nUse first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nSave and render your document.\n\nQuarto will create an HTML file that is a fully functional slide deck.\n\n\n\n\n\n\nNote\n\n\nYou can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations.\n\n\n\n\n\n\n−+\n05:00\n\n\n\n\nAlright, your turn to try! Take five minutes to practice what we’ve just covered. The exercise is on your screen. The goal is just to get your hands dirty with the basic syntax."
   },
   {
     "objectID": "materials/02-presentations/slides.html#editing-slides",
     "href": "materials/02-presentations/slides.html#editing-slides",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Editing slides",
-    "text": "Editing slides\nThe quarto-revealjs-editable extension allows the repositioning and resizing of images and text divs directly in the previewed slides.\n\n\nLearn more: quarto-revealjs-editable"
+    "text": "Editing slides\nThe quarto-revealjs-editable extension allows for the repositioning and resizing of images and text divs directly in previewed slides.\n\n\nLearn more: quarto-revealjs-editable\n\n\nA great tool for fine-tuning your presentation is the quarto-revealjs-editable extension by Emil Hvitfeldt. It allows you to drag and drop text and images right on the slide preview to reposition and resize them. This saves a lot of time by eliminating the need to manually adjust positions in your source code."
   },
   {
     "objectID": "materials/02-presentations/slides.html#content-overflow",
     "href": "materials/02-presentations/slides.html#content-overflow",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Content overflow",
-    "text": "Content overflow\nUse the .smaller class to use a smaller typeface so that more text fits on the slide. For example:\n## Slide Title {.smaller}\nUse the .scrollable class to make off-slide content available by scrolling. For example:\n## Slide Title {.scrollable}"
+    "text": "Content overflow\nUse the .smaller class to use a smaller typeface so that more text fits on the slide. For example:\n## Slide Title {.smaller}\nUse the .scrollable class to make off-slide content available by scrolling. For example:\n## Slide Title {.scrollable}\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\nNullam sagittis ex eget bibendum vulputate.\n\nVestibulum lobortis mauris sed lorem auctor, in commodo ex semper.\nVestibulum congue nisl eget blandit suscipit.\nCurabitur sit amet diam elementum, dictum massa quis, vulputate est.\nSed dignissim lacus et lorem pellentesque interdum.\nUt efficitur eros id leo condimentum, vel sodales velit lacinia.\n\nVivamus cursus massa accumsan tellus imperdiet aliquet id et odio.\nDuis tincidunt nunc vitae erat sollicitudin, non condimentum enim eleifend.\nPhasellus ac ligula aliquam, aliquet nunc quis, tempor libero.\nVivamus ultricies enim a metus ultrices, a pretium velit tristique.\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\nNullam sagittis ex eget bibendum vulputate.\n\nVestibulum lobortis mauris sed lorem auctor, in commodo ex semper.\nVestibulum congue nisl eget blandit suscipit.\nCurabitur sit amet diam elementum, dictum massa quis, vulputate est.\nSed dignissim lacus et lorem pellentesque interdum.\nUt efficitur eros id leo condimentum, vel sodales velit lacinia.\n\nVivamus cursus massa accumsan tellus imperdiet aliquet id et odio.\nDuis tincidunt nunc vitae erat sollicitudin, non condimentum enim eleifend.\nPhasellus ac ligula aliquam, aliquet nunc quis, tempor libero.\nVivamus ultricies enim a metus ultrices, a pretium velit tristique.\n\nWhat do you do when you have too much content for a single slide? Quarto offers two easy solutions. You can use the .smaller class to shrink the font size and fit more text on the slide, or you can use the .scrollable class to make the content scrollable. You can add these classes to any heading."
   },
   {
     "objectID": "materials/02-presentations/slides.html#slide-transitions",
     "href": "materials/02-presentations/slides.html#slide-transitions",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Slide transitions",
-    "text": "Slide transitions\nEdit the YAML to change the slide transitions:\n---\ntitle: \"Presentation\"\nformat:\n  revealjs:\n    transition: slide\n    transition-speed: fast\n---\n\nLearn more: Slide Transitions"
+    "text": "Slide transitions\nEdit the YAML to change the slide transitions:\n---\ntitle: \"Presentation\"\nformat:\n  revealjs:\n    transition: slide\n    transition-speed: fast\n---\n\nLearn more: Slide Transitions\n\n\nYou can control the slide transitions directly from the YAML header."
   },
   {
     "objectID": "materials/02-presentations/slides.html#slide-transitions-1",
     "href": "materials/02-presentations/slides.html#slide-transitions-1",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Slide transitions",
-    "text": "Slide transitions\nThe next few slides will transition using the slide transition\n\n\n\n\n\n\n\nTransition\nDescription\n\n\n\n\nnone\nNo transition (default, switch instantly)\n\n\nfade\nCross fade\n\n\nslide\nSlide horizontally\n\n\nconvex\nSlide at a convex angle\n\n\nconcave\nSlide at a concave angle\n\n\nzoom\nScale the incoming slide so it grows in from the center of the screen."
+    "text": "Slide transitions\nThe next few slides will transition using the slide transition\n\n\n\n\n\n\n\nTransition\nDescription\n\n\n\n\nnone\nNo transition (default, switch instantly)\n\n\nfade\nCross fade\n\n\nslide\nSlide horizontally\n\n\nconvex\nSlide at a convex angle\n\n\nconcave\nSlide at a concave angle\n\n\nzoom\nScale the incoming slide so it grows in from the center of the screen.\n\n\n\n\nHere’s a list of the available transitions. As you can see, the default is none, which is an instant switch, but you can also use fade, slide, convex, concave, or zoom. We’ll use the slide transition for the next few slides so you can see it in action."
   },
   {
     "objectID": "materials/02-presentations/slides.html#tabsets",
     "href": "materials/02-presentations/slides.html#tabsets",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Tabsets",
-    "text": "Tabsets\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nMazda RX4\n21.0\n6\n160.0\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160.0\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nDatsun 710\n22.8\n4\n108.0\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nHornet 4 Drive\n21.4\n6\n258.0\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nHornet Sportabout\n18.7\n8\n360.0\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nValiant\n18.1\n6\n225.0\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\nDuster 360\n14.3\n8\n360.0\n245\n3.21\n3.570\n15.84\n0\n0\n3\n4\n\n\nMerc 240D\n24.4\n4\n146.7\n62\n3.69\n3.190\n20.00\n1\n0\n4\n2\n\n\nMerc 230\n22.8\n4\n140.8\n95\n3.92\n3.150\n22.90\n1\n0\n4\n2\n\n\nMerc 280\n19.2\n6\n167.6\n123\n3.92\n3.440\n18.30\n1\n0\n4\n4\n\n\nMerc 280C\n17.8\n6\n167.6\n123\n3.92\n3.440\n18.90\n1\n0\n4\n4\n\n\nMerc 450SE\n16.4\n8\n275.8\n180\n3.07\n4.070\n17.40\n0\n0\n3\n3\n\n\nMerc 450SL\n17.3\n8\n275.8\n180\n3.07\n3.730\n17.60\n0\n0\n3\n3\n\n\nMerc 450SLC\n15.2\n8\n275.8\n180\n3.07\n3.780\n18.00\n0\n0\n3\n3\n\n\nCadillac Fleetwood\n10.4\n8\n472.0\n205\n2.93\n5.250\n17.98\n0\n0\n3\n4\n\n\nLincoln Continental\n10.4\n8\n460.0\n215\n3.00\n5.424\n17.82\n0\n0\n3\n4\n\n\nChrysler Imperial\n14.7\n8\n440.0\n230\n3.23\n5.345\n17.42\n0\n0\n3\n4\n\n\nFiat 128\n32.4\n4\n78.7\n66\n4.08\n2.200\n19.47\n1\n1\n4\n1\n\n\nHonda Civic\n30.4\n4\n75.7\n52\n4.93\n1.615\n18.52\n1\n1\n4\n2\n\n\nToyota Corolla\n33.9\n4\n71.1\n65\n4.22\n1.835\n19.90\n1\n1\n4\n1\n\n\nToyota Corona\n21.5\n4\n120.1\n97\n3.70\n2.465\n20.01\n1\n0\n3\n1\n\n\nDodge Challenger\n15.5\n8\n318.0\n150\n2.76\n3.520\n16.87\n0\n0\n3\n2\n\n\nAMC Javelin\n15.2\n8\n304.0\n150\n3.15\n3.435\n17.30\n0\n0\n3\n2\n\n\nCamaro Z28\n13.3\n8\n350.0\n245\n3.73\n3.840\n15.41\n0\n0\n3\n4\n\n\nPontiac Firebird\n19.2\n8\n400.0\n175\n3.08\n3.845\n17.05\n0\n0\n3\n2\n\n\nFiat X1-9\n27.3\n4\n79.0\n66\n4.08\n1.935\n18.90\n1\n1\n4\n1\n\n\nPorsche 914-2\n26.0\n4\n120.3\n91\n4.43\n2.140\n16.70\n0\n1\n5\n2\n\n\nLotus Europa\n30.4\n4\n95.1\n113\n3.77\n1.513\n16.90\n1\n1\n5\n2\n\n\nFord Pantera L\n15.8\n8\n351.0\n264\n4.22\n3.170\n14.50\n0\n1\n5\n4\n\n\nFerrari Dino\n19.7\n6\n145.0\n175\n3.62\n2.770\n15.50\n0\n1\n5\n6\n\n\nMaserati Bora\n15.0\n8\n301.0\n335\n3.54\n3.570\n14.60\n0\n1\n5\n8\n\n\nVolvo 142E\n21.4\n4\n121.0\n109\n4.11\n2.780\n18.60\n1\n1\n4\n2\n\n\n\n\n\n\n\n\n\nLearn more: Tabsets"
+    "text": "Tabsets\n\nPlotDataTabset Code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nMazda RX4\n21.0\n6\n160.0\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160.0\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nDatsun 710\n22.8\n4\n108.0\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nHornet 4 Drive\n21.4\n6\n258.0\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nHornet Sportabout\n18.7\n8\n360.0\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nValiant\n18.1\n6\n225.0\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\nDuster 360\n14.3\n8\n360.0\n245\n3.21\n3.570\n15.84\n0\n0\n3\n4\n\n\nMerc 240D\n24.4\n4\n146.7\n62\n3.69\n3.190\n20.00\n1\n0\n4\n2\n\n\nMerc 230\n22.8\n4\n140.8\n95\n3.92\n3.150\n22.90\n1\n0\n4\n2\n\n\nMerc 280\n19.2\n6\n167.6\n123\n3.92\n3.440\n18.30\n1\n0\n4\n4\n\n\nMerc 280C\n17.8\n6\n167.6\n123\n3.92\n3.440\n18.90\n1\n0\n4\n4\n\n\nMerc 450SE\n16.4\n8\n275.8\n180\n3.07\n4.070\n17.40\n0\n0\n3\n3\n\n\nMerc 450SL\n17.3\n8\n275.8\n180\n3.07\n3.730\n17.60\n0\n0\n3\n3\n\n\nMerc 450SLC\n15.2\n8\n275.8\n180\n3.07\n3.780\n18.00\n0\n0\n3\n3\n\n\nCadillac Fleetwood\n10.4\n8\n472.0\n205\n2.93\n5.250\n17.98\n0\n0\n3\n4\n\n\nLincoln Continental\n10.4\n8\n460.0\n215\n3.00\n5.424\n17.82\n0\n0\n3\n4\n\n\nChrysler Imperial\n14.7\n8\n440.0\n230\n3.23\n5.345\n17.42\n0\n0\n3\n4\n\n\nFiat 128\n32.4\n4\n78.7\n66\n4.08\n2.200\n19.47\n1\n1\n4\n1\n\n\nHonda Civic\n30.4\n4\n75.7\n52\n4.93\n1.615\n18.52\n1\n1\n4\n2\n\n\nToyota Corolla\n33.9\n4\n71.1\n65\n4.22\n1.835\n19.90\n1\n1\n4\n1\n\n\nToyota Corona\n21.5\n4\n120.1\n97\n3.70\n2.465\n20.01\n1\n0\n3\n1\n\n\nDodge Challenger\n15.5\n8\n318.0\n150\n2.76\n3.520\n16.87\n0\n0\n3\n2\n\n\nAMC Javelin\n15.2\n8\n304.0\n150\n3.15\n3.435\n17.30\n0\n0\n3\n2\n\n\nCamaro Z28\n13.3\n8\n350.0\n245\n3.73\n3.840\n15.41\n0\n0\n3\n4\n\n\nPontiac Firebird\n19.2\n8\n400.0\n175\n3.08\n3.845\n17.05\n0\n0\n3\n2\n\n\nFiat X1-9\n27.3\n4\n79.0\n66\n4.08\n1.935\n18.90\n1\n1\n4\n1\n\n\nPorsche 914-2\n26.0\n4\n120.3\n91\n4.43\n2.140\n16.70\n0\n1\n5\n2\n\n\nLotus Europa\n30.4\n4\n95.1\n113\n3.77\n1.513\n16.90\n1\n1\n5\n2\n\n\nFord Pantera L\n15.8\n8\n351.0\n264\n4.22\n3.170\n14.50\n0\n1\n5\n4\n\n\nFerrari Dino\n19.7\n6\n145.0\n175\n3.62\n2.770\n15.50\n0\n1\n5\n6\n\n\nMaserati Bora\n15.0\n8\n301.0\n335\n3.54\n3.570\n14.60\n0\n1\n5\n8\n\n\nVolvo 142E\n21.4\n4\n121.0\n109\n4.11\n2.780\n18.60\n1\n1\n4\n2\n\n\n\n\n\n\n\n::: panel-tabset\n### Plot\n\n```{r}\nlibrary(ggplot2)\nggplot(mtcars, aes(hp, mpg, color = am)) +\n  geom_point() +\n  geom_smooth(formula = y ~ x, method = \"loess\")\n```\n\n### Data\n\n```{r}\nknitr::kable(mtcars)\n```\n:::\n\n\n\n\nTabsets are a fantastic way to organize multiple types of content on a single slide without cluttering it. You can switch between different tabs to view a plot, a table, or any other content you want. This is especially useful for showing data and the code that generated it.\n\n\nLearn more: Tabsets"
   },
   {
     "objectID": "materials/02-presentations/slides.html#column-layout",
     "href": "materials/02-presentations/slides.html#column-layout",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Column layout",
-    "text": "Column layout\nArrange content into columns of varying widths:\n\n\nMotor Trend Car Road Tests\nThe data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\nHornet 4 Drive\n21.4\n6\n258\n110\n3.215\n\n\nHornet Sportabout\n18.7\n8\n360\n175\n3.440\n\n\nValiant\n18.1\n6\n225\n105\n3.460\n\n\n\n\n\n\n\nLearn more: Multiple Columns"
+    "text": "Column layout\nArrange content into columns of varying widths:\n\n\nMotor Trend Car Road Tests\nThe data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\nHornet 4 Drive\n21.4\n6\n258\n110\n3.215\n\n\nHornet Sportabout\n18.7\n8\n360\n175\n3.440\n\n\nValiant\n18.1\n6\n225\n105\n3.460\n\n\n\n\n\n\n\nLearn more: Multiple Columns\n\n\nQuarto also offers a flexible column layout. You can create columns of varying widths to present your content in a more visually appealing way. Here, we’ve used columns to show a description on the left and a data table on the right. This is much better than trying to squeeze everything into a single-column layout."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#column-layout-1",
+    "href": "materials/02-presentations/slides.html#column-layout-1",
+    "title": "Presentations with reveal.js",
+    "section": "Column layout",
+    "text": "Column layout\nArrange content into columns of varying widths:\n::: columns\n::: {.column width=\"35%\"}\n#### Motor Trend Car Road Tests\n\nThe data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.\n:::\n\n::: {.column width=\"3%\"}\n:::\n\n::: {.column width=\"62%\"}\n```{r}\nknitr::kable(head(mtcars)[,c(\"mpg\", \"cyl\", \"disp\", \"hp\", \"wt\")])\n```\n:::\n:::"
   },
   {
     "objectID": "materials/02-presentations/slides.html#line-highlighting",
     "href": "materials/02-presentations/slides.html#line-highlighting",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Line highlighting",
-    "text": "Line highlighting\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\nLearn more: Line Highlighting"
+    "text": "Line highlighting\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\n``` {.python code-line-numbers=\"4-5|7|10\"}\n```\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\nLearn more: Line Highlighting\n\n\nFor those of you presenting code, this feature is a game-changer. You can highlight specific lines of code to draw attention to them, or even incrementally highlight additional lines. This helps your audience follow along and focus on the parts of the code you’re talking about."
   },
   {
     "objectID": "materials/02-presentations/slides.html#executable-code",
     "href": "materials/02-presentations/slides.html#executable-code",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Executable code",
-    "text": "Executable code\n\nlibrary(ggplot2)\nggplot(mtcars, aes(hp, mpg, color = am)) +\n  geom_point() +\n  geom_smooth(formula = y ~ x, method = \"loess\")\n\n\n\nLearn more: Executable Code"
+    "text": "Executable code\n\nlibrary(ggplot2)\nggplot(mtcars, aes(hp, mpg, color = am)) +\n  geom_point() +\n  geom_smooth(formula = y ~ x, method = \"loess\")\n\n\n\nLearn more: Executable Code\n\n\nOne of the most powerful features of Quarto is the ability to include executable code directly in your presentation. The code is run, and the output—whether it’s a plot, a table, or just text—is displayed on the slide. This is great for live demonstrations or for ensuring your examples are always up-to-date."
   },
   {
     "objectID": "materials/02-presentations/slides.html#latex-equations",
     "href": "materials/02-presentations/slides.html#latex-equations",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "LaTeX equations",
-    "text": "LaTeX equations\nMathJax rendering of equations to HTML\n\n\n\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\n\n\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\n\n\\[\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\\]\n\\[\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\\]\n\n\nLearn more: LaTeX Equations"
+    "text": "LaTeX equations\nMathJax rendering of equations to HTML\n\n\n\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\n\n\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\n\n\\[\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\\]\n\\[\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\\]\n\n\nLearn more: LaTeX Equations\n\n\nIf your work involves math or science, you’ll be happy to know that Quarto has excellent support for LaTeX equations."
   },
   {
     "objectID": "materials/02-presentations/slides.html#incremental-lists",
     "href": "materials/02-presentations/slides.html#incremental-lists",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Incremental lists",
-    "text": "Incremental lists\nLists can optionally be displayed incrementally:\n\nFirst item\nSecond item\nThird item\n\n\n Insert pauses to make other types of content display incrementally.\n\nLearn more: Incremental Lists"
+    "text": "Incremental lists\nLists can optionally be displayed incrementally:\n\nFirst item\nSecond item\nThird item\n\n\n Insert pauses to make other types of content display incrementally.\n\nLearn more: Incremental Lists\n\n\nTo avoid overwhelming your audience with too much information at once, you can display lists incrementally. Items will appear one by one as you advance the slide, keeping your audience’s attention focused on the current point. You can also use a simple … to insert pauses between content."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#incremental-lists-1",
+    "href": "materials/02-presentations/slides.html#incremental-lists-1",
+    "title": "Presentations with reveal.js",
+    "section": "Incremental lists",
+    "text": "Incremental lists\nLists can optionally be displayed incrementally:\n::: incremental\n-   First item\n-   Second item\n-   Third item\n:::\n\n. . .\n\n&lt;br/&gt; Insert pauses to make other types of content display incrementally."
   },
   {
     "objectID": "materials/02-presentations/slides.html#fragments",
     "href": "materials/02-presentations/slides.html#fragments",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Fragments",
-    "text": "Fragments\nIncremental text display and animation with fragments:\n\n\nFade in\n\n\nSlide up while fading in\n\n\nSlide left while fading in\n\n\nFade in then semi out\n\n\n\nStrike\n\n\nHighlight red\n\n\nLearn more: Fragments"
+    "text": "Fragments\nIncremental text display and animation with fragments:\n\n\nFade in\n\n\nSlide up while fading in\n\n\nSlide left while fading in\n\n\nFade in then semi out\n\n\n\nStrike\n\n\nHighlight red\n\n\nLearn more: Fragments\n\n\nFragments are a more advanced form of incremental display. They allow you to apply different animation effects to your content. You can make things fade in, slide up, or even highlight in different colors. This gives you a lot of control over how your information is revealed."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#fragments-1",
+    "href": "materials/02-presentations/slides.html#fragments-1",
+    "title": "Presentations with reveal.js",
+    "section": "Fragments",
+    "text": "Fragments\n::: {.fragment .fade-in}\nFade in\n:::\n\n::: {.fragment .fade-up}\nSlide up while fading in\n:::\n\n::: {.fragment .fade-left}\nSlide left while fading in\n:::\n\n::: {.fragment .fade-in-then-semi-out}\nFade in then semi out\n:::\n\n. . .\n\n::: {.fragment .strike}\nStrike\n:::\n\n::: {.fragment .highlight-red}\nHighlight red\n:::"
   },
   {
     "objectID": "materials/02-presentations/slides.html#absolute-position",
     "href": "materials/02-presentations/slides.html#absolute-position",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Absolute position",
-    "text": "Absolute position\nPosition images or other elements at precise locations\n\n\n\n\nLearn more: Absolute Position"
+    "text": "Absolute position\nPosition images or other elements at precise locations\n\n\n\n\nLearn more: Absolute Position\n\n\nFor precise placement of elements, you can use absolute positioning. You can place images or text at a specific distance from the top, bottom, left, or right of the slide. This is great for creating unique layouts and collages."
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#absolute-position-1",
+    "href": "materials/02-presentations/slides.html#absolute-position-1",
+    "title": "Presentations with reveal.js",
+    "section": "Absolute position",
+    "text": "Absolute position\n![](images/kitten-400-350.jpeg){.absolute top=\"170\" left=\"30\" width=\"400\" height=\"400\"}\n\n![](images/kitten-450-250.jpeg){.absolute .fragment top=\"150\" right=\"80\" width=\"450\"}\n\n![](images/kitten-300-200.jpeg){.absolute .fragment bottom=\"110\" right=\"130\" width=\"300\"}"
   },
   {
     "objectID": "materials/02-presentations/slides.html#interactive-slides",
     "href": "materials/02-presentations/slides.html#interactive-slides",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Interactive slides",
-    "text": "Interactive slides\nInclude Jupyter widgets and htmlwidgets in your presentations\n\n\n\n\n\n\n\nLearn more: Jupyter widgets, htmlwidgets"
+    "text": "Interactive slides\nInclude Jupyter widgets and htmlwidgets in your presentations\n\n```{r}\n#| fig-height: 5\nlibrary(leaflet)\nleaflet() %&gt;%\n  addTiles() %&gt;%  # Add default OpenStreetMap map tiles\n  addMarkers(lng=174.768, lat=-36.852, popup=\"The birthplace of R\")\n```\n\n\n\n\n\n\nLearn more: Jupyter widgets, htmlwidgets\n\n\nQuarto makes it easy to include interactive content in your presentations. For example, you can embed Jupyter widgets or htmlwidgets, like this interactive Leaflet map. This makes your presentations more engaging and allows your audience to explore data on their own."
   },
   {
     "objectID": "materials/02-presentations/slides.html#interactive-slides-1",
     "href": "materials/02-presentations/slides.html#interactive-slides-1",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Interactive slides",
-    "text": "Interactive slides\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\nlibrary(bslib)\n\n# Define UI for app that draws a histogram ----\nui &lt;- page_sidebar(\n  sidebar = sidebar(open = \"open\",\n    numericInput(\"n\", \"Sample count\", 100),\n    checkboxInput(\"pause\", \"Pause\", FALSE),\n  ),\n  plotOutput(\"plot\", width=1100)\n)\n\nserver &lt;- function(input, output, session) {\n  data &lt;- reactive({\n    input$resample\n    if (!isTRUE(input$pause)) {\n      invalidateLater(1000)\n    }\n    rnorm(input$n)\n  })\n  \n  output$plot &lt;- renderPlot({\n    hist(data(),\n      breaks = 40,\n      xlim = c(-2, 2),\n      ylim = c(0, 1),\n      lty = \"blank\",\n      xlab = \"value\",\n      freq = FALSE,\n      main = \"\"\n    )\n    \n    x &lt;- seq(from = -2, to = 2, length.out = 500)\n    y &lt;- dnorm(x)\n    lines(x, y, lwd=1.5)\n    \n    lwd &lt;- 5\n    abline(v=0, col=\"red\", lwd=lwd, lty=2)\n    abline(v=mean(data()), col=\"blue\", lwd=lwd, lty=1)\n\n    legend(legend = c(\"Normal\", \"Mean\", \"Sample mean\"),\n      col = c(\"black\", \"red\", \"blue\"),\n      lty = c(1, 2, 1),\n      lwd = c(1, lwd, lwd),\n      x = 1,\n      y = 0.9\n    )\n  }, res=140)\n}\n\n# Create Shiny app ----\nshinyApp(ui = ui, server = server)\n\nLearn more: Observable, Shiny, Component Layout"
+    "text": "Interactive slides\nAdd executable R or Python chunks into your slides:\n\n\n\n\n\n\n\n\n\nLearn more: Quartolive"
+  },
+  {
+    "objectID": "materials/02-presentations/slides.html#interactive-slides-2",
+    "href": "materials/02-presentations/slides.html#interactive-slides-2",
+    "title": "Presentations with reveal.js",
+    "section": "Interactive slides",
+    "text": "Interactive slides\nAdd Shinylive applications into your slides:\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\nlibrary(bslib)\n\n# Define UI for app that draws a histogram ----\nui &lt;- page_sidebar(\n  sidebar = sidebar(open = \"open\",\n    numericInput(\"n\", \"Sample count\", 100),\n    checkboxInput(\"pause\", \"Pause\", FALSE),\n  ),\n  plotOutput(\"plot\", width=1100)\n)\n\nserver &lt;- function(input, output, session) {\n  data &lt;- reactive({\n    input$resample\n    if (!isTRUE(input$pause)) {\n      invalidateLater(1000)\n    }\n    rnorm(input$n)\n  })\n  \n  output$plot &lt;- renderPlot({\n    hist(data(),\n      breaks = 40,\n      xlim = c(-2, 2),\n      ylim = c(0, 1),\n      lty = \"blank\",\n      xlab = \"value\",\n      freq = FALSE,\n      main = \"\"\n    )\n    \n    x &lt;- seq(from = -2, to = 2, length.out = 500)\n    y &lt;- dnorm(x)\n    lines(x, y, lwd=1.5)\n    \n    lwd &lt;- 5\n    abline(v=0, col=\"red\", lwd=lwd, lty=2)\n    abline(v=mean(data()), col=\"blue\", lwd=lwd, lty=1)\n\n    legend(legend = c(\"Normal\", \"Mean\", \"Sample mean\"),\n      col = c(\"black\", \"red\", \"blue\"),\n      lty = c(1, 2, 1),\n      lwd = c(1, lwd, lwd),\n      x = 1,\n      y = 0.9\n    )\n  }, res=140)\n}\n\n# Create Shiny app ----\nshinyApp(ui = ui, server = server)\n\nLearn more: Shinylive"
   },
   {
     "objectID": "materials/02-presentations/slides.html#your-turn-1",
     "href": "materials/02-presentations/slides.html#your-turn-1",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Your turn",
-    "text": "Your turn\n\nShrink the heading: Add {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nCreate two columns: Place your plot and table side-by-side. Adjust the percentages as needed.\nAdd tabsets: Use ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nAdd a transition: To improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom."
+    "text": "Your turn\n\nAdd {.smaller} to your heading to decrease its font size, like this: ## Global Happiness Trends {.smaller}.\nPlace your plot and table side-by-side. Adjust the percentages as needed.\nUse ::: panel-tabset on the “Country-Level Analysis” slide to organize your content.\nTo improve the flow, add slide-transition: slide to your YAML header. Other options include fade, convex, concave, or zoom.\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "materials/02-presentations/slides.html#easy-navigation",
     "href": "materials/02-presentations/slides.html#easy-navigation",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Easy navigation",
-    "text": "Easy navigation\n\nQuickly jump to other parts of your presentation\n\n\n\n\n\n\n\nToggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.\n\n\n\nYou can also press mm to toggle the menu open and closed.\nYou can also press gg to toggle ‘Jump To Slide’ modal box to quickly go to one of your slide using its number or id.\n\nLearn more: Navigation / Jump To Slide"
+    "text": "Easy navigation\n\nQuickly jump to other parts of your presentation\n\n\n\n\n\n\n\nToggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.\n\n\n\nYou can also press mm to toggle the menu open and closed.\n\nLearn more: Navigation"
   },
   {
     "objectID": "materials/02-presentations/slides.html#jump-to-slide",
     "href": "materials/02-presentations/slides.html#jump-to-slide",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Jump to slide",
-    "text": "Jump to slide\n\nQuickly jump to other parts of your presentation"
+    "text": "Jump to slide\nYou can also press gg to toggle ‘Jump To Slide’ modal box to quickly go to one of your slide using its number or id.\n\nLearn more: Jump To Slide"
   },
   {
     "objectID": "materials/02-presentations/slides.html#chalkboard",
     "href": "materials/02-presentations/slides.html#chalkboard",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Chalkboard",
-    "text": "Chalkboard\n\nFree form drawing and slide annotations\n\n\n\n\n\n\n\nUse the chalkboard button at the bottom left of the slide to toggle the chalkboard.\n\n\n\n\n\n\n\n\n\nUse the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.\n\n\n\nYou can also press bb to toggle the chalkboard or cc to toggle the notes canvas.\n\nLearn more: Chalkboard"
+    "text": "Chalkboard\nEnable by adding:\nformat:\n  revealjs:\n    chalkboard: true\n\n\n\n\n\n\n\nUse the chalkboard button at the bottom left of the slide to toggle the chalkboard.\n\n\n\n\n\n\n\n\n\nUse the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.\n\n\n\nYou can also press bb to toggle the chalkboard or cc to toggle the notes canvas.\n\nLearn more: Chalkboard"
   },
   {
     "objectID": "materials/02-presentations/slides.html#point-of-view",
     "href": "materials/02-presentations/slides.html#point-of-view",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Point of view",
     "text": "Point of view\npress oo to toggle overview mode:\n\nHold down the AltAlt/OptionOption and click on any element to zoom towards it—try it now on this slide.\n\nLearn more: Overview Mode, Slide Zoom"
   },
   {
     "objectID": "materials/02-presentations/slides.html#preview-links",
     "href": "materials/02-presentations/slides.html#preview-links",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Preview links",
     "text": "Preview links\nNavigate to hyperlinks without disrupting the flow of your presentation.\nUse the preview-links option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:\n\nMatplotlib: Visualization with Python\n\n\nLearn more: Preview Links"
   },
   {
     "objectID": "materials/02-presentations/slides.html#speaker-view",
     "href": "materials/02-presentations/slides.html#speaker-view",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Speaker view",
     "text": "Speaker view\npress ss (or use the tools in presentation menu ) to open speaker view\n## Slide with speaker notes\n\nSlide content\n\n::: {.notes}\nSpeaker notes go here.\n:::\n\nSpeaker notes go here.\n\n\nLearn more: Speaker View"
   },
   {
     "objectID": "materials/02-presentations/slides.html#themes",
     "href": "materials/02-presentations/slides.html#themes",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Themes",
-    "text": "Themes\n10 Built-in themes\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Themes"
+    "text": "Themes\n10 built-in themes also apply to reveal.js:\n\n\n\n\n\n\n\n\n\n\n\nLearn more: Themes"
   },
   {
     "objectID": "materials/02-presentations/slides.html#reveal.js-with-brand.yml",
     "href": "materials/02-presentations/slides.html#reveal.js-with-brand.yml",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "reveal.js with brand.yml",
-    "text": "reveal.js with brand.yml\nThe _brand.yml file in the root directory of your project (with or without a _quarto.yml file) will automatically apply the brand to your revealjs documents.\n\nThe revealjs format does not support switching between light and dark modes."
+    "text": "reveal.js with brand.yml\nThe _brand.yml file in the root directory of your project will automatically apply the brand to your revealjs documents."
   },
   {
     "objectID": "materials/02-presentations/slides.html#title-slide-background",
     "href": "materials/02-presentations/slides.html#title-slide-background",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Title slide background",
     "text": "Title slide background\nAdd a custom background to the title slide using the title-slide-attributes key:\n---\nformat: revealjs\ntitle-slide-attributes:\n    data-background-image: images/milky-way.jpeg\n    data-background-size: cover\n---\n\nLearn more: Custom Background"
   },
   {
     "objectID": "materials/02-presentations/slides.html#slide-backgrounds",
     "href": "materials/02-presentations/slides.html#slide-backgrounds",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Slide backgrounds",
     "text": "Slide backgrounds\nSet the background attribute on a slide to change the background color (all CSS color formats are supported).\nUse {{&lt; brand color COLOR_NAME BRAND_MODE &gt;}} to return the brand color named COLOR_NAME as a string.\n---\nformat: revealjs\n---\n\n## Slide Title {background-color='{{&lt; brand color primary &gt;}}'}\n\nLearn more: Slide Backgrounds"
   },
   {
     "objectID": "materials/02-presentations/slides.html#media-backgrounds",
     "href": "materials/02-presentations/slides.html#media-backgrounds",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Media backgrounds",
     "text": "Media backgrounds\nYou can also use the following as a slide background:\n\nAn image: background-image\nA video: background-video\nAn iframe: background-iframe"
   },
   {
     "objectID": "materials/02-presentations/slides.html#and-more",
     "href": "materials/02-presentations/slides.html#and-more",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "And more…",
     "text": "And more…\n\nTouch optimized (presentations look great on mobile, swipe to navigate slides)\nFooter & Logo (optionally specify custom footer per-slide or hide global footer)\nAuto-Slide (step through slides automatically, without any user input)\nMultiplex (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).\n\n\nLearn more: Quarto Presentations"
   },
   {
     "objectID": "materials/02-presentations/slides.html#your-turn-2",
     "href": "materials/02-presentations/slides.html#your-turn-2",
-    "title": "Quarto\nPresentations",
+    "title": "Presentations with reveal.js",
     "section": "Your turn",
-    "text": "Your turn\n\nChange the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that it uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary."
+    "text": "Your turn\n\nChange the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that the slide uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary.\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "materials/02-presentations/exercise-03.html",
     "href": "materials/02-presentations/exercise-03.html",
     "title": "",
     "section": "",
-    "text": "Change the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that it uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary."
+    "text": "Change the title slide background.\n\nFind an image on Unsplash and get the direct URL to the image file.\nAdd title-slide-attributes to your YAML header and specify the data-background-image attribute with the image’s URL.\nIf it’s a dark photo, you may want to change data-background-color to a dark color so that the slide uses a light font color.\n\nEdit Conclusion slide background color: Use the brand.yml shortcodes to change the color to primary."
   },
   {
     "objectID": "materials/02-presentations/exercise-01.html",
     "href": "materials/02-presentations/exercise-01.html",
     "title": "",
     "section": "",
-    "text": "Change the format: In your document’s YAML header, change format: html to format: revealjs.\nAdd slides: Use first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nRender: Save and render your document. Quarto will create an HTML file that is a fully functional slide deck.\n\nNote: You can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations."
+    "text": "In your document’s YAML header, change format: html to format: revealjs.\nUse first-level headings (#) to create a new slide. Use other Markdown headings and text for content on each slide.\nSave and render your document.\n\nQuarto will create an HTML file that is a fully functional slide deck.\n\n\n\n\n\n\nNote\n\n\n\nYou can remove code-fold and code-summary from the YAML header, as these are for HTML documents and do not apply to presentations."
   }
 ]
