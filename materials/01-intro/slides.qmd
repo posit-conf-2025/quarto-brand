@@ -31,15 +31,32 @@ Find the materials at: [pos.it/quarto-brand-conf25](pos.it/quarto-brand-conf25)
 1. Install [Quarto 1.8](https://quarto.org/docs/get-started/)
 2. Join Discord: From the [event portal](https://reg.conf.posit.co/flow/posit/positconf25/reg/login), click "Join the server", find our channel: #workshop-quarto-brand
 
+::: notes
+Intro: 30 min your turn
+15 minute live coding
+45 min talking
+
+welcome to 
+I have the wifi
+I recommend opening the website on your own computer so you can follow along
+:::
+
 ## Housekeeping {.smaller}
 
-* There are **gender neutral bathrooms** on **LL2** next to **Chicago A**.
+* There are **gender neutral bathrooms**:
+  - On **LL1** (**Under escalators**, to the right of the Learning Center)
+  - On **LL2** (Next to **Chicago A**)
 * There is a **meditation/prayer room** located on **LL2** next to **Chicago A**.
-* The **lactation room** is located on **LL2** next to **Chicago B**
+* The **lactation room** is located on **LL2** next to **Chicago B**.
 * Participants who do not wish to be photographed have red lanyards; please note everyone’s lanyard colors before taking a photo and respect their choices.
 * The Code of Conduct can be found at [https://posit.co/code-of-conduct](https://posit.co/code-of-conduct). You can report Code of Conduct violations in person, by email, or by phone. Please see the policy linked above for contact information.
 
-## Schedule
+## Discord
+
+From the [event portal](https://reg.conf.posit.co/flow/posit/positconf25/reg/login), click "Join the server", find our channel: #workshop-quarto-brand
+
+* Ask questions
+* Share code
 
 ## Schedule
 
@@ -137,11 +154,11 @@ These materials are pitched at someone who:
 
 -   Knows some R or Python 
 
--   Has R or Python installed
-
 -   Wants to create outputs that weave text and code
 
 -   Relatively new to Quarto
+
+-   Wants to learn about branded Quarto
 :::
 :::
 
@@ -156,6 +173,12 @@ We'll teach you
 - How to brand those Quarto outputs with brand.yml
 :::
 :::
+:::
+
+::: notes
+we designed this workshop for someone who 
+
+not assuming you know about Quarto 
 :::
 
 ## Workshop structure
@@ -184,11 +207,9 @@ We'll teach you
 
 🟥 “I’m stuck and need help!”
 
-🟦 “I finished the exercise”
+🟩 “I finished the exercise”
 
 * Ask in the Discord channel: [#workshop-quarto-brand](https://discord.com/channels/1381993558437007490/1402378754084573299)
-
-* Talk to us during breaks or your-turns
 
 ## Your turn - About you {background-color='{{< brand color light-blue >}}'}
 
@@ -236,7 +257,7 @@ Quarto is an open-source scientific and technical publishing system built on Pan
 
 ## With Quarto ...
 
-you can **weave** together **narrative** and **code** to produce elegantly formatted output such as documents, web pages, blog posts, books, dashboards, and more, with...
+you can **weave** together **narrative** and **code** to produce elegantly formatted output such as documents, web pages, blog posts, books, dashboards, and more.
 
 ::: incremental
 -   Create dynamic content with Python, R, Julia, and Observable
@@ -252,17 +273,7 @@ you can **weave** together **narrative** and **code** to produce elegantly forma
 [![](images/id-elections.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}](https://fosstodon.org/@andrew@fediscience.org/112485099746718354)
 
 ::: notes
-Let's see some examples of how people have used Quarto to tell their stories. Andrew Heiss, in conjunction with the Idaho Secretary of State's office, created a Quarto website for Idaho's primary election results.
-:::
-
-## Display data and results {.smaller}
-
-[Health Trends in England](https://fingertips.phe.org.uk/static-reports/health-trends-in-england/England/overview.html){preview-link="true"} by the  Department of Health & Social Care
-
-[![](images/england-health.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}](https://bsky.app/profile/statsgeekclare.bsky.social/post/3ld6iwagnzs2m)
-
-::: notes
-The Department of Health & Social Care in England created a Health Trends tool to open up public health data to a broader audience, and were shortlisted in the Analysis in Government award.
+Let's see some examples of how people have used Quarto. Andrew Heiss, in conjunction with the Idaho Secretary of State's office, created a Quarto website for Idaho's primary election results.
 :::
 
 ## Walk through a story {.smaller}
@@ -299,7 +310,7 @@ Quarto also has extensive features for writing journal articles, from diagrams a
 ![](images/quarto_template_overview.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
 
 ::: notes
-With Quarto, you can create reports or presentations that update automatically when data changes or when you change inputs because you are creating your report with code. There's a software engineering concept called the DRY Principle ("Don't Repeat Yourself") that is useful in data work that encourages writing code that can be reused with functions or loops instead of copy/paste. Use variables (parameters) to dynamically change parts of your analysis or report like to generate the same report for different regions, departments, or time periods, write reusable functions to avoid repeating code and keeps work cleaner, more consistent, and easier to maintain. The folks at United States Geological Survey have great blog posts on how they are implementing these ideas in Quarto.
+With Quarto, you can create reports or presentations that update automatically when data changes or when you change inputs because you are creating your report with code. Use variables (parameters) to dynamically change parts of your analysis or report like to generate the same report for different regions, departments, or time periods, write reusable functions to avoid repeating code and keeps work cleaner, more consistent, and easier to maintain. The folks at United States Geological Survey have great blog posts on how they are implementing these ideas in Quarto.
 :::
 
 ## Get your team on the same page {.smaller}
@@ -324,13 +335,38 @@ With Quarto, you can create reports or presentations that update automatically w
 And finally, Melissa van Bussel gave a talk on how the Statistics Canada team converted not just their documentation, but training resources, presentations, and more to Quarto to streamline efforts.
 :::
 
+## World Happiness Report
+
+::: columns
+
+::: column
+![](images/report-final.png){fig-align="center" width="100%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+:::
+
+::: column
+
+This is what you'll work on today!
+:::
+:::
+
+::: footer
+<https://www.worldhappiness.report/>
+:::
+
+::: notes
+world happiness report combines and analyzes wellbeing data for around 150 countries and writes an annual report. they investigate how happy countries are, how that happiness has changed over time, and what factors explain a country's happiness or lack thereof.
+
+today, you're going to make reports, dashboards, websites, and presentations with this data.
+:::
+
 
 ## "Literate programming"
 
 ![](images/literate-programming.png)
 
 ::: notes
-Quarto sits inside the big and broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!
+all this is possible because 
+Quarto sits inside the broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!
 :::
 
 ## Why Quarto?
@@ -411,22 +447,21 @@ Quarto is a command line interface (**CLI**) that renders plain text formats (`.
 
 ![](images/quarto-how-it-works.png){fig-align="center"}
 
-::: incremental
 -   `jupyter` or `knitr` evaluates Python, Julia, R, or Observable code and returns a `.md` file along with the evaluated code
 -   Quarto applies Lua filters + CSS/LaTeX which is then evaluated alongside the `.md` file by Pandoc and converted to a final output format
+
+::: footer
+Illustration by Allison Horst
 :::
 
-## Options {background-color='{{< brand color dark-blue >}}'}
+## Environment options {background-color='{{< brand color dark-blue >}}'}
 
 Let's walk through your options for today.
 
 ::: incremental
-
-1. Posit Cloud
-2. GitHub Codespace
-3. Local installation
-  - GitHub repository
-  - Package installation
+1. Posit Cloud - RStudio
+2. GitHub Codespace - VS Code
+3. Local installation 
 :::
  
 ::: notes
@@ -461,11 +496,11 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 ::: {.fragment}
 
 :::: columns
-::: {.column width="40%"}
+::: {.column width="50%"}
 ![](images/rstudio-preview.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
 :::
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 ![](images/positron-preview.png){ style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
 :::
 ::::
@@ -492,8 +527,15 @@ quarto preview
 #| label: intro-clock2
 #| echo: false
 # 5 minutes, warning at 1 minute
-countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+countdown::countdown(minutes = 5)
 ```
+
+::: notes
+show how to add a code chunk
+
+Positron/vs code insert code cell, cmd shift i
+RStudio green button, cmd option i
+::: 
 
 # Quarto documents {background-color='{{< brand color dark-blue >}}'}
 
@@ -708,31 +750,6 @@ Code chunks can have optional chunk options identified by the hashpipe at the be
 
 **Code** can include optional chunk options, in YAML style, identified by `#|` at the beginning of the line
 
-````{.markdown code-line-numbers=9-10}
----
-title: "World Happiness Report"
-format: html
----
-
-This analysis uses data from the [**2025 World Happiness Report**](https://www.worldhappiness.report/). 
-
-```{{python}}
-#| include: false
-#| fig.alt: "A barplot with country on the x-axis and happiness score on the y-axis."
-from plotnine import ggplot, aes, geom_col
-
-(
-    ggplot(df, aes(x = "country", y = "score"))
-    + geom_col()
-)
-```
-
-````
-
-## Anatomy of a Quarto document
-
-**Code** can include optional chunk options, in YAML style, identified by `#|` at the beginning of the line
-
 +--------------+------------------------------------------------+
 | Option       | Description                                    |
 +==============+================================================+
@@ -755,7 +772,7 @@ Other options: <https://quarto.org/docs/computations/execution-options.html>
 #| label: doc-clock-1
 #| echo: false
 # 5 minutes, warning at 1 minute
-countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+countdown::countdown(minutes = 5)
 ```
 
 # Authoring Quarto {background-color='{{< brand color dark-blue >}}'}
@@ -811,14 +828,6 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 ## Divs and Spans
 
 For further customization, you can add classes, attributes, and other identifiers to content using divs and spans.
-
-. . .
-
-* Div syntax: `:::`
-* Span syntax: `{ }`
-
-
-. . .
 
 **Divs**
 
@@ -1044,6 +1053,18 @@ Learn more: <https://posit-dev.github.io/brand-yml/>
 
 ## 
 
+::: r-fit-text
+Branding can be frustrating
+:::
+
+. . .
+
+:::r-fit-text
+But brand.yml makes it easier
+:::
+
+## 
+
 ::: {.fragment}
 [1. Define branding in a single `_brand.yml` file.]{style="font-size: 1.5em;"}
 
@@ -1211,6 +1232,8 @@ typography:
 ```
 
 ::: notes
+
+define your brand’s color palette and map your palette to the roles colors play. the semantic colors -- primary, foreground, etc
 
 if this seems like a lot of details, don't worry! we will show you how to make your own file later. for now, it's enough to just have a general understanding of the different parts
 :::
@@ -1426,6 +1449,12 @@ brand = Brand.from_yaml_str(
 # 5 minutes, warning at 1 minute
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
+
+::: notes
+if there's time, go over this
+
+the r function automatically applies theme_minimal()
+:::
 
 ## Why brand.yml?
 

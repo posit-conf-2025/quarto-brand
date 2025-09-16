@@ -1,4 +1,4 @@
-* Shrink the heading: Add `{.smaller}` to your heading to decrease its font size, like this: `## Global Happiness Trends {.smaller}`.
-* Create two columns: Place your plot and table side-by-side. Adjust the percentages as needed.
-* Add tabsets: Use :`:: panel-tabset` on the "Country-Level Analysis" slide to organize your content.
-* Add a transition: To improve the flow, add `slide-transition: slide` to your YAML header. Other options include `fade`, `convex`, `concave`, or `zoom.`
+* Add `{.smaller}` to your heading to decrease its font size, like this: `## Global Happiness Trends {.smaller}`.
+* Place your plot and table side-by-side. Adjust the percentages as needed.
+* Use :`:: panel-tabset` on the "Country-Level Analysis" slide to organize your content.
+* To improve the flow, add `slide-transition: slide` to your YAML header. Other options include `fade`, `convex`, `concave`, or `zoom.`
